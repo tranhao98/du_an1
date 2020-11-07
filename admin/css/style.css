@@ -1,0 +1,42 @@
+nav.row {
+    height: 40px;
+    line-height: 40px
+}
+
+header {
+    background-color: white;
+    font-size: 40pt;
+    padding-top: 15px;
+}
+
+.card {
+    border: none !important;
+}
+
+.card-header {
+    border: none !important;
+}
+
+header .row {
+    height: 90px;
+}
+
+footer {
+    font-size: 20pt;
+    padding-left: 600px;
+    padding-top: 15px;
+}
+
+img {
+    width: 80%;
+    height: 30%;
+    object-fit: cover;
+}
+
+footer.row {
+    min-height: 100px;
+}
+
+div.noidung {
+    min-height: 500px
+}
