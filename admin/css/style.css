@@ -40,3 +40,11 @@ footer.row {
 div.noidung {
     min-height: 500px
 }
+
+
+h3{
+  color: red;
+}
+table{
+  width: 90%;
+}
