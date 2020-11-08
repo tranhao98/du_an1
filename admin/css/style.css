@@ -40,3 +40,15 @@ footer.row {
 div.noidung {
     min-height: 500px
 }
+
+.table .table-bordered{
+    margin: auto!important;
+}
+.iconedit{
+    color: orange;
+    padding: 5px;
+}
+.icondelete{
+    color: orange;
+    padding: 5px;
+}
