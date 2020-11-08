@@ -3,10 +3,6 @@
         <div class="col-4 mt-4">
         <h3>Thêm người dùng </h3>
             <form enctype="multipart/form-data"  method="post" action="?ctrl=nguoidung&act=insert">
-                <div class="form-group">                       
-                    <label for="">STT </label>
-                    <input type="text" name="name" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
                 <div class="form-group">
                     <label for="">Tên Người Dùng</label>
                     <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">

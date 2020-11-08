@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="font-family: 'Poppins', sans-serif;box-sizing:border-box;" class="bg-light">
+<body style="font-family: 'Poppins', sans-serif; box-sizing:border-box;" class="bg-light">
     <div class="container mw-100 p-0">
-        <header class="mb-3">
+        <header class="shadow-sm p-3 mb-3 bg-white rounded">
             <div class="row">
                 <div class="col-3 p-3 text-center mt-n3">
                     <img src="../upload/logo.png" alt="">
@@ -37,21 +37,36 @@
             </div>
         </header>
         <div class="row noidung">
-            <aside class="col-3 bg-white">
+            <aside class="col-3 bg-white shadow-sm p-3 bg-white rounded">
                 <div class="accordion mx-n3" id="accordionExample">
                     <div class="card-header bg-white" id="heading0">
                         <h2 class="mb-0">
-                            <button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
-                                <a class="btn btn-white" href=""><i class="fa fa-bar-chart" style="font-size:20px"></i> Tổng quan</a>
-                            </button>
+                            <a class="btn btn-white p-0" href=""><button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                    <i class="fa fa-bar-chart" style="font-size:20px"></i> Tổng quan
+                                </button></a>
 
+                        </h2>
+                    </div>
+                    <div class="card-header bg-white" id="headingtwo">
+                        <h2 class="mb-0">
+                            <a class="btn btn-white p-0" href="index.php?ctrl=danhmuc&act=index"> <button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý danh mục
+                                </button></a>
+
+                        </h2>
+                    </div>
+                    <div class="card-header bg-white" id="headingtwo">
+                        <h2 class="mb-0">
+                            <a class="btn btn-white p-0" href="index.php?ctrl=khuvuc&act=index"> <button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý khu vực
+                                </button></a>
                         </h2>
                     </div>
                     <div class="card bg-white">
                         <div class="card-header bg-white" id="headingOne">
                             <h2 class="mb-0">
                                 <button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý bài đăng <span style="margin-left: 120px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
+                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý bài đăng <span style="margin-left: 110px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
                                 </button>
 
                             </h2>
@@ -64,41 +79,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header bg-white" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý danh mục <span style="margin-left: 112px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body pl-5">
-                                <p><a class="btn btn-white" href="?ctrl=danhmuc&act=index">Danh sách danh mục</a></p>
-                                <p><a class="btn btn-white" href="?ctrl=danhmuc&act=addnew">Thêm danh mục</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header bg-white" id="heading5">
-                            <h2 class="mb-0">
-                                <button class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý khu vực <span style="margin-left: 130px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
-                            <div class="card-body pl-5">
-                                <p><a class="btn btn-white" href="?ctrl=khuvuc&act=index">Danh sách khu vực</a></p>
-                                <p><a class="btn btn-white" href="?ctrl=khuvuc&act=index">Thêm khu vực</a></p>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="card">
                         <div class="card-header bg-white" id="headingThree">
                             <h2 class="mb-0">
                                 <button class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý người dùng <span style="margin-left: 100px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
+                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý người dùng <span style="margin-left: 90px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
                                 </button>
                             </h2>
                         </div>
@@ -113,7 +99,7 @@
                         <div class="card-header bg-white" id="heading4">
                             <h2 class="mb-0">
                                 <button class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý thông báo <span style="margin-left: 110px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
+                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý thông báo <span style="margin-left: 100px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
                                 </button>
                             </h2>
                         </div>
@@ -127,30 +113,21 @@
                 </div>
             </aside>
             <main class="col-9">
-                <div class="row bg-white mb-3 ml-2 p-2">
+                <!-- <div class="row bg-white mb-3 ml-2 p-2">
                     <div class="col-9 text-left align-self-center">
                         <h2>Tên chức năng</h2>
                     </div>
                     <div class="col-3 ">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb bg-white">
-                                <li class="breadcrumb-item active"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                <li class="breadcrumb-item active"><a href="#">Tổng quan</a></li>
+                                <li class="breadcrumb-item"><a href="#">Quản lý</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Data</li>
                             </ol>
                         </nav>
                     </div>
-                </div>
-                <div class="row">
-                    <?php 
-                        if (isset($view)==true) {
-                            require_once "$view";
-                        } 
-                        else
-                        echo "";
-                    ?>
-                    <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
-                </div>
+                </div> -->
+                <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
             </main>
         </div>
         <footer></footer>

@@ -6,7 +6,7 @@
   switch ($act) {
 
     case "index":
-        $dsdm = getAllDanhMuc();
+        // $dsdm = getAllDanhMuc();
         $view = "views/danhmuc-index.php";
         require_once "layout.php";
     break;

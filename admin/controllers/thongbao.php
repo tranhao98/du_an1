@@ -6,13 +6,13 @@
   switch ($act) {
 
     case "index":
-        $dstb = getAllThongBao();
+        // $dstb = getAllThongBao();
         $view = "views/thongbao-index.php";
         require_once "layout.php";
     break;
 
     case "addnew":
-        $view = "views/thongbao-add.php";
+        $view = "views/thongbao-addnew.php";
         require_once "layout.php";
     break;
 

@@ -6,7 +6,7 @@
   switch ($act) {
 
     case "index":
-        $dskv = getAllKhuVuc();
+        // $dskv = getAllKhuVuc();
         $view = "views/khuvuc-index.php";
         require_once "layout.php";
     break;
