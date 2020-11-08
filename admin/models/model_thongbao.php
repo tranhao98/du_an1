@@ -15,9 +15,9 @@
         $sql="SELECT * from thongbao where idtb='$idtb'";
         return queryOne($sql);
     }
-    // function deleteThongBao($idtb){
-    //     $sql= "delete from thongbao where idtb='$idtb'";
-    //     execute($sql);
-    // }
+    function deleteThongBao($idtb){
+        $sql= "delete from thongbao where idtb='$idtb'";
+        execute($sql);
+    }
 
 ?>
