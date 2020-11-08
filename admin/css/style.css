@@ -48,3 +48,6 @@ h3{
 table{
   width: 90%;
 }
+td, th{
+    font-size: 11pt;
+}
