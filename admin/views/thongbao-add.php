@@ -26,7 +26,7 @@
         <!-- Nội dung -->
             <div class="form-group col-6 ">
                 <label for="tieude">Nội Dung</label>
-                <input type="textarea" class="form-control" id="noidung"  name="noidung" placeholder="Nội Dung">
+                <textarea class="form-control" id="exampleFormControlTextarea1" id="noidung"  name="noidung" placeholder="... ... ..." rows="3"></textarea>
             </div>
         </div>
         <!-- Ẩn hiện -->
