@@ -52,3 +52,13 @@ div.noidung {
     color: orange;
     padding: 5px;
 }
+
+h3{
+  color: red;
+}
+table{
+  width: 90%;
+}
+td, th{
+    font-size: 11pt;
+}
