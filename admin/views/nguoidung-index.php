@@ -4,7 +4,7 @@
         <h3>Thêm người dùng </h3>
             <form enctype="multipart/form-data"  method="post" action="?ctrl=nguoidung&act=insert">
                 <div class="form-group">                       
-                    <label for="">STT </label>
+                    <label for="">ID Người Dùng </label>
                     <input type="text" name="name" id="" class="form-control" placeholder="" aria-describedby="helpId">
                 </div>
                 <div class="form-group">
@@ -12,7 +12,35 @@
                     <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
                 </div>
                 <div class="form-group">
-                    <label for="">Thứ Tự</label>
+                    <label for="">Ngày Sinh</label>
+                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                    <label for="">Tên Đăng Nhập</label>
+                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                    <label for="">Mặt Khẩu</label>
+                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                    <label for="">Số Điện Thoại</label>
+                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                    <label for="">Địa Chỉ</label>
+                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                    <label for="">Giới Tính</label>
+                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                    <label for="">Vai Trò</label>
                     <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
                 </div>
                 <div class="form-check">
@@ -33,7 +61,14 @@
                     <tr>
                         <th scope="col">ID người dùng</th>
                         <th scope="col">Tên người dùng</th>
-                        <th scope="col">Thứ Tự</th>
+                        <th scope="col">Ngày sinh</th>
+                        <th scope="col">Tên đăng nhập</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Mật khẩu</th>
+                        <th scope="col">Số điện thoại</th>
+                        <th scope="col">Địa chỉ</th>
+                        <th scope="col">Giới tính</th>
+                        <th scope="col">Vai trò</th>
                         <th scope="col">Ẩn Hiện</th>
                         <th scope="col">Edit & Delete</th>
                     </tr>
@@ -41,8 +76,15 @@
                 <tbody>
                     <?php foreach ($dskv as $row) { ?>
                     <tr>
-                        <td><?=$row['idnguoidung']?></td>
+                        <td><?=$row['id']?></td>
                         <td><?=$row['tennguoidung']?></td>
+                        <td><?=$row['ngaysinh']?></td>
+                        <td><?=$row['tendangnhap']?></td>
+                        <td><?=$row['email']?></td>
+                        <td><?=$row['matkhau']?></td>
+                        <td><?=$row['diachi']?></td>
+                        <td><?=$row['gioitinh']?></td>
+                        <td><?=$row['vaitro']?></td>
                         <td><?=$row['thutu']?></td>
                         <td> <?=($row['anhien']==1)? 'Ẩn':'Hiện'; ?></td>
                         <td>
