@@ -1,6 +1,6 @@
 <?php
 define('HOST_DB' , "localhost");
-define('NAME_DB' , "simple");
+define('NAME_DB' , "duan1");
 define('USER_DB' , "root");
 define('PASS_DB' , "");
 define('ROOT_URL' , "/DUAN1");
