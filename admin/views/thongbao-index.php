@@ -11,7 +11,7 @@
             <th scope="col">Ngày Đăng</th>
             <th scope="col">Nội Dung</th>
             <th scope="col">Ẩn Hiện</th>
-            <th scope="col">Edit & Delete</th>
+            <th scope="col">Sửa & Xóa</th>
             </tr>
         </thead>
         <tbody>
