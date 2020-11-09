@@ -7,7 +7,6 @@ $message = "";
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
   case "index":
-    $test = "khang";
     $view = "views/baidang-index.php";
     require_once "layout.php";
     break;
