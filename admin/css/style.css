@@ -65,13 +65,13 @@ main {
 }
 
 .box-add-dm {
-    width: calc(40% - 20px);
+    width: calc(30% - 20px);
     float: left;
     margin-right: 20px;
 }
 
 .box-list-dm {
-    width: 60%;
+    width: 70%;
     float: left;
 }
 
