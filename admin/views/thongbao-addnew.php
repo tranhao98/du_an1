@@ -15,7 +15,11 @@
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
         <h5></h5>
-        <form class="mx-auto w-100" method="post" action="?ctrl=thongbao&act=insert">
+        <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=thongbao&act=insert">
+            <div class="form-group">
+                <label for="exampleinput requiredPassword1">Hình ảnh</label>
+                <input required type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+            </div>
             <div class="row">
                 <div class="form-group col-6 ">
                     <label for="tieude">Tiêu Đề</label>

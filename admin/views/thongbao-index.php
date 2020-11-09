@@ -19,6 +19,7 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
+                    <th scope="col">Hình Ảnh</th>
                     <th scope="col">Tiêu Đề</th>
                     <th scope="col">Ngày Đăng</th>
                     <th scope="col">Người Đăng</th>
@@ -33,6 +34,9 @@
                 $dem = 1; ?>
                 <tr>
                     <th scope="col"><?= $dem++ ?></th>
+                    <td>
+                        <?= $row['hinh'] ?>
+                    </td>
                     <td>
                         <?= $row['tieude'] ?>
                     </td>
