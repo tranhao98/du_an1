@@ -17,33 +17,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="font-family: 'Poppins', sans-serif; box-sizing:border-box;" class="bg-light">
+<body style="font-family: 'Poppins', sans-serif; background-color: #f2f2f2;">
     <div class="container mw-100 p-0 m-0">
         <header class=" shadow-sm p-3 mb-3 bg-white rounded">
             <div class="row">
-                <div class="col-3 h-100 text-center">
+                <div class="col-2 h-100 text-center logo-admin">
                     <img src="../upload/logo.png" alt="">
                 </div>
-                <div class="col-6 text-left">
-                    <i class="fa fa-bars" style="font-size:30px; margin-left:8.7%;"></i>
+                <div class="col-7 text-left">
+                    <i class="fa fa-bars" style="font-size:18pt; padding-top:2%; margin-left:6.3%;"></i>
                 </div>
                 <div class="col-3 text-right">
-                    <div class="pr-4">
-                        <img class="w-25" src="../upload/comment_2.png" alt="">
-                        <span style="font-size: 20px; font-weight:bold;">Hào Long <i class="fa fa-angle-down" style="font-size:22px"></i></span>
+                    <div class="pr-2 user-admin">
+                        <img src="../upload/comment_2.png" alt="">
+                        <span>Hào Long <i class="fa fa-angle-down" style="font-size:12pt"></i></span>
                     </div>
                 </div>
 
             </div>
         </header>
-        <div class=" noidung">
-          
-            <aside class="shadow-sm p-3 bg-white rounded">
+        <div class="noidung">
+            <aside class="shadow-sm pl-1 pr-3 bg-white rounded">
                 <div class="accordion mx-n3" id="accordionExample">
                     <div class="card-header bg-white" id="heading0">
                         <h2 class="mb-0">
-                            <a class="btn btn-white p-0" href=""><button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
-                                    <i class="fa fa-bar-chart" style="font-size:20px"></i> Tổng quan
+                            <a class="btn btn-white p-0 " href=""><button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                    <i class="fa fa-bar-chart" style="font-size:18px"></i> Tổng quan
                                 </button></a>
 
                         </h2>
@@ -51,7 +50,7 @@
                     <div class="card-header bg-white" id="headingtwo">
                         <h2 class="mb-0">
                             <a class="btn btn-white p-0" href="index.php?ctrl=danhmuc&act=index"> <button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý danh mục
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý danh mục
                                 </button></a>
 
                         </h2>
@@ -59,7 +58,7 @@
                     <div class="card-header bg-white" id="headingtwo">
                         <h2 class="mb-0">
                             <a class="btn btn-white p-0" href="index.php?ctrl=khuvuc&act=index"> <button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý khu vực
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý khu vực
                                 </button></a>
                         </h2>
                     </div>
@@ -67,7 +66,7 @@
                         <div class="card-header bg-white" id="headingOne">
                             <h2 class="mb-0">
                                 <button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý bài đăng <span style="margin-left: 110px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý bài đăng <span style="margin-left:18%;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
                                 </button>
 
                             </h2>
@@ -85,7 +84,7 @@
                         <div class="card-header bg-white" id="headingThree">
                             <h2 class="mb-0">
                                 <button class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý người dùng <span style="margin-left: 90px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý người dùng <span style="margin-left:9%;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
                                 </button>
                             </h2>
                         </div>
@@ -100,7 +99,7 @@
                         <div class="card-header bg-white" id="heading4">
                             <h2 class="mb-0">
                                 <button class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    <i class="fa fa-cogs" style="font-size:20px"></i> Quản lý thông báo <span style="margin-left: 100px;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý thông báo <span style="margin-left:13%;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
                                 </button>
                             </h2>
                         </div>

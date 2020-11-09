@@ -1,12 +1,6 @@
 nav.row {
     height: 40px;
-    line-height: 40px
-}
-
-header {
-    background-color: white;
-    font-size: 40pt;
-    padding-top: 15px;
+    line-height: 40px;
 }
 
 .card {
@@ -18,7 +12,7 @@ header {
 }
 
 header .row {
-    height: 90px;
+    height: 50px;
 }
 
 footer {
@@ -27,44 +21,33 @@ footer {
     padding-top: 15px;
 }
 
-img {
-    width: 80%;
+.logo-admin img {
+    width: 85%;
     height: 100%;
     object-fit: cover;
+}
+
+.user-admin img {
+    width: 15%;
+}
+
+.user-admin span {
+    font-size: 12pt;
 }
 
 footer.row {
     min-height: 100px;
 }
 
-div.noidung {
-    min-height: 500px
-}
-
-
-/* .table .table-bordered {
-    margin: auto!important;
-} */
-
-.iconedit {
-    color: orange;
-    padding: 5px;
-}
-
-.icondelete {
-    color: orange;
-    padding: 5px;
-}
-
-h3 {
-    color: red;
+.noidung {
+    min-height: 500px;
 }
 
 td,
 th {
-    font-size: 14pt;
+    font-size: 12pt;
     border-bottom: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
 }
 
 tr:nth-child(even) {
@@ -72,13 +55,12 @@ tr:nth-child(even) {
 }
 
 aside {
-    width: calc(30% - 20px);
+    width: 20%;
     float: left;
-    margin-right: 20px;
 }
 
 main {
-    width: 70%;
+    width: 80%;
     float: left;
 }
 
@@ -91,4 +73,8 @@ main {
 .box-list-dm {
     width: 60%;
     float: left;
+}
+
+.content .row {
+    height: 50px;
 }

@@ -1,12 +1,12 @@
-<div class="container">
-    <div class="row shadow-sm mb-3 p-3 bg-white rounded">
-        <div class="col-8 text-left align-self-center p-0">
-            <h4>Quản lý danh mục</h4>
+<div class="container content">
+    <div class="row shadow-sm mb-3 bg-white rounded ">
+        <div class="col-8 text-left h-100 p-0 p-3 mt-n1">
+            <h5 class="font-weight-bold">Quản lý danh mục</h5>
         </div>
-        <div class="col-4">
+        <div class="col-4 h-100">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb bg-white">
-                    <li class="breadcrumb-item"><a href="#">Tổng quan</a></li>
+                <ol class="breadcrumb pl-5 bg-white">
+                    <li class="breadcrumb-item "><a class="text-dark" href="#">Tổng quan</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Quản lý danh mục</li>
                 </ol>
             </nav>
@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="box-add-dm shadow-sm bg-white rounded p-3">
-            <h5 class="mb-3 font-weight-bold">Thêm Danh mục </h5>
+            <h5 class="mb-4 font-weight-bold">Thêm Danh Mục </h5>
             <form method="post" action="?ctrl=danhmuc&act=insert">
                 <div class="form-group">
                     <label for="">Tên Danh Mục</label>
@@ -43,7 +43,7 @@
             </form>
         </div>
         <div class="box-list-dm p-3 shadow-sm bg-white rounded">
-            <h5 class="mb-3 font-weight-bold">Danh sách danh mục </h5>
+            <h5 class="mb-5 font-weight-bold text-uppercase">Danh sách danh mục </h5>
             <table style="text-align:center; width:100%">
                 <thead>
                     <tr>
