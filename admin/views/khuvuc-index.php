@@ -12,17 +12,18 @@
             </nav>
         </div>
     </div>
+
     <div class="row">
-        <div class="col-md-4 p-3 box shadow-sm bg-white rounded">
+        <div class="box-add-dm shadow-sm bg-white rounded p-3">
             <h5 class="mb-3 font-weight-bold">Thêm khu vực </h5>
-            <form method="post" action="?ctrl=khuvuc&act=insert">
+            <form method="post" action="?ctrl=danhmuc&act=insert">
                 <div class="form-group">
                     <label for="">Tên khu vực</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                    <input type="text" name="tendm" id="" class="form-control" placeholder="" aria-describedby="helpId">
                 </div>
                 <div class="form-group">
                     <label for="">Thứ Tự</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                    <input type="text" name="thutu" id="" class="form-control" placeholder="" aria-describedby="helpId">
                 </div>
                 <div class="row">
                     <div class="form-group col-6 ">
@@ -37,11 +38,11 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="submit" name="themkv" id="" class="form-control" value="Submit" aria-describedby="helpId">
+                    <input type="submit" name="themdm" id="" class="form-control btn btn-primary" value="Submit" aria-describedby="helpId">
                 </div>
             </form>
         </div>
-        <div class="col-md-8 p-3">
+        <div class="box-list-dm p-3 shadow-sm bg-white rounded">
             <h5 class="mb-3 font-weight-bold">Danh sách khu vực </h5>
             <table style="text-align:center; width:100%">
                 <thead>
@@ -60,7 +61,7 @@
                     ?>
                     <tr>
                         <td scope="col"><?= $dem++ ?></td>
-                        <td><?= $row['tenkv'] ?></td>
+                        <td><?= $row['tendm'] ?></td>
                         <td><?= $row['thutu'] ?></td>
                         <td> <?= ($row['anhien'] == 1) ? 'Ẩn' : 'Hiện'; ?></td>
                         <td class="align-middle"> <a href="index.php?ctrl=xe&act=edit&id=<?= $row['id'] ?>" class="btn-info btn"><i class='fas fa-pencil-alt' style='font-size:24px'></i></a> </td>

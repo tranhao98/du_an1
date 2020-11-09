@@ -18,14 +18,14 @@
 </head>
 
 <body style="font-family: 'Poppins', sans-serif; box-sizing:border-box;" class="bg-light">
-    <div class="container mw-100 p-0">
-        <header class="shadow-sm p-3 mb-3 bg-white rounded">
+    <div class="container mw-100 p-0 m-0">
+        <header class=" shadow-sm p-3 mb-3 bg-white rounded">
             <div class="row">
-                <div class="col-3 p-3 text-center mt-n3">
+                <div class="col-3 h-100 text-center">
                     <img src="../upload/logo.png" alt="">
                 </div>
                 <div class="col-6 text-left">
-                    <i class="fa fa-bars" style="font-size:30px"></i>
+                    <i class="fa fa-bars" style="font-size:30px; margin-left:8.7%;"></i>
                 </div>
                 <div class="col-3 text-right">
                     <div class="pr-4">
@@ -36,8 +36,9 @@
 
             </div>
         </header>
-        <div class="row noidung">
-            <aside class="col-3 bg-white shadow-sm p-3 bg-white rounded">
+        <div class=" noidung">
+          
+            <aside class="shadow-sm p-3 bg-white rounded">
                 <div class="accordion mx-n3" id="accordionExample">
                     <div class="card-header bg-white" id="heading0">
                         <h2 class="mb-0">
@@ -112,7 +113,7 @@
                     </div>
                 </div>
             </aside>
-            <main class="col-9">
+            <main>
                 <!-- <div class="row bg-white mb-3 ml-2 p-2">
                     <div class="col-9 text-left align-self-center">
                         <h2>Tên chức năng</h2>
@@ -129,6 +130,7 @@
                 </div> -->
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
             </main>
+           
         </div>
         <footer></footer>
     </div>
