@@ -29,7 +29,7 @@
                     <td>
                         <?= ($row['anhien'] == 1) ? '<i style="font-size:20px" class="fa">&#xf046;</i>' : '<i style="font-size:20px" class="fa">&#xf096;</i>'; ?>
                     </td>
-                    <td class="align-middle"> <a href="index.php?ctrl=xe&act=edit&id=<?= $row['id'] ?>" class="btn-primary btn"><i class="fa fa-pencil" style="font-size:24px"></i></a> </td>
+                    <td class="align-middle"> <a href="index.php?ctrl=xe&act=edit&id=<?= $row['id'] ?>" class="btn-primary btn"><i class='fas fa-pencil-alt' style='font-size:24px'></i></a> </td>
                     <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=xe&act=delete&id=<?= $row['id'] ?>" class="btn-primary btn"><i class="fa fa-trash" style="font-size:24px"></i></a> </td>
                 </tr>
         </tbody>
