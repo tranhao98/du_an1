@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once "model/model_baidang.php"; //nạp model để có các hàm tương tác db 
+require_once "models/model_baidang.php"; //nạp model để có các hàm tương tác db 
 
-$act = "index"; //chức năng mặc định
+$act = "index"; //chức năng mặc địnhg
 $message = "";
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
