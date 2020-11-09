@@ -1,6 +1,6 @@
-<div class="container content">
-    <div class="row shadow-sm mb-3 bg-white rounded ">
-        <div class="col-8 text-left h-100 p-0 p-3 mt-n1">
+<div class="container">
+    <div class="row content shadow-sm mb-3 bg-white rounded ">
+        <div class="col-8 text-left h-100 p-3 mt-n1">
             <h5 class="font-weight-bold">Quản lý danh mục</h5>
         </div>
         <div class="col-4 h-100">
@@ -45,7 +45,7 @@
         </div>
         <div class="box-list-dm p-3 shadow-sm bg-white rounded">
             <h5 class="mb-5 font-weight-bold text-uppercase">Danh sách danh mục </h5>
-            <table style="text-align:center; width:100%">
+            <table class="w-100">
                 <thead>
                     <tr>
                         <th scope="col">#</th>

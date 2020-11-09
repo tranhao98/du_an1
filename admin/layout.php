@@ -30,8 +30,17 @@
                 </div>
                 <div class="col-3 text-right">
                     <div class="pr-2 user-admin">
-                        <img src="../upload/comment_2.png" alt="">
-                        <span>Hào Long <i class="fa fa-angle-down" style="font-size:12pt"></i></span>
+
+                        <div class="dropdown show">
+                            <img src="../upload/comment_2.png" alt="">
+                            <a class="dropdown-toggle text-dark" style="text-decoration: none;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hào Long
+                            </a>
+                            <div class="dropdown-menu mt-4 w-auto" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Đăng xuất</a>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -106,8 +115,8 @@
                         </div>
                         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
                             <div class="card-body font-card-body pl-5">
-                                <p><a class="btn btn-white" href="?ctrl=thongbao&act=index">Danh sách thông báo</a></p>
-                                <p><a class="btn btn-white" href="?ctrl=thongbao&act=addnew">Thêm thông báo</a></p>
+                                <p><a class="btn btn-white" href="index.php?ctrl=thongbao&act=index">Danh sách thông báo</a></p>
+                                <p><a class="btn btn-white" href="index.php?ctrl=thongbao&act=addnew">Thêm thông báo</a></p>
                             </div>
                         </div>
                     </div>
@@ -130,7 +139,7 @@
                 </div> -->
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
             </main>
-           
+
         </div>
         <footer></footer>
     </div>
