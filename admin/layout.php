@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"> </script>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="font-family: 'Poppins', sans-serif; background-color: #f2f2f2;">
+<body style="font-family: 'Nunito Sans', sans-serif; background-color: #f2f2f2;">
     <div class="container mw-100 p-0 m-0">
         <header class=" shadow-sm p-3 mb-3 bg-white rounded">
             <div class="row">
@@ -41,15 +41,15 @@
                 <div class="accordion mx-n3" id="accordionExample">
                     <div class="card-header bg-white" id="heading0">
                         <h2 class="mb-0">
-                            <a class="btn btn-white p-0 " href=""><button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
-                                    <i class="fa fa-bar-chart" style="font-size:18px"></i> Tổng quan
+                            <a class="btn btn-white p-0 " href=""><button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                    <i class="fa fa-bar-chart" style="font-size:15px;"></i> Tổng quan
                                 </button></a>
 
                         </h2>
                     </div>
                     <div class="card-header bg-white" id="headingtwo">
                         <h2 class="mb-0">
-                            <a class="btn btn-white p-0" href="index.php?ctrl=danhmuc&act=index"> <button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                            <a class="btn btn-white p-0" href="index.php?ctrl=danhmuc&act=index"> <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
                                     <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý danh mục
                                 </button></a>
 
@@ -57,7 +57,7 @@
                     </div>
                     <div class="card-header bg-white" id="headingtwo">
                         <h2 class="mb-0">
-                            <a class="btn btn-white p-0" href="index.php?ctrl=khuvuc&act=index"> <button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                            <a class="btn btn-white p-0" href="index.php?ctrl=khuvuc&act=index"> <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
                                     <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý khu vực
                                 </button></a>
                         </h2>
@@ -65,15 +65,15 @@
                     <div class="card bg-white">
                         <div class="card-header bg-white" id="headingOne">
                             <h2 class="mb-0">
-                                <button class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý bài đăng <span style="margin-left:18%;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
+                                <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý bài đăng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:23%;"></i>
                                 </button>
 
                             </h2>
                         </div>
 
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body pl-5">
+                            <div class="card-body font-card-body pl-5">
                                 <p><a class="btn btn-white" href="">Danh sách bài đăng</a></p>
                                 <p><a class="btn btn-white" href="">Thêm bài đăng</a></p>
                             </div>
@@ -83,13 +83,13 @@
                     <div class="card">
                         <div class="card-header bg-white" id="headingThree">
                             <h2 class="mb-0">
-                                <button class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý người dùng <span style="margin-left:9%;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
+                                <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý người dùng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:14%;"></i>
                                 </button>
                             </h2>
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body pl-5">
+                            <div class="card-body font-card-body pl-5">
                                 <p><a class="btn btn-white" href="">Danh sách người dùng</a></p>
                                 <p><a class="btn btn-white" href="">Thêm người dùng</a></p>
                             </div>
@@ -98,13 +98,13 @@
                     <div class="card">
                         <div class="card-header bg-white" id="heading4">
                             <h2 class="mb-0">
-                                <button class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý thông báo <span style="margin-left:13%;"><i class="fa fa-angle-down" style="font-size:22px"></i></span>
+                                <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý thông báo <i class="fa fa-angle-down" style="font-size:14pt; margin-left:18%;"></i>
                                 </button>
                             </h2>
                         </div>
                         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
-                            <div class="card-body pl-5">
+                            <div class="card-body font-card-body pl-5">
                                 <p><a class="btn btn-white" href="?ctrl=thongbao&act=index">Danh sách thông báo</a></p>
                                 <p><a class="btn btn-white" href="?ctrl=thongbao&act=addnew">Thêm thông báo</a></p>
                             </div>

@@ -57,17 +57,23 @@ tr:nth-child(even) {
 aside {
     width: 20%;
     float: left;
+    margin-right: 15px;
 }
 
 main {
-    width: 80%;
+    width: calc(80% - 30px);
     float: left;
+    margin-right: 15px;
 }
 
 .box-add-dm {
-    width: calc(30% - 20px);
+    width: calc(30% - 15px);
     float: left;
-    margin-right: 20px;
+    margin-right: 15px;
+}
+
+.font-card-body a {
+    font-size: 11pt;
 }
 
 .box-list-dm {
