@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "models/model_baidang.php"; //nạp model để có các hàm tương tác db 
+require_once "model/model_baidang.php"; //nạp model để có các hàm tương tác db 
 
 $act = "index"; //chức năng mặc định
 $message = "";
