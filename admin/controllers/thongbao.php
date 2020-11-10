@@ -6,7 +6,7 @@
   switch ($act) {
 
     case "index":
-        // $dstb = getAllThongBao();
+        $dstb = getAllThongBao();
         $view = "views/thongbao-index.php";
         require_once "layout.php";
     break;
