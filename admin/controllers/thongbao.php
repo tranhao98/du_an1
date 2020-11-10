@@ -7,8 +7,8 @@
   switch ($act) {
 
     case "index":
-      $dstb = getAllThongBao();
-      $nguoidung = getAllNguoiDung();
+      // $dstb = getAllThongBao();
+      // $nguoidung = getAllNguoiDung();
       $view = "views/thongbao-index.php";
       require_once "layout.php";
       break;
@@ -22,29 +22,29 @@
       break;
 
     case "edit":
-      $thongbao = getAllThongBao();
+      // $thongbao = getAllThongBao();
       // $row = getThongBaoByID($idtb);
       // $nguoidung = getAllNguoiDung($id);
       // $all_nd = getAllNguoiDung();
-      $idtb = $_GET["idtb"];
-      settype($idtb, "int");
+      // $idtb = $_GET["idtb"];
+      // settype($idtb, "int");
       $view = "views/thongbao-edit.php";
       require_once "layout.php";
       break;  
     case "update":
-      $idtb = $_POST["idtb"];
-      $idnguoidung = $_POST["idnguoidung"];
-      $tieude = $_POST["tieude"];
-      $ngaydang = $_POST["ngaydang"];
-      $noidung = $_POST["noidung"];
-      $thutu = $_POST["thutu"];
-      $anhien = $_POST["anhien"];
-      settype($idtb, "int");
-      settype($idnguoidung, "int");
-      settype($thutu, "int");
-      $noidung = trim(strip_tags($noidung));
-      updateThongBao($idtb, $idnguoidung, $tieude, $ngaydang, $noidung, $thutu, $anhien);
-      $message = "Cap nhat thanh cong!";
+      // $idtb = $_POST["idtb"];
+      // $idnguoidung = $_POST["idnguoidung"];
+      // $tieude = $_POST["tieude"];
+      // $ngaydang = $_POST["ngaydang"];
+      // $noidung = $_POST["noidung"];
+      // $thutu = $_POST["thutu"];
+      // $anhien = $_POST["anhien"];
+      // settype($idtb, "int");
+      // settype($idnguoidung, "int");
+      // settype($thutu, "int");
+      // $noidung = trim(strip_tags($noidung));
+      // updateThongBao($idtb, $idnguoidung, $tieude, $ngaydang, $noidung, $thutu, $anhien);
+      // $message = "Cap nhat thanh cong!";
       header("location:index.php?ctrl=thongbao");
       break;
 
