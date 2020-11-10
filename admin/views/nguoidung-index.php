@@ -15,7 +15,7 @@
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
         <h5 class="font-weight-bold mb-3">Thông tin người dùng</h5>
-        <table class="w-100 mx-auto border table-tb">
+        <table class="w-100 mx-auto border table-tb-nd">
                 <thead>
                     <tr>
                         <th scope="col">ID người dùng</th>
@@ -29,7 +29,8 @@
                         <th scope="col">Giới tính</th>
                         <th scope="col">Vai trò</th>
                         <th scope="col">Ẩn Hiện</th>
-                        <th scope="col">Edit & Delete</th>
+                        <th scope="col">Sửa</th>
+                        <th scope="col">Xóa</th>
                     </tr>
                 </thead>                        
                 <tbody>
@@ -46,10 +47,8 @@
                         <td><?=$row['vaitro']?></td>
                         <td><?=$row['thutu']?></td>
                         <td> <?=($row['anhien']==1)? 'Ẩn':'Hiện'; ?></td>
-                        <td>
-                            <a class="iconedit" href="?ctrl=nguoidung&act=edit&idtb=<?= $row['idkv']?>"><i style='font-size:15px' class='far'>&#xf044;</i></a>
-                            <a class="icondelete" href="?ctrl=nguoidung&act=delete&idtb=<?= $row['idkv']?>"><i style='font-size:15px' class='far'>&#xf2ed;</i></a>
-                        </td>
+                        <td class="align-middle"> <a href="index.php?ctrl=thongbao&act=edit&idtb=<?= $row['idtb'] ?>" class="btn-primary btn"><i class='fas fa-pencil-alt' style='font-size:24px'></i></a> </td>
+                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=thongbao&act=delete&idtb=<?= $row['idtb'] ?>" class="btn-primary btn"><i class="fa fa-trash" style="font-size:24px"></i></a> </td>
                     </tr>
                 </tbody>
             </table>

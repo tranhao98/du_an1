@@ -43,10 +43,16 @@ footer.row {
     min-height: 500px;
 }
 
-td,
-th {
+.table-dm-kv td,
+.table-dm-kv th {
     font-size: 12pt;
     border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.table-tb-nd td,
+.table-tb-nd th {
+    border: 1px solid #ddd;
     padding: 10px;
 }
 

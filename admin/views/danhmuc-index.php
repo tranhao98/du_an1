@@ -45,7 +45,7 @@
         </div>
         <div class="box-list-dm p-3 shadow-sm bg-white rounded">
             <h5 class="mb-5 font-weight-bold text-uppercase">Danh sách danh mục </h5>
-            <table style="text-align:center; width:100%">
+            <table class="table-dm-kv" style="text-align:center; width:100%">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
