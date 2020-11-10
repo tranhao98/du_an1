@@ -1,62 +1,21 @@
 <div class="container">
-    <div class="row">
-        <div class="col-4 mt-4">
-        <h3>Thêm người dùng </h3>
-            <form enctype="multipart/form-data"  method="post" action="?ctrl=nguoidung&act=insert">
-                <div class="form-group">                       
-                    <label for="">ID Người Dùng </label>
-                    <input type="text" name="name" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Tên Người Dùng</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Ngày Sinh</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Tên Đăng Nhập</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Email</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Mặt Khẩu</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Số Điện Thoại</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Địa Chỉ</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Giới Tính</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Vai Trò</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" name="anhien" id="" value="1" checked>
-                    Ẩn Hiện
-                    </label>
-                </div>
-                <div class="form-group">
-                    <input type="submit" name="themkv" id="" class="form-control" value="Submit" aria-describedby="helpId">
-                </div>
-            </form>
+    <div class="row content shadow-sm mb-3 bg-white rounded">
+        <div class="col-6 text-left h-100 p-3 mt-n1">
+            <h5 class="font-weight-bold">Danh sách người dùng</h5>
         </div>
-        <div class="col-8 mt-4"> 
-            <h3>Danh sách người dùng </h3>
-            <table border="1">  
+        <div class="col-6 h-100">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb pl-5 bg-white">
+                    <li class="breadcrumb-item "><a class="text-dark" href="#">Tổng quan</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Thay đổi thông tin người dùng</li>
+                    <li class="breadcrumb-item active" aria-current="page">Danh sách người dùng</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="row shadow-sm bg-white rounded p-3">
+        <h5 class="font-weight-bold mb-3">Thông tin người dùng</h5>
+        <table class="w-100 mx-auto border table-tb">
                 <thead>
                     <tr>
                         <th scope="col">ID người dùng</th>
@@ -92,9 +51,7 @@
                             <a class="icondelete" href="?ctrl=nguoidung&act=delete&idtb=<?= $row['idkv']?>"><i style='font-size:15px' class='far'>&#xf2ed;</i></a>
                         </td>
                     </tr>
-                    <?php }?>
                 </tbody>
             </table>
-        </div>
     </div>
 </div>
