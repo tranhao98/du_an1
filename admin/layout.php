@@ -37,6 +37,9 @@
                                 Hào Long
                             </a>
                             <div class="dropdown-menu mt-4 w-auto" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+                                <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Đăng xuất</a>
                                 
                             </div>
@@ -84,8 +87,8 @@
 
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body font-card-body pl-5">
-                                <p><a class="btn btn-white" href="">Danh sách bài đăng</a></p>
-                                <p><a class="btn btn-white" href="">Thêm bài đăng</a></p>
+                                <p><a class="btn btn-white" href="?ctrl=baidang">Danh sách bài đăng</a></p>
+                                <p><a class="btn btn-white" href="?ctrl=baidang&act=addnew">Thêm bài đăng</a></p>
                             </div>
                         </div>
                     </div>
