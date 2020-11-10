@@ -91,8 +91,8 @@
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body font-card-body pl-5">
-                                <p><a class="btn btn-white" href="">Danh sách người dùng</a></p>
-                                <p><a class="btn btn-white" href="">Thêm người dùng</a></p>
+                                <p><a class="btn btn-white" href="index.php?ctrl=nguoidung&act=index">Danh sách người dùng</a></p>
+                                <p><a class="btn btn-white" href="index.php?ctrl=nguoidung&act=addnew">Thêm người dùng</a></p>
                             </div>
                         </div>
                     </div>

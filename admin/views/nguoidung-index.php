@@ -7,18 +7,18 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
                     <li class="breadcrumb-item "><a class="text-dark" href="#">Tổng quan</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Thay đổi thông tin người dùng</li>
+                    <li class="breadcrumb-item">Quản lý người dùng</li>
                     <li class="breadcrumb-item active" aria-current="page">Danh sách người dùng</li>
                 </ol>
             </nav>
         </div>
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
-        <h5 class="font-weight-bold mb-3">Thông tin người dùng</h5>
+        <h5 class="font-weight-bold mb-3">Thông Tin Người Dùng</h5>
         <table class="w-100 mx-auto border table-tb-nd">
                 <thead>
                     <tr>
-                        <th scope="col">ID người dùng</th>
+                        <th scope="col">#</th>
                         <th scope="col">Tên người dùng</th>
                         <th scope="col">Ngày sinh</th>
                         <th scope="col">Tên đăng nhập</th>
@@ -34,9 +34,12 @@
                     </tr>
                 </thead>                        
                 <tbody>
-                    <?php foreach ($dskv as $row) { ?>
+                    
+                    <?php
+                    $dem = 1;
+                    foreach ($dskv as $row) { ?>
                     <tr>
-                        <td><?=$row['id']?></td>
+                        <td><?= $dem++ ?></td>
                         <td><?=$row['tennguoidung']?></td>
                         <td><?=$row['ngaysinh']?></td>
                         <td><?=$row['tendangnhap']?></td>

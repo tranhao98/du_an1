@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row content shadow-sm mb-3 bg-white rounded">
         <div class="col-6 text-left h-100 p-3 mt-n1">
-            <h5 class="font-weight-bold">Danh sách người dùng</h5>
+            <h5 class="font-weight-bold">Thêm người dùng</h5>
         </div>
         <div class="col-6 h-100">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
-                    <li class="breadcrumb-item active" aria-current="page">Danh sách người dùng</li>
-                    <li class="breadcrumb-item active" aria-current="page">Thay đổi thông tin người dùng</li>
+                    <li class="breadcrumb-item">Tổng quan</li>
+                    <li class="breadcrumb-item">Quản lý người dùng</li>
                     <li class="breadcrumb-item active" aria-current="page">Thêm người dùng</li>
                 </ol>
             </nav>
