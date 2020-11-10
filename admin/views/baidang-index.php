@@ -18,21 +18,17 @@
         <table class="w-100">
             <thead>
                 <tr>
-                    <!-- <th scope="col" style="width: ;">#</th>
-                    <th scope="col" style="width: ;">Tên người bán</th>
-                    <th scope="col" style="width: ;">Thông tin cho thuê</th>
-                    <th scope="col" style="width: ;">Hình ảnh</th>
-                    <th scope="col" style="width: ;">Mô tả</th>
-                    <th scope="col" style="width: ;">Thứ tự</th>
-                    <th scope="col" style="width: ;">Ẩn hiện</th> -->
-                    <!-- <th scope="col" style="width: ;">Trạng thái</th> -->
-                    <!-- <th scope="col" style="width: ;">Hành động</th> -->
+                    <th scope="col" style="width: 5%;">#</th>
+                    <th scope="col" style="width: 15%;">Tên người bán</th>
+                    <th scope="col" style="width: 20%;">Thông tin cho thuê</th>
+                    <th scope="col" style="width: 20%;">Hình ảnh</th>
+                    <th scope="col" style="width: 10%;">Mô tả</th>
+                    <th scope="col" style="width: 15%;">Thứ tự - Ẩn hiện</th>
+                    <th scope="col" style="width: 15%;">Hành động</th>
                 </tr>
             </thead>
             <tbody>
                 <th>1</th>
-                <td></td>
-                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
