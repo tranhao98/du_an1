@@ -19,14 +19,11 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Tên người dùng</th>
-                        <th scope="col">Ngày sinh</th>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">Thông tin người dùng</th>
                         <th scope="col">Tên đăng nhập</th>
-                        <th scope="col">Email</th>
                         <th scope="col">Mật khẩu</th>
                         <th scope="col">Số điện thoại</th>
-                        <th scope="col">Địa chỉ</th>
-                        <th scope="col">Giới tính</th>
                         <th scope="col">Vai trò</th>
                         <th scope="col">Ẩn Hiện</th>
                         <th scope="col">Sửa</th>
@@ -34,26 +31,28 @@
                     </tr>
                 </thead>                        
                 <tbody>
-                    
                     <?php
                     $dem = 1;
-                    foreach ($dskv as $row) { ?>
+                    ?>
                     <tr>
                         <td><?= $dem++ ?></td>
-                        <td><?=$row['tennguoidung']?></td>
-                        <td><?=$row['ngaysinh']?></td>
+                        <td><?=$row['hinh']?></td>
+                        <td><?=$row['hoten']?>
+                        <?=$row['ngaysinh']?>
+                        <?=$row['email']?>
+                        <?=$row['gioitinh']?>
+                        <?=$row['quanhuyen']?>
+                        <?=$row['phuongxa']?>
+                        <?=$row['tinhthanh']?>
+                    </td>
                         <td><?=$row['tendangnhap']?></td>
-                        <td><?=$row['email']?></td>
                         <td><?=$row['matkhau']?></td>
-                        <td><?=$row['diachi']?></td>
-                        <td><?=$row['gioitinh']?></td>
+                        <td><?=$row['sodienthoai']?></td>
                         <td><?=$row['vaitro']?></td>
-                        <td><?=$row['thutu']?></td>
                         <td> <?=($row['anhien']==1)? 'Ẩn':'Hiện'; ?></td>
                         <td class="align-middle"> <a href="index.php?ctrl=thongbao&act=edit&idtb=<?= $row['idtb'] ?>" class="btn-primary btn"><i class='fas fa-pencil-alt' style='font-size:24px'></i></a> </td>
                         <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=thongbao&act=delete&idtb=<?= $row['idtb'] ?>" class="btn-primary btn"><i class="fa fa-trash" style="font-size:24px"></i></a> </td>
                     </tr>
-                    <?php } ?>
                 </tbody>
             </table>
     </div>

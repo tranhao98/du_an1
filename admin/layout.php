@@ -30,11 +30,19 @@
                 </div>
                 <div class="col-3 text-right">
                     <div class="pr-2 user-admin">
-                        <img src="../upload/comment_2.png" alt="">
-                        <span>Hào Long <i class="fa fa-angle-down" style="font-size:12pt"></i></span>
+                        <div class="dropdown">
+                            <img src="../upload/comment_2.png" alt="">
+                            <a class="dropdown-toggle text-dark" style="text-decoration: none;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hào Long
+                            </a>
+
+                            <div class="dropdown-menu mt-3" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Đăng xuất</a>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </header>
         <div class="noidung">
@@ -67,7 +75,7 @@
                         <div class="card-header bg-white" id="headingOne">
                             <h2 class="mb-0">
                                 <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý bài đăng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:23%;"></i>
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý bài đăng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:22%;"></i>
                                 </button>
 
                             </h2>
@@ -85,7 +93,7 @@
                         <div class="card-header bg-white" id="headingThree">
                             <h2 class="mb-0">
                                 <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý người dùng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:14%;"></i>
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý người dùng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:13%;"></i>
                                 </button>
                             </h2>
                         </div>
@@ -100,7 +108,7 @@
                         <div class="card-header bg-white" id="heading4">
                             <h2 class="mb-0">
                                 <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý thông báo <i class="fa fa-angle-down" style="font-size:14pt; margin-left:18%;"></i>
+                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý thông báo <i class="fa fa-angle-down" style="font-size:14pt; margin-left:17%;"></i>
                                 </button>
                             </h2>
                         </div>
@@ -130,7 +138,7 @@
                 </div> -->
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
             </main>
-           
+
         </div>
         <footer></footer>
     </div>
