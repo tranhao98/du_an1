@@ -40,11 +40,6 @@
                 <div class="form-group col-6">
                     <label for="tieude">Người Đăng</label>
                     <select class="form-control" name="ma_loai" placeholder="Người Dùng">
-                        <option value="">Người Dùng</option>
-                        <?php
-                        foreach ($nguoidung as $nd) { ?>
-                            <option value=" <?= $nd['id'] ?> "> <?= $nd['hoten'] ?> </option>
-                        <?php } ?>
                     </select>
                 </div>
             </div>
