@@ -39,15 +39,8 @@
                 <!-- Người dùng -->
                 <div class="form-group col-6">
                     <label for="tieude">Người Đăng</label>
-                    <select class="form-control" name="id" placeholder="Hãng Xe">
-                        <?php
-                            foreach($nguoidung as $nd) {
-                                if($nd['id'] == $nguoidung['id']){
-                        ?>
-                        <option value=" <?=$nd['id']?>" selected> <?=$nguoidung['tenguoidung']?> </option>
-                        <?php }else{ ?>  
-                            <option value=" <?=$nd['id']?>" selected> <?=$nguoidung['tenguoidung']?> </option>     
-                        <?php } }?>                 
+                    <select class="form-control" name="id" placeholder="Người Đăng">
+                        
                     </select>
                 </div>
             </div>
