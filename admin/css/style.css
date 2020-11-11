@@ -54,6 +54,7 @@ footer.row {
 .table-tb-nd th {
     border: 1px solid #ddd;
     padding: 10px;
+    font-size: 14px;
 }
 
 tr:nth-child(even) {
@@ -64,6 +65,8 @@ aside {
     width: 20%;
     float: left;
     margin-right: 15px;
+    background-color: white;
+    height: 550px;
 }
 
 main {
@@ -93,4 +96,10 @@ main {
 
 img {
     width: 100%;
+}
+
+.bg-input input,
+.bg-input textarea,
+.bg-input select {
+    background-color: #f2f2f2;
 }

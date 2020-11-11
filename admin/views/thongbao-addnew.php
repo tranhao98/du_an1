@@ -14,10 +14,10 @@
         </div>
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
-        <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=thongbao&act=insert">
+        <form enctype="multipart/form-data" class="mx-auto w-100 bg-input" method="post" action="?ctrl=thongbao&act=insert">
             <div class="form-group">
                 <label for="exampleinput requiredPassword1">Hình ảnh</label>
-                <input required type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+                <input class="bg-light" required type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
             </div>
             <div class="row">
                 <div class="form-group col-6 ">
@@ -51,7 +51,7 @@
                 <div class="form-group col-6 ">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
-                        <label class="form-check-label" for="anhien0">Hiện</label>
+                        <label class="form-check-label" for="anhien1">Hiện</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="anhien" id="anhien0" value="0">

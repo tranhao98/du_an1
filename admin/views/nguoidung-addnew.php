@@ -15,47 +15,89 @@
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
         <h5 class="font-weight-bold mb-3">Thêm người dùng</h5>
-        <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=nguoidung&act=addnew">
+        <form enctype="multipart/form-data" class="mx-auto w-100 bg-input" method="post" action="?ctrl=nguoidung&act=addnew">
             <div class="row">
-                <div class="form-group col-6">
+                <div class="form-group col-3">
                     <label for="">Tên Người Dùng</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                    <input type="text" name="tennguoidung" id="" class="form-control" placeholder="Tên người dùng" aria-describedby="helpId">
                 </div>
-                <div class="form-group col-6">
+                <div class="form-group col-3">
                     <label for="">Ngày Sinh</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                    <input type="date" name="ngaysinh" id="" class="form-control" placeholder="Ngày sinh" aria-describedby="helpId">
+                </div>
+                <div class="form-group col-3">
+                    <label class="mb-3" for="">Giới Tính</label> <br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gioitinh" id="gioitinh1" value="1">
+                        <label class="form-check-label" for="gioitinh1">Nam</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gioitinh" id="gioitinh0" value="0">
+                        <label class="form-check-label" for="gioitinh0">Nữ</label>
+                    </div>
+                </div>
+                <div class="form-group col-3">
+                    <label class="mb-3" for="">Vai Trò</label> <br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="vaitro" id="vaitro">
+                        <label class="form-check-label" for="vaitro">Quản trị viên</label>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="form-group col-4">
+                <div class="form-group col-3">
                     <label for="">Tên Đăng Nhập</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                    <input type="text" name="tendangnhap" id="" class="form-control" placeholder="Tên đăng nhập" aria-describedby="helpId">
                 </div>
-                <div class="form-group col-4">
+                <div class="form-group col-3">
                     <label for="">Mật Khẩu</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                    <input type="text" name="matkhau" id="" class="form-control" placeholder="Mật khẩu" aria-describedby="helpId">
                 </div>
-                <div class="form-group col-4">
+                <div class="form-group col-3">
                     <label for="">Email</label>
-                    <input type="email" name="email" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                    <input type="email" name="email" id="" class="form-control" placeholder="Email" aria-describedby="helpId">
+                </div>
+                <div class="form-group col-3">
+                    <label for="">Số Điện Thoại</label>
+                    <input type="text" name="sodienthoai" id="" class="form-control" placeholder="Số điện thoại" aria-describedby="helpId">
                 </div>
             </div>
+            <div class="row">
 
-            <div class="form-group">
-                <label for="">Số Điện Thoại</label>
-                <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-            </div>
-            <div class="form-group">
-                <label for="">Địa Chỉ</label>
-                <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-            </div>
-            <div class="form-group">
-                <label for="">Giới Tính</label>
-                <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-            </div>
-            <div class="form-group">
-                <label for="">Vai Trò</label>
-                <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                <div class="form-group col-3">
+                    <label for="">Tỉnh/Thành phố</label>
+                    <select id="tinhthanh" class="form-control" name="tinhthanh" placeholder="Tỉnh/Thành phố">
+                        <option value="" selected>--Chọn Tỉnh/Thành phố--</option>
+                        <?php
+                        foreach ($dstinhthanh as $row) { ?>
+                            <option value=" <?= $row['matp'] ?> "> <?= $row['name'] ?> </option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="form-group col-3">
+                    <label for="">Quận/Huyện</label>
+
+                    <select id="quanhuyen" class="form-control" name="quanhuyen" placeholder="Quận/Huyện">
+                        <option value="" selected>--Chọn Quận/Huyện--</option>
+                        <?php foreach ($dsquanhuyen as $row) { ?>
+                            <option value="<?= $row['maqh'] ?>"><?= $row['name'] ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="form-group col-3">
+                    <label for="">Phường/Xã</label>
+                    <select id="phuongxa" class="form-control" name="quanhuyen" placeholder="Quận/Huyện">
+                        <option value="" selected>--Chọn Phường/Xã--</option>
+                        <?php foreach ($dsphuongxa as $row) { ?>
+                            <option value="<?= $row['xaid'] ?>"><?= $row['name'] ?></option>
+                        <?php } ?>
+
+                    </select>
+                </div>
+                <div class="form-group col-3">
+                    <label for="">Địa Chỉ</label>
+                    <input type="text" name="mota" id="" class="form-control" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId">
+                </div>
             </div>
             <div class="row">
                 <div class="form-group col-6 ">

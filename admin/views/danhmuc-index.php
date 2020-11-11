@@ -16,14 +16,14 @@
     <div class="row">
         <div class="box-add-dm shadow-sm bg-white rounded p-3">
             <h5 class="mb-4 font-weight-bold">Thêm Danh Mục </h5>
-            <form method="post" action="?ctrl=danhmuc&act=insert">
+            <form method="post" action="?ctrl=danhmuc&act=insert" class="bg-input">
                 <div class="form-group">
                     <label for="">Tên Danh Mục</label>
-                    <input type="text" name="tendm" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                    <input type="text" name="tendm" id="" class="form-control" placeholder="Tên danh mục" aria-describedby="helpId">
                 </div>
                 <div class="form-group">
                     <label for="">Thứ Tự</label>
-                    <input type="text" name="thutu" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                    <input type="text" name="thutu" id="" class="form-control" placeholder="Thứ tự" aria-describedby="helpId">
                 </div>
                 <div class="row">
                     <div class="form-group col-3">

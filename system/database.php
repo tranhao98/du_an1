@@ -6,9 +6,10 @@ require_once "../system/config.php";
     return $conn;
     }
     function query($sql)   {
-    $conn = getConnection();
-    $result = $conn->query($sql);
-    return $result;
+        $conn = getConnection();
+        $result = $conn->query($sql);
+        $result = $result->fetchall();
+        return $result;
     }
     function queryOne($sql) {
         $conn = getConnection();
@@ -21,4 +22,3 @@ require_once "../system/config.php";
         $result = $conn ->exec($sql);
         return $result;
     }
-?>

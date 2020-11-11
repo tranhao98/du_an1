@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
-    <title>Admin</title>
+    <script src="../js/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"> </script>
@@ -20,7 +20,7 @@
 
 <body style="font-family: 'Nunito Sans', sans-serif; background-color: #f2f2f2;">
     <div class="container mw-100 p-0 m-0">
-        <header class=" shadow-sm p-3 mb-3 bg-white rounded">
+        <header class="shadow-sm p-3 mb-3 bg-white rounded">
             <div class="row">
                 <div class="col-2 h-100 text-center logo-admin">
                     <img src="../upload/logo.png" alt="">
