@@ -8,8 +8,12 @@
     }
     
     function getDanhMucByID($iddm) {
-        $sql="SELECT * from danhmuc where idmd='$idmd'";
+        $sql="SELECT * from danhmuc where iddm='$iddm'";
         return queryOne($sql);
+    }
+    function deleteDanhmuc($iddm){
+        $sql= "delete from thongbao where iddm='$iddm'";
+        execute($sql);
     }
 
 ?>

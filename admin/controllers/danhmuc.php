@@ -6,9 +6,9 @@
   switch ($act) {
 
     case "index":
-        // $dsdm = getAllDanhMuc();
-        $view = "views/danhmuc-index.php";
-        require_once "layout.php";
+      $dsdm = getAllDanhMuc();
+      $view = "views/danhmuc-index.php";
+      require_once "layout.php";
     break;
 
     case "insert":
@@ -19,7 +19,7 @@
       $view = "views/danhmuc-edit.php";
       require_once "layout.php";
       break;    
-      case "update":
+    case "update":
         break;
 
   }
