@@ -20,8 +20,5 @@
            </div>
        </div>
     </div>
-    <div class="row">
-    <h5 class="font-weight-bold mt-4">Thông báo mới nhất</h5>
-    </div>
     </div>
 </div>
