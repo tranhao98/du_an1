@@ -37,13 +37,16 @@
                 <?php foreach ($dstb as $row) { ?>
                     <tr>
                         <th scope="col"><?= $dem++ ?></th>
-                        <td></td>
+                        <td><?=$row['hinh']?></td>
 
                         <td><?= $row['tieude'] ?></td>
 
                         <td><?= $row['ngaydang'] ?></td>
                         
-                        <td></td>
+                        <td>
+                            <?php foreach ($nguoidung as $nd) {
+                                if($row['idnguoidang'] == $nd['id']) echo $nd['hoten'];} ?>
+                        </td>
 
                         <td><?= $row['noidung'] ?></td>
                         
