@@ -58,16 +58,16 @@
                     </div>
                     <div class="card-header bg-white" id="headingtwo">
                         <h2 class="mb-0">
-                            <a class="btn btn-white p-0" href="index.php?ctrl=danhmuc&act=index"> <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý danh mục
+                            <a class="btn btn-white p-0" href="index.php?ctrl=danhmuc&act=index"><button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                    <i class="far fa-clone" style="font-size:18px"></i> Quản lý danh mục
                                 </button></a>
 
                         </h2>
                     </div>
                     <div class="card-header bg-white" id="headingtwo">
                         <h2 class="mb-0">
-                            <a class="btn btn-white p-0" href="index.php?ctrl=khuvuc&act=index"> <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý khu vực
+                            <a class="btn btn-white p-0" href="index.php?ctrl=khuvuc&act=index"><button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                                    <i class="fas fa-map-marker-alt" style="font-size:18px"></i> Quản lý khu vực
                                 </button></a>
                         </h2>
                     </div>
@@ -75,7 +75,7 @@
                         <div class="card-header bg-white" id="headingOne">
                             <h2 class="mb-0">
                                 <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý bài đăng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:22%;"></i>
+                                    <i class="fas fa-book" style="font-size:18px"></i> Quản lý bài đăng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:22%;"></i>
                                 </button>
 
                             </h2>
@@ -93,7 +93,7 @@
                         <div class="card-header bg-white" id="headingThree">
                             <h2 class="mb-0">
                                 <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý người dùng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:13%;"></i>
+                                    <i class="fas fa-user-alt" style="font-size:18px"></i> Quản lý người dùng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:13%;"></i>
                                 </button>
                             </h2>
                         </div>
@@ -108,7 +108,7 @@
                         <div class="card-header bg-white" id="heading4">
                             <h2 class="mb-0">
                                 <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    <i class="fa fa-cogs" style="font-size:18px"></i> Quản lý thông báo <i class="fa fa-angle-down" style="font-size:14pt; margin-left:17%;"></i>
+                                    <i class="far fa-comment-dots" style="font-size:18px"></i> Quản lý thông báo <i class="fa fa-angle-down" style="font-size:14pt; margin-left:17%;"></i>
                                 </button>
                             </h2>
                         </div>

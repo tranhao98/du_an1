@@ -8,4 +8,8 @@
         $sql="SELECT * from taikhoan where iddm='$iddm'";
         return queryOne($sql);
     }
+    function getNameNguoiDung($id){
+        $sql="SELECT * from taikhoan where id='$id'";
+        return queryOne($sql);
+    }
 ?>

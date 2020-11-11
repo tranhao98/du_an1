@@ -44,10 +44,7 @@
                         <td><?= $row['ngaydang'] ?></td>
                         
                         <td>
-                            <?php foreach ($nguoidung as $nd) {
-                                if($row['idnguoidang'] == $nd['id']) echo $nd['hoten'];
-                                } 
-                            ?>
+                            <?php echo getNameNguoiDung($row['idnguoidang'])['hoten'];?>
                         </td>
 
                         <td><?= $row['noidung'] ?></td>
