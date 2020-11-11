@@ -83,8 +83,8 @@
 
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body font-card-body pl-5">
-                                <p><a class="btn btn-white" href="">Danh sách bài đăng</a></p>
-                                <p><a class="btn btn-white" href="">Thêm bài đăng</a></p>
+                                <p><a class="btn btn-white" href="?ctrl=baidang">Danh sách bài đăng</a></p>
+                                <p><a class="btn btn-white" href="?ctrl=baidang&act=addnew">Thêm bài đăng</a></p>
                             </div>
                         </div>
                     </div>
