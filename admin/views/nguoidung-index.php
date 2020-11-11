@@ -50,8 +50,8 @@
                         <td><?=$row['sodienthoai']?></td>
                         <td><?=$row['vaitro']?></td>
                         <td> <?=($row['anhien']==1)? 'Ẩn':'Hiện'; ?></td>
-                        <td class="align-middle"> <a href="index.php?ctrl=thongbao&act=edit&idtb=<?= $row['idtb'] ?>" class="btn-primary btn"><i class='fas fa-pencil-alt' style='font-size:24px'></i></a> </td>
-                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=thongbao&act=delete&idtb=<?= $row['idtb'] ?>" class="btn-primary btn"><i class="fa fa-trash" style="font-size:24px"></i></a> </td>
+                        <td class="align-middle"> <a href="index.php?ctrl=thongbao&act=edit&idtb=<?= $row['idtb'] ?>"><i class='far fa-edit' style='font-size:18px'></i></a> </td>
+                        <td class="align-middle"> <a class="txt-danger" onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=thongbao&act=delete&idtb=<?= $row['idtb'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
                     </tr>
                 </tbody>
             </table>

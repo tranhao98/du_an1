@@ -46,7 +46,7 @@
                         <td><input type="checkbox" name="" id=""></td>
                         <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
                         <td class="align-middle"><a href=""><i class='far fa-edit' style='font-size:20px'></i></a></td>
-                        <td class="align-middle"><a href=""><i class="fa fa-trash" style="font-size:20px"></i></a></td>
+                        <td class="align-middle"><a href=""><i class="fa fa-trash text-danger" style="font-size:20px"></i></a></td>
                     </tr>
                 </tbody>
             </table>
