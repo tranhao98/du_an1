@@ -1,5 +1,5 @@
-<div class="container content">
-    <div class="row shadow-sm mb-3 bg-white rounded ">
+<div class="container">
+    <div class="row content shadow-sm mb-3 bg-white rounded ">
         <div class="col-8 text-left h-100 p-0 p-3 mt-n1">
             <h5 class="font-weight-bold">Quản lý bài đăng</h5>
         </div>
@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col-12 p-3 shadow-sm bg-white rounded">
-            <h5 class="mb-5 font-weight-bold text-uppercase">Danh sách bài đăng </h5>
+            <h5 class="mb-5 font-weight-bold">Danh Sách Bài Đăng </h5>
             <table class="table-tb-nd" style="width:100%">
                 <thead>
                     <tr>
