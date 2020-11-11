@@ -18,23 +18,23 @@
         <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=thongbao&act=update">
             <div class="form-group">
                 <label for="exampleinput requiredPassword1">Hình ảnh</label>
-                <input required type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+                <input required type="file" value="<?=$row['hinh']?>" name="hinh" class="form-control" id="exampleinput requiredPassword1">
             </div>
             <div class="row">
                 <div class="form-group col-6 ">
                     <label for="tieude">Tiêu Đề</label>
-                    <input type="text" class="form-control" id="tieude" name="tieude" placeholder="Tiêu Đề">
+                    <input type="text" class="form-control"  value="<?=$row['tieude']?>"  id="tieude" name="tieude" placeholder="Tiêu Đề">
                 </div>
                 <div class="form-group col-6 ">
                     <label for="tieude">Ngày Đăng</label>
-                    <input type="date" class="form-control"  name="Ngày Đăng">
+                    <input type="date" class="form-control" value="<?=$row['ngaydang']?>" name="Ngày Đăng">
                 </div>
             </div>
             <div class="row">
                 <!-- Nội dung -->
                 <div class="form-group col-6">
                     <label for="tieude">Nội Dung</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" id="noidung"  name="noidung" placeholder="... ... ..." rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"  value="<?=$row['noidung']?>"  id="noidung"  name="noidung" placeholder="Nhập nội dung..." rows="3"></textarea>
                 </div>
                 <!-- Người dùng -->
                 <div class="form-group col-6">
@@ -59,7 +59,7 @@
             </div>
             <input name="idtb" value="<?=$row['idtb']?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
-            <button type="submit" class="btn btn-danger">Thêm</button>
+            <button type="submit" name="nutsave" class="btn btn-danger">Thêm</button>
         </form>
     </div>
 </div>
