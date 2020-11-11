@@ -22,10 +22,10 @@
                     <input type="text" class="form-control" id="tenkhuvuc" name="tenkhuvuc" placeholder="Tên danh mục">
                 </div>
                 <!-- Người dùng -->
-                <div class="form-group col-6">
-                    <label for="thutu">Thứ tự</label>
-                    <select  type="number" class="form-control" name="id" placeholder="Thứ tự">
-                        
+                <div class="form-group">
+                    <label for="">Thứ Tự</label>
+                    <input type="number" name="thutu" id="" class="form-control" placeholder="Thứ tự" aria-describedby="helpId">
+                </div>
                     </select>
                 </div>
             </div>

@@ -14,7 +14,7 @@
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
         <h5></h5>
-        <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=danhmuc&act=update">
+        <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=khuvuc&act=update">
             <div class="row">
                 <!-- Nội dung -->
                 <div class="form-group col-6 ">
@@ -22,10 +22,10 @@
                     <input type="text" class="form-control" id="tenkhuvuc" name="tenkhuvuc" placeholder="Tên khu vực">
                 </div>
                 <!-- Người dùng -->
-                <div class="form-group col-6">
-                    <label for="thutu">Thứ tự</label>
-                    <select  type="number" class="form-control" name="id" placeholder="Thứ tự">
-                        
+                <div class="form-group">
+                    <label for="">Thứ Tự</label>
+                    <input type="number" name="thutu" id="" class="form-control" placeholder="Thứ tự" aria-describedby="helpId">
+                </div>
                     </select>
                 </div>
             </div>
