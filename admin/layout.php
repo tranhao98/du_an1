@@ -124,7 +124,6 @@
             <main>
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
             </main>
-
         </div>
         <footer></footer>
     </div>
