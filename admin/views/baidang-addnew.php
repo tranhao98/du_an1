@@ -6,8 +6,8 @@
         <div class="col-7 h-100 ">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
-                    <li class="breadcrumb-item">Tổng quan</li>
-                    <li class="breadcrumb-item">Quản lý bài đăng</li>
+                    <li class="breadcrumb-item"><a href="" class="text-dark">Tổng quan</a></li>
+                    <li class="breadcrumb-item"><a href="" class="text-dark">Quản lý bài đăng</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Thêm thông tin bài đăng</li>
                 </ol>
             </nav>
@@ -15,29 +15,19 @@
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
         <h5 class="font-weight-bold mb-3">Thêm bài đăng</h5>
-        <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=nguoidung&act=addnew">
+        <form action="" method="POST" class="mx-auto w-100">
             <div class="row">
-                <div class="form-group col-6">
-                    <label for="">Tên Người Dùng</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                <div class="form-group col-12">
+                    <label for="name">Tiêu đề bài viết:</label>
+                    <input type="text" class="form-control" id="name">
                 </div>
-                <div class="form-group col-6">
-                    <label for="">Ngày Sinh</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                <div class="form-group col-12">
+                    <label for="exampleinput requiredPassword1">Hình ảnh:</label>
+                    <input required type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
                 </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-4">
-                    <label for="">Tên Đăng Nhập</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group col-4">
-                    <label for="">Mật Khẩu</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group col-4">
-                    <label for="">Email</label>
-                    <input type="email" name="email" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                <div class="form-group col-12">
+                    <label for="exampleFormControlTextarea1">Mô tả:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" resize="none"></textarea>
                 </div>
             </div>
         </form>
