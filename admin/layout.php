@@ -50,7 +50,7 @@
                 <div class="accordion mx-n3" id="accordionExample">
                     <div class="card-header bg-white" id="heading0">
                         <h2 class="mb-0">
-                            <a class="btn btn-white p-0 " href=""><button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                            <a class="btn btn-white p-0 " href="?ctrl=home"><button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
                                     <i class="fa fa-bar-chart" style="font-size:15px;"></i> Tổng quan
                                 </button></a>
 
