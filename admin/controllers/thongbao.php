@@ -29,6 +29,7 @@
       settype($thutu, "int");
       $noidung = trim(strip_tags($noidung));
       addNewThongBao($idnguoidang, $tieude, $ngaydang, $noidung, $thutu, $anhien);
+      header("location:index.php?ctrl=thongbao");
       break;
 
     case "edit":
@@ -53,7 +54,7 @@
       settype($thutu, "int");
       $noidung = trim(strip_tags($noidung));
       updateThongBao($idtb, $idnguoidung, $tieude, $ngaydang, $noidung, $thutu, $anhien);
-      $message = "Cap nhat thanh cong!";
+      $message = "Cập nhật thành công!";
       header("location:index.php?ctrl=thongbao");
       break;
     case "delete":

@@ -27,7 +27,21 @@
                 </div>
                 <div class="form-group col-12">
                     <label for="exampleFormControlTextarea1">Mô tả:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" resize="none"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize: none"></textarea>
+                </div>
+                <div class="form-group col-12">
+                    <select class="custom-select col-6">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <select class="custom-select col-5">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
                 </div>
             </div>
         </form>
