@@ -15,7 +15,10 @@
     break;
 
     case "edit":
-        break;  
+     
+      $view = "views/khuvuc-edit.php";
+      require_once "layout.php";
+      break;    
       case "update":
         break;
 

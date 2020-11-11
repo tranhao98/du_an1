@@ -29,7 +29,7 @@
                     <div class="form-group col-3">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
-                            <label class="form-check-label" for="anhien0">Hiện</label>
+                            <label class="form-check-label" for="anhien1">Hiện</label>
                         </div>
                     </div>
                     <div class="form-group col-9">
@@ -45,7 +45,7 @@
         </div>
         <div class="box-list-dm p-3 shadow-sm bg-white rounded">
             <h5 class="mb-5 font-weight-bold text-uppercase">Danh sách danh mục </h5>
-            <table style="text-align:center; width:100%">
+            <table class="table-dm-kv" style="text-align:center; width:100%">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -65,8 +65,8 @@
                         <td><?= $row['tendm'] ?></td>
                         <td><?= $row['thutu'] ?></td>
                         <td> <?= ($row['anhien'] == 1) ? 'Ẩn' : 'Hiện'; ?></td>
-                        <td class="align-middle"> <a href="index.php?ctrl=xe&act=edit&id=<?= $row['id'] ?>" class="btn-danger btn"><i class='fas fa-pencil-alt' style='font-size:18px'></i></a> </td>
-                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=xe&act=delete&id=<?= $row['id'] ?>" class="btn-danger btn"><i class="fa fa-trash" style="font-size:18px"></i></a> </td>
+                        <td class="align-middle"> <a href="index.php?ctrl=danhmuc&act=edit&iddm="><i class='far fa-edit' style='font-size:18px'></i></a> </td>
+                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=danhmuc&act=delete&id=<?= $row['id'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
                     </tr>
                 </tbody>
             </table>

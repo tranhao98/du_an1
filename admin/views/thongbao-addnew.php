@@ -14,7 +14,6 @@
         </div>
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
-        <h5></h5>
         <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=thongbao&act=insert">
             <div class="form-group">
                 <label for="exampleinput requiredPassword1">Hình ảnh</label>

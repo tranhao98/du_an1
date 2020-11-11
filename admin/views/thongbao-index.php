@@ -17,7 +17,7 @@
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
         <h5 class="font-weight-bold mb-3">Tất Cả Thông Báo</h5>
-        <table class="w-100 mx-auto border table-tb">
+        <table class="w-100 mx-auto border table-tb-nd">
             <thead>
                 <tr>
                     <th scope="col">#</th>
