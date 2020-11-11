@@ -65,8 +65,8 @@
                         <td><?= $row['tendm'] ?></td>
                         <td><?= $row['thutu'] ?></td>
                         <td> <?= ($row['anhien'] == 1) ? 'Ẩn' : 'Hiện'; ?></td>
-                        <td class="align-middle"> <a href="index.php?ctrl=xe&act=edit&id=<?= $row['id'] ?>" class="btn-danger btn"><i class='fas fa-pencil-alt' style='font-size:18px'></i></a> </td>
-                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=xe&act=delete&id=<?= $row['id'] ?>" class="btn-danger btn"><i class="fa fa-trash" style="font-size:18px"></i></a> </td>
+                        <td class="align-middle"> <a href="index.php?ctrl=khuvuc&act=edit&idkhuvuc=" class="btn-danger btn"><i class='fas fa-pencil-alt' style='font-size:18px'></i></a> </td>
+                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=khuvuc&act=delete&id=<?= $row['id'] ?>" class="btn-danger btn"><i class="fa fa-trash" style="font-size:18px"></i></a> </td>
                     </tr>
                 </tbody>
             </table>
