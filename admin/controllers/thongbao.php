@@ -8,6 +8,7 @@
   switch ($act) {
 
     case "index":
+      $nguoidung = getAllNguoiDung();
       $dstb = getAllThongBao();
       $view = "views/thongbao-index.php";
       require_once "layout.php";
@@ -24,8 +25,7 @@
       $ngaydang = $_POST["ngaydang"];
       $noidung = $_POST["noidung"];
       $anhien = $_POST["anhien"];
-      settype($idtb, "int");
-      settype($idnguoidangng, "int");
+      settype($idnguoidang, "int");
       settype($thutu, "int");
       $noidung = trim(strip_tags($noidung));
       addNewThongBao($idnguoidang, $tieude, $ngaydang, $noidung, $thutu, $anhien);
