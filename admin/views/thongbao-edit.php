@@ -29,19 +29,28 @@
                     <label for="tieude">Ngày Đăng</label>
                     <input type="date" class="form-control" value="<?=$row['ngaydang']?>" name="ngaydang">
                 </div>
+                <div class="form-group col-6 ">
+                    <label for="tieude">Thứ tự</label>
+                    <input type="number" class="form-control" value="<?=$row['thutu']?>" name="thutu">
+                </div>
+                <!-- Người dùng -->
+                <div class="form-group col-6">
+                    <label for="tieude">Người Đăng</label>
+                    <select class="form-control" id="idnguoidang" name="idnguoidang" placeholder="Người Đăng">
+                        <?php
+                            foreach($nd as $nd) { ?>
+                        <option value=" <?=$nd['id']?> " <?php if ($row["idnguoidang"] == $nd["id"]) {
+                        echo "selected";
+                        }?>> <?=$nd['hoten']?> </option>
+                        <?php } ?>                
+                    </select>
+                </div>
             </div>
             <div class="row">
                 <!-- Nội dung -->
                 <div class="form-group col-6">
                     <label for="tieude">Nội Dung</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" value="<?=$row['noidung']?>"  id="noidung"  name="noidung" placeholder="Nhập nội dung..." rows="3"></textarea>
-                </div>
-                <!-- Người dùng -->
-                <div class="form-group col-6">
-                    <label for="tieude">Người Đăng</label>
-                    <select class="form-control" name="id" placeholder="Người Đăng">
-                        
-                    </select>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value="<?=$row['noidung']?>"  id="noidung"  name="noidung"  rows="3"></textarea>
                 </div>
             </div>
             <!-- Ẩn hiện -->
@@ -59,7 +68,7 @@
             </div>
             <input name="idtb" value="<?=$row['idtb']?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
-            <button type="submit" name="nutsave" class="btn btn-danger">Thêm</button>
+            <button type="submit" name="nutsave" class="btn btn-danger">Sửa</button>
         </form>
     </div>
 </div>
