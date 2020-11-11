@@ -37,6 +37,9 @@
                             </a>
 
                             <div class="dropdown-menu mt-3" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+                                <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Đăng xuất</a>
                                 
                             </div>
