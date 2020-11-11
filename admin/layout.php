@@ -122,20 +122,7 @@
                 </div>
             </aside>
             <main>
-                <!-- <div class="row bg-white mb-3 ml-2 p-2">
-                    <div class="col-9 text-left align-self-center">
-                        <h2>Tên chức năng</h2>
-                    </div>
-                    <div class="col-3 ">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb bg-white">
-                                <li class="breadcrumb-item active"><a href="#">Tổng quan</a></li>
-                                <li class="breadcrumb-item"><a href="#">Quản lý</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Data</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div> -->
+
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
             </main>
 
