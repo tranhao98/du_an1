@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group col-6 ">
                     <label for="tieude">Ngày Đăng</label>
-                    <input type="date" class="form-control" name="Ngày Đăng">
+                    <input type="date" class="form-control" name="ngaydang" placeholder="Ngày đăng">
                 </div>
             </div>
             <div class="row">
@@ -40,6 +40,10 @@
                 <div class="form-group col-6">
                     <label for="tieude">Người Đăng</label>
                     <select class="form-control" name="ma_loai" placeholder="Người Dùng">
+                        <?php
+                            foreach($nguoidung as $nd) { ?>
+                        <option value=" <?=$nd['id']?> "> <?=$nd['hoten']?> </option>
+                        <?php } ?>   
                     </select>
                 </div>
             </div>
