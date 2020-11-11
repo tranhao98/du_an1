@@ -29,7 +29,7 @@
                     <div class="form-group col-3">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
-                            <label class="form-check-label" for="anhien0">Hiện</label>
+                            <label class="form-check-label" for="anhien1">Hiện</label>
                         </div>
                     </div>
                     <div class="form-group col-9">
