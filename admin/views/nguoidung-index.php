@@ -34,17 +34,19 @@
                     <?php
                     $dem = 1;
                     ?>
+                    <?php foreach ($dsnd as $row) { ?>
                     <tr>
                         <td><?= $dem++ ?></td>
                         <td><?=$row['hinh']?></td>
-                        <td><?=$row['hoten']?>
-                        <?=$row['ngaysinh']?>
-                        <?=$row['email']?>
-                        <?=$row['gioitinh']?>
-                        <?=$row['quanhuyen']?>
-                        <?=$row['phuongxa']?>
-                        <?=$row['tinhthanh']?>
-                    </td>
+                        <td>
+                            <?=$row['hoten']?>,
+                            <?=$row['ngaysinh']?><br>
+                            <?=$row['email']?><br>
+                            <a>Phường <?=$row['phuongxa']?></a>,
+                            <?=$row['quanhuyen']?>,
+                            <?=$row['tinhthanh']?><br>
+                            <a>Giới Tính: <?=($row['gioitinh']==1)? 'Nam':'Nữ'; ?></a>
+                        </td>
                         <td><?=$row['tendangnhap']?></td>
                         <td><?=$row['matkhau']?></td>
                         <td><?=$row['sodienthoai']?></td>
@@ -53,6 +55,7 @@
                         <td class="align-middle"> <a href="index.php?ctrl=thongbao&act=edit&idtb=<?= $row['idtb'] ?>"><i class='far fa-edit' style='font-size:18px'></i></a> </td>
                         <td class="align-middle"> <a class="txt-danger" onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=thongbao&act=delete&idtb=<?= $row['idtb'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
                     </tr>
+                    <?php } ?>
                 </tbody>
             </table>
     </div>
