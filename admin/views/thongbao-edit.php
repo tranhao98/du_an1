@@ -23,18 +23,18 @@
             <div class="row">
                 <div class="form-group col-6 ">
                     <label for="tieude">Tiêu Đề</label>
-                    <input type="text" class="form-control"  value="<?=$row['tieude']?>"  id="tieude" name="tieude" placeholder="Tiêu Đề">
+                    <input type="text" class="form-control" value="<?=$row['tieude']?>"  id="tieude" name="tieude" placeholder="Tiêu Đề">
                 </div>
                 <div class="form-group col-6 ">
                     <label for="tieude">Ngày Đăng</label>
-                    <input type="date" class="form-control" value="<?=$row['ngaydang']?>" name="Ngày Đăng">
+                    <input type="date" class="form-control" value="<?=$row['ngaydang']?>" name="ngaydang">
                 </div>
             </div>
             <div class="row">
                 <!-- Nội dung -->
                 <div class="form-group col-6">
                     <label for="tieude">Nội Dung</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1"  value="<?=$row['noidung']?>"  id="noidung"  name="noidung" placeholder="Nhập nội dung..." rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" value="<?=$row['noidung']?>"  id="noidung"  name="noidung" placeholder="Nhập nội dung..." rows="3"></textarea>
                 </div>
                 <!-- Người dùng -->
                 <div class="form-group col-6">
@@ -48,11 +48,11 @@
             <div class="row">
                 <div class="form-group col-6 ">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
+                        <input class="form-check-input" type="radio" <?php if ($row['anhien']==1) echo "checked"; ?> name="anhien" id="anhien1" value="1">
                         <label class="form-check-label" for="anhien0">Hiện</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio"  name="anhien" id="anhien0" value="0">
+                        <input class="form-check-input" type="radio" <?php if ($row['anhien']==0) echo "checked"; ?> name="anhien" id="anhien0" value="0">
                         <label class="form-check-label" for="anhien0">Ẩn</label>
                     </div>
                 </div>
