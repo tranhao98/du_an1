@@ -18,7 +18,7 @@
     }
     function updateDanhMuc($iddm, $tendm, $thutu, $anhien){
         try {
-          $sql="UPDATE danhmuc SET iddm='$iddm', tendm='$tendm', thutu='$thutu',
+          $sql="UPDATE danhmuc SET tendm='$tendm', thutu='$thutu',
           anhien='$anhien' WHERE iddm='$iddm'";
           execute($sql);
         }

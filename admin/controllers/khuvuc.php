@@ -29,7 +29,7 @@
         break;  
   
       case "update":
-        $idkhuvuc = $_GET["idkhuvuc"];
+        $idkhuvuc = $_POST["idkhuvuc"];
         $tenkhuvuc = $_POST["tenkhuvuc"];
         $thutu = $_POST["thutu"];
         $anhien = $_POST["anhien"];

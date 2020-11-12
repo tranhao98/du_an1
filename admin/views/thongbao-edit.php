@@ -24,7 +24,7 @@
                 } else $hinh = "<img src = '../upload/noimg.jpg' style='width:150px'>";
                 ?>
                 <label for="exampleinput requiredPassword1">Hình ảnh</label>
-                <input required type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+                <input type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
                 <?= $hinh ?>
             </div>
             <div class="row">
