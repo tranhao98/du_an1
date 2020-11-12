@@ -58,13 +58,14 @@
       settype($idnguoidang, "int");
       settype($thutu, "int");
       $idtb = trim(strip_tags($idtb));
+      $hinh = trim(strip_tags($hinh));
       $noidung = trim(strip_tags($noidung));
       updateThongBao($idtb, $idnguoidang, $tieude, $hinh, $ngaydang, $noidung, $thutu, $anhien);
 
       $message = "Cập nhật thành công!";
       header("location:index.php?ctrl=thongbao");
       break;
-      
+
     case "delete":
       $idtb = $_GET["idtb"];
       settype($idtb, "int");
