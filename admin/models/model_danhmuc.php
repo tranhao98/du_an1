@@ -16,9 +16,9 @@
         VALUES ( '$tendm', '$thutu', '$anhien')";
         execute($sql);
     }
-    function updateDanhMuc($iddm, $tendm, $thutu, $anhien) {
+    function updateDanhMuc($iddm, $tendm, $thutu, $anhien){
         try {
-          $sql="UPDATE thongbao SET iddm='$iddm', tendm='$tendm' ,thutu='$thutu',
+          $sql="UPDATE danhmuc SET iddm='$iddm', tendm='$tendm', thutu='$thutu',
           anhien='$anhien' WHERE iddm='$iddm'";
           execute($sql);
         }
