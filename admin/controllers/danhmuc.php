@@ -20,31 +20,29 @@
       header("location:index.php?ctrl=danhmuc");
       break;
 
+    case "edit":
+      $iddm = $_GET["iddm"];
+      settype($iddm, "int");
+      //$row = getAllDanhmuc();
+      $row = getDanhMucByID($iddm) ;
 
-      case "edit":
-        $iddm = $_GET["iddm"];
-        settype($iddm, "int");
-        //$row = getAllDanhmuc();
-        $row = getDanhMucByID($iddm) ;
-  
-        $view = "views/danhmuc-edit.php";
-        require_once "layout.php";
-        break;  
-      case "update":
-        $iddm = $_POST["iddm"];
-        $tendm = $_POST["tendm"];
-        $thutu = $_POST["thutu"];
-        $anhien = $_POST["anhien"];
-        settype($iddm, "int");
-        settype($thutu, "int");
-        $iddm = trim(strip_tags($iddm));
-        $tendm = trim(strip_tags($tendm));
-        updateDanhMuc($iddm, $tendm, $thutu, $anhien) ;
-  
-        $message = "Cập nhật thành công!";
-        header("location:index.php?ctrl=danhmuc");
-        break;
-        
+      $view = "views/danhmuc-edit.php";
+      require_once "layout.php";
+      break;  
+    case "update":
+      $iddm = $_POST["iddm"];
+      $tendm = $_POST["tendm"];
+      $thutu = $_POST["thutu"];
+      $anhien = $_POST["anhien"];
+      settype($iddm, "int");
+      settype($thutu, "int");
+      $iddm = trim(strip_tags($iddm));
+      $tendm = trim(strip_tags($tendm));
+      updateDanhMuc($iddm, $tendm, $thutu, $anhien) ;
+
+      $message = "Cập nhật thành công!";
+      header("location:index.php?ctrl=danhmuc");
+      break;
     case "delete":
       $iddm = $_GET["iddm"];
       settype($iddm, "int");
