@@ -6,7 +6,7 @@ $act = "index"; //chức năng mặc định
 $message = "";
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
-  case "index":     
+  case "index":
     $dsnd = getAllNguoiDung();
     $view = "views/nguoidung-index.php";
     require_once "layout.php";
@@ -29,5 +29,14 @@ switch ($act) {
   case "delete":
     $view = "views/nguoidung-index.php";
     require_once "layout.php";
+    break;
+  case 'dangxuat':
+    if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
+      if (isset($_GET['logout']) && ($_GET['logout'] == 1)) {
+        unset($_SESSION['sid']);
+        unset($_SESSION['tendangnhap']);
+        header("location: dangnhap.php");
+      }
+    }
     break;
 }

@@ -1,4 +1,3 @@
 <?php
-    $view = "views/home.php";
-    require_once "layout.php";
+header("location: dangnhap.php");
 ?>
