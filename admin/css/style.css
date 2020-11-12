@@ -54,7 +54,7 @@ footer.row {
 .table-tb-nd th {
     border: 1px solid #ddd;
     padding: 10px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 tr:nth-child(even) {

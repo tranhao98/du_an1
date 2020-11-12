@@ -1,5 +1,3 @@
-
-
 <div class="container">
     <div class="row content shadow-sm mb-3 bg-white rounded">
         <div class="col-6 text-left h-100 p-3 mt-n1">
@@ -26,7 +24,7 @@
                     <th scope="col">Ngày Đăng</th>
                     <th scope="col">Người Đăng</th>
                     <th scope="col">Nội Dung</th>
-                    <th scope="col">Ẩn Hiện</th>
+                    <th scope="col">Trạng Thái</th>
                     <th scope="col">Sửa</th>
                     <th scope="col">Xóa</th>
                 </tr>
@@ -38,20 +36,21 @@
                     <tr>
                         <th scope="col"><?= $dem++ ?></th>
                         <td style="width:15%">
-                        <img src="../upload/<?= $row['hinh'] ?>" alt="" onerror="this.src = '../upload/noimg.jpg';">
+                            <img src="../upload/<?= $row['hinh'] ?>" alt="" onerror="this.src = '../upload/noimg.jpg';">
                         </td>
 
                         <td><?= $row['tieude'] ?></td>
 
                         <td><?= $row['ngaydang'] ?></td>
-                        
+
                         <td>
-                            <?php echo getNameNguoiDung($row['idnguoidang'])['hoten'];?>
+                            <?php echo getNameNguoiDung($row['idnguoidang'])['hoten']; ?>
                         </td>
 
                         <td><?= $row['noidung'] ?></td>
-                        
-                        <td><?= ($row['anhien'] == 1) ? 'Hiện' : 'Ẩn'; ?></td>
+
+                        <td><em class="text-success font-weight-normal"> <?php if ($row['anhien'] == 1) echo "Đang hiện"; ?></em>
+                            <em class="text-danger font-weight-normal"> <?php if ($row['anhien'] == 0) echo "Đang ẩn"; ?></em></td>
 
                         <td class="align-middle"> <a href="index.php?ctrl=thongbao&act=edit&idtb=<?= $row['idtb'] ?>"><i class='fas fa-edit' style='font-size:18px'></i></a> </td>
                         <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=thongbao&act=delete&idtb=<?= $row['idtb'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
