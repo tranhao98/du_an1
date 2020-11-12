@@ -38,7 +38,7 @@
                             <div class="dropdown">
                                 <img src="../upload/comment_2.png" alt="">
                                 <a class="dropdown-toggle text-dark" style="text-decoration: none;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <?=$_SESSION['hoten']?>
+                                    <?= $_SESSION['hoten'] ?>
                                 </a>
 
                                 <div class="dropdown-menu mt-3" aria-labelledby="dropdownMenuLink">
@@ -132,9 +132,11 @@
             </aside>
             <main>
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
+                <footer class="mt-3 bg-white rounded shadow-sm">Giao diện này được thực hiện bởi <strong class="text-danger">HARDWORK TEAM</strong> </footer>
             </main>
+            
         </div>
-        <footer></footer>
+        
     </div>
 </body>
 
