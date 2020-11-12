@@ -16,15 +16,15 @@
         <h5></h5>
         <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=khuvuc&act=update">
             <div class="row">
-                <!-- Nội dung -->
+                <!-- Tên -->
                 <div class="form-group col-6 ">
                     <label for="tieude">Tên khu vực</label>
-                    <input type="text" class="form-control" id="tenkhuvuc" name="tenkhuvuc" placeholder="Tên khu vực">
+                    <input type="text" class="form-control" value="<?=$row['tenkhuvuc']?>" name="tenkhuvuc">
                 </div>
-                <!-- Người dùng -->
+                <!-- Thứ tự -->
                 <div class="form-group">
                     <label for="">Thứ Tự</label>
-                    <input type="number" name="thutu" id="" class="form-control" placeholder="Thứ tự" aria-describedby="helpId">
+                    <input type="number" class="form-control" value="<?=$row['thutu']?>" name="thutu">
                 </div>
                     </select>
                 </div>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <input name="idtb" value="<?=$row['idtb']?>" type="hidden">
+            <input name="iddm" value="<?=$row['iddm']?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
             <button type="submit" class="btn btn-danger">Sửa</button>
         </form>
