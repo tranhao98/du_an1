@@ -50,7 +50,7 @@
                 <!-- Nội dung -->
                 <div class="form-group col-6">
                     <label for="tieude">Nội Dung</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" value="<?=$row['noidung']?>"  id="noidung"  name="noidung"  rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" id="noidung"  name="noidung"  rows="3"><?=$row['noidung']?></textarea>
                 </div>
             </div>
             <!-- Ẩn hiện -->
@@ -58,7 +58,7 @@
                 <div class="form-group col-6 ">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" <?php if ($row['anhien']==1) echo "checked"; ?> name="anhien" id="anhien1" value="1">
-                        <label class="form-check-label" for="anhien0">Hiện</label>
+                        <label class="form-check-label" for="anhien1">Hiện</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" <?php if ($row['anhien']==0) echo "checked"; ?> name="anhien" id="anhien0" value="0">

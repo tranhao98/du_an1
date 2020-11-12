@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once "models/model_baidang.php"; //nạp model để có các hàm tương tác db 
+require_once "models/model_donvihanhchinh.php"; //nạp model để có các hàm tương tác db 
+require_once "models/model_khuvuc.php"; //nạp model để có các hàm tương tác db 
+require_once "models/model_danhmuc.php"; //nạp model để có các hàm tương tác db 
 
 $act = "index"; //chức năng mặc địnhg
 $message = "";
@@ -11,6 +14,11 @@ switch ($act) {
     require_once "layout.php";
     break;
   case "addnew":
+    $dsdm = getAllDanhMuc();
+    $dskv = getAllKhuVuc();
+    $tinh = getTinhThanhPho();
+    $huyen = getQuanHuyen();
+    $xa = getPhuongXa();
     $view = "views/baidang-addnew.php";
     require_once "layout.php";
     break;
