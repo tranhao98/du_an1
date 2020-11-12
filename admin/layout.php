@@ -123,8 +123,8 @@
                         </div>
                         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
                             <div class="card-body font-card-body pl-5">
-                                <p><a class="btn btn-white" href="?ctrl=thongbao&act=index">Danh sách thông báo</a></p>
-                                <p><a class="btn btn-white" href="?ctrl=thongbao&act=addnew">Thêm thông báo</a></p>
+                                <p><a class="btn btn-white" href="index.php?ctrl=thongbao&act=index">Danh sách thông báo</a></p>
+                                <p><a class="btn btn-white" href="index.php?ctrl=thongbao&act=addnew">Thêm thông báo</a></p>
                             </div>
                         </div>
                     </div>
