@@ -45,6 +45,4 @@
       $message='Xóa Thành Công!';
       header("location:index.php?ctrl=danhmuc");
       break;
-    
-
   }
