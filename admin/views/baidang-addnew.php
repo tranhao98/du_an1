@@ -21,7 +21,12 @@
                     <label for="name">Tiêu đề bài viết:</label>
                     <input required type="text" class="form-control" id="name" name="tieude">
                 </div>
-                <div class="row col-12">
+                <div class="form-group col-12">
+                    <label for="exampleinput requiredPassword1">Hình ảnh:</label>
+                    <input required type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh">
+                </div>
+            </div>
+            <div class="row col-12">
                     <div class="form-group col-6">
                         <label for="name">Giá:</label>
                         <input required type="text" class="form-control" id="name" name="gia">
@@ -36,10 +41,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group col-12">
-                    <label for="exampleinput requiredPassword1">Hình ảnh:</label>
-                    <input required type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh">
-                </div>
+            <div class="row col-12">
                 <div class="form-group col-12">
                     <label for="exampleFormControlTextarea1">Mô tả:</label>
                     <textarea required class="form-control" id="exampleFormControlTextarea1" rows="15" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."></textarea>
