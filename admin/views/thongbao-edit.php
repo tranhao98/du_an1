@@ -17,32 +17,39 @@
         <h5></h5>
         <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=thongbao&act=update">
             <div class="form-group">
+                <?php
+                $hinh = "../upload/" . $row['hinh'];
+                if (is_file($hinh)) {
+                    $hinh = "<img src='$hinh' style='width:150px'>";
+                } else $hinh = "<img src = '../upload/noimg.jpg' style='width:150px'>";
+                ?>
                 <label for="exampleinput requiredPassword1">Hình ảnh</label>
-                <input required type="file" value="<?=$row['hinh']?>" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+                <input required type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+                <?= $hinh ?>
             </div>
             <div class="row">
                 <div class="form-group col-6 ">
                     <label for="tieude">Tiêu Đề</label>
-                    <input type="text" class="form-control" value="<?=$row['tieude']?>"  id="tieude" name="tieude" placeholder="Tiêu Đề">
+                    <input type="text" class="form-control" value="<?= $row['tieude'] ?>" id="tieude" name="tieude" placeholder="Tiêu Đề">
                 </div>
                 <div class="form-group col-6 ">
                     <label for="tieude">Ngày Đăng</label>
-                    <input type="date" class="form-control" value="<?=$row['ngaydang']?>" name="ngaydang">
+                    <input type="date" class="form-control" value="<?= $row['ngaydang'] ?>" name="ngaydang">
                 </div>
                 <div class="form-group col-6 ">
                     <label for="tieude">Thứ tự</label>
-                    <input type="number" class="form-control" value="<?=$row['thutu']?>" name="thutu">
+                    <input type="number" class="form-control" value="<?= $row['thutu'] ?>" name="thutu">
                 </div>
                 <!-- Người dùng -->
                 <div class="form-group col-6">
                     <label for="tieude">Người Đăng</label>
                     <select class="form-control" id="idnguoidang" name="idnguoidang" placeholder="Người Đăng">
                         <?php
-                            foreach($nd as $nd) { ?>
-                        <option value=" <?=$nd['id']?> " <?php if ($row["idnguoidang"] == $nd["id"]) {
-                        echo "selected";
-                        }?>> <?=$nd['hoten']?> </option>
-                        <?php } ?>                
+                        foreach ($nd as $nd) { ?>
+                            <option value=" <?= $nd['id'] ?> " <?php if ($row["idnguoidang"] == $nd["id"]) {
+                                                                    echo "selected";
+                                                                } ?>> <?= $nd['hoten'] ?> </option>
+                        <?php } ?>
                     </select>
                 </div>
             </div>
@@ -57,16 +64,16 @@
             <div class="row">
                 <div class="form-group col-6 ">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" <?php if ($row['anhien']==1) echo "checked"; ?> name="anhien" id="anhien1" value="1">
+                        <input class="form-check-input" type="radio" <?php if ($row['anhien'] == 1) echo "checked"; ?> name="anhien" id="anhien1" value="1">
                         <label class="form-check-label" for="anhien1">Hiện</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" <?php if ($row['anhien']==0) echo "checked"; ?> name="anhien" id="anhien0" value="0">
+                        <input class="form-check-input" type="radio" <?php if ($row['anhien'] == 0) echo "checked"; ?> name="anhien" id="anhien0" value="0">
                         <label class="form-check-label" for="anhien0">Ẩn</label>
                     </div>
                 </div>
             </div>
-            <input name="idtb" value="<?=$row['idtb']?>" type="hidden">
+            <input name="idtb" value="<?= $row['idtb'] ?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
             <button type="submit" name="nutsave" class="btn btn-danger">Sửa</button>
         </form>
