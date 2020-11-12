@@ -13,4 +13,11 @@
         $sql= "DELETE FROM baidang where idsp ='$id'";
         execute($sql);
     }
+    function getBaiVietById($id){
+        $sql= "SELECT * FROM baidang WHERE idsp ='$id'";
+        return queryOne($sql);
+    }
+    function updateBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh,$gia,$nguoidung,$id){
+        $sql = "";
+    }
 ?>  

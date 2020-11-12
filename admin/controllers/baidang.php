@@ -29,7 +29,15 @@ switch ($act) {
     require_once "layout.php";
     break;
   case "edit":
-
+    $id = $_GET['id'];
+    settype($id, "int");
+    $nguoidung = getAllNguoiDung();
+    $dsdm = getAllDanhMuc();
+    $dskv = getAllKhuVuc();
+    $tinh = getTinhThanhPho();
+    $huyen = getQuanHuyen();
+    $xa = getPhuongXa();
+    $baiviet = getBaiVietById($id);
     $view = "views/baidang-edit.php";
     require_once "layout.php";
     break;
@@ -59,9 +67,25 @@ switch ($act) {
     header('location: ?ctrl=baidang');
     break;
   case "update":
-    
-    $view = "views/baidang-index.php";
-    require_once "layout.php";
+    $id = $_POST['idbaiviet'];
+    $tieude = trim(strip_tags($_POST['tieude']));
+    $gia = trim(strip_tags($_POST['gia']));
+    $nguoidung = trim(strip_tags($_POST['idnguoidang']));
+    $mota = trim(strip_tags($_POST['mota']));
+    $noithat = trim(strip_tags($_POST['noithat']));
+    $phongngu = trim(strip_tags($_POST['phongngu']));
+    $dientich = trim(strip_tags($_POST['dientich']));
+    $khuvuc = $_POST['khuvuc'];
+    $danhmuc = $_POST['danhmuc'];
+    $diachi = trim(strip_tags($_POST['diachi']));
+    $anhien = $_POST['anhien'];
+    $hinh_anh = $_FILES['hinhanh']['name'];
+    $partimg = "../upload/";
+    $target_file = $partimg . basename($hinh_anh);
+    move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
+    if(isset($_POST['noibat'])) $noibat = 1; else $noibat = 0;
+    updateBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh,$gia,$nguoidung,$id);
+    header('location: ?ctrl=baidang');
     break;
   case "delete":
     $id = $_GET["id"];

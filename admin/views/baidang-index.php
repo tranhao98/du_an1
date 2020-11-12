@@ -45,6 +45,8 @@
                             $gia = $sanpham['gia'];
                             $mota = $sanpham['mota'];
                             $noibat = $sanpham['noibat'];
+                            $anhien = $sanpham['anhien'];
+                            if($anhien == 1) $anhien = '<span class="text-primary" style="font-weight: bold;">Hiển thị</span>' ; else $anhien = '<span class="text-danger" style="font-weight: bold;">Ẩn</span>';
                             if($noibat == 1) $noibat = "checked" ; else $noibat = "";
                             $linkedit = "?ctrl=baidang&act=edit&id=".$id;
                             $linkdel = "?ctrl=baidang&act=delete&id=".$id;
@@ -59,8 +61,10 @@
                             Diện tích: <?=$dientich?><br>
                             Phòng ngủ: <?=$phongngu?><br>
                             Nội thất: <?=$noithat?><br>
+                            Trạng thái: <?=$anhien?><br>
+                            
                         </td>
-                        <td><img src="" alt="" onerror="this.src ='../upload/<?=$hinh?>'"></td>
+                        <td><img src="../upload/<?=$hinh?>" alt="" onerror="this.src ='../upload/message.jpg'"></td>
                         <td><?=number_format($gia, 0, ',', '.')?>đ</td>
                         <td><input type="checkbox" name="" id="" <?=$noibat?>></td>
                         <td><?=$mota?></td>
