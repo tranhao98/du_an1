@@ -11,13 +11,24 @@
         $sql="SELECT * from danhmuc where iddm='$iddm'";
         return queryOne($sql);
     }
-    function addDanhmuc($tendm, $thutu, $anhien){
+    function addDanhMuc($tendm, $thutu, $anhien){
         $sql="INSERT INTO danhmuc ( tendm, thutu, anhien) 
         VALUES ( '$tendm', '$thutu', '$anhien')";
         execute($sql);
     }
+    function updateDanhMuc($iddm, $tendm, $thutu, $anhien) {
+        try {
+          $sql="UPDATE thongbao SET iddm='$iddm', tendm='$tendm' ,thutu='$thutu',
+          anhien='$anhien' WHERE iddm='$iddm'";
+          execute($sql);
+        }
+        catch (Exception  $e) {                         
+          print_r($e->errorInfo);
+          exit();
+        }
+    }
 
-    function deleteDanhmuc($iddm){
+    function deleteDanhMuc($iddm){
         $sql= "delete from danhmuc where iddm='$iddm'";
         execute($sql);
     }
