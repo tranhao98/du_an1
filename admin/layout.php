@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="font-family: 'Nunito Sans', sans-serif; background-color: #f2f2f2;">
+<body style="font-family: 'Nunito Sans', sans-serif; background-color: #f2f2f2; min-height:auto">
     <div class="container mw-100 p-0 m-0">
         <header class="shadow-sm p-3 mb-3 bg-white rounded">
             <div class="row">
@@ -130,7 +130,7 @@
             </aside>
             <main>
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
-                <footer class="mt-3 bg-white rounded shadow-sm">Giao diện này được thực hiện bởi <strong class="text-danger">HARDWORK TEAM</strong> </footer>
+                <footer class="mt-3 mb-3 bg-white rounded shadow-sm">Giao diện này được thực hiện bởi <strong class="text-danger">HARDWORK TEAM</strong> </footer>
             </main>
             
         </div>
