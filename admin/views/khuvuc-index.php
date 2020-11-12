@@ -18,8 +18,14 @@
             <h5 class="mb-4 font-weight-bold">Thêm Khu Vực</h5>
             <form method="post" action="?ctrl=khuvuc&act=insert" class="bg-input">
                 <div class="form-group">
-                    <label for="">Tên Khu Vực</label>
-                    <input type="text" name="tenkhuvuc" id="" class="form-control" placeholder="Tên khu vực" aria-describedby="helpId">
+                    <label for="">Chọn Khu Vực</label>
+                    <select id="tinhthanh" class="form-control" name="tenkhuvuc">
+                        <option value="" selected>--Chọn khu vực--</option>
+                        <?php
+                        foreach ($dstinhthanh as $row) { ?>
+                            <option value=" <?= $row['name'] ?> "> <?= $row['name'] ?> </option>
+                        <?php } ?>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="">Thứ Tự</label>
@@ -63,7 +69,7 @@
                      <?php foreach ($dskv as $row) { ?>
                     <tr>
                         <td scope="col"><?= $dem++ ?></td>
-                        <td><?= $row['tenkhuvuc'] ?></td>
+                        <td><?= $row['tenkhuvuc']?></td>
                         <td><?= $row['thutu'] ?></td>
                         <td> <em class="text-success font-weight-normal"> <?php if ($row['anhien'] == 1) echo "Đang hiện"; ?></em>
                                 <em class="text-danger font-weight-normal"> <?php if ($row['anhien'] == 0) echo "Đang ẩn"; ?></em></td>

@@ -43,7 +43,7 @@
                             <span class="text-success font-weight-bold"><?php if ($row['gioitinh'] == 1) echo "<span class='text-secondary'>Giới tính:</span> Nam"; ?></span>
                             <span class="text-danger font-weight-bold"><?php if ($row['gioitinh'] == 0) echo "<span class='text-secondary'>Giới tính:</span> Nữ"; ?></span> <br>
                             <span class="text-secondary font-weight-bold">Email:</span> <?= $row['email'] ?><br>
-                            <span class="text-secondary font-weight-bold">Quê quán:</span> <?= $row['phuongxa'] ?>, <?= $row['quanhuyen'] ?>, <?= $row['tinhthanh'] ?><br>
+                            <span class="text-secondary font-weight-bold">Địa chỉ:</span> <?=$row['diachi']?>, <?= $row['phuongxa'] ?>, <?= $row['quanhuyen'] ?>, <?= $row['tinhthanh'] ?><br>
                         </td>
                         <td><?= $row['tendangnhap'] ?></td>
                         <td><?= $row['matkhau'] ?></td>
