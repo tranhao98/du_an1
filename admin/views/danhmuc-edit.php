@@ -18,13 +18,13 @@
             <div class="row">
                 <!-- Nội dung -->
                 <div class="form-group col-6 ">
-                    <label for="tieude">Tên danh mục</label>
-                    <input type="text" class="form-control" id="tenkhuvuc" name="tenkhuvuc" placeholder="Tên danh mục">
+                    <label for="tendm">Tên danh mục</label>
+                    <input type="text" class="form-control" value="<?=$row['tendm']?>" id="tendm" name="tendm">
                 </div>
                 <!-- Người dùng -->
-                <div class="form-group">
-                    <label for="">Thứ Tự</label>
-                    <input type="number" name="thutu" id="" class="form-control" placeholder="Thứ tự" aria-describedby="helpId">
+                <div class="form-group col-3">
+                    <label for="thutu">Thứ Tự</label>
+                    <input type="number" class="form-control" name="thutu" value="<?=$row['thutu']?>">
                 </div>
                     </select>
                 </div>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <input name="idtb" value="<?=$row['idtb']?>" type="hidden">
+            <input name="iddm" value="<?=$row['iddm']?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
             <button type="submit" class="btn btn-danger">Sửa</button>
         </form>
