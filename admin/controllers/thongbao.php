@@ -22,13 +22,14 @@
     case "insert":
       $idnguoidang = $_POST['idnguoidang'];
       $tieude = $_POST["tieude"];
+      $hinh = $_POST["hinh"];
       $ngaydang = $_POST["ngaydang"];
       $noidung = $_POST["noidung"];
       $anhien = $_POST["anhien"];
       settype($idnguoidang, "int");
       settype($thutu, "int");
       $noidung = trim(strip_tags($noidung));
-      addNewThongBao($idnguoidang, $tieude, $ngaydang, $noidung, $thutu, $anhien);
+      addNewThongBao($idnguoidang, $tieude, $hinh, $ngaydang, $noidung, $thutu, $anhien);
       header("location:index.php?ctrl=thongbao");
       break;
 
@@ -48,6 +49,7 @@
       $idtb = $_POST["idtb"];
       $idnguoidang = $_POST["idnguoidang"];
       $tieude = $_POST["tieude"];
+      $hinh = $_POST["hinh"];
       $ngaydang = $_POST["ngaydang"];
       $noidung = $_POST["noidung"];
       $thutu = $_POST["thutu"];
@@ -57,7 +59,7 @@
       settype($thutu, "int");
       $idtb = trim(strip_tags($idtb));
       $noidung = trim(strip_tags($noidung));
-      updateThongBao($idtb, $idnguoidang, $tieude, $ngaydang, $noidung, $thutu, $anhien);
+      updateThongBao($idtb, $idnguoidang, $tieude, $hinh, $ngaydang, $noidung, $thutu, $anhien);
 
       $message = "Cập nhật thành công!";
       header("location:index.php?ctrl=thongbao");
