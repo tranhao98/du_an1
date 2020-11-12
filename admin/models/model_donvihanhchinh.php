@@ -12,4 +12,18 @@
         $sql = "SELECT * FROM xaphuongthitran";
         return query($sql);
     }
+    function getNameKhuVucHanhChinh($id,$case){
+        switch($case){
+            case "1":
+                $sql = "SELECT * FROM tinhthanhpho WHERE matp = '$id'";
+            break;
+            case "2":
+                $sql = "SELECT * FROM quanhuyen WHERE maqh = '$id'";
+            break;
+            case "3":
+                $sql = "SELECT * FROM xaphuongthitran WHERE xaid = '$id'";
+            break;
+        }
+        return queryOne($sql);
+    }
 ?>
