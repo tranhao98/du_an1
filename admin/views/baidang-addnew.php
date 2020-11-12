@@ -150,7 +150,7 @@
                     <button type="submit" class="btn btn-danger">Thêm bài viết</button>
                 </div>
             </div>
+        </form>
     </div>
-    </form>
-</div>
+
 </div>
