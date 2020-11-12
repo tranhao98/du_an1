@@ -6,7 +6,7 @@
         <div class="col-5 h-100">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
-                    <li class="breadcrumb-item "><a class="text-dark" href="#">Quản lý danh mục</a></li>
+                    <li class="breadcrumb-item "><a class="text-dark" href="#">Danh mục</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Sửa danh mục</li>
                 </ol>
             </nav>

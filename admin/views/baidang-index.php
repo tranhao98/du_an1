@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
                     <li class="breadcrumb-item "><a class="text-dark" href="#">Tổng quan</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Quản lý bài đăng</li>
+                    <li class="breadcrumb-item active" aria-current="page">Bài đăng</li>
                 </ol>
             </nav>
         </div>
@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col-12 p-3 shadow-sm bg-white rounded">
-            <h5 class="mb-5 font-weight-bold">Danh Sách Bài Đăng </h5>
+            <h5 class="mb-3 font-weight-bold">Danh Sách Bài Đăng </h5>
             <table class="table-tb-nd" style="width:100%">
                 <thead>
                     <tr>

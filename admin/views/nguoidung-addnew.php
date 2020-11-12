@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
                     <li class="breadcrumb-item">Tổng quan</li>
-                    <li class="breadcrumb-item">Quản lý người dùng</li>
+                    <li class="breadcrumb-item">Người dùng</li>
                     <li class="breadcrumb-item active" aria-current="page">Thêm thông tin người dùng</li>
                 </ol>
             </nav>

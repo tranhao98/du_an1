@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
                     <li class="breadcrumb-item "><a class="text-dark" href="#">Tổng quan</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Quản lý danh mục</li>
+                    <li class="breadcrumb-item active" aria-current="page">Danh mục</li>
                 </ol>
             </nav>
         </div>
@@ -51,7 +51,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Tên Danh Mục</th>
                         <th scope="col">Thứ Tự</th>
-                        <th scope="col">Ẩn Hiện</th>
+                        <th scope="col">Trạng Thái</th>
                         <th scope="col">Sửa</th>
                         <th scope="col">Xóa</th>
                     </tr>
