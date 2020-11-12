@@ -20,13 +20,24 @@
       break;
  
 
-    case "edit":     
-      $view = "views/khuvuc-edit.php";
-      require_once "layout.php";
-      break;  
-
-    case "update":
-      break;
+      case "edit":   
+        $idkhuvuc = $_GET["idkhuvuc"];
+        settype($idkhuvuc, "int");
+        $row = getKhuVucByID($idkhuvuc);
+        $view = "views/khuvuc-edit.php";
+        require_once "layout.php";
+        break;  
+  
+      case "update":
+        $idkhuvuc = $_GET["idkhuvuc"];
+        $tenkhuvuc = $_POST["tenkhuvuc"];
+        $thutu = $_POST["thutu"];
+        $anhien = $_POST["anhien"];
+        updateKhuVuc($idkhuvuc, $tenkhuvuc, $thutu, $anhien);
+        $message = "Cập nhật thành công!";
+        header("location:index.php?ctrl=khuvuc");
+        break;
+          
 
     case "delete":
       $idkhuvuc = $_GET["idkhuvuc"];

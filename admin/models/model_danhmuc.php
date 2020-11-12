@@ -12,9 +12,20 @@
         return queryOne($sql);
     }
     function addDanhmuc($tendm, $thutu, $anhien){
-        $sql="INSERT INTO danhmuc ( tendm, thutu, anhien) 
+        $sql="INSERT INTO danhmuc (tendm, thutu, anhien) 
         VALUES ( '$tendm', '$thutu', '$anhien')";
         execute($sql);
+    }
+    function updateDanhMuc($iddm, $tendm, $thutu, $anhien){
+        try {
+          $sql="UPDATE danhmuc SET iddm='$iddm', tendm='$tendm', thutu='$thutu',
+          anhien='$anhien' WHERE iddm='$iddm'";
+          execute($sql);
+        }
+        catch (Exception  $e) {                         
+          print_r($e->errorInfo);
+          exit();
+        }
     }
 
     function deleteDanhmuc($iddm){

@@ -21,20 +21,30 @@
       break;
 
     case "edit":   
+      $iddm = $_GET["iddm"];
+      settype($iddm, "int");
+      $row = getDanhMucByID($iddm);
       $view = "views/danhmuc-edit.php";
       require_once "layout.php";
-      break;    
+      break;  
 
     case "update":
-        break;
+      $iddm = $_POST["iddm"];
+      $tendm = $_POST["tendm"];
+      $thutu = $_POST["thutu"];
+      $anhien = $_POST["anhien"];
+      updateDanhMuc($iddm, $tendm, $thutu, $anhien);
+      $message = "Cập nhật thành công!";
+      header("location:index.php?ctrl=danhmuc");
+      break;
         
-      case "delete":
-        $iddm = $_GET["iddm"];
-        settype($iddm, "int");
-        deleteDanhmuc($iddm);
-        $message='Xóa Thành Công!';
-        header("location:index.php?ctrl=danhmuc");
-        break;
+    case "delete":
+      $iddm = $_GET["iddm"];
+      settype($iddm, "int");
+      deleteDanhmuc($iddm);
+      $message='Xóa Thành Công!';
+      header("location:index.php?ctrl=danhmuc");
+      break;
     
 
   }
