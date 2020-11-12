@@ -37,15 +37,8 @@
                 <?php foreach ($dstb as $row) { ?>
                     <tr>
                         <th scope="col"><?= $dem++ ?></th>
-                        <td>
-                            <?php
-                            if($row['hinh'] == NULL){
-                                echo "<img src='../upload/noimg.jpg' width='100px' height='100px'>";
-                            }
-                            else{
-                                echo "<img src='../upload/".$row['hinh']."' width='100px' height='100px'>";
-                            }
-                            ?> 
+                        <td style="width:15%">
+                        <img src="../upload/<?= $row['hinh'] ?>" alt="" onerror="this.src = '../upload/noimg.jpg';">
                         </td>
 
                         <td><?= $row['tieude'] ?></td>
