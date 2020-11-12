@@ -23,7 +23,7 @@
                         <th scope="col" style="width: 35%;">Thông tin bài đăng</th>
                         <th scope="col" style="width: 10%;">Hình ảnh</th>
                         <th scope="col" style="width: 10%;">Giá</th>
-                        <th scope="col" style="width: 10%; text-align: center;">Nổi bật</th>
+                        <th scope="col" style="width: 10%;">Nổi bật</th>
                         <th scope="col">Mô tả</th>
                         <th scope="col">Sửa</th>
                         <th scope="col">Xóa</th>
