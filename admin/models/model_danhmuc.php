@@ -22,4 +22,8 @@
         execute($sql);
     }
 
+    function getNameDanhMuc($id){
+        $sql="SELECT * from danhmuc where iddm='$id'";
+        return queryOne($sql);
+    }
 ?>

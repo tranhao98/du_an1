@@ -32,4 +32,9 @@
         $sql= "delete from khuvuc where idkhuvuc='$idkhuvuc'";
         execute($sql);
     }
+
+    function getNameKhuVuc($id){
+        $sql="SELECT * from khuvuc where idkhuvuc='$id'";
+        return queryOne($sql);
+    }
 ?>

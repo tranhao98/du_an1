@@ -5,4 +5,8 @@
         VALUES ( '$danhmuc', '$khuvuc', '$nguoidung', '$tieude', '$hinh_anh', '$gia', '$dientich', '$phongngu', '$noithat', '$noibat', '$mota', '$diachi', '$anhien')";
         execute($sql);
     }
+    function getAllSanPham(){
+        $sql = "SELECT * FROM baidang";
+        return query($sql);
+    }
 ?>  

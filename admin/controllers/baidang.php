@@ -14,6 +14,7 @@ $message = "";
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
   case "index":
+    $sanpham = getAllSanPham();
     $view = "views/baidang-index.php";
     require_once "layout.php";
     break;
@@ -55,8 +56,7 @@ switch ($act) {
     if(isset($_POST['noibat'])) $noibat = 1; else $noibat = 0;
 
     addBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh,$gia,$nguoidung);
-    // $view = "views/baidang-index.php";
-    // require_once "layout.php";
+    header('location: ?ctrl=baidang');
     break;
   case "update":
     

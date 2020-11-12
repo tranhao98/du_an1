@@ -23,31 +23,50 @@
                         <th scope="col" style="width: 35%;">Thông tin bài đăng</th>
                         <th scope="col" style="width: 10%;">Hình ảnh</th>
                         <th scope="col" style="width: 10%;">Giá</th>
-                        <th scope="col" style="width: 10%;">Nổi bật</th>
+                        <th scope="col" style="width: 10%; text-align: center;">Nổi bật</th>
                         <th scope="col">Mô tả</th>
                         <th scope="col">Sửa</th>
                         <th scope="col">Xóa</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        foreach($sanpham as $row => $sanpham){
+                            $stt = $row + 1;
+                            $ten = $sanpham['tensp'];
+                            $nguoidang = getNameNguoiDung($sanpham['idnguoiban'])['hoten'];
+                            $khuvuc = getNameKhuVuc($sanpham['idkhuvuc'])['tenkhuvuc'];
+                            $danhmuc = getNameDanhMuc($sanpham['iddm'])['tendm'];
+                            $dientich = $sanpham['dientich'];
+                            $phongngu = $sanpham['phongngu'];
+                            $noithat = $sanpham['noithat'];
+                            $hinh = $sanpham['hinh'];
+                            $gia = $sanpham['gia'];
+                            $mota = $sanpham['mota'];
+                            $noibat = $sanpham['noibat'];
+                            if($noibat == 1) $noibat = "checked" ; else $noibat = "";
+                            $linkedit = "";
+                            $linkdel = "";
+                    ?>
                     <tr>
-                        <th scope="col">1</th>
+                        <th scope="col"><?=$stt?></th>
                         <td>
-                            Tên bài viết: <br>
-                            Người đăng: <br>
-                            Danh mục: <br>
-                            Khu vực: <br>
-                            Diện tích: <br>
-                            Phòng ngủ: <br>
-                            Nội thất: <br>
+                            Tên bài viết: <?=$ten?><br>
+                            Người đăng: <?=$nguoidang?><br>
+                            Danh mục: <?=$danhmuc?><br>
+                            Khu vực: <?=$khuvuc?><br>
+                            Diện tích: <?=$dientich?><br>
+                            Phòng ngủ: <?=$phongngu?><br>
+                            Nội thất: <?=$noithat?><br>
                         </td>
-                        <td><img src="" alt="" onerror="this.src ='../upload/message.jpg'"></td>
-                        <td>1.500.000đ</td>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</td>
+                        <td><img src="" alt="" onerror="this.src ='../upload/<?=$hinh?>'"></td>
+                        <td><?=number_format($gia, 0, ',', '.')?>đ</td>
+                        <td><input type="checkbox" name="" id="" <?=$noibat?>></td>
+                        <td><?=$mota?></td>
                         <td class="align-middle"><a href=""><i class='far fa-edit' style='font-size:20px'></i></a></td>
                         <td class="align-middle"><a href=""><i class="fa fa-trash text-danger" style="font-size:20px"></i></a></td>
                     </tr>
+                        <?php }?>
                 </tbody>
             </table>
         </div>
