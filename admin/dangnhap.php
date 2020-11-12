@@ -38,7 +38,7 @@ if (isset($_POST['login']) && ($_POST['login'])) {
 </head>
 
 <body style="background-color: #47A1FA;">
-    <div class="container w-50" style="padding-top: 8%;">
+    <div class="container" style="padding-top: 8%; width: 400px;">
         <h4 style="font-weight: normal;" class="text-white text-center mb-3">Hardwork Team Admin</h4>
         <div class="row">
             <div class="col-md-12 bg-white p-4 shadow-sm rounded">
@@ -56,9 +56,6 @@ if (isset($_POST['login']) && ($_POST['login'])) {
                         <div class="col-6 text-left form-group form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Nhớ tài khoản</label>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <a href="">Quên Mật Khẩu?</a>
                         </div>
                     </div> <br>
                     <input type="submit" name="login" value="ĐĂNG NHẬP" class="btn btn-primary w-100 p-2">
