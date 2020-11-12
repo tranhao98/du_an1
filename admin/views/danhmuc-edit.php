@@ -16,24 +16,21 @@
         <h5></h5>
         <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=danhmuc&act=update">
             <div class="row">
-                <!-- Nội dung -->
+            <!-- Tên -->
                 <div class="form-group col-6 ">
                     <label for="tendm">Tên danh mục</label>
                     <input type="text" class="form-control" value="<?=$row['tendm']?>" id="tendm" name="tendm">
                 </div>
                 <!-- Người dùng -->
-                <div class="form-group col-3">
+                <div class="form-group col-6">
                     <label for="thutu">Thứ Tự</label>
                     <input type="number" class="form-control" name="thutu" value="<?=$row['thutu']?>">
                 </div>
-                    </select>
-                </div>
-            </div>
             <!-- Ẩn hiện -->
             <div class="row">
                 <div class="form-group col-6 ">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
+                        <input class="form-check-input" type="radio"  name="anhien" id="anhien1" value="1">
                         <label class="form-check-label" for="anhien0">Hiện</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -44,7 +41,7 @@
             </div>
             <input name="iddm" value="<?=$row['iddm']?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
-            <button type="submit" class="btn btn-danger">Sửa</button>
+            <button type="submit" name="nutsave" class="btn btn-danger">Sửa</button>
         </form>
     </div>
 </div>
