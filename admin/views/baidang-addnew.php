@@ -42,7 +42,7 @@
                 </div>
                 <div class="form-group col-12">
                     <label for="exampleFormControlTextarea1">Mô tả:</label>
-                    <textarea required class="form-control" id="exampleFormControlTextarea1" rows="15" style="resize: none" name="mota"></textarea>
+                    <textarea required class="form-control" id="exampleFormControlTextarea1" rows="15" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."></textarea>
                 </div>
                 </div>
                 <div class="row col-12">
@@ -143,11 +143,11 @@
                             <label class="custom-control-label" for="customCheck1">Nổi bật</label>
                         </div>
                     </div>   
-                </div>
-                <div class="row col-12">
-                    <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
-                    <button type="submit" class="btn btn-danger">Thêm bài viết</button>
-                </div>    
+                   <div class="form-group col-12">
+                        <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
+                        <button type="submit" class="btn btn-danger">Thêm bài viết</button>
+                   </div>
+                </div>  
             </div>     
         </form>
     </div>
