@@ -1,5 +1,5 @@
-<div class="container content">
-    <div class="row shadow-sm mb-3 bg-white rounded ">
+<div class="container">
+    <div class="row content shadow-sm mb-3 bg-white rounded ">
         <div class="col-8 text-left h-100 p-0 p-3 mt-n1">
             <h5 class="font-weight-bold">Quản lý khu vực</h5>
         </div>
@@ -66,7 +66,7 @@
                         <td><?= $row['tenkhuvuc'] ?></td>
                         <td><?= $row['thutu'] ?></td>
                         <td> <?= ($row['anhien'] == 1) ? 'Ẩn' : 'Hiện'; ?></td>
-                        <td class="align-middle"> <a href="index.php?ctrl=khuvuc&act=edit&idkhuvuc="><i class='far fa-edit' style='font-size:18px'></i></a> </td>
+                        <td class="align-middle"> <a href="index.php?ctrl=khuvuc&act=edit&idkhuvuc=<?= $row['idkhuvuc'] ?>"><i class='far fa-edit' style='font-size:18px'></i></a> </td>
                         <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=khuvuc&act=delete&idkhuvuc=<?= $row['idkhuvuc'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
                     </tr>
                     <?php } ?>

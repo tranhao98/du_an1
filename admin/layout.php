@@ -8,8 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
     <script src="../js/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"> </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -38,7 +36,7 @@
                             <div class="dropdown">
                                 <img src="../upload/comment_2.png" alt="">
                                 <a class="dropdown-toggle text-dark" style="text-decoration: none;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <?=$_SESSION['hoten']?>
+                                    <?= $_SESSION['hoten'] ?>
                                 </a>
 
                                 <div class="dropdown-menu mt-3" aria-labelledby="dropdownMenuLink">
@@ -132,9 +130,11 @@
             </aside>
             <main>
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
+                <footer class="mt-3 bg-white rounded shadow-sm">Giao diện này được thực hiện bởi <strong class="text-danger">HARDWORK TEAM</strong> </footer>
             </main>
+            
         </div>
-        <footer></footer>
+        
     </div>
 </body>
 
