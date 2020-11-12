@@ -28,22 +28,28 @@
                 <div class="col-7 text-left">
                     <i class="fa fa-bars" style="font-size:18pt; padding-top:2%; margin-left:6.3%;"></i>
                 </div>
+
                 <div class="col-3 text-right">
                     <div class="pr-2 user-admin">
-                        <div class="dropdown">
-                            <img src="../upload/comment_2.png" alt="">
-                            <a class="dropdown-toggle text-dark" style="text-decoration: none;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Hào Long
-                            </a>
+                        <?php
+                        session_start();
+                        if (isset($_SESSION['sid']) && $_SESSION['sid'] > 0) {
+                        ?>
+                            <div class="dropdown">
+                                <img src="../upload/comment_2.png" alt="">
+                                <a class="dropdown-toggle text-dark" style="text-decoration: none;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <?=$_SESSION['hoten']?>
+                                </a>
 
-                            <div class="dropdown-menu mt-3" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#">Thông tin tài khoản</a>
-                                <a class="dropdown-item" href="#">Đổi mật khẩu</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Đăng xuất</a>
-                                
+                                <div class="dropdown-menu mt-3" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+                                    <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a onclick="return confirm('Bạn có muốn đăng xuất không?')" class="dropdown-item" href="index.php?ctrl=nguoidung&act=dangxuat&logout=1">Đăng xuất</a>
+
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
