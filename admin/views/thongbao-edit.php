@@ -50,7 +50,7 @@
                 <!-- Nội dung -->
                 <div class="form-group col-6">
                     <label for="tieude">Nội Dung</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" id="noidung"  name="noidung"  rows="3"><?=$row['noidung']?></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" id="noidung"  name="noidung" rows="3"> <?=$row['noidung']?> </textarea>
                 </div>
             </div>
             <!-- Ẩn hiện -->
