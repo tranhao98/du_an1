@@ -23,21 +23,23 @@
                 </div>
                 <div class="form-group col-6 ">
                     <label for="tieude">Thứ tự</label>
-                    <input type="number" class="form-control" name="thutu">
+                    <input type="number" class="form-control" value="<?=$row['thutu']?>" name="thutu">
                 </div>
             <!-- Ẩn hiện -->
             <div class="row">
-                <div class="form-group col-6 ">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio"  name="anhien" id="anhien1" value="1">
-                        <label class="form-check-label" for="anhien0">Hiện</label>
+                    <div class="form-group col-4">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
+                            <label class="form-check-label" for="anhien1">Hiện</label>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio"  name="anhien" id="anhien0" value="0">
-                        <label class="form-check-label" for="anhien0">Ẩn</label>
+                    <div class="form-group col-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="anhien" id="anhien0" value="0">
+                            <label class="form-check-label" for="anhien0">Ẩn</label>
+                        </div>
                     </div>
                 </div>
-            </div>
             <input name="iddm" value="<?=$row['iddm']?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
             <button type="submit" name="nutsave" class="btn btn-danger">Sửa</button>

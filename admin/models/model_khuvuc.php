@@ -29,7 +29,7 @@
     }
     function updateKhuVuc($idkhuvuc, $tenkhuvuc, $thutu, $anhien){
         try {
-          $sql="UPDATE khuvuc SET idkhuvuc='$idkhuvuc', tendm='$tenkhuvuc', thutu='$thutu',
+          $sql="UPDATE khuvuc SET idkhuvuc='$idkhuvuc', tenkhuvuc='$tenkhuvuc', thutu='$thutu',
           anhien='$anhien' WHERE idkhuvuc='$idkhuvuc'";
           execute($sql);
         }

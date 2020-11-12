@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <input name="iddm" value="<?=$row['iddm']?>" type="hidden">
+            <input name="idkhuvuc" value="<?=$row['idkhuvuc']?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
             <button type="submit" class="btn btn-danger">Sửa</button>
         </form>
