@@ -33,27 +33,32 @@
       break;
 
     case "edit":
-      $thongbao = getAllThongBao();
-      $row = getThongBaoByID($idtb);
-      $all_nd = getAllNguoiDung();
       $idtb = $_GET["idtb"];
       settype($idtb, "int");
+
+      $thongbao = getAllThongBao();
+      $row = getThongBaoByID($idtb);
+      $nguoidung = getAllNguoiDung($row['id']);
+      $nd = getAllNguoiDung();
+
       $view = "views/thongbao-edit.php";
       require_once "layout.php";
       break;  
     case "update":
       $idtb = $_POST["idtb"];
-      $idnguoidung = $_POST["idnguoidung"];
+      $idnguoidang = $_POST["idnguoidang"];
       $tieude = $_POST["tieude"];
       $ngaydang = $_POST["ngaydang"];
       $noidung = $_POST["noidung"];
       $thutu = $_POST["thutu"];
       $anhien = $_POST["anhien"];
       settype($idtb, "int");
-      settype($idnguoidung, "int");
+      settype($idnguoidang, "int");
       settype($thutu, "int");
+      $idtb = trim(strip_tags($idtb));
       $noidung = trim(strip_tags($noidung));
-      updateThongBao($idtb, $idnguoidung, $tieude, $ngaydang, $noidung, $thutu, $anhien);
+      updateThongBao($idtb, $idnguoidang, $tieude, $ngaydang, $noidung, $thutu, $anhien);
+
       $message = "Cập nhật thành công!";
       header("location:index.php?ctrl=thongbao");
       break;

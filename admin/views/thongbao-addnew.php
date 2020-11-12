@@ -33,7 +33,7 @@
                 <!-- Nội dung -->
                 <div class="form-group col-6">
                     <label for="tieude">Nội Dung</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" id="noidung" name="noidung" placeholder="... ... ..." rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" id="noidung" name="noidung" placeholder="mời nhập nội dung..." rows="3"></textarea>
                 </div>
                 <!-- Người dùng -->
                 <div class="form-group col-6">

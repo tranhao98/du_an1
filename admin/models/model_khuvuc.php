@@ -6,8 +6,8 @@
         return query($sql);
     }
     
-    function getKhuVucByID($iddm) {
-        $sql="SELECT * from khuvuc where idmd='$iddm'";
+    function getKhuVucByID($idkv) {
+        $sql="SELECT * from khuvuc where idkv='$idkv'";
         return queryOne($sql);
     }
     function getAllTinhThanh(){
@@ -21,5 +21,15 @@
     function getAllPhuongXa(){
         $sql="SELECT * FROM xaphuongthitran";
         return query($sql);
+    }
+    function addKhuVuc($tenkhuvuc, $thutu, $anhien){
+        $sql="INSERT INTO khuvuc ( tenkhuvuc, thutu, anhien) 
+        VALUES ( '$tenkhuvuc', '$thutu', '$anhien')";
+        execute($sql);
+    }
+
+    function deleteKhuVuc($idkhuvuc){
+        $sql= "delete from khuvuc where idkhuvuc='$idkhuvuc'";
+        execute($sql);
     }
 ?>

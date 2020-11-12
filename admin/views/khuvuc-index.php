@@ -15,11 +15,11 @@
 
     <div class="row">
         <div class="box-add-dm shadow-sm bg-white rounded p-3">
-            <h5 class="mb-4 font-weight-bold">Thêm Khu Vực </h5>
-            <form method="post" action="?ctrl=danhmuc&act=insert" class="bg-input">
+            <h5 class="mb-4 font-weight-bold">Thêm Khu Vực</h5>
+            <form method="post" action="?ctrl=khuvuc&act=insert" class="bg-input">
                 <div class="form-group">
                     <label for="">Tên Khu Vực</label>
-                    <input type="text" name="tendm" id="" class="form-control" placeholder="Tên khu vực" aria-describedby="helpId">
+                    <input type="text" name="tenkhuvuc" id="" class="form-control" placeholder="Tên khu vực" aria-describedby="helpId">
                 </div>
                 <div class="form-group">
                     <label for="">Thứ Tự</label>
@@ -60,14 +60,16 @@
                     <?php
                     $dem = 1;
                     ?>
+                     <?php foreach ($dskv as $row) { ?>
                     <tr>
                         <td scope="col"><?= $dem++ ?></td>
-                        <td><?= $row['tendm'] ?></td>
+                        <td><?= $row['tenkhuvuc'] ?></td>
                         <td><?= $row['thutu'] ?></td>
                         <td> <?= ($row['anhien'] == 1) ? 'Ẩn' : 'Hiện'; ?></td>
                         <td class="align-middle"> <a href="index.php?ctrl=khuvuc&act=edit&idkhuvuc="><i class='far fa-edit' style='font-size:18px'></i></a> </td>
-                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=khuvuc&act=delete&id=<?= $row['id'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
+                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=khuvuc&act=delete&idkhuvuc=<?= $row['idkhuvuc'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
                     </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>

@@ -6,20 +6,35 @@
   switch ($act) {
 
     case "index":
-        // $dskv = getAllKhuVuc();
+        $dskv = getAllKhuVuc();
         $view = "views/khuvuc-index.php";
         require_once "layout.php";
     break;
 
     case "insert":
-    break;
+      $tenkhuvuc= $_POST["tenkhuvuc"];
+      $thutu = $_POST["thutu"];
+      $anhien = $_POST["anhien"];
+      addKhuVuc($tenkhuvuc, $thutu, $anhien);    
+      header("location:index.php?ctrl=khuvuc");
+      break;
+ 
 
-    case "edit":
-     
+    case "edit":     
       $view = "views/khuvuc-edit.php";
       require_once "layout.php";
-      break;    
-      case "update":
-        break;
+      break;  
+
+    case "update":
+      break;
+
+    case "delete":
+      $idkhuvuc = $_GET["idkhuvuc"];
+      settype($idkhuvuc, "int");
+      deleteKhuVuc($idkhuvuc);
+      $message='Xóa Thành Công!';
+      header("location:index.php?ctrl=khuvuc");
+      break;
+    
 
   }

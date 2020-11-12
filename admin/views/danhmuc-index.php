@@ -60,14 +60,16 @@
                     <?php
                     $dem = 1;
                     ?>
+                    <?php foreach ($dsdm as $row) { ?>
                     <tr>
                         <td scope="col"><?= $dem++ ?></td>
                         <td><?= $row['tendm'] ?></td>
                         <td><?= $row['thutu'] ?></td>
                         <td> <?= ($row['anhien'] == 1) ? 'Ẩn' : 'Hiện'; ?></td>
                         <td class="align-middle"> <a href="index.php?ctrl=danhmuc&act=edit&iddm="><i class='far fa-edit' style='font-size:18px'></i></a> </td>
-                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=danhmuc&act=delete&id=<?= $row['id'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
+                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=danhmuc&act=delete&iddm=<?= $row['iddm'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
                     </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>

@@ -30,5 +30,9 @@
         $sql= "delete from thongbao where idtb='$idtb'";
         execute($sql);
     }
+    // function getNguoiDungByID($id) {
+    //     $sql="SELECT * from taikhoan where id='$id'";
+    //     return queryOne($sql);
+    // }
 
 ?>
