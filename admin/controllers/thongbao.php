@@ -64,6 +64,7 @@
       $message = "Cập nhật thành công!";
       header("location:index.php?ctrl=thongbao");
       break;
+      
     case "delete":
       $idtb = $_GET["idtb"];
       settype($idtb, "int");
