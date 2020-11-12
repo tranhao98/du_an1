@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
                     <li class="breadcrumb-item"><a href="" class="text-dark">Tổng quan</a></li>
-                    <li class="breadcrumb-item"><a href="" class="text-dark">Quản lý bài đăng</a></li>
+                    <li class="breadcrumb-item"><a href="" class="text-dark">Bài đăng</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Sửa thông tin bài đăng</li>
                 </ol>
             </nav>
@@ -15,111 +15,90 @@
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
         <h5 class="font-weight-bold mb-3">Sửa bài đăng</h5>
-        <form action="?ctrl=baidang" method="POST" class="mx-auto w-100 bg-input" enctype="multipart/form-data">
+        <form action="?ctrl=baidang&act=update" method="POST" class="mx-auto w-100 bg-input" enctype="multipart/form-data">
             <div class="row col-12">
                 <div class="form-group col-12">
                     <label for="name">Tiêu đề bài viết:</label>
-                    <input required type="text" class="form-control" id="name" name="tieude">
+                    <input required type="text" class="form-control" id="name" name="tieude" value="<?=$baiviet['tensp']?>">
                 </div>
                 <div class="row col-12">
                     <div class="form-group col-6">
                         <label for="name">Giá:</label>
-                        <input required type="text" class="form-control" id="name" name="gia">
+                        <input required type="text" class="form-control" id="name" name="gia" value="<?=$baiviet['gia']?>">
                     </div>
                     <div class="form-group col-6">
                         <label for="tieude">Người Đăng:</label>
                         <select class="form-control" name="idnguoidang" placeholder="Người Dùng">
                             <?php
-                                foreach($nguoidung as $nd) { ?>
-                            <option value=" <?=$nd['id']?> "> <?=$nd['hoten']?> </option>
-                            <?php } ?>   
+                                foreach($nguoidung as $nd) { 
+                                if($baiviet['idnguoiban'] == $nd['id']){
+                                echo '<option selected value="'.$nd['id'].'">'.$nd['hoten'].'</option>';
+                                } else{
+                                echo '<option value="'.$nd['id'].'">'.$nd['hoten'].'</option>';
+                                }
+                            }
+                            ?> 
                         </select>
                     </div>
                 </div>
                 <div class="form-group col-12">
                     <label for="exampleinput requiredPassword1">Hình ảnh:</label>
-                    <input required type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh">
+                    <input type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh">
+                    <img src="../upload/<?=$baiviet['hinh']?>" alt="" onerror="this.src ='../upload/message.jpg'" class="mt-3" style="width: 30% !important;">
                 </div>
                 <div class="form-group col-12">
                     <label for="exampleFormControlTextarea1">Mô tả:</label>
-                    <textarea required class="form-control" id="exampleFormControlTextarea1" rows="15" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."></textarea>
+                    <textarea required class="form-control" id="exampleFormControlTextarea1" rows="15" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."><?=$baiviet['mota']?></textarea>
                 </div>
                 </div>
                 <div class="row col-12">
                     <div class="form-group col-6">
                         <select class="custom-select col-12" required name="khuvuc">
-                            <option selected>Chọn khu vực</option>
                             <?php
                                 foreach($dskv as $kv) {
+                                    if($baiviet['idkhuvuc'] == $kv['idkhuvuc']){
+                                       echo '<option selected value="'.$kv['idkhuvuc'].'">'.$kv['tenkhuvuc'].'</option>';
+                                    }
+                                    else {
+                                       echo '<option value="'.$kv['idkhuvuc'].'">'.$kv['tenkhuvuc'].'</option>';
+                                    }
+                                }
                             ?>
-                            <option value="<?=$kv['idkhuvuc']?>"><?=$kv['tenkhuvuc']?></option>
-                            <?php }?>
                         </select>
                     </div>
                     <div class="form-group col-6">
                         <select class="custom-select col-12" required name="danhmuc">
-                            <option selected>Chọn danh mục</option>
                             <?php
                                 foreach($dsdm as $dm) {
+                                    if($baiviet['iddm'] == $dm['iddm']){
+                                        echo '<option selected value="'.$dm['iddm'].'">'.$dm['tendm'].'</option>';
+                                    }
+                                    else {
+                                        echo '<option value="'.$dm['iddm'].'">'.$dm['tendm'].'</option>';
+                                    }
+                                }
                             ?>
-                            <option value="<?=$dm['iddm']?>"><?=$dm['tendm']?></option>
-                            <?php }?>
                         </select>
                     </div>
                 </div>    
                 <div class="row col-12">
                     <div class="form-group col-4">
                         <label for="exampleinput">Nội thất:</label>
-                        <input required type="text" class="form-control" id="exampleinput" name="noithat">
+                        <input required type="text" class="form-control" id="exampleinput" name="noithat" value="<?=$baiviet['noithat']?>">
                     </div>
                     <div class="form-group col-4">
                         <label for="exampleinput">Phòng ngủ:</label>
-                        <input required type="text" class="form-control" id="exampleinput" name="phongngu">
+                        <input required type="text" class="form-control" id="exampleinput" name="phongngu" value="<?=$baiviet['phongngu']?>">
                     </div>
                     <div class="form-group col-4">
                         <label for="exampleinput requiredPassword1">Diện tích:</label>
-                        <input required type="text" class="form-control" id="exampleinput" name="dientich">
-                    </div>
-                </div>
-                <div class="row col-12">
-                    <div class="form-group col-4">
-                        <label for="">Tỉnh / Thành phố:</label>
-                        <select id="tinhthanh" class="form-control" placeholder="Tỉnh/Thành phố" required name="tinhthanhpho">
-                            <option value="" selected>--Chọn Tỉnh / Thành phố--</option>
-                            <?php
-                                foreach($tinh as $tinh) {
-                            ?>
-                            <option value="<?=$tinh['matp']?>"><?=$tinh['name']?></option>
-                            <?php }?>
-                        </select>
-                    </div>
-                    <div class="form-group col-4">
-                        <label for="">Quận / Huyện:</label>
-                        <select id="quanhuyen" class="form-control" placeholder="Quận/Huyện" required name="quanhuyen">  
-                            <option value="" selected>--Chọn Quận / Huyện--</option>
-                            <?php
-                                foreach($huyen as $huyen) {
-                            ?>
-                            <option value="<?=$huyen['maqh']?>"><?=$huyen['name']?></option>
-                            <?php }?>
-                        </select>
-                    </div>
-                    <div class="form-group col-4">
-                        <label for="">Phường / Xã:</label>
-                        <select id="phuongxa" class="form-control" placeholder="Quận/Huyện" required name="phuongxa">
-                            <option value="" selected>--Chọn Phường / Xã--</option>
-                            <?php
-                                foreach($xa as $xa) {
-                            ?>
-                            <option value="<?=$xa['xaid']?>"><?=$xa['name']?></option>
-                            <?php }?>
-                        </select>
+                        <input required type="text" class="form-control" id="exampleinput" name="dientich" value="<?=$baiviet['dientich']?>">
                     </div>
                 </div>
                 <div class="row col-12">
                     <div class="form-group col-12">
                         <label for="exampleFormControlTextarea1">Địa chỉ:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="resize: none" required name="diachi" placeholder="Nhập số nhà, tổ, đường,..."></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="resize: none" required name="diachi" placeholder="Nhập số nhà, tổ, đường,..."><?=$baiviet['diadiem']?></textarea>
                     </div>
                 </div>
                 <div class="row col-12">
@@ -129,18 +108,28 @@
                     </div> -->
                     <div class="form-group col-2">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
+                            <?php
+                                if($baiviet['anhien'] == 1) $anhien = 'checked';
+                            ?>
+                            <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1" <?php if(isset($anhien)) echo $anhien?>>
                             <label class="form-check-label" for="anhien1">Hiện</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio"  name="anhien" id="anhien0" value="0">
+                            <?php
+                                if($baiviet['anhien'] == 0) $anhien = 'checked';
+                            ?>
+                            <input class="form-check-input" type="radio"  name="anhien" id="anhien0" value="0" <?php if(isset($anhien)) echo $anhien?>>
                             <label class="form-check-label" for="anhien0">Ẩn</label>
                         </div>
                     </div>
                     <div class="form-group col-2">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1" name="noibat" value="1">
+                            <?php
+                                if($baiviet['noibat'] == 1) $noibat = 'checked';
+                            ?>
+                            <input type="checkbox" class="custom-control-input" id="customCheck1" name="noibat" value="1" <?php if(isset($noibat)) echo $noibat?>>
                             <label class="custom-control-label" for="customCheck1">Nổi bật</label>
+                            <input type="hidden" name="idbaiviet" value="<?=$_GET['id']?>">
                         </div>
                     </div>   
                    <div class="form-group col-12">

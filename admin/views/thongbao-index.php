@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
                     <li class="breadcrumb-item "><a class="text-dark" href="#">Tổng quan</a></li>
-                    <li class="breadcrumb-item "><a class="text-dark" href="#">Quản lý thông báo</a></li>
+                    <li class="breadcrumb-item "><a class="text-dark" href="#">Thông báo</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Danh sách thông báo</li>
                 </ol>
             </nav>
