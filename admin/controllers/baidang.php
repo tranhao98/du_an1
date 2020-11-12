@@ -14,7 +14,7 @@ $message = "";
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
   case "index":
-    $sanpham = getAllSanPham();
+    $sanpham = getAllBaiViet();
     $view = "views/baidang-index.php";
     require_once "layout.php";
     break;
@@ -64,8 +64,10 @@ switch ($act) {
     require_once "layout.php";
     break;
   case "delete":
-    
-    $view = "views/baidang-index.php";
-    require_once "layout.php";
+    $id = $_GET["id"];
+    settype($id, "int");
+    deleteBaiViet($id);
+    $message='Xóa Thành Công!';
+    header('location: ?ctrl=baidang');
     break;
 }

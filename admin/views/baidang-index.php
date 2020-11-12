@@ -34,6 +34,7 @@
                         foreach($sanpham as $row => $sanpham){
                             $stt = $row + 1;
                             $ten = $sanpham['tensp'];
+                            $id = $sanpham['idsp'];
                             $nguoidang = getNameNguoiDung($sanpham['idnguoiban'])['hoten'];
                             $khuvuc = getNameKhuVuc($sanpham['idkhuvuc'])['tenkhuvuc'];
                             $danhmuc = getNameDanhMuc($sanpham['iddm'])['tendm'];
@@ -45,8 +46,8 @@
                             $mota = $sanpham['mota'];
                             $noibat = $sanpham['noibat'];
                             if($noibat == 1) $noibat = "checked" ; else $noibat = "";
-                            $linkedit = "";
-                            $linkdel = "";
+                            $linkedit = "?ctrl=baidang&act=edit&id=".$id;
+                            $linkdel = "?ctrl=baidang&act=delete&id=".$id;
                     ?>
                     <tr>
                         <th scope="col"><?=$stt?></th>
@@ -63,8 +64,8 @@
                         <td><?=number_format($gia, 0, ',', '.')?>đ</td>
                         <td><input type="checkbox" name="" id="" <?=$noibat?>></td>
                         <td><?=$mota?></td>
-                        <td class="align-middle"><a href=""><i class='far fa-edit' style='font-size:20px'></i></a></td>
-                        <td class="align-middle"><a href=""><i class="fa fa-trash text-danger" style="font-size:20px"></i></a></td>
+                        <td class="align-middle"><a href="<?=$linkedit?>"><i class='far fa-edit' style='font-size:20px'></i></a></td>
+                        <td class="align-middle"><a href="<?=$linkdel?>"><i class="fa fa-trash text-danger" style="font-size:20px"></i></a></td>
                     </tr>
                         <?php }?>
                 </tbody>

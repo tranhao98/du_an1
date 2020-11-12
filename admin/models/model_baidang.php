@@ -5,8 +5,12 @@
         VALUES ( '$danhmuc', '$khuvuc', '$nguoidung', '$tieude', '$hinh_anh', '$gia', '$dientich', '$phongngu', '$noithat', '$noibat', '$mota', '$diachi', '$anhien')";
         execute($sql);
     }
-    function getAllSanPham(){
+    function getAllBaiViet(){
         $sql = "SELECT * FROM baidang";
         return query($sql);
+    }
+    function deleteBaiViet($id){
+        $sql= "DELETE FROM baidang where idsp ='$id'";
+        execute($sql);
     }
 ?>  
