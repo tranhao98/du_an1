@@ -21,6 +21,21 @@
                     <label for="name">Tiêu đề bài viết:</label>
                     <input required type="text" class="form-control" id="name" name="tieude">
                 </div>
+                <div class="row col-12">
+                    <div class="form-group col-6">
+                        <label for="name">Giá:</label>
+                        <input required type="text" class="form-control" id="name" name="gia">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="tieude">Người Đăng:</label>
+                        <select class="form-control" name="idnguoidang" placeholder="Người Dùng">
+                            <?php
+                                foreach($nguoidung as $nd) { ?>
+                            <option value=" <?=$nd['id']?> "> <?=$nd['hoten']?> </option>
+                            <?php } ?>   
+                        </select>
+                    </div>
+                </div>
                 <div class="form-group col-12">
                     <label for="exampleinput requiredPassword1">Hình ảnh:</label>
                     <input required type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh">
@@ -29,27 +44,29 @@
                     <label for="exampleFormControlTextarea1">Mô tả:</label>
                     <textarea required class="form-control" id="exampleFormControlTextarea1" rows="15" style="resize: none" name="mota"></textarea>
                 </div>
-                <div class="form-group col-12">
-                    <select class="custom-select col-12" required name="khuvuc">
-                        <option selected>Chọn khu vực</option>
-                        <?php
-                            foreach($dskv as $kv) {
-                        ?>
-                        <option value="<?=$kv['idkhuvuc']?>"><?=$kv['tenkhuvuc']?></option>
-                        <?php }?>
-                    </select>
                 </div>
-                <div class="form-group col-12">
-                    <select class="custom-select col-12" required name="danhmuc">
-                        <option selected>Chọn danh mục</option>
-                        <?php
-                            foreach($dsdm as $dm) {
-                        ?>
-                        <option value="<?=$dm['iddm']?>"><?=$dm['tendm']?></option>
-                        <?php }?>
-                    </select>
-                </div>
-                </div>
+                <div class="row col-12">
+                    <div class="form-group col-6">
+                        <select class="custom-select col-12" required name="khuvuc">
+                            <option selected>Chọn khu vực</option>
+                            <?php
+                                foreach($dskv as $kv) {
+                            ?>
+                            <option value="<?=$kv['idkhuvuc']?>"><?=$kv['tenkhuvuc']?></option>
+                            <?php }?>
+                        </select>
+                    </div>
+                    <div class="form-group col-6">
+                        <select class="custom-select col-12" required name="danhmuc">
+                            <option selected>Chọn danh mục</option>
+                            <?php
+                                foreach($dsdm as $dm) {
+                            ?>
+                            <option value="<?=$dm['iddm']?>"><?=$dm['tendm']?></option>
+                            <?php }?>
+                        </select>
+                    </div>
+                </div>    
                 <div class="row col-12">
                     <div class="form-group col-4">
                         <label for="exampleinput">Nội thất:</label>
@@ -106,6 +123,10 @@
                     </div>
                 </div>
                 <div class="row col-12">
+                    <!-- <div class="form-group col-5">
+                        <label for="name">Thứ tự:</label>
+                        <input required type="text" class="form-control" id="name" name="thutu">
+                    </div> -->
                     <div class="form-group col-2">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
@@ -116,9 +137,9 @@
                             <label class="form-check-label" for="anhien0">Ẩn</label>
                         </div>
                     </div>
-                    <div class="form-group col-3">
+                    <div class="form-group col-2">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1" name="noibat">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1" name="noibat" value="1">
                             <label class="custom-control-label" for="customCheck1">Nổi bật</label>
                         </div>
                     </div>   
