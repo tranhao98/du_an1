@@ -14,7 +14,6 @@
         </div>
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
-        <h5 class="font-weight-bold mb-3">Thêm người dùng</h5>
         <form enctype="multipart/form-data" class="mx-auto w-100 bg-input" method="post" action="?ctrl=nguoidung&act=addnew">
             <div class="row">
                 <div class="form-group col-3">
@@ -111,7 +110,6 @@
                     </div>
                 </div>
             </div>
-            <input name="idtb" value="<?= $row['idtb'] ?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
             <button type="submit" class="btn btn-danger">Thêm</button>
         </form>
