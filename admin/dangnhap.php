@@ -57,7 +57,7 @@ if (isset($_POST['login']) && ($_POST['login'])) {
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Nhớ tài khoản</label>
                         </div>
-                    </div> <br>
+                    </div><br>
                     <input type="submit" name="login" value="ĐĂNG NHẬP" class="btn btn-primary w-100 p-2">
                     <?php
                     if (isset($warning) && ($warning != "")) echo $warning;
