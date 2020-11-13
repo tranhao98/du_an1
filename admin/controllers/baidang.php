@@ -2,7 +2,7 @@
 
 use function PHPSTORM_META\elementType;
 
-session_start();
+
 require_once "models/model_baidang.php"; //nạp model để có các hàm tương tác db 
 require_once "models/model_donvihanhchinh.php"; //nạp model để có các hàm tương tác db 
 require_once "models/model_khuvuc.php"; //nạp model để có các hàm tương tác db 
