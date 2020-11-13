@@ -79,7 +79,9 @@ switch ($act) {
     $hoten = trim(strip_tags($hoten));
     updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
 
-
+    $dstinhthanh = getAllTinhThanh();
+    $dsquanhuyen = getAllQuanHuyenTheoTinhThanh();
+    $dsphuongxa = getAllPhuongXa();
     $message = "Cập nhật thành công!";
     header("location:index.php?ctrl=nguoidung");
     break;

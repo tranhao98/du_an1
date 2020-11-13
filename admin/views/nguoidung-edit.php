@@ -103,7 +103,7 @@
                 </div>
                 <div class="form-group col-3">
                     <label for="">Phường/Xã</label>
-                    <select id="phuongxa" class="form-control" name="quanhuyen" placeholder="Quận/Huyện">
+                    <select id="phuongxa" class="form-control" name="phuongxa" placeholder="Quận/Huyện">
                     <?php foreach ($dsphuongxa as $dsxp) {
                             if ($row['phuongxa'] == $dsxp['name']) { ?>
                                 <option value="<?= $dsxp['name'] ?>" selected><?= $dsxp['name'] ?> </option>
@@ -117,7 +117,7 @@
                 </div>
                 <div class="form-group col-3">
                     <label for="">Địa Chỉ</label>
-                    <input type="text" name="mota" id="" class="form-control" value="<?=$row['diachi']?>" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId">
+                    <input type="text" name="diachi" id="" class="form-control" value="<?=$row['diachi']?>" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId">
                 </div>
             </div>
             <input name="id" value="<?= $row['id'] ?>" type="hidden">

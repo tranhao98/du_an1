@@ -25,8 +25,10 @@ switch ($act) {
   case "edit":
     $idkhuvuc = $_GET["idkhuvuc"];
     settype($idkhuvuc, "int");
+    $dskv = getAllKhuVuc();
+    $dstinhthanh = getAllTinhThanh();
     $row = getKhuVucByID($idkhuvuc);
-    $view = "views/khuvuc-edit.php";
+    $view = "views/khuvuc-index.php";
     require_once "layout.php";
     break;
 
