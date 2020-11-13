@@ -7,14 +7,13 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
                     <li class="breadcrumb-item "><a class="text-dark" href="#">Tổng quan</a></li>
-                    <li class="breadcrumb-item "><a class="text-dark" href="#">Quản lý thông báo</a></li>
+                    <li class="breadcrumb-item "><a class="text-dark" href="#">Thông báo</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Thêm thông báo</li>
                 </ol>
             </nav>
         </div>
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
-        <h5></h5>
         <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=thongbao&act=update">
             <div class="form-group">
                 <?php
@@ -24,7 +23,7 @@
                 } else $hinh = "<img src = '../upload/noimg.jpg' style='width:150px'>";
                 ?>
                 <label for="exampleinput requiredPassword1">Hình ảnh</label>
-                <input required type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+                <input type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
                 <?= $hinh ?>
             </div>
             <div class="row">

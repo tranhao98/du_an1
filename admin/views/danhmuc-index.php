@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
                     <li class="breadcrumb-item "><a class="text-dark" href="#">Tổng quan</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Quản lý danh mục</li>
+                    <li class="breadcrumb-item active" aria-current="page">Danh mục</li>
                 </ol>
             </nav>
         </div>
@@ -51,7 +51,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Tên Danh Mục</th>
                         <th scope="col">Thứ Tự</th>
-                        <th scope="col">Ẩn Hiện</th>
+                        <th scope="col">Trạng Thái</th>
                         <th scope="col">Sửa</th>
                         <th scope="col">Xóa</th>
                     </tr>
@@ -61,14 +61,15 @@
                     $dem = 1;
                     ?>
                     <?php foreach ($dsdm as $row) { ?>
-                    <tr>
-                        <td scope="col"><?= $dem++ ?></td>
-                        <td><?= $row['tendm'] ?></td>
-                        <td><?= $row['thutu'] ?></td>
-                        <td> <?= ($row['anhien'] == 1) ? 'Hiện' : 'Ẩn'; ?></td>
-                        <td class="align-middle"> <a href="index.php?ctrl=danhmuc&act=edit&iddm=<?= $row['iddm'] ?>"><i class='far fa-edit' style='font-size:18px'></i></a> </td>
-                        <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=danhmuc&act=delete&iddm=<?= $row['iddm'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
-                    </tr>
+                        <tr>
+                            <td scope="col"><?= $dem++ ?></td>
+                            <td><?= $row['tendm'] ?></td>
+                            <td><?= $row['thutu'] ?></td>
+                            <td> <em class="text-success font-weight-normal"> <?php if ($row['anhien'] == 1) echo "Đang hiện"; ?></em>
+                                <em class="text-danger font-weight-normal"> <?php if ($row['anhien'] == 0) echo "Đang ẩn"; ?></em></td>
+                            <td class="align-middle"> <a href="index.php?ctrl=danhmuc&act=edit&iddm=<?= $row['iddm'] ?>"><i class='far fa-edit' style='font-size:18px'></i></a> </td>
+                            <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=danhmuc&act=delete&iddm=<?= $row['iddm'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
+                        </tr>
                     <?php } ?>
                 </tbody>
             </table>

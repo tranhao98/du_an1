@@ -18,17 +18,77 @@ switch ($act) {
     $view = "views/nguoidung-addnew.php";
     require_once "layout.php";
     break;
-  case "insert":
-    $view = "views/nguoidung-index.php";
+  case "edit";
+    $id = $_GET["id"];
+    settype($id, "int");
+    $row = getNguoiDungByID1($id);
+    $dstinhthanh = getAllTinhThanh();
+    $dsquanhuyen = getAllQuanHuyenTheoTinhThanh();
+    $dsphuongxa = getAllPhuongXa();
+    $view = "views/nguoidung-edit.php";
     require_once "layout.php";
+    break;
+  case "insert":
+
+    $hinh = $_FILES['hinh']['name'];
+    $target_file = "../upload/" . basename($hinh);
+    move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file);
+
+    $hoten = $_POST["tennguoidung"];
+    $ngaysinh = $_POST["ngaysinh"];
+    $email = $_POST["email"];
+    $phuongxa = $_POST["phuongxa"];
+    $quanhuyen = $_POST["quanhuyen"];
+    $tinhthanh = $_POST["tinhthanh"];
+    $gioitinh = $_POST["gioitinh"];
+    $tendangnhap = $_POST["tendangnhap"];
+    $matkhau = $_POST["matkhau"];
+    $sodienthoai = $_POST["sodienthoai"];
+    $diachi = $_POST["diachi"];
+    if (isset($_POST['vaitro']) == true) $vaitro = 1;
+    else $vaitro = 0;
+    $anhien = $_POST["anhien"];
+    $hoten = trim(strip_tags($hoten));
+    $tendangnhap = trim(strip_tags($tendangnhap));
+    $matkhau = trim(strip_tags($matkhau));
+    addNewNguoiDung($hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
+    header("location:index.php?ctrl=nguoidung");
     break;
   case "update":
-    $view = "views/nguoidung-index.php";
-    require_once "layout.php";
+    $id = $_POST["id"];
+
+    $hinh = $_FILES['hinh']['name'];
+    $target_file = "../upload/" . basename($hinh);
+    move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file);
+
+    $hoten = $_POST["tennguoidung"];
+    $ngaysinh = $_POST["ngaysinh"];
+    $email = $_POST["email"];
+    $phuongxa = $_POST["phuongxa"];
+    $quanhuyen = $_POST["quanhuyen"];
+    $tinhthanh = $_POST["tinhthanh"];
+    $gioitinh = $_POST["gioitinh"];
+    $tendangnhap = $_POST["tendangnhap"];
+    $matkhau = $_POST["matkhau"];
+    $sodienthoai = $_POST["sodienthoai"];
+    $diachi = $_POST["diachi"];
+    if (isset($_POST['vaitro']) == true) $vaitro = 1;
+    else $vaitro = 0;
+    $anhien = $_POST["anhien"];
+    settype($id, "int");
+    $hoten = trim(strip_tags($hoten));
+    updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
+
+
+    $message = "Cập nhật thành công!";
+    header("location:index.php?ctrl=nguoidung");
     break;
   case "delete":
-    $view = "views/nguoidung-index.php";
-    require_once "layout.php";
+    $id = $_GET["id"];
+    settype($id, "int");
+    deleteNguoiDung($id);
+    $message = 'Xóa Thành Công!';
+    header("location:index.php?ctrl=nguoidung");
     break;
   case 'dangxuat':
     if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {

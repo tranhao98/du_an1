@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="font-family: 'Nunito Sans', sans-serif; background-color: #f2f2f2;">
+<body style="font-family: 'Nunito Sans', sans-serif; background-color: #f2f2f2; min-height:auto">
     <div class="container mw-100 p-0 m-0">
         <header class="shadow-sm p-3 mb-3 bg-white rounded">
             <div class="row">
@@ -66,7 +66,7 @@
                     <div class="card-header bg-white" id="headingtwo">
                         <h2 class="mb-0">
                             <a class="btn btn-white p-0" href="index.php?ctrl=danhmuc&act=index"><button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                    <i class="far fa-clone" style="font-size:18px"></i> Quản lý danh mục
+                                    <i class="far fa-clone" style="font-size:18px"></i> Danh mục
                                 </button></a>
 
                         </h2>
@@ -74,7 +74,7 @@
                     <div class="card-header bg-white" id="headingtwo">
                         <h2 class="mb-0">
                             <a class="btn btn-white p-0" href="index.php?ctrl=khuvuc&act=index"><button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                    <i class="fas fa-map-marker-alt" style="font-size:18px"></i> Quản lý khu vực
+                                    <i class="fas fa-map-marker-alt" style="font-size:18px"></i> Khu vực
                                 </button></a>
                         </h2>
                     </div>
@@ -82,7 +82,7 @@
                         <div class="card-header bg-white" id="headingOne">
                             <h2 class="mb-0">
                                 <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="fas fa-book" style="font-size:18px"></i> Quản lý bài đăng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:22%;"></i>
+                                    <i class="fas fa-book" style="font-size:18px"></i> Bài đăng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:50%;"></i>
                                 </button>
 
                             </h2>
@@ -100,7 +100,7 @@
                         <div class="card-header bg-white" id="headingThree">
                             <h2 class="mb-0">
                                 <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <i class="fas fa-user-alt" style="font-size:18px"></i> Quản lý người dùng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:13%;"></i>
+                                    <i class="fas fa-user-alt" style="font-size:18px"></i> Người dùng <i class="fa fa-angle-down" style="font-size:14pt; margin-left:39%;"></i>
                                 </button>
                             </h2>
                         </div>
@@ -115,7 +115,7 @@
                         <div class="card-header bg-white" id="heading4">
                             <h2 class="mb-0">
                                 <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    <i class="far fa-comment-dots" style="font-size:18px"></i> Quản lý thông báo <i class="fa fa-angle-down" style="font-size:14pt; margin-left:17%;"></i>
+                                    <i class="far fa-comment-dots" style="font-size:18px"></i> Thông báo <i class="fa fa-angle-down" style="font-size:14pt; margin-left:42%;"></i>
                                 </button>
                             </h2>
                         </div>
@@ -130,7 +130,7 @@
             </aside>
             <main>
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
-                <footer class="mt-3 bg-white rounded shadow-sm">Giao diện này được thực hiện bởi <strong class="text-danger">HARDWORK TEAM</strong> </footer>
+                <footer class="mt-3 mb-3 bg-white rounded shadow-sm">Giao diện này được thực hiện bởi <strong class="text-danger">HARDWORK TEAM</strong> </footer>
             </main>
             
         </div>

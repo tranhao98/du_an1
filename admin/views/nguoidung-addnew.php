@@ -7,15 +7,18 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
                     <li class="breadcrumb-item">Tổng quan</li>
-                    <li class="breadcrumb-item">Quản lý người dùng</li>
+                    <li class="breadcrumb-item">Người dùng</li>
                     <li class="breadcrumb-item active" aria-current="page">Thêm thông tin người dùng</li>
                 </ol>
             </nav>
         </div>
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
-        <h5 class="font-weight-bold mb-3">Thêm người dùng</h5>
-        <form enctype="multipart/form-data" class="mx-auto w-100 bg-input" method="post" action="?ctrl=nguoidung&act=addnew">
+        <form enctype="multipart/form-data" class="mx-auto w-100 bg-input" method="post" action="?ctrl=nguoidung&act=insert">
+            <div class="form-group">
+                <label for="exampleinput requiredPassword1">Hình ảnh</label>
+                <input type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+            </div>
             <div class="row">
                 <div class="form-group col-3">
                     <label for="">Tên Người Dùng</label>
@@ -70,7 +73,7 @@
                         <option value="" selected>--Chọn Tỉnh/Thành phố--</option>
                         <?php
                         foreach ($dstinhthanh as $row) { ?>
-                            <option value=" <?= $row['matp'] ?> "> <?= $row['name'] ?> </option>
+                            <option value=" <?= $row['name'] ?> "> <?= $row['name'] ?> </option>
                         <?php } ?>
                     </select>
                 </div>
@@ -80,38 +83,25 @@
                     <select id="quanhuyen" class="form-control" name="quanhuyen" placeholder="Quận/Huyện">
                         <option value="" selected>--Chọn Quận/Huyện--</option>
                         <?php foreach ($dsquanhuyen as $row) { ?>
-                            <option value="<?= $row['maqh'] ?>"><?= $row['name'] ?></option>
+                            <option value="<?= $row['name'] ?>"><?= $row['name'] ?></option>
                         <?php } ?>
                     </select>
                 </div>
                 <div class="form-group col-3">
                     <label for="">Phường/Xã</label>
-                    <select id="phuongxa" class="form-control" name="quanhuyen" placeholder="Quận/Huyện">
+                    <select id="phuongxa" class="form-control" name="phuongxa" placeholder="Phường/Xã">
                         <option value="" selected>--Chọn Phường/Xã--</option>
                         <?php foreach ($dsphuongxa as $row) { ?>
-                            <option value="<?= $row['xaid'] ?>"><?= $row['name'] ?></option>
+                            <option value="<?= $row['name'] ?>"><?= $row['name'] ?></option>
                         <?php } ?>
 
                     </select>
                 </div>
                 <div class="form-group col-3">
                     <label for="">Địa Chỉ</label>
-                    <input type="text" name="mota" id="" class="form-control" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId">
+                    <input type="text" name="diachi" id="" class="form-control" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group col-6 ">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
-                        <label class="form-check-label" for="anhien1">Hiện</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="anhien" id="anhien0" value="0">
-                        <label class="form-check-label" for="anhien0">Ẩn</label>
-                    </div>
-                </div>
-            </div>
-            <input name="idtb" value="<?= $row['idtb'] ?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
             <button type="submit" class="btn btn-danger">Thêm</button>
         </form>

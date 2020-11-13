@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb pl-5 bg-white">
                     <li class="breadcrumb-item "><a class="text-dark" href="#">Tổng quan</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Quản lý khu vực</li>
+                    <li class="breadcrumb-item active" aria-current="page">Khu vực</li>
                 </ol>
             </nav>
         </div>
@@ -18,8 +18,14 @@
             <h5 class="mb-4 font-weight-bold">Thêm Khu Vực</h5>
             <form method="post" action="?ctrl=khuvuc&act=insert" class="bg-input">
                 <div class="form-group">
-                    <label for="">Tên Khu Vực</label>
-                    <input type="text" name="tenkhuvuc" id="" class="form-control" placeholder="Tên khu vực" aria-describedby="helpId">
+                    <label for="">Chọn Khu Vực</label>
+                    <select id="tinhthanh" class="form-control" name="tenkhuvuc">
+                        <option value="" selected>--Chọn khu vực--</option>
+                        <?php
+                        foreach ($dstinhthanh as $row) { ?>
+                            <option value=" <?= $row['name'] ?> "> <?= $row['name'] ?> </option>
+                        <?php } ?>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="">Thứ Tự</label>
@@ -51,7 +57,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Tên Khu Vực</th>
                         <th scope="col">Thứ Tự</th>
-                        <th scope="col">Ẩn Hiện</th>
+                        <th scope="col">Trạng Thái</th>
                         <th scope="col">Sửa</th>
                         <th scope="col">Xóa</th>
                     </tr>
@@ -63,9 +69,10 @@
                      <?php foreach ($dskv as $row) { ?>
                     <tr>
                         <td scope="col"><?= $dem++ ?></td>
-                        <td><?= $row['tenkhuvuc'] ?></td>
+                        <td><?= $row['tenkhuvuc']?></td>
                         <td><?= $row['thutu'] ?></td>
-                        <td> <?= ($row['anhien'] == 1) ? 'Ẩn' : 'Hiện'; ?></td>
+                        <td> <em class="text-success font-weight-normal"> <?php if ($row['anhien'] == 1) echo "Đang hiện"; ?></em>
+                                <em class="text-danger font-weight-normal"> <?php if ($row['anhien'] == 0) echo "Đang ẩn"; ?></em></td>
                         <td class="align-middle"> <a href="index.php?ctrl=khuvuc&act=edit&idkhuvuc=<?= $row['idkhuvuc'] ?>"><i class='far fa-edit' style='font-size:18px'></i></a> </td>
                         <td class="align-middle"> <a onclick="return confirm('Bạn có muốn xóa không?')" href="index.php?ctrl=khuvuc&act=delete&idkhuvuc=<?= $row['idkhuvuc'] ?>"><i class="fa fa-trash text-danger" style="font-size:18px"></i></a> </td>
                     </tr>
