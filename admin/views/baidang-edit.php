@@ -47,7 +47,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Mô tả:</label>
-                <textarea required class="form-control" id="exampleFormControlTextarea1 editor1" rows="5" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."><?= $baiviet['mota'] ?></textarea>
+                <textarea required class="form-control" id="editor0" rows="5" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."><?= $baiviet['mota'] ?></textarea>
             </div>
 
             <div class="row">
@@ -136,3 +136,6 @@
         </form>
     </div>
 </div>
+<script>
+    CKEDITOR.replace('editor0')
+</script>

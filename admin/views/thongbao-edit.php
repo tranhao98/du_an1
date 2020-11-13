@@ -35,6 +35,8 @@
                     <label for="tieude">Ngày Đăng</label>
                     <input type="date" class="form-control" value="<?= $row['ngaydang'] ?>" name="ngaydang">
                 </div>
+            </div>
+            <div class="row">
                 <div class="form-group col-6 ">
                     <label for="tieude">Thứ tự</label>
                     <input type="number" class="form-control" value="<?= $row['thutu'] ?>" name="thutu">
@@ -52,12 +54,11 @@
                     </select>
                 </div>
             </div>
-            <div class="row">
-                <!-- Nội dung -->
-                <div class="form-group col-6">
-                    <label for="tieude">Nội Dung</label>
-                    <textarea class="form-control" id="editor1"  name="noidung" rows="5"> <?=$row['noidung']?> </textarea>
-                </div>
+
+            <!-- Nội dung -->
+            <div class="form-group">
+                <label for="tieude">Nội Dung</label>
+                <textarea class="form-control" id="editor0" name="noidung" rows="5"> <?= $row['noidung'] ?> </textarea>
             </div>
             <!-- Ẩn hiện -->
             <div class="row">
@@ -78,3 +79,6 @@
         </form>
     </div>
 </div>
+<script>
+    CKEDITOR.replace('editor0')
+</script>

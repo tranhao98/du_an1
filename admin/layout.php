@@ -15,7 +15,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../ckeditor/ckeditor.js"></script>
-    <script>CKEDITOR.replace('editor1')</script>
+    
 </head>
 
 <body style="font-family: 'Nunito Sans', sans-serif; background-color: #f2f2f2; min-height:auto">

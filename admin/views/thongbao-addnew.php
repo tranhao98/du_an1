@@ -20,23 +20,16 @@
                 <input class="bg-light" required type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
             </div>
             <div class="row">
-                <div class="form-group col-6 ">
+                <div class="form-group col-4 ">
                     <label for="tieude">Tiêu Đề</label>
                     <input type="text" class="form-control" id="tieude" name="tieude" placeholder="Tiêu Đề">
                 </div>
-                <div class="form-group col-6 ">
+                <div class="form-group col-4 ">
                     <label for="tieude">Ngày Đăng</label>
                     <input type="date" class="form-control" name="ngaydang" placeholder="Ngày đăng">
                 </div>
-            </div>
-            <div class="row">
-                <!-- Nội dung -->
-                <div class="form-group col-6">
-                    <label for="tieude">Nội Dung</label>
-                    <textarea id="editor1" class="form-control" name="noidung" placeholder="mời nhập nội dung..." rows="5"></textarea>
-                </div>
                 <!-- Người dùng -->
-                <div class="form-group col-6">
+                <div class="form-group col-4">
                     <label for="tieude">Người Đăng</label>
                     <select class="form-control" name="idnguoidang" placeholder="Người Dùng">
                         <?php
@@ -44,7 +37,14 @@
                             <option value=" <?= $nd['id'] ?> "> <?= $nd['hoten'] ?> </option>
                         <?php } ?>
                     </select>
+
                 </div>
+            </div>
+
+            <!-- Nội dung -->
+            <div class="form-group">
+                <label for="tieude">Nội Dung</label>
+                <textarea id="editor0" class="form-control" name="noidung" placeholder="mời nhập nội dung..." rows="5"></textarea>
             </div>
             <!-- Ẩn hiện -->
             <div class="row">
@@ -64,3 +64,6 @@
         </form>
     </div>
 </div>
+<script>
+    CKEDITOR.replace('editor0')
+</script>
