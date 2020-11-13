@@ -12,7 +12,7 @@ if (isset($_POST['login']) && ($_POST['login'])) {
         $_SESSION['sid'] = $check['id'];
         $_SESSION['hoten'] = $check['hoten'];
         $_SESSION['tendangnnhap'] = $check['tendangnhap'];
-        if ($check['vaitro'] == 1) header("location: layout.php");
+        if ($check['vaitro'] == 1) header("location: index.php");
         // else header("location: ../site/index.php");
     } else {
         $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
