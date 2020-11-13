@@ -30,7 +30,7 @@
                 <div class="col-3 text-right">
                     <div class="pr-2 user-admin">
                         <?php
-                        session_start();
+                        if (! session_id ()) session_start ();
                         if (isset($_SESSION['sid']) && $_SESSION['sid'] > 0) {
                         ?>
                             <div class="dropdown">
