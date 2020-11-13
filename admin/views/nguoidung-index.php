@@ -22,7 +22,6 @@
                     <th scope="col">Hình ảnh</th>
                     <th scope="col">Thông tin người dùng</th>
                     <th scope="col">Tên đăng nhập</th>
-                    <th scope="col">Mật khẩu</th>
                     <th scope="col">Số điện thoại</th>
                     <th scope="col">Vai trò</th>
                     <th scope="col">Sửa</th>
@@ -46,7 +45,6 @@
                             <span class="text-secondary font-weight-bold">Địa chỉ:</span> <?=$row['diachi']?>, <?= $row['phuongxa'] ?>, <?= $row['quanhuyen'] ?>, <?= $row['tinhthanh'] ?><br>
                         </td>
                         <td><?= $row['tendangnhap'] ?></td>
-                        <td><?= $row['matkhau'] ?></td>
                         <td><?= $row['sodienthoai'] ?></td>
                         <td><span class="text-warning font-weight-bold"><?php if ($row['vaitro'] == 1) echo "Quản trị viên"; ?></span>
                             <span class="text-info font-weight-bold"><?php if ($row['vaitro'] == 0) echo "Người dùng"; ?></span></td>

@@ -18,6 +18,8 @@
         return queryOne($sql);
     }
     function updateBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh,$gia,$nguoidung,$id){
-        $sql = "";
+        if($hinh_anh != "") $sql = "UPDATE baidang SET idkhuvuc = '$khuvuc', iddm = '$danhmuc', idnguoiban = '$nguoidung', tensp = '$tieude', hinh = '$hinh_anh', gia = '$gia', dientich = '$dientich', phongngu = '$phongngu', noithat = '$noithat', noibat = '$noibat', mota = '$mota', diadiem = '$diachi', anhien = '$anhien' WHERE idsp = '$id'";
+        else $sql = "UPDATE baidang SET idkhuvuc = '$khuvuc', iddm = '$danhmuc', idnguoiban = '$nguoidung', tensp = '$tieude', gia = '$gia', dientich = '$dientich', phongngu = '$phongngu', noithat = '$noithat', noibat = '$noibat', mota = '$mota', diadiem = '$diachi', anhien = '$anhien' WHERE idsp = '$id'";
+        execute($sql);
     }
 ?>  
