@@ -47,7 +47,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Mô tả:</label>
-                <textarea required class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."><?= $baiviet['mota'] ?></textarea>
+                <textarea required class="form-control" id="exampleFormControlTextarea1 editor1" rows="5" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."><?= $baiviet['mota'] ?></textarea>
             </div>
 
             <div class="row">
@@ -95,7 +95,7 @@
 
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Địa chỉ:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="resize: none" required name="diachi" placeholder="Nhập số nhà, tổ, đường,..."><?= $baiviet['diadiem'] ?></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1 " rows="2" style="resize: none" required name="diachi" placeholder="Nhập số nhà, tổ, đường,..."><?= $baiviet['diadiem'] ?></textarea>
             </div>
 
             <div class="row">

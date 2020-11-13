@@ -44,7 +44,7 @@
 
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Mô tả:</label>
-                <textarea required class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."></textarea>
+                <textarea required class="form-control" id="exampleFormControlTextarea1 editor1" rows="5" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."></textarea>
             </div>
 
             <div class="row">

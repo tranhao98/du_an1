@@ -1,9 +1,9 @@
 <?php
+session_start();
+if(isset($_SESSION['sid']) && $_SESSION['sid'] > 0){
   define("ARR_CONTROLLER", ["home","baidang", "danhmuc", "khuvuc","nguoidung","binhluan","thongbao"]) ; //Gán các request được chấp nhận
-
   $ctrl='home'; // ctrl mặc định là home.php
-  session_start();
-  if(isset($_SESSION['sid']) && $_SESSION['sid'] > 0){
+  
     if(isset($_GET['ctrl']) && ($_GET['ctrl'] != "")) $ctrl=$_GET['ctrl']; //Nhận request trên thanh địa chỉ
 
     if (in_array($ctrl, ARR_CONTROLLER)==false) die("Không tồn tại địa chỉ");
@@ -15,5 +15,3 @@
   } else {
     header("location: dangnhap.php");
   }
-
-?>
