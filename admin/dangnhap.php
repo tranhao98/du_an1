@@ -9,6 +9,7 @@ if (isset($_POST['login']) && ($_POST['login'])) {
     $check = kiemTraNguoiDung($tendangnhap, $matkhau);
     // var_dump($check);
     if (is_array($check)) {
+        $_SESSION['hinh'] = $check['hinh'];
         $_SESSION['sid'] = $check['id'];
         $_SESSION['hoten'] = $check['hoten'];
         $_SESSION['tendangnnhap'] = $check['tendangnhap'];

@@ -34,7 +34,7 @@
                         if (isset($_SESSION['sid']) && $_SESSION['sid'] > 0) {
                         ?>
                             <div class="dropdown">
-                                <img src="../upload/comment_2.png" alt="">
+                                <img src="../upload/<?=$_SESSION['hinh']?>" alt="" onerror="this.src = '../upload/noavatar.jpg';">
                                 <a class="dropdown-toggle text-dark" style="text-decoration: none;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <?= $_SESSION['hoten'] ?>
                                 </a>
@@ -129,6 +129,7 @@
                 </div>
             </aside>
             <main>
+            <?php if (isset($message) && file_exists($message)) require_once "$message"; ?>
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
                 <footer class="mt-3 mb-3 bg-white rounded shadow-sm">Giao diện này được thực hiện bởi <strong class="text-danger">HARDWORK TEAM</strong> </footer>
             </main>

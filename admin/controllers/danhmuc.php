@@ -17,7 +17,12 @@ switch ($act) {
     $thutu = $_POST["thutu"];
     $anhien = $_POST["anhien"];
     addDanhMuc($tendm, $thutu, $anhien);
-    header("location:index.php?ctrl=danhmuc");
+    $dsdm = getAllDanhMuc();
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã thêm thành công!
+    </div>";
+    $view = "views/danhmuc-index.php";
+    require_once "layout.php";
     break;
 
   case "edit":
