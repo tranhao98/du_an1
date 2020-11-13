@@ -12,7 +12,7 @@ if (isset($_POST['login']) && ($_POST['login'])) {
         $_SESSION['sid'] = $check['id'];
         $_SESSION['hoten'] = $check['hoten'];
         $_SESSION['tendangnnhap'] = $check['tendangnhap'];
-        if ($check['vaitro'] == 1) header("location: layout.php");
+        if ($check['vaitro'] == 1) header("location: index.php");
         // else header("location: ../site/index.php");
     } else {
         $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
@@ -38,7 +38,7 @@ if (isset($_POST['login']) && ($_POST['login'])) {
 </head>
 
 <body style="background-color: #47A1FA;">
-    <div class="container" style="padding-top: 8%; width: 400px;">
+    <div class="container" style="padding-top: 8%; width:500px;">
         <h4 style="font-weight: normal;" class="text-white text-center mb-3">Hardwork Team Admin</h4>
         <div class="row">
             <div class="col-md-12 bg-white p-4 shadow-sm rounded">
