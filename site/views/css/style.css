@@ -1,6 +1,5 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
-    overflow: hidden;
 }
 
 p {
@@ -121,6 +120,10 @@ header .navbar {
     color: #1e1e1e!important;
 }
 
+.background-header .navbar-nav span {
+    color: #1e1e1e!important;
+}
+
 .background-header .navbar-nav .nav-link:hover,
 .background-header .navbar-nav .active>.nav-link,
 .background-header .navbar-nav .nav-link.active,
@@ -158,8 +161,16 @@ header .navbar {
     margin-right: 0px;
 }
 
+.navbar .navbar-nav .dn .nav-link {
+    color: yellowgreen;
+}
+
 .navbar .navbar-nav .dk {
     margin-left: 0px;
+}
+
+.navbar .navbar-nav .dk .nav-link {
+    color: #f33f3f;
 }
 
 .navbar .navbar-nav a.nav-link {
@@ -291,4 +302,297 @@ header .navbar {
 .owl-banner .owl-dots .owl-dot.active {
     background-color: #fff;
     opacity: 1;
+}
+
+#our-classes {
+    margin-bottom: 50px;
+}
+
+.section-heading {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #232d39;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.section-heading img {
+    margin: 20px auto;
+}
+
+#tabs ul {
+    margin: 0;
+    padding: 0;
+}
+
+#tabs ul li {
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+#tabs ul li:last-child {
+    margin-bottom: 0px;
+}
+
+#tabs ul li a {
+    text-transform: capitalize;
+    width: 100%;
+    padding: 30px 30px;
+    display: inline-block;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 19px;
+    color: #232d39;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+#tabs .main-rounded-button a {
+    text-align: center;
+    padding: 20px 30px;
+    width: 100%;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    background-color: #ed563b;
+}
+
+#tabs .main-rounded-button a:hover {
+    background-color: #f9735b;
+}
+
+#tabs ul li a .fa {
+    font-size: 32px;
+    height: 32px;
+    color: #ed563b;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+#tabs ul .ui-tabs-active span {
+    background: #faf5b2;
+    border: #faf5b2;
+    line-height: 90px;
+    border-bottom: none;
+}
+
+#tabs ul .ui-tabs-active a {
+    color: #ed563b;
+}
+
+#tabs ul .ui-tabs-active span {
+    color: #1e1e1e;
+}
+
+.tabs-content {
+    margin-left: 30px;
+    text-align: left;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.tabs-content img {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.tabs-content h4 {
+    font-size: 23px;
+    font-weight: 700;
+    color: #232d39;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.tabs-content p {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-bottom: 28px;
+}
+
+.main-button a {
+    display: inline-block;
+    font-size: 15px;
+    padding: 12px 20px;
+    background-color: #ed563b;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+.main-button a:hover {
+    background-color: #f9735b;
+    color: #fff;
+}
+
+#trainers {
+    padding-bottom: 50px;
+}
+
+#trainers .trainer-item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+#trainers .trainer-item img {
+    width: 100%;
+    border-radius: 5px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#trainers .trainer-item span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ed563b;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+#trainers .trainer-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #232d39;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+#trainers .trainer-item p {
+    margin-bottom: 5px;
+}
+
+ul.social-icons li {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+ul.social-icons li:last-child {
+    margin-right: 0px;
+}
+
+ul.social-icons li a {
+    color: #232d39;
+    transition: all .3s;
+}
+
+ul.social-icons li a:hover {
+    color: #ed563b;
+}
+
+#location {
+    padding-bottom: 50px;
+}
+
+#location .single_location {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+#location .special {
+    height: 95.5%;
+}
+
+#location .special .thumb {
+    height: 100% !important;
+}
+
+#location .single_location::before {
+    background-image: linear-gradient(to bottom, rgba(4, 14, 39, 0) 0%, rgba(4, 14, 39, 1.7) 100%);
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+}
+
+#location .single_location .thumb {
+    width: 100%;
+    height: 200px;
+}
+
+#location .single_location .thumb img {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+}
+
+#location .single_location .content {
+    position: absolute;
+    left: 15px;
+    bottom: 30px;
+    z-index: 7;
+}
+
+#location .special .content p {
+    font-size: 25px !important;
+}
+
+#location .special .content p a {
+    font-size: 15px !important;
+}
+
+#location .single_location .content p {
+    margin-bottom: 0;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+#location .single_location .content p a {
+    display: inline-block;
+    background: #1EC6B6;
+    font-size: 11px;
+    border-radius: 30px;
+    font-weight: 400;
+    padding: 0px 12px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    margin-left: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#location .single_location:hover {
+    transform: translateY(-10px);
+}
+
+#location .single_location:hover .content p {
+    color: #FF4A52;
+    transition: 0.3s;
+}
+
+#location .single_location:hover .content p a {
+    background: #FF4A52;
+    color: #fff;
 }

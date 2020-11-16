@@ -4,7 +4,7 @@ $act = "index"; //chức năng mặc định
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "index":
-        require_once "views/layout.php";
+        require_once "views/home.php";
         break;
     }
 ?>
