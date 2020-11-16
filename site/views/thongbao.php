@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/thongbao.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/owl.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -80,15 +81,118 @@
     </header>
 
 
-<!-- Code ở đây nha Phong -->
+    <!-- Code ở đây nha Phong -->
+    <section  class="section" id="our-classes">
+        <div class="container">
+            <div class="row">
+                <table class="mt-100 col-12">
+                    <tr>
+                        <th>THÔNG BÁO VÀ TIN MỚI NHẤT</th>
+                        <th>THÔNG BÁO VÀ TIN MỚI NHẤT</th>
+                        <th>THÔNG BÁO VÀ TIN KHÁC</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tb-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-thongbao">Top 5 Dự Án Căn Hộ Tầm Trung Hot Nhất TPHCM Hiện Nay</a>
+                                    <p>Nội dung thông báo</p>
+                                </div>
+                                <div class="tb-card-body">
+                                    <p>Ngày đăng: 17-11-2020</p>
+                                    <p>Người đăng: ntphong</p>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tb-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-thongbao">Top 5 Dự Án Căn Hộ Tầm Trung Hot Nhất TPHCM Hiện Nay</a>
+                                    <p>Nội dung thông báo</p>
+                                </div>
+                                <div class="tb-card-body">
+                                    <p>Ngày đăng: 17-11-2020</p>
+                                    <p>Người đăng: ntphong</p>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tb-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-thongbao">Top 5 Dự Án Căn Hộ Tầm Trung Hot Nhất TPHCM Hiện Nay</a>
+                                    <p>Nội dung thông báo</p>
+                                </div>
+                                <div class="tb-card-body">
+                                    <p>Ngày đăng: 17-11-2020</p>
+                                    <p>Người đăng: ntphong</p>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tb-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-thongbao">Top 5 Dự Án Căn Hộ Tầm Trung Hot Nhất TPHCM Hiện Nay</a>
+                                    <p>Nội dung thông báo</p>
+                                </div>
+                                <div class="tb-card-body">
+                                    <p>Ngày đăng: 17-11-2020</p>
+                                    <p>Người đăng: ntphong</p>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tb-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-thongbao">Top 5 Dự Án Căn Hộ Tầm Trung Hot Nhất TPHCM Hiện Nay</a>
+                                    <p>Nội dung thông báo</p>
+                                </div>
+                                <div class="tb-card-body">
+                                    <p>Ngày đăng: 17-11-2020</p>
+                                    <p>Người đăng: ntphong</p>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tb-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-thongbao">Top 5 Dự Án Căn Hộ Tầm Trung Hot Nhất TPHCM Hiện Nay</a>
+                                    <p>Nội dung thông báo</p>
+                                </div>
+                                <div class="tb-card-body">
+                                    <p>Ngày đăng: 17-11-2020</p>
+                                    <p>Người đăng: ntphong</p>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="tb-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-thongbao">Top 5 Dự Án Căn Hộ Tầm Trung Hot Nhất TPHCM Hiện Nay</a>
+                                    <p>Nội dung thông báo</p>
+                                </div>
+                                <div class="tb-card-body">
+                                    <p>Ngày đăng: 17-11-2020</p>
+                                    <p>Người đăng: ntphong</p>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
-
-
-
-
-
-
-
+        </div>
+    </section>
 
     <script src="../../js/jquery/jquery.min.js"></script>
     <script src="../../js/custom.js"> </script>
