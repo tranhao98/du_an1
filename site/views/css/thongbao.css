@@ -1,0 +1,44 @@
+
+.mt-100{
+    margin-top: 100px;
+}
+
+table{
+    width: 100%;
+}
+th{ 
+    font-size: 15pt;
+    color: rgb(171, 10, 10);
+    font-weight: bold;
+}
+.tb-card{
+    min-width: 0;
+    min-height: 150px;
+    padding:  10px;
+    background-color: #fff;
+    background-clip: border-box;
+}
+.tb-card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    /* padding: 1.25rem; */
+}
+.title-thongbao{
+    font-size: 15pt;
+    color: rgb(4, 4, 160);
+}
+
+hr{
+	border-top: 1px solid #000000;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    margin: auto;
+}
+hr:after {
+	content: '';
+	display: block;
+	margin-top: 2px;
+	border-top: 1px solid #737373;
+	border-bottom: 1px solid #fff;
+}
