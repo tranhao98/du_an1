@@ -59,11 +59,11 @@
                             </div>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link" href="../trang/gioithieu">Giới thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Giới thiệu</a></li>
 
-                        <li class="nav-item"><a class="nav-link" href="../trang/lienhe">Liên hệ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Liên hệ</a></li>
 
-                        <li class="nav-item dn"><a class="nav-link" href="../admin/dangnhap.php">Đăng nhập</a>
+                        <li class="nav-item dn"><a class="nav-link" href="">Đăng nhập</a>
 
                         </li>
 
