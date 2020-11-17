@@ -81,47 +81,59 @@
     </header>
     <div class="container">
         <div class="row">
-            <div class="card-thongbaochitiet mt-100">
-                <div class="card-title">
-                    <h1>5 CĂN PENTHOUSE XA XỈ NHẤT TẠI TP.HCM</h1>
-                    <p>17/11/2020</p>
-                    <h6>
-                        Penthouse luôn là căn hộ được giới siêu giàu yêu thích và nhanh tay chi tiền sở hữu một vài căn ở khắp thế giới. 
-                        Penthouse xuất phát từ Tòa nhà Plaza Hotel ở 
-                        New York từ năm 1923, đó là căn hộ nằm ở tầng cao nhất của một tòa nhà và được tận dụng tối đa diện tích rộng, thông thoáng nhất để thiết kế nội thất một cách xa xỉ nhất. 
-                        Căn hộ penthouse gần đầy được giới đại gia TP.HCM cực kỳ yêu thích. 
-                        Trong bài viết này chính là 5 căn penthouse đẹp đẽ, tráng lệ nhất tại những vị trí trung tâm siêu đắc địa của Sài Gòn phồn hoa. 
-                        Và đó cũng chính là những dự án căn hộ cao cấp tốt nhất tại TP.HCM đến từ Vingroup, Novaland, CapitaLand. Hãy cùng tìm hiểu về 5 căn penthouse đáng chi tiền nhất này nhé!
-                    </h6>
+            <div class="card-thongbao">
+                <div class="thongbao-trai mt-100">
+                    <div class="card-title">
+                        <h2>Novaland Gallery: Đẳng cấp mới của điểm giao dịch Bất động sản</h2>
+                        <p>17/11/2020 \</p>
+                        <h6>
+                            Ngày 19/11 tới đây, tại khu vực trung tâm TP.HCM, Tập đoàn Novaland sẽ ra mắt Novaland Gallery 
+                            (Trung tâm Triển lãm Novaland) lớn tại miền Nam với diện tích lên tới gần 5.000 m2. 
+                            Đây được coi là trung tâm triển lãm, giao dịch bất động sản lớn bậc nhất tại khu vực miền Nam tính đến thời điểm hiện tại.
+                        </h6>
+                    </div>
+                    <div class="card-content">
+                        <h5>Tập đoàn Novaland Gallery</h5>
+                        <img src="../../upload/novaland-gallery.jpg" alt=""> <br>
+                        <a class="">
+                            Theo đại diện của Novaland, Novaland Gallery sẽ được xây dựng thành một công trình đa chức năng, đồng bộ, 
+                            đáp ứng nhu cầu của khách hàng đến tham quan, tìm hiểu dự án, bao gồm cả khách trong nước và ngoài nước, 
+                            xứng tầm là công trình trọng điểm tại Quận 3, TP.HCM.
+                            Việc ra mắt Novaland Gallery với diện mạo mới sẽ giúp nâng cao hơn nữa chất lượng dịch vụ khách hàng, 
+                            tăng tính trải nghiệm và tương tác trong quá trình chọn lựa các sản phẩm Bất động sản của Novaland. 
+                            Đặc biệt, đây cũng là sự mở đầu hoành tráng cho chuỗi sự kiện từ 19/11/2020 đến 31/12/2020 để giới thiệu 
+                            các dự án trọng điểm sắp tới của Novaland, hâm nóng bầu không khí náo nhiệt của mùa đầu tư cuối năm trong bối cảnh bình thường mới.
+                        </a>
+                    </div>
+                    <div class="card-conclude">
+                        <p>Nguyễn Thanh Phong</p>
+                    </div>
                 </div>
-                <div class="card-img">
-                    <h5>Penthouse – The Vista – CapitaLand</h5>
-                    <img src="../../upload/thongbao1.jpg" alt="">
+                <div class="thongbao-phai mt-200">
+                    <div class="card-thongbao">
+                        <div class="tintucmoi">
+                            <h4>Tin tức mới</h4>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                        </div>
+                        <div class="tintuccu">
+                            <h4>Tin tức cũ</h4>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-img">
-                    <h5>Penthouse – Vinhomes Central Park – Vingroup</h5>
-                    <img src="../../upload/thongbao2.jpg" alt="">
-                </div>
-                <div class="card-img">
-                    <h5>Penthouse – Vista Verde – CapitaLand</h5>
-                    <img src="../../upload/thongbao3.png" alt="">
-                </div>
-                <div class="card-img">
-                    <h5>Penthouse – Sunrise City – Novaland</h5>
-                    <img src="../../upload/thongbao4.jpg" alt="">
-                </div>
-                <div class="card-img">
-                    <h5>Penthouse – Estela</h5>
-                    <img src="../../upload/thongbao5.jpg" alt="">
-                </div>
-                <div class="card-content"></div>
             </div>
         </div>
     </div>
-    <footer>
 
-    </footer>
-    
     <script src="../../js/jquery/jquery.min.js"></script>
     <script src="../../js/custom.js"> </script>
     <script src="../../js/owl.js"> </script>
