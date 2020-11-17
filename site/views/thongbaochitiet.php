@@ -79,64 +79,62 @@
             </div>
         </nav>
     </header>
-
-
-    <section  class="section">
-        <div class="container">
-            <div class="row">
-                <div class="boxchitiet-img mt-100">
-                    <div class="">
-                        <img src="../../upload/noavatar.png" height="600px" width="500px">
+    <div class="container">
+        <div class="row">
+            <div class="card-thongbao">
+                <div class="thongbao-trai mt-100">
+                    <div class="card-title">
+                        <h2>Novaland Gallery: Đẳng cấp mới của điểm giao dịch Bất động sản</h2>
+                        <p>17/11/2020 | Bất động sản</p>
+                        <h6>
+                            Ngày 19/11 tới đây, tại khu vực trung tâm TP.HCM, Tập đoàn Novaland sẽ ra mắt Novaland Gallery 
+                            (Trung tâm Triển lãm Novaland) lớn tại miền Nam với diện tích lên tới gần 5.000 m2. 
+                            Đây được coi là trung tâm triển lãm, giao dịch bất động sản lớn bậc nhất tại khu vực miền Nam tính đến thời điểm hiện tại.
+                        </h6>
+                    </div>
+                    <div class="card-content">
+                        <h5>Tập đoàn Novaland Gallery</h5>
+                        <img src="../../upload/novaland-gallery.jpg" alt=""> <br>
+                        <a class="tbct-noidung">
+                            Trung tâm Triển lãm Novaland tọa lại tại 179 Hai Bà Trưng, P.6, Q3 (góc giao với đường Điện Biên Phủ). 
+                            Đây là điểm tiếp khách lớn nhất của Novaland với nhiều hạng mục tiện ích mới lạ và đột phá.
+                            Theo đại diện của Novaland, Novaland Gallery sẽ được xây dựng thành một công trình đa chức năng, đồng bộ, 
+                            đáp ứng nhu cầu của khách hàng đến tham quan, tìm hiểu dự án, bao gồm cả khách trong nước và ngoài nước, 
+                            xứng tầm là công trình trọng điểm tại Quận 3, TP.HCM.
+                            Việc ra mắt Novaland Gallery với diện mạo mới sẽ giúp nâng cao hơn nữa chất lượng dịch vụ khách hàng, 
+                            tăng tính trải nghiệm và tương tác trong quá trình chọn lựa các sản phẩm Bất động sản của Novaland. 
+                            Đặc biệt, đây cũng là sự mở đầu hoành tráng cho chuỗi sự kiện từ 19/11/2020 đến 31/12/2020 để giới thiệu 
+                            các dự án trọng điểm sắp tới của Novaland, hâm nóng bầu không khí náo nhiệt của mùa đầu tư cuối năm trong bối cảnh bình thường mới.
+                        </a>
+                    </div>
+                    <div class="card-conclude">
+                        <p class="tbct-nguoidang">Nguyễn Thanh Phong</p>
                     </div>
                 </div>
-                <div class="boxchitiet-text mt-200">
-                    <div class="">
-                        <h5>THÔNG TIN THÔNG BÁO</h5>
-                        <p>Tiêu đề:</p>
-                        <p>Tên người đăng:</p>
-                        <p>Ngày đăng:</p>
-                    </div>
-                    <div class="">
-                        <h5>NỘI DUNG THÔNG BÁO</h5>
-                        <p>...............................................................................................</p>
-                        <p>...............................................................................................</p>
-                        <p>...............................................................................................</p>
-                        <p>...............................................................................................</p>
-                        <p>...............................................................................................</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-100">
-                <div class="col-12 mx-auto " style="min-height: 200px;">
-                    <div class="col-12 mt-2">
-                        <label for="exampleFormControlTextarea1">BÌNH LUẬN</label><br>
-                        <a><img src="../../upload/2.png" class="rounded-circle" width="50"></a>
-                        <a class="mt-2">căn hộ này đẹp quá</a>
-                        <br><br>
-                        <a><img src="../../upload/2.png" class="rounded-circle" width="50"></a>
-                        <a class="mt-2">giá căn hộ này như thế nào ạ</a>
-                        <br><br>
-                        <a><img src="../../upload/2.png" class="rounded-circle" width="50"></a>
-                        <a class="mt-2">vị trí thuận tiện không</a>
-                        <br><br>
-                        <form action="/?act=binhluan" method="post" class="">
-                            <div class="form-group w-100">
-                                <label for="exampleFormControlTextarea1">VIẾT BÌNH LUẬN</label><br>
-                                <div class="nd-bluan"> 
-                                    <img src="../../upload/2.png" class="rounded-circle mr-5" width="50">
-                                    <textarea class="form-control noidungbinhluan" id="exampleFormControlTextarea1" rows="2" name="noidung" placeholder="THÊM BÌNH LUẬN"></textarea>
-                                </div>
-                                <input class="btn btn-primary float-right mt-2 mb-2" type="submit" value="Bình luận">
-                            </div>
-                        </form>
-                        <a href="" class="text-center text-info mb-2 mt-2" style="text-align: center;">Bạn cần đăng nhập để có thể bình luận!</a>
-                    
+                <div class="thongbao-phai mt-200">
+                    <div class="card-thongbao">
+                        <div class="tintucmoi">
+                            <h4>Tin tức mới</h4>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                        </div>
+                        <div class="tintuccu">
+                            <h4>Tin tức cũ</h4>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Bất động sản & Covid 19</a></li>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <script src="../../js/jquery/jquery.min.js"></script>
     <script src="../../js/custom.js"> </script>
