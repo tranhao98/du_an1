@@ -6,5 +6,8 @@ switch ($act) {
     case "index":
         require_once "views/home.php";
         break;
+    case "baidang":
+        require_once "views/baidang.php";
+        break;
     }
 ?>
