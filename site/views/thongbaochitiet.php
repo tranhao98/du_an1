@@ -81,7 +81,7 @@
     </header>
 
 
-    <section  class="section mt--100" id="our-classes">
+    <section  class="section">
         <div class="container">
             <div class="row">
                 <div class="boxchitiet-img mt-100">

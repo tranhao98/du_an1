@@ -81,7 +81,7 @@
     </header>
 
 
-    <section  class="section" id="our-classes">
+    <section  class="section">
         <div class="container">
             <div class="row">
                 <table class="mt-100 col-12">
