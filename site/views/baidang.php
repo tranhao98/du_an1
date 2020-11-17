@@ -165,7 +165,8 @@
             </div>
         </div>
     </section>
-
+    <hr>
+    <hr>
    
     <footer>
         <div class="container">
