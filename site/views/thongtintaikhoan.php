@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="thongbao-trai mt-100">
+                <div class="thongbao-trai mt-100    ">
                     <div class="card-thongbao">
                         <div class="tintucmoi">
                             <h4>Tên người dùng</h4>
