@@ -85,7 +85,7 @@
                 <div class="thongbao-trai mt-100">
                     <div class="card-title">
                         <h2>Novaland Gallery: Đẳng cấp mới của điểm giao dịch Bất động sản</h2>
-                        <p>17/11/2020 \</p>
+                        <p>17/11/2020 | Bất động sản</p>
                         <h6>
                             Ngày 19/11 tới đây, tại khu vực trung tâm TP.HCM, Tập đoàn Novaland sẽ ra mắt Novaland Gallery 
                             (Trung tâm Triển lãm Novaland) lớn tại miền Nam với diện tích lên tới gần 5.000 m2. 
@@ -95,7 +95,7 @@
                     <div class="card-content">
                         <h5>Tập đoàn Novaland Gallery</h5>
                         <img src="../../upload/novaland-gallery.jpg" alt=""> <br>
-                        <a class="">
+                        <a class="tb-noidung">
                             Theo đại diện của Novaland, Novaland Gallery sẽ được xây dựng thành một công trình đa chức năng, đồng bộ, 
                             đáp ứng nhu cầu của khách hàng đến tham quan, tìm hiểu dự án, bao gồm cả khách trong nước và ngoài nước, 
                             xứng tầm là công trình trọng điểm tại Quận 3, TP.HCM.
