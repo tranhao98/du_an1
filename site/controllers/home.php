@@ -9,5 +9,8 @@ switch ($act) {
     case "baidang":
         require_once "views/baidang.php";
         break;
+    case "chitietthongbao":
+        require_once "views/thongbaochitiet.php";
+        break;
     }
 ?>
