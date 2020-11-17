@@ -91,8 +91,6 @@
             <div class="card-img"></div>
             <div class="card-content"></div>
         </div>
-
-    
     </div>
 
     <script src="../../js/jquery/jquery.min.js"></script>
