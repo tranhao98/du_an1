@@ -45,14 +45,19 @@ switch ($act) {
     $tendm = trim(strip_tags($tendm));
     updateDanhMuc($iddm, $tendm, $thutu, $anhien);
 
-    $message = "Cập nhật thành công!";
-    header("location:index.php?ctrl=danhmuc");
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã cập nhật thành công!
+    </div>";
+    $view = "views/danhmuc-index.php";
+    require_once "layout.php";
     break;
   case "delete":
     $iddm = $_GET["iddm"];
     settype($iddm, "int");
     deleteDanhmuc($iddm);
-    $message = 'Xóa Thành Công!';
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã xóa thành công!
+    </div>";
     header("location:index.php?ctrl=danhmuc");
     break;
 }

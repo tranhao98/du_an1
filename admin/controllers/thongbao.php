@@ -33,6 +33,9 @@ switch ($act) {
     settype($thutu, "int");
     $noidung = trim(strip_tags($noidung));
     addNewThongBao($idnguoidang, $hinh, $tieude, $ngaydang, $noidung, $thutu, $anhien);
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã thêm thành công!
+    </div>";
     header("location:index.php?ctrl=thongbao");
     break;
   case "edit":
@@ -67,14 +70,18 @@ switch ($act) {
     $noidung = trim(strip_tags($noidung));
     updateThongBao($idtb, $idnguoidang, $hinh, $tieude, $ngaydang, $noidung, $thutu, $anhien);
 
-    $message = "Cập nhật thành công!";
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã cập nhật thành công!
+    </div>";
     header("location:index.php?ctrl=thongbao");
     break;
   case "delete":
     $idtb = $_GET["idtb"];
     settype($idtb, "int");
     deleteThongBao($idtb);
-    $message = 'Xóa Thành Công!';
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã xóa thành công!
+    </div>";
     header("location:index.php?ctrl=thongbao");
     break;
 }

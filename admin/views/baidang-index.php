@@ -16,7 +16,10 @@
     <div class="row">
         <div class="col-12 p-3 shadow-sm bg-white rounded">
             <h5 class="mb-3 font-weight-bold">Danh Sách Bài Đăng </h5>
-            <table class="table-tb-nd" style="width:100%">
+            <?php if (isset($message) && $message != "") {
+            echo $message;
+        } ?>
+            <table class="table-tb-nd text-nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th scope="col" style="width: 5%;">#</th>
