@@ -81,62 +81,19 @@
     </header>
 
 
-    <section  class="section mt--100" id="our-classes">
-        <div class="container">
-            <div class="row">
-                <div class="boxchitiet-img mt-100">
-                    <div class="">
-                        <img src="../../upload/noavatar.png" height="600px" width="500px">
-                    </div>
-                </div>
-                <div class="boxchitiet-text mt-200">
-                    <div class="">
-                        <h5>THÔNG TIN THÔNG BÁO</h5>
-                        <p>Tiêu đề:</p>
-                        <p>Tên người đăng:</p>
-                        <p>Ngày đăng:</p>
-                    </div>
-                    <div class="">
-                        <h5>NỘI DUNG THÔNG BÁO</h5>
-                        <p>...............................................................................................</p>
-                        <p>...............................................................................................</p>
-                        <p>...............................................................................................</p>
-                        <p>...............................................................................................</p>
-                        <p>...............................................................................................</p>
-                    </div>
-                </div>
+    <div class="row">
+        <div class="card-thongbaochitiet mt-100">
+            <div class="card-title">
+                <h1>5 CĂN PENTHOUSE XA XỈ NHẤT TẠI TP.HCM</h1>
+                <p>17/11/2020</p>
+                <h5>Penthouse luôn là căn hộ được giới siêu giàu yêu thích và nhanh tay chi tiền sở hữu một vài căn ở khắp thế giới. Penthouse xuất phát từ Tòa nhà Plaza Hotel ở New York từ năm 1923, đó là căn hộ nằm ở tầng cao nhất của một tòa nhà và được tận dụng tối đa diện tích rộng, thông thoáng nhất để thiết kế nội thất một cách xa xỉ nhất. Căn hộ penthouse gần đầy được giới đại gia TP.HCM cực kỳ yêu thích. Trong bài viết này chính là 5 căn penthouse đẹp đẽ, tráng lệ nhất tại những vị trí trung tâm siêu đắc địa của Sài Gòn phồn hoa. Và đó cũng chính là những dự án căn hộ cao cấp tốt nhất tại TP.HCM đến từ Vingroup, Novaland, CapitaLand. Hãy cùng tìm hiểu về 5 căn penthouse đáng chi tiền nhất này nhé!</h5>
             </div>
-
-            <div class="row mt-100">
-                <div class="col-12 mx-auto " style="min-height: 200px;">
-                    <div class="col-12 mt-2">
-                        <label for="exampleFormControlTextarea1">BÌNH LUẬN</label><br>
-                        <a><img src="../../upload/2.png" class="rounded-circle" width="50"></a>
-                        <a class="mt-2">căn hộ này đẹp quá</a>
-                        <br><br>
-                        <a><img src="../../upload/2.png" class="rounded-circle" width="50"></a>
-                        <a class="mt-2">giá căn hộ này như thế nào ạ</a>
-                        <br><br>
-                        <a><img src="../../upload/2.png" class="rounded-circle" width="50"></a>
-                        <a class="mt-2">vị trí thuận tiện không</a>
-                        <br><br>
-                        <form action="/?act=binhluan" method="post" class="">
-                            <div class="form-group w-100">
-                                <label for="exampleFormControlTextarea1">VIẾT BÌNH LUẬN</label><br>
-                                <div class="nd-bluan"> 
-                                    <img src="../../upload/2.png" class="rounded-circle mr-5" width="50">
-                                    <textarea class="form-control noidungbinhluan" id="exampleFormControlTextarea1" rows="2" name="noidung" placeholder="THÊM BÌNH LUẬN"></textarea>
-                                </div>
-                                <input class="btn btn-primary float-right mt-2 mb-2" type="submit" value="Bình luận">
-                            </div>
-                        </form>
-                        <a href="" class="text-center text-info mb-2 mt-2" style="text-align: center;">Bạn cần đăng nhập để có thể bình luận!</a>
-                    
-                    </div>
-                </div>
-            </div>
+            <div class="card-img"></div>
+            <div class="card-content"></div>
         </div>
-    </section>
+
+    
+    </div>
 
     <script src="../../js/jquery/jquery.min.js"></script>
     <script src="../../js/custom.js"> </script>
