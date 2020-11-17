@@ -12,9 +12,20 @@
 .row{
     width: 100%;
 }
-.card-thongbaochitiet{
-    width: 80%;
+.card-thongbao{
+    width: 90%;
     margin: auto;
+}
+.thongbao-trai{
+    float: left;
+    width: 70%;
+}
+.thongbao-phai{
+    float: left;
+    width: 30%;
+}
+.card-conclude p{
+    float: right;
 }
 #our-classes {
     margin-bottom: 0px;
