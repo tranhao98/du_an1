@@ -95,7 +95,9 @@
                     <div class="card-content">
                         <h5>Tập đoàn Novaland Gallery</h5>
                         <img src="../../upload/novaland-gallery.jpg" alt=""> <br>
-                        <a class="tb-noidung">
+                        <a class="tbct-noidung">
+                            Trung tâm Triển lãm Novaland tọa lại tại 179 Hai Bà Trưng, P.6, Q3 (góc giao với đường Điện Biên Phủ). 
+                            Đây là điểm tiếp khách lớn nhất của Novaland với nhiều hạng mục tiện ích mới lạ và đột phá.
                             Theo đại diện của Novaland, Novaland Gallery sẽ được xây dựng thành một công trình đa chức năng, đồng bộ, 
                             đáp ứng nhu cầu của khách hàng đến tham quan, tìm hiểu dự án, bao gồm cả khách trong nước và ngoài nước, 
                             xứng tầm là công trình trọng điểm tại Quận 3, TP.HCM.
@@ -106,7 +108,7 @@
                         </a>
                     </div>
                     <div class="card-conclude">
-                        <p>Nguyễn Thanh Phong</p>
+                        <p class="tbct-nguoidang">Nguyễn Thanh Phong</p>
                     </div>
                 </div>
                 <div class="thongbao-phai mt-200">
