@@ -85,7 +85,7 @@
                 <div class="thongbao-trai mt-100">
                     <div class="card-title">
                         <h2>Novaland Gallery: Đẳng cấp mới của điểm giao dịch Bất động sản</h2>
-                        <p>17/11/2020 | Bất động sản</p>
+                        <p>17/11/2020 | Bất động sản</p> <br>
                         <h6>
                             Ngày 19/11 tới đây, tại khu vực trung tâm TP.HCM, Tập đoàn Novaland sẽ ra mắt Novaland Gallery 
                             (Trung tâm Triển lãm Novaland) lớn tại miền Nam với diện tích lên tới gần 5.000 m2. 
@@ -94,7 +94,8 @@
                     </div>
                     <div class="card-content">
                         <h5>Tập đoàn Novaland Gallery</h5>
-                        <img src="../../upload/novaland-gallery.jpg" alt=""> <br>
+                        <img src="../../upload/novaland-gallery.jpg" alt=""> <br> <br>
+                        <a class="tbct-noidung"></a>
                         <a class="tbct-noidung">
                             Trung tâm Triển lãm Novaland tọa lại tại 179 Hai Bà Trưng, P.6, Q3 (góc giao với đường Điện Biên Phủ). 
                             Đây là điểm tiếp khách lớn nhất của Novaland với nhiều hạng mục tiện ích mới lạ và đột phá.
