@@ -107,7 +107,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
-                        <h2>TIN TỨC MỚI CẬP NHẬT</h2>
+                        <h2><em>TIN TỨC</em>  MỚI CẬP NHẬT</h2>
                         <img src="views/images/line-dec.png" alt="">
                     </div>
                 </div>
@@ -163,7 +163,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
-                        <h2>Bất động sản dành cho bạn</h2>
+                        <h2>Bất động sản được <em>đề xuất</em></h2>
                         <img src="views/images/line-dec.png" alt="">
                     </div>
                 </div>
@@ -353,7 +353,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
-                        <h2>Bất động sản theo địa điểm</h2>
+                        <h2>Bất động sản theo <em>địa điểm</em></h2>
                         <img src="views/images/line-dec.png" alt="">
                     </div>
                 </div>
@@ -417,6 +417,89 @@
         </div>
 
     </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-item">
+                    <img src="../upload/logo-footer.png" alt="">
+                    <p><strong>Địa chỉ:</strong> Toà nhà Innovation, lô 24, Công viên phần mềm Quang Trung.</p>
+                    <p><strong>Điện thoại:</strong> <a href="#">0798445519</a></p>
+                    <p><strong>Email:</strong> <a href="#">hardworkt@gmail.com</a></p>
+                    <p><strong>Website</strong> <a href="#">www.hardworkt.com</a></p>
+                    <ul class="social-icons">
+                        <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-item">
+                    <h4>Hướng dẫn</h4>
+                    <ul class="menu-list">
+                        <li><a href="#">Báo giá & hỗ trợ</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Thông báo</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-item">
+                    <h4>Quy định</h4>
+                    <ul class="menu-list">
+                        <li><a href="#">Quy định đăng tin</a></li>
+                        <li><a href="#">Quy chế hoạt động</a></li>
+                        <li><a href="#">Điều khoản thỏa thuận</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-item last-item">
+                    <h4>Kết nối với chúng tôi</h4>
+                    <div class="contact-form">
+                        <form id="contact footer-contact" action="" method="post">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name" placeholder="Họ tên đầy đủ" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="sdt" type="text" class="form-control" id="sdt" pattern="[^ @]*@[^ @]*" placeholder="Số điện thoại" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Nhập dự án quan tâm, chúng tôi sẽ gọi lại cho bạn" required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="filled-button">Gửi</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        Copyright © 2020 HardWorkTeam
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
