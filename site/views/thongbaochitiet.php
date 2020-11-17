@@ -79,20 +79,49 @@
             </div>
         </nav>
     </header>
-
-
-    <div class="row">
-        <div class="card-thongbaochitiet mt-100">
-            <div class="card-title">
-                <h1>5 CĂN PENTHOUSE XA XỈ NHẤT TẠI TP.HCM</h1>
-                <p>17/11/2020</p>
-                <h5>Penthouse luôn là căn hộ được giới siêu giàu yêu thích và nhanh tay chi tiền sở hữu một vài căn ở khắp thế giới. Penthouse xuất phát từ Tòa nhà Plaza Hotel ở New York từ năm 1923, đó là căn hộ nằm ở tầng cao nhất của một tòa nhà và được tận dụng tối đa diện tích rộng, thông thoáng nhất để thiết kế nội thất một cách xa xỉ nhất. Căn hộ penthouse gần đầy được giới đại gia TP.HCM cực kỳ yêu thích. Trong bài viết này chính là 5 căn penthouse đẹp đẽ, tráng lệ nhất tại những vị trí trung tâm siêu đắc địa của Sài Gòn phồn hoa. Và đó cũng chính là những dự án căn hộ cao cấp tốt nhất tại TP.HCM đến từ Vingroup, Novaland, CapitaLand. Hãy cùng tìm hiểu về 5 căn penthouse đáng chi tiền nhất này nhé!</h5>
+    <div class="container">
+        <div class="row">
+            <div class="card-thongbaochitiet mt-100">
+                <div class="card-title">
+                    <h1>5 CĂN PENTHOUSE XA XỈ NHẤT TẠI TP.HCM</h1>
+                    <p>17/11/2020</p>
+                    <h6>
+                        Penthouse luôn là căn hộ được giới siêu giàu yêu thích và nhanh tay chi tiền sở hữu một vài căn ở khắp thế giới. 
+                        Penthouse xuất phát từ Tòa nhà Plaza Hotel ở 
+                        New York từ năm 1923, đó là căn hộ nằm ở tầng cao nhất của một tòa nhà và được tận dụng tối đa diện tích rộng, thông thoáng nhất để thiết kế nội thất một cách xa xỉ nhất. 
+                        Căn hộ penthouse gần đầy được giới đại gia TP.HCM cực kỳ yêu thích. 
+                        Trong bài viết này chính là 5 căn penthouse đẹp đẽ, tráng lệ nhất tại những vị trí trung tâm siêu đắc địa của Sài Gòn phồn hoa. 
+                        Và đó cũng chính là những dự án căn hộ cao cấp tốt nhất tại TP.HCM đến từ Vingroup, Novaland, CapitaLand. Hãy cùng tìm hiểu về 5 căn penthouse đáng chi tiền nhất này nhé!
+                    </h6>
+                </div>
+                <div class="card-img">
+                    <h5>Penthouse – The Vista – CapitaLand</h5>
+                    <img src="../../upload/thongbao1.jpg" alt="">
+                </div>
+                <div class="card-img">
+                    <h5>Penthouse – Vinhomes Central Park – Vingroup</h5>
+                    <img src="../../upload/thongbao2.jpg" alt="">
+                </div>
+                <div class="card-img">
+                    <h5>Penthouse – Vista Verde – CapitaLand</h5>
+                    <img src="../../upload/thongbao3.png" alt="">
+                </div>
+                <div class="card-img">
+                    <h5>Penthouse – Sunrise City – Novaland</h5>
+                    <img src="../../upload/thongbao4.jpg" alt="">
+                </div>
+                <div class="card-img">
+                    <h5>Penthouse – Estela</h5>
+                    <img src="../../upload/thongbao5.jpg" alt="">
+                </div>
+                <div class="card-content"></div>
             </div>
-            <div class="card-img"></div>
-            <div class="card-content"></div>
         </div>
     </div>
+    <footer>
 
+    </footer>
+    
     <script src="../../js/jquery/jquery.min.js"></script>
     <script src="../../js/custom.js"> </script>
     <script src="../../js/owl.js"> </script>
