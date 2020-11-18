@@ -15,10 +15,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../ckeditor/ckeditor.js"></script>
-    
+
 </head>
 
 <body style="font-family: 'Nunito Sans', sans-serif; background-color: #f2f2f2; min-height:auto">
+
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <div class="container mw-100 p-0 m-0">
         <header class="shadow-sm p-3 mb-3 bg-white rounded">
             <div class="row">
@@ -131,7 +140,7 @@
                 </div>
             </aside>
             <main>
-                <!-- <?php if (isset($message) && file_exists($message)) require_once "$message"; ?> -->
+                
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
                 <footer class="mt-3 mb-3 bg-white rounded shadow-sm">Giao diện này được thực hiện bởi <strong class="text-danger">HARDWORK TEAM</strong> </footer>
             </main>
@@ -139,6 +148,9 @@
         </div>
 
     </div>
+
+    
+    <script src="../js/custom.js"> </script>
 </body>
 
 </html>

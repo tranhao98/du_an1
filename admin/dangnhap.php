@@ -4,7 +4,7 @@ session_start();
 include "models/model_nguoidung.php";
 if (isset($_POST['login']) && ($_POST['login'])) {
     $tendangnhap = $_POST['tendangnhap'];
-    $matkhau = $_POST['matkhau'];
+    $matkhau = md5($_POST['matkhau']);
 
     $check = kiemTraNguoiDung($tendangnhap, $matkhau);
     // var_dump($check);
@@ -28,7 +28,7 @@ if (isset($_POST['login']) && ($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
-    <script src="../js/jquery-3.5.1.min.js"></script>
+   
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -39,6 +39,13 @@ if (isset($_POST['login']) && ($_POST['login'])) {
 </head>
 
 <body style="background-color: #47A1FA;">
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div class="container" style="padding-top: 8%; width:500px;">
         <h4 style="font-weight: normal;" class="text-white text-center mb-3">Hardwork Team Admin</h4>
         <div class="row">
@@ -67,6 +74,9 @@ if (isset($_POST['login']) && ($_POST['login'])) {
             </div>
         </div>
     </div>
+
+    <script src="../js/jquery/jquery.js"></script>
+    <script src="../js/custom.js"> </script>
 </body>
 
 </html>

@@ -364,7 +364,7 @@
     
     #tabs .main-rounded-button a {
         text-align: center;
-        padding: 20px 30px;
+        padding: 12px 20px;
         width: 100%;
         border-radius: 5px;
         display: inline-block;
@@ -602,7 +602,7 @@
         color: #fff;
     }
     
-    <<<<<<< HEAD .social-share {
+    .social-share {
         display: flex;
         justify-content: start;
         height: 5rem;
@@ -789,6 +789,7 @@
         box-shadow: none;
         border: none;
         margin-bottom: 15px;
+        resize: none;
     }
     
     footer .contact-form textarea:focus {
@@ -850,5 +851,4 @@
     
     .sub-footer a {
         color: #fff;
-        >>>>>>>fe78a5a207f395c1e1988c28337b3a5ae56b37db
     }
