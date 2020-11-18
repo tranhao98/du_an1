@@ -13,6 +13,11 @@ function getThongBaobyID($idtb)
     $sql = "SELECT * FROM thongbao WHERE idtb = '$idtb'";
     return queryOne($sql);
 }
+function getNameNguoiDung($id)
+{
+    $sql = "SELECT * from taikhoan where id='$id'";
+    return queryOne($sql);
+}
 
 function getAllBaiDang()
 {
