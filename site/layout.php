@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hark Work Team</title>
+    <title>Hardwork Team</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/owl.css">
-    <link rel="shortcut icon" type="image/png" href="https://png.pngtree.com/png-clipart/20200701/original/pngtree-family-stay-at-home-illustration-to-prevent-covid-19-plague-vector-png-image_5344919.jpg"/>
+    <link rel="shortcut icon" type="image/png" href="https://png.pngtree.com/png-clipart/20200701/original/pngtree-family-stay-at-home-illustration-to-prevent-covid-19-plague-vector-png-image_5344919.jpg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
@@ -41,21 +41,21 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Đất nền</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php?ctrl=home&act=cat-danhmuc" role="button" aria-haspopup="true" aria-expanded="false">Đất nền</a>
 
                             <div class="dropdown-menu">
 
-                                <a class="dropdown-item" href=""></a>
+                                <a class="dropdown-item" href="index.php?ctrl=home&act=cat-danhmuc">Tất cả BĐS</a>
 
                             </div>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Căn hộ</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php?ctrl=home&act=cat-danhmuc" role="button" aria-haspopup="true" aria-expanded="false">Căn hộ</a>
 
                             <div class="dropdown-menu">
 
-                                <a class="dropdown-item" href=""></a>
+                                <a class="dropdown-item" href="index.php?ctrl=home&act=cat-danhmuc">Tất cả BĐS</a>
 
                             </div>
                         </li>
@@ -64,7 +64,7 @@
 
                         <li class="nav-item"><a class="nav-link" href="">Liên hệ</a></li>
 
-                        <li class="nav-item dn"><a class="nav-link" href="">Đăng nhập</a>
+                        <li class="nav-item dn"><a data-toggle="modal" data-target="#staticBackdrop2" class="nav-link" href="">Đăng nhập</a>
 
                         </li>
 
@@ -187,11 +187,12 @@
             </div>
         </div>
     </div>
-    
+    <?php require_once "views/dangnhap.php"; ?>
 </body>
+
 </html>
-    <script src="../js/jquery/jquery.min.js"></script>
-    <script src="../js/custom.js"></script>
-    <script src="../js/owl.js"> </script>
-    <script src="../js/accordions.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="../js/jquery/jquery.min.js"></script>
+<script src="../js/custom.js"></script>
+<script src="../js/owl.js"> </script>
+<script src="../js/accordions.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

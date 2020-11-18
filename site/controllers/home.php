@@ -7,6 +7,14 @@ switch ($act) {
         $view = "views/home.php";
         require_once "layout.php";
         break;
+    case "cat-danhmuc":
+        $view = "views/cat-danhmuc.php";
+        require_once "layout.php";
+        break;
+    case "cat-khuvuc":
+        $view = "views/cat-khuvuc.php";
+        require_once "layout.php";
+        break;
     case "baidang":
         $view = "views/baidang.php";
         require_once "layout.php";
@@ -21,5 +29,4 @@ switch ($act) {
         $row = getAllThongBao($idtb);
         require_once "views/thongbaochitiet.php";
         break;
-    }
-?>
+}
