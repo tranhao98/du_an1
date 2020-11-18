@@ -72,7 +72,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <!-- <div class="row"> -->
+
                     <?php
                     $r = 1;
                     foreach ($dsbd as $bd) {
@@ -105,7 +105,6 @@
 
                     <?php $r++;
                     } ?>
-                    <!-- </div> -->
                 </div>
             </div>
             <br>
