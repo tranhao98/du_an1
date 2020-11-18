@@ -4,7 +4,7 @@ session_start();
 include "models/model_nguoidung.php";
 if (isset($_POST['login']) && ($_POST['login'])) {
     $tendangnhap = $_POST['tendangnhap'];
-    $matkhau = $_POST['matkhau'];
+    $matkhau = md5($_POST['matkhau']);
 
     $check = kiemTraNguoiDung($tendangnhap, $matkhau);
     // var_dump($check);
