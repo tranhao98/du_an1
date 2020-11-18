@@ -44,9 +44,9 @@
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="index.php?ctrl=home&act=cat-danhmuc" role="button" aria-haspopup="true" aria-expanded="false">Đất nền</a>
 
                             <div class="dropdown-menu">
-
-                                <a class="dropdown-item" href="index.php?ctrl=home&act=cat-danhmuc">Tất cả BĐS</a>
-
+                                <?php foreach ($dsdm1 as $dm1) { ?>
+                                <a class="dropdown-item" href="index.php?ctrl=home&act=cat-danhmuc&id=<?=$dm1['iddm']?>"><?=$dm1['tendm']?></a>
+                                <?php } ?>
                             </div>
                         </li>
 
@@ -55,7 +55,9 @@
 
                             <div class="dropdown-menu">
 
-                                <a class="dropdown-item" href="index.php?ctrl=home&act=cat-danhmuc">Tất cả BĐS</a>
+                            <?php foreach ($dsdm2 as $dm2) { ?>
+                                <a class="dropdown-item" href="index.php?ctrl=home&act=cat-danhmuc&id=<?=$dm2['iddm']?>"><?=$dm2['tendm']?></a>
+                                <?php } ?>
 
                             </div>
                         </li>

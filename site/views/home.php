@@ -64,202 +64,63 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="trainer-item">
-                    <div class="image-thumb">
-                        <a href=""><img src="views/images/banner.png" alt=""></a>
-                    </div>
-                    <div class="down-content">
-                        <span>
-                            90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                        </span>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- <div class="row"> -->
+                    <?php
+                    $r = 1;
+                    foreach ($dsbd as $bd) {
+                        if ($r % 9 == 0) {
+                            echo '</div><div class="carousel-item">';
+                        }
+                    ?>
+                        <div class="box-baidang">
+                            <div class="trainer-item">
+                                <div class="image-thumb">
+                                    <a href=""><img src="../upload/<?= $bd['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" height="200px"></a>
+                                </div>
+                                <div class="down-content">
+                                    <span>
+                                        <?= number_format($bd['gia'], 0, ",", "."); ?>/m<sup>2</sup> - <?= $bd['dientich'] ?> m<sup>2</sup>
+                                    </span>
 
-                        <a href="">
-                            <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                        </a>
+                                    <a href="">
+                                        <h4><?= $bd['tensp'] ?></h4>
+                                    </a>
 
-                        <p>Quận 1 - TP. Hồ Chí Minh</p>
+                                    <p><?= $bd['diadiem'] ?></p>
 
-                        <ul class="social-icons">
-                            <li><a href="  ">+ View More</a></li>
-                        </ul>
-                    </div>
+                                    <ul class="social-icons">
+                                        <li><a href="  ">+ Xem thêm</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php $r++;
+                    } ?>
+                    <!-- </div> -->
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="trainer-item">
-                    <div class="image-thumb">
-                        <a href=""><img src="views/images/banner.png" alt=""></a>
-                    </div>
-                    <div class="down-content">
-                        <span>
-                            90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                        </span>
-
-                        <a href="">
-                            <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                        </a>
-
-                        <p>Quận 1 - TP. Hồ Chí Minh</p>
-
-                        <ul class="social-icons">
-                            <li><a href="  ">+ View More</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="trainer-item">
-                    <div class="image-thumb">
-                        <a href=""><img src="views/images/banner.png" alt=""></a>
-                    </div>
-                    <div class="down-content">
-                        <span>
-                            90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                        </span>
-
-                        <a href="">
-                            <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                        </a>
-
-                        <p>Quận 1 - TP. Hồ Chí Minh</p>
-
-                        <ul class="social-icons">
-                            <li><a href="  ">+ View More</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="trainer-item">
-                    <div class="image-thumb">
-                        <a href=""><img src="views/images/banner.png" alt=""></a>
-                    </div>
-                    <div class="down-content">
-                        <span>
-                            90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                        </span>
-
-                        <a href="">
-                            <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                        </a>
-
-                        <p>Quận 1 - TP. Hồ Chí Minh</p>
-
-                        <ul class="social-icons">
-                            <li><a href="  ">+ View More</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="trainer-item">
-                    <div class="image-thumb">
-                        <a href=""><img src="views/images/banner.png" alt=""></a>
-                    </div>
-                    <div class="down-content">
-                        <span>
-                            90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                        </span>
-
-                        <a href="">
-                            <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                        </a>
-
-                        <p>Quận 1 - TP. Hồ Chí Minh</p>
-
-                        <ul class="social-icons">
-                            <li><a href="  ">+ View More</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="trainer-item">
-                    <div class="image-thumb">
-                        <a href=""><img src="views/images/banner.png" alt=""></a>
-                    </div>
-                    <div class="down-content">
-                        <span>
-                            90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                        </span>
-
-                        <a href="">
-                            <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                        </a>
-
-                        <p>Quận 1 - TP. Hồ Chí Minh</p>
-
-                        <ul class="social-icons">
-                            <li><a href="  ">+ View More</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="trainer-item">
-                    <div class="image-thumb">
-                        <a href=""><img src="views/images/banner.png" alt=""></a>
-                    </div>
-                    <div class="down-content">
-                        <span>
-                            90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                        </span>
-
-                        <a href="">
-                            <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                        </a>
-
-                        <p>Quận 1 - TP. Hồ Chí Minh</p>
-
-                        <ul class="social-icons">
-                            <li><a href="  ">+ View More</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="trainer-item">
-                    <div class="image-thumb">
-                        <a href=""><img src="views/images/banner.png" alt=""></a>
-                    </div>
-                    <div class="down-content">
-                        <span>
-                            90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                        </span>
-
-                        <a href="">
-                            <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                        </a>
-
-                        <p>Quận 1 - TP. Hồ Chí Minh</p>
-                        <ul class="social-icons">
-                            <li><a href="  ">+ View More</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <br>
+            <br>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <nav>
-            <ul class="pagination pagination-lg justify-content-center">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+
+
     </div>
 </section>
 

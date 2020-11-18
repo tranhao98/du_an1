@@ -13,6 +13,9 @@ jQuery(document).ready(function($) {
         }, 300);
     });
 
+
+
+
     $(function() {
         $("#tabs").tabs();
     });
