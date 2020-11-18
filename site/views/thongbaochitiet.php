@@ -109,7 +109,8 @@
                         </a>
                     </div>
                     <div class="card-conclude">
-                        <p class="tbct-nguoidang">Nguyễn Thanh Phong</p>
+                        <p class="tbct-nguoidang">Nguyễn Thanh Phong</p><br>
+                        <p class="tbct-nguoidang">Theo nhịp sống kinh tế</p>
                     </div>
                 </div>
                 <div class="thongbao-phai mt-200">
