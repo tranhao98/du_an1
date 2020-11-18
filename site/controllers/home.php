@@ -9,7 +9,14 @@ switch ($act) {
     case "baidang":
         require_once "views/baidang.php";
         break;
+    case "thongbao":
+        require_once "views/thongbao.php";
+        break;
     case "chitietthongbao":
+        $idtb = 0;
+        if (isset($_GET['idtb']) == true) $idtb = $_GET['idtb'];
+        settype($idtb, "int");
+        $row = getAllThongBao($idtb);
         require_once "views/thongbaochitiet.php";
         break;
     }
