@@ -602,7 +602,7 @@
         color: #fff;
     }
     
-    <<<<<<< HEAD .social-share {
+    .social-share {
         display: flex;
         justify-content: start;
         height: 5rem;
@@ -850,5 +850,4 @@
     
     .sub-footer a {
         color: #fff;
-        >>>>>>>fe78a5a207f395c1e1988c28337b3a5ae56b37db
     }
