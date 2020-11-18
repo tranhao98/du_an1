@@ -509,7 +509,7 @@
 
 
 
-    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="../js/jquery/jquery.js"></script>
 
     <script src="../js/custom.js"> </script>
     <script src="../js/owl.js"> </script>
