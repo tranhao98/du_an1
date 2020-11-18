@@ -110,6 +110,7 @@
     .dropdown-menu a {
         line-height: 1.3;
         color: #fff;
+        font-weight: 500;
     }
     
     .dropdown-menu a.active,
@@ -970,10 +971,7 @@
     
     .carousel-control-next,
     .carousel-control-prev,
-    .carousel-indicators
-    /*, .carousel-indicators */
-    
-    {
+    .carousel-indicators {
         filter: invert(100%);
     }
     
@@ -987,5 +985,5 @@
     }
     
     .carousel-control-prev {
-        margin-left: -120px;
+        margin-left: -110px;
     }
