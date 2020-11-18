@@ -103,19 +103,21 @@
                         <!-- <a class="tbct-noidung"></a> -->
                         <a class="tbct-noidung">
                             <?=$rowidtb['noidung']?>
-                            <!-- Đây được coi là trung tâm triển lãm, giao dịch bất động sản lớn bậc nhất tại khu vực miền Nam tính đến thời điểm hiện tại.
-                            Trung tâm Triển lãm Novaland tọa lại tại 179 Hai Bà Trưng, P.6, Q3 (góc giao với đường Điện Biên Phủ). 
-                            Đây là điểm tiếp khách lớn nhất của Novaland với nhiều hạng mục tiện ích mới lạ và đột phá.
-                            Tiên phong tại TP.HCM, một trung tâm triển lãm đem đến những "trải nghiệm số" vô cùng thú vị, giúp khách hàng hình dung rõ hơn về những dự án tương lai. 
-                            Cụ thể phải kể đến như phòng chiếu phim , sa bàn thực tế ảo… Bên cạnh đó, không gian mở và linh hoạt của 
-                            Trung tâm cũng rất thuận tiện để chuyển đổi công năng thành nơi tổ chức sự kiện cao cấp. Nhà hàng The Dome tiêu chuẩn 5 sao, cà phê 
-                            Saigon Casa nằm trong khuôn viên Triển lãm vừa phục vụ cho các tiệc tri ân khách hàng, cũng vừa tạo thêm điểm gặp gỡ, kết nối lý tưởng cho giới đầu tư thời gian 
-                            tới.
-                            Các dự án trọng điểm của Novaland sẽ được giới thiệu và trưng bày tại đây như: The Grand Manhattan (Q.1, TP.HCM), Aqua City (Biên Hòa, Đồng Nai), 
-                            NovaWorld Ho Tram (Bà Rịa Vũng Tàu), NovaWorld Phan Thiet (Phan Thiết, Bình Thuận), NovaHills Mui Ne Resort & Villas (Mũi Né, Bình Thuận)…
-                            Bên cạnh sa bàn thực, khách hàng còn có thể tham quan các dự án bằng hệ thống sa bàn thực tế ảo; qua đó có thể quan sát các dự án từ tổng quan, 
-                            góc trên cao với mọi phương hướng, đến sự thay đổi về thời tiết, thời gian trong ngày (sáng, trưa, tối). Các thông tin từ hệ thống sa bàn sẽ giúp 
-                            khách hàng có lựa chọn sản phẩm phù hợp với nhu cầu về vị trí, hướng nhà, kết nối tiện ích ưa chuộng… -->
+                            <!-- 
+                                Đây được coi là trung tâm triển lãm, giao dịch bất động sản lớn bậc nhất tại khu vực miền Nam tính đến thời điểm hiện tại.
+                                Trung tâm Triển lãm Novaland tọa lại tại 179 Hai Bà Trưng, P.6, Q3 (góc giao với đường Điện Biên Phủ). 
+                                Đây là điểm tiếp khách lớn nhất của Novaland với nhiều hạng mục tiện ích mới lạ và đột phá.
+                                Tiên phong tại TP.HCM, một trung tâm triển lãm đem đến những "trải nghiệm số" vô cùng thú vị, giúp khách hàng hình dung rõ hơn về những dự án tương lai. 
+                                Cụ thể phải kể đến như phòng chiếu phim , sa bàn thực tế ảo… Bên cạnh đó, không gian mở và linh hoạt của 
+                                Trung tâm cũng rất thuận tiện để chuyển đổi công năng thành nơi tổ chức sự kiện cao cấp. Nhà hàng The Dome tiêu chuẩn 5 sao, cà phê 
+                                Saigon Casa nằm trong khuôn viên Triển lãm vừa phục vụ cho các tiệc tri ân khách hàng, cũng vừa tạo thêm điểm gặp gỡ, kết nối lý tưởng cho giới đầu tư thời gian 
+                                tới.
+                                Các dự án trọng điểm của Novaland sẽ được giới thiệu và trưng bày tại đây như: The Grand Manhattan (Q.1, TP.HCM), Aqua City (Biên Hòa, Đồng Nai), 
+                                NovaWorld Ho Tram (Bà Rịa Vũng Tàu), NovaWorld Phan Thiet (Phan Thiết, Bình Thuận), NovaHills Mui Ne Resort & Villas (Mũi Né, Bình Thuận)…
+                                Bên cạnh sa bàn thực, khách hàng còn có thể tham quan các dự án bằng hệ thống sa bàn thực tế ảo; qua đó có thể quan sát các dự án từ tổng quan, 
+                                góc trên cao với mọi phương hướng, đến sự thay đổi về thời tiết, thời gian trong ngày (sáng, trưa, tối). Các thông tin từ hệ thống sa bàn sẽ giúp 
+                                khách hàng có lựa chọn sản phẩm phù hợp với nhu cầu về vị trí, hướng nhà, kết nối tiện ích ưa chuộng… 
+                            -->
                         </a>
                     </div>
                     <div class="card-conclude">
@@ -127,22 +129,25 @@
                     <div class="card-thongbao">
                         <div class="tintucmoi">
                             <h4>Tin tức mới</h4>
-                            <li><a href="">Eximbank tổ chức đại hội cổ đông lần 4</a></li>
+                            <?php foreach ($dstb as $row) { ?>
+                                <li><a href='?act=chitietthongbao&idtb=<?=$row['idtb']?>'><?=$row['tieude']?></a></li>
+                            <?php } ?>
+                            <!-- <li><a href="">Eximbank tổ chức đại hội cổ đông lần 4</a></li>
                             <li><a href="">Bất động sản Tp.HCM trên đà “hồi sinh” trở lại?</a></li>
                             <li><a href="">BĐS công nghiệp Bắc Ninh – Xu hướng mới của giới đầu tư</a></li>
                             <li><a href="">B.thự sang trọng tại sân golf của NovaWorld Phan Thiet</a></li>
                             <li><a href="">Top 6 mẫu biệt thự hiện đại đang được ưa chuộng hiện nay</a></li>
-                            <li><a href="">Khám phá căn hộ “không góc chết” tại Imperia Smart City</a></li>
+                            <li><a href="">Khám phá căn hộ “không góc chết” tại Imperia Smart City</a></li> -->
                         </div>
                         <div class="tintuccu">
-                            <h4>Tin tức cũ</h4>
+                            <!-- <h4>Tin tức cũ</h4>
                             <li><a href="">Garden Riverside: Tận hưởng chất lượng sống sinh thái bên sông</a></li>
                             <li><a href="">Celesta Rise đưa phong cách nghỉ dưỡng vào không gian sống</a></li>
                             <li><a href="">Long An chi 13.000 tỷ đồng xây dựng 8 công trình giao thông quan trọng</a></li>
                             <li><a href="">Số lượng dự án BĐS nghỉ dưỡng được cấp phép tại miền Trung gấp 9 lần cả miền Bắc và miền Nam cộng lại</a></li>
                             <li><a href="">Lilama 18 xin chuyển mục đích sử dụng đất rừng tự nhiên để xây khu du lịch nghỉ dưỡng</a></li>
                             <li><a href="">The Icon – dinh thự sang trọng với thiết kế thông minh dành cho nhà đầu tư tinh nhạy</a></li>
-                            <li><a href="">The Residence Phú Quốc mở bán biệt thự 2 mặt tiền tại Bãi Trường</a></li>
+                            <li><a href="">The Residence Phú Quốc mở bán biệt thự 2 mặt tiền tại Bãi Trường</a></li> -->
                         </div>
                     </div>
                 </div>
