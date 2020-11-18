@@ -123,8 +123,8 @@
                                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                                 </ol>
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=843&q=80" alt="First slide">
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="First slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="Second slide">
@@ -166,6 +166,9 @@
                                     <li class="list-group-item">Phòng ngủ: 4 phòng ngủ</li>
                                     <li class="list-group-item">Diện tích: 2000 m2</li>
                                 </ul>
+                                <div class="divider">
+                                    <br>
+                                </div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item bg-dark text-white">Liên hệ người đăng</li>
                                     <li class="list-group-item">Số điện thoại: 0123456789</li>

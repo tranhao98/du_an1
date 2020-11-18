@@ -70,7 +70,7 @@
                         <span class="text-white pt-2">
                             <h4 class="text-center">|</h4>
                         </span>
-                        <li class="nav-item dk"><a class="nav-link" href="../admin/dangnhap.php">Đăng ký</a>
+                        <li class="nav-item dk"><a class="nav-link" href="">Đăng ký</a>
 
                         </li>
                     </ul>
