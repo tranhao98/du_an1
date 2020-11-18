@@ -1,5 +1,4 @@
 <!-- Modal -->
-<br><br><br>
 <div class="modal fade mt-4" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
