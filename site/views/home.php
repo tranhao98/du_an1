@@ -12,7 +12,7 @@
             <div class="col-lg-4">
                 <ul>
                     <?php foreach ($dstb as $row) { ?>
-                        <li><a href='#tabs-1'><?=$dstb['tieude']?></a></li>
+                        <li><a href='?act=chitietthongbao&idtb=<?=$row['idtb']?>'><?=$row['tieude']?></a></li>
                     <?php } ?>
                     <!-- <li><a href='#tabs-1'>Loạt chung cư gần Làng Đại học Quốc gia có giá từ 1,6 tỷ/căn.</a></li>
                     <li><a href='#tabs-2'>“Còng lưng” vì 1 phút sĩ diện muốn xây nhà to ra ở riêng.</a></li>
@@ -42,7 +42,7 @@
                             <a href="">Đọc tiếp</a>
                         </div>
                     </article>
-                    <article id='tabs-3'>
+                    <!-- <article id='tabs-3'>
                         <img src="views/images/banner3.png" alt="">
                         <h4>Chỉ có 300 triệu đồng trong tay, tôi vẫn mua được nhà nhờ biết “liệu cơm gắp mắm”.</h4>
                         <p><i class="fa fa-user"></i> Hào Long &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10 &nbsp;|&nbsp; <i class="fa fa-comments"></i> 15 bình luận</p>
@@ -50,7 +50,7 @@
                         <div class="main-button">
                             <a href=" ">Đọc tiếp</a>
                         </div>
-                    </article>
+                    </article> -->
                 </section>
             </div>
         </div>
