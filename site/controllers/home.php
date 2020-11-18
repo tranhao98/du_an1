@@ -45,6 +45,7 @@ switch ($act) {
     case "chitietthongbao":
         $idtb = $_GET['idtb'];
         settype($idtb, "int");
+        $dstb = getAllThongBao();
         $rowidtb = getThongBaobyID($idtb);
         $view = "view/thongbaochitiet.php";
         require_once "layout.php";
