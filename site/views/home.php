@@ -11,10 +11,13 @@
         <div class="row" id="tabs">
             <div class="col-lg-4">
                 <ul>
-                    <li><a href='#tabs-1'>Loạt chung cư gần Làng Đại học Quốc gia có giá từ 1,6 tỷ/căn.</a></li>
+                    <?php foreach ($dstb as $row) { ?>
+                        <li><a href='#tabs-1'><?=$dstb['tieude']?></a></li>
+                    <?php } ?>
+                    <!-- <li><a href='#tabs-1'>Loạt chung cư gần Làng Đại học Quốc gia có giá từ 1,6 tỷ/căn.</a></li>
                     <li><a href='#tabs-2'>“Còng lưng” vì 1 phút sĩ diện muốn xây nhà to ra ở riêng.</a></li>
-                    <li><a href='#tabs-3'>Chỉ có 300 triệu đồng trong tay, tôi vẫn mua được nhà nhờ biết “liệu cơm gắp mắm”.</a></li>
-                    <div class="main-rounded-button"><a href="">Xem Thêm Tin Tức</a></div>
+                    <li><a href='#tabs-3'>Chỉ có 300 triệu đồng trong tay, tôi vẫn mua được nhà nhờ biết “liệu cơm gắp mắm”.</a></li> -->
+                    <div class="main-rounded-button"><a href="">Xem Thêm Tin Tức</a></div> 
                 </ul>
             </div>
             <div class="col-lg-8">
