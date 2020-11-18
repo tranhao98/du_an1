@@ -1,4 +1,5 @@
 <?php
+require_once "../system/config.php";
 require_once "models/home.php"; //nạp model để có các hàm tương tác db
 $act = "index"; //chức năng mặc định
 $dsdm1 = getAllDanhMuc1();
@@ -7,6 +8,7 @@ $dsbd = getAllBaiDang();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "index":
+        $dstb = getAllThongBao();
         $view = "views/home.php";
         require_once "layout.php";
         break;
