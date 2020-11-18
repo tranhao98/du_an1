@@ -21,15 +21,21 @@
 }
 .thongbao-trai{
     float: left;
-    width: 70%;
+    width: 67%;
 }
 .thongbao-phai{
-    padding: 15px;
+    padding: 10px;
     float: left;
-    width: 30%;
+    width: 33%;
 }
 .card-conclude{
     float: right;
+}
+.tintucmoi{
+    color: black;
+}
+.tintuccu{
+    color: black;
 }
 .tbct-noidung{
     color: black;
@@ -38,10 +44,14 @@
     color: black;
 }
 .tbct-nguoidang{
+    float: right;
     font-weight: bold;
     color: black;
+    margin-bottom: 0rem;
 }
 .tbct-nguontt{
-    font-weight: italic;
+    font-style: italic;
     color: black;
+    float: right;
+    margin-bottom: 0rem;
 }
