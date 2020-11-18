@@ -15,7 +15,10 @@
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
         <h5 class="font-weight-bold mb-3">Thông Tin Người Dùng</h5>
-        <table class="w-100 mx-auto border table-tb-nd">
+        <?php if (isset($message) && $message != "") {
+            echo $message;
+        } ?>
+        <table class="w-100 mx-auto border table-tb-nd text-nowrap">
             <thead>
                 <tr>
                     <th scope="col">#</th>

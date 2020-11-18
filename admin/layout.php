@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
-    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/jquery/jquery.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -14,9 +14,20 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../ckeditor/ckeditor.js"></script>
+
 </head>
 
 <body style="font-family: 'Nunito Sans', sans-serif; background-color: #f2f2f2; min-height:auto">
+
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <div class="container mw-100 p-0 m-0">
         <header class="shadow-sm p-3 mb-3 bg-white rounded">
             <div class="row">
@@ -30,11 +41,11 @@
                 <div class="col-3 text-right">
                     <div class="pr-2 user-admin">
                         <?php
-                        if (! session_id ()) session_start ();
+                        if (!session_id()) session_start();
                         if (isset($_SESSION['sid']) && $_SESSION['sid'] > 0) {
                         ?>
                             <div class="dropdown">
-                                <img src="../upload/comment_2.png" alt="">
+                                <img src="../upload/<?= $_SESSION['hinh'] ?>" alt="" onerror="this.src = '../upload/noavatar.png';">
                                 <a class="dropdown-toggle text-dark" style="text-decoration: none;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <?= $_SESSION['hoten'] ?>
                                 </a>
@@ -129,13 +140,17 @@
                 </div>
             </aside>
             <main>
+                
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
                 <footer class="mt-3 mb-3 bg-white rounded shadow-sm">Giao diện này được thực hiện bởi <strong class="text-danger">HARDWORK TEAM</strong> </footer>
             </main>
-            
+
         </div>
-        
+
     </div>
+
+    
+    <script src="../js/custom.js"> </script>
 </body>
 
 </html>

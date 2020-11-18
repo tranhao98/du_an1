@@ -16,7 +16,10 @@
     <div class="row">
         <div class="col-12 p-3 shadow-sm bg-white rounded">
             <h5 class="mb-3 font-weight-bold">Danh Sách Bài Đăng </h5>
-            <table class="table-tb-nd" style="width:100%">
+            <?php if (isset($message) && $message != "") {
+            echo $message;
+        } ?>
+            <table class="table-tb-nd text-nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th scope="col" style="width: 5%;">#</th>
@@ -46,6 +49,7 @@
                             $mota = $sanpham['mota'];
                             $noibat = $sanpham['noibat'];
                             $anhien = $sanpham['anhien'];
+                            $diachi = $sanpham['diadiem'];
                             if($anhien == 1) $anhien = '<span class="text-primary" style="font-weight: bold;">Hiển thị</span>' ; else $anhien = '<span class="text-danger" style="font-weight: bold;">Ẩn</span>';
                             if($noibat == 1) $noibat = "checked" ; else $noibat = "";
                             $linkedit = "?ctrl=baidang&act=edit&id=".$id;
@@ -54,14 +58,15 @@
                     <tr>
                         <th scope="col"><?=$stt?></th>
                         <td>
-                            Tên bài viết: <?=$ten?><br>
-                            Người đăng: <?=$nguoidang?><br>
-                            Danh mục: <?=$danhmuc?><br>
-                            Khu vực: <?=$khuvuc?><br>
-                            Diện tích: <?=$dientich?><br>
-                            Phòng ngủ: <?=$phongngu?><br>
-                            Nội thất: <?=$noithat?><br>
-                            Trạng thái: <?=$anhien?><br>
+                            <span class="text-secondary font-weight-bold">Tên bài viết:</span> <?=$ten?><br>
+                            <span class="text-secondary font-weight-bold">Người đăng:</span> <?=$nguoidang?><br>
+                            <span class="text-secondary font-weight-bold">Danh mục:</span> <?=$danhmuc?><br>
+                            <span class="text-secondary font-weight-bold">Khu vực:</span> <?=$khuvuc?><br>
+                            <span class="text-secondary font-weight-bold">Diện tích:</span> <?=$dientich?><br>
+                            <span class="text-secondary font-weight-bold">Phòng ngủ:</span> <?=$phongngu?><br>
+                            <span class="text-secondary font-weight-bold">Nội thất:</span> <?=$noithat?><br>
+                            <span class="text-secondary font-weight-bold">Trạng thái:</span> <?=$anhien?><br>
+                            <span class="text-secondary font-weight-bold">Địa chỉ:</span> <?=$diachi?><br>
                             
                         </td>
                         <td><img src="../upload/<?=$hinh?>" alt="" onerror="this.src ='../upload/message.jpg'"></td>

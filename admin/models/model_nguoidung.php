@@ -33,7 +33,7 @@ function getNguoiDungByID1($id)
 function updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien)
 {
     if ($hinh != "")
-    $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', hinh = '$hinh', tendangnhap='$tendangnhap', email='$email', matkhau='$matkhau', sodienthoai='$sodienthoai',diachi='$diachi',
+    $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', hinh = '$hinh', tendangnhap='$tendangnhap', email='$email', matkhau='$matkhau', sodienthoai='$sodienthoai', diachi='$diachi',
     tinhthanh='$tinhthanh', quanhuyen='$quanhuyen', phuongxa='$phuongxa', gioitinh='$gioitinh', vaitro='$vaitro', anhien='$anhien' WHERE id='$id'";
     else
     $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', tendangnhap='$tendangnhap', email='$email', matkhau='$matkhau', sodienthoai='$sodienthoai', diachi='$diachi',

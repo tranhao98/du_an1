@@ -64,6 +64,9 @@ switch ($act) {
     if(isset($_POST['noibat'])) $noibat = 1; else $noibat = 0;
 
     addBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh,$gia,$nguoidung);
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã thêm thành công!
+    </div>";
     header('location: ?ctrl=baidang');
     break;
   case "update":
@@ -85,13 +88,18 @@ switch ($act) {
     move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
     if(isset($_POST['noibat'])) $noibat = 1; else $noibat = 0;
     updateBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh,$gia,$nguoidung,$id);
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã cập nhật thành công!
+    </div>";
     header('location: ?ctrl=baidang');
     break;
   case "delete":
     $id = $_GET["id"];
     settype($id, "int");
     deleteBaiViet($id);
-    $message='Xóa Thành Công!';
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã xóa thành công!
+    </div>";
     header('location: ?ctrl=baidang');
     break;
 }

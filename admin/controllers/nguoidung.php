@@ -52,6 +52,9 @@ switch ($act) {
     $tendangnhap = trim(strip_tags($tendangnhap));
     $matkhau = trim(strip_tags($matkhau));
     addNewNguoiDung($hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã thêm thành công!
+    </div>";
     header("location:index.php?ctrl=nguoidung");
     break;
   case "update":
@@ -79,15 +82,21 @@ switch ($act) {
     $hoten = trim(strip_tags($hoten));
     updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
 
-
-    $message = "Cập nhật thành công!";
+    $dstinhthanh = getAllTinhThanh();
+    $dsquanhuyen = getAllQuanHuyenTheoTinhThanh();
+    $dsphuongxa = getAllPhuongXa();
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã cập nhật thành công!
+    </div>";
     header("location:index.php?ctrl=nguoidung");
     break;
   case "delete":
     $id = $_GET["id"];
     settype($id, "int");
     deleteNguoiDung($id);
-    $message = 'Xóa Thành Công!';
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã xóa thành công!
+    </div>";
     header("location:index.php?ctrl=nguoidung");
     break;
   case 'dangxuat':

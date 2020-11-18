@@ -18,6 +18,9 @@ switch ($act) {
     $thutu = $_POST["thutu"];
     $anhien = $_POST["anhien"];
     addKhuVuc($tenkhuvuc, $thutu, $anhien);
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã thêm thành công!
+    </div>";
     header("location:index.php?ctrl=khuvuc");
     break;
 
@@ -25,8 +28,10 @@ switch ($act) {
   case "edit":
     $idkhuvuc = $_GET["idkhuvuc"];
     settype($idkhuvuc, "int");
+    $dskv = getAllKhuVuc();
+    $dstinhthanh = getAllTinhThanh();
     $row = getKhuVucByID($idkhuvuc);
-    $view = "views/khuvuc-edit.php";
+    $view = "views/khuvuc-index.php";
     require_once "layout.php";
     break;
 
@@ -36,7 +41,9 @@ switch ($act) {
     $thutu = $_POST["thutu"];
     $anhien = $_POST["anhien"];
     updateKhuVuc($idkhuvuc, $tenkhuvuc, $thutu, $anhien);
-    $message = "Cập nhật thành công!";
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã cập nhật thành công!
+    </div>";
     header("location:index.php?ctrl=khuvuc");
     break;
 
@@ -45,7 +52,9 @@ switch ($act) {
     $idkhuvuc = $_GET["idkhuvuc"];
     settype($idkhuvuc, "int");
     deleteKhuVuc($idkhuvuc);
-    $message = 'Xóa Thành Công!';
+    $message = "<div class=\"alert alert-primary\" role=\"alert\">
+      Đã xóa thành công!
+    </div>";
     header("location:index.php?ctrl=khuvuc");
     break;
 }

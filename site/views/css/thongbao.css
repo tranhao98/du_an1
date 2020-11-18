@@ -1,0 +1,44 @@
+
+.mt-100{
+    margin-top: 100px;
+}
+.mt-200{
+    margin-top: 200px;
+}
+
+.mt--100{
+    margin-top: 0px;
+}
+#our-classes {
+    margin-bottom: 0px;
+}
+.row{
+    width: 100%;
+}
+.card-thongbao{
+    width: 100%;
+    margin: auto;
+}
+.thongbao-trai{
+    float: left;
+    width: 70%;
+}
+.thongbao-phai{
+    margin-left: 20px;
+    padding: 15px;
+    float: left;
+    width: 30%;
+}
+.card-conclude p{
+    float: right;
+}
+.tbct-noidung{
+    color: black;
+}
+.tbct-noidung:hover{
+    color: black;
+}
+.tbct-nguoidang{
+    font-weight: bold;
+    color: black;
+}

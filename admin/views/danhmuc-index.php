@@ -14,37 +14,74 @@
     </div>
 
     <div class="row">
-        <div class="box-add-dm shadow-sm bg-white rounded p-3">
-            <h5 class="mb-4 font-weight-bold">Thêm Danh Mục </h5>
-            <form method="post" action="?ctrl=danhmuc&act=insert" class="bg-input">
-                <div class="form-group">
-                    <label for="">Tên Danh Mục</label>
-                    <input type="text" name="tendm" id="" class="form-control" placeholder="Tên danh mục" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Thứ Tự</label>
-                    <input type="text" name="thutu" id="" class="form-control" placeholder="Thứ tự" aria-describedby="helpId">
-                </div>
-                <div class="row">
-                    <div class="form-group col-3">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
-                            <label class="form-check-label" for="anhien1">Hiện</label>
+        <?php
+        if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) { ?>
+            <div class="box-add-dm shadow-sm bg-white rounded p-3">
+                <h5 class="mb-4 font-weight-bold">Sửa Danh Mục </h5>
+                <form method="post" action="?ctrl=danhmuc&act=update" class="bg-input">
+                    <div class="form-group">
+                        <label for="">Tên Danh Mục</label>
+                        <input type="text" name="tendm" value="<?= $row['tendm'] ?>" id="" class="form-control" placeholder="Tên danh mục" aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Thứ Tự</label>
+                        <input type="text" name="thutu" id="" class="form-control" value="<?= $row['thutu'] ?>" placeholder="Thứ tự" aria-describedby="helpId">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-3">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="anhien" <?php if ($row['anhien'] == 1) echo "checked"; ?> id="anhien1" value="1">
+                                <label class="form-check-label" for="anhien1">Hiện</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="anhien" <?php if ($row['anhien'] == 0) echo "checked"; ?> id="anhien0" value="0">
+                                <label class="form-check-label" for="anhien0">Ẩn</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group col-9">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="anhien" id="anhien0" value="0">
-                            <label class="form-check-label" for="anhien0">Ẩn</label>
+                    <input name="iddm" value="<?= $row['iddm'] ?>" type="hidden">
+                    <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
+                    <button type="submit" class="btn btn-danger">Sửa</button>
+                </form>
+            </div>
+        <?php } else { ?>
+            <div class="box-add-dm shadow-sm bg-white rounded p-3">
+                <h5 class="mb-4 font-weight-bold">Thêm Danh Mục </h5>
+                <form method="post" action="?ctrl=danhmuc&act=insert" class="bg-input">
+                    <div class="form-group">
+                        <label for="">Tên Danh Mục</label>
+                        <input type="text" name="tendm" id="" class="form-control" placeholder="Tên danh mục" aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Thứ Tự</label>
+                        <input type="text" name="thutu" id="" class="form-control" placeholder="Thứ tự" aria-describedby="helpId">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-3">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
+                                <label class="form-check-label" for="anhien1">Hiện</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="anhien" id="anhien0" value="0">
+                                <label class="form-check-label" for="anhien0">Ẩn</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
-                <button type="submit" class="btn btn-danger">Thêm</button>
-            </form>
-        </div>
+                    <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
+                    <button type="submit" class="btn btn-danger">Thêm</button>
+                </form>
+            </div>
+        <?php } ?>
         <div class="box-list-dm p-3 shadow-sm bg-white rounded">
             <h5 class="mb-5 font-weight-bold text-uppercase">Danh sách danh mục </h5>
+            <?php if (isset($message) && $message != "") {
+            echo $message;
+        } ?>
             <table class="table-dm-kv" style="text-align:center; width:100%">
                 <thead>
                     <tr>
