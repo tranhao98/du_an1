@@ -113,27 +113,29 @@
                     </div>
                     <div class="card-conclude">
                         <p class="tbct-nguoidang">Nguyễn Thanh Phong</p>
-                        <p class="tbct-nguontt">Theo nhịp sống kinh tế</p>
+                        <p class="tbct-nguontt">VnExpress</p>
                     </div>
                 </div>
                 <div class="thongbao-phai mt-200">
                     <div class="card-thongbao">
                         <div class="tintucmoi">
                             <h4>Tin tức mới</h4>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
-                            <li><a href="">Những căn hộ hot nhất TPHCM</a></li>
-                            <li><a href="">Xu hướng bất động sản 09/2020</a></li>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Eximbank tổ chức đại hội cổ đông lần 4</a></li>
+                            <li><a href="">Bất động sản Tp.HCM trên đà “hồi sinh” trở lại?</a></li>
+                            <li><a href="">BĐS công nghiệp Bắc Ninh – Xu hướng mới của giới đầu tư</a></li>
+                            <li><a href="">B.thự sang trọng tại sân golf của NovaWorld Phan Thiet</a></li>
+                            <li><a href="">Top 6 mẫu biệt thự hiện đại đang được ưa chuộng hiện nay</a></li>
+                            <li><a href="">Khám phá căn hộ “không góc chết” tại Imperia Smart City</a></li>
                         </div>
                         <div class="tintuccu">
                             <h4>Tin tức cũ</h4>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Garden Riverside: Tận hưởng chất lượng sống sinh thái bên sông</a></li>
+                            <li><a href="">Celesta Rise đưa phong cách nghỉ dưỡng vào không gian sống</a></li>
+                            <li><a href="">Long An chi 13.000 tỷ đồng xây dựng 8 công trình giao thông quan trọng</a></li>
+                            <li><a href="">Số lượng dự án BĐS nghỉ dưỡng được cấp phép tại miền Trung gấp 9 lần cả miền Bắc và miền Nam cộng lại</a></li>
+                            <li><a href="">Lilama 18 xin chuyển mục đích sử dụng đất rừng tự nhiên để xây khu du lịch nghỉ dưỡng</a></li>
+                            <li><a href="">The Icon – dinh thự sang trọng với thiết kế thông minh dành cho nhà đầu tư tinh nhạy</a></li>
+                            <li><a href="">The Residence Phú Quốc mở bán biệt thự 2 mặt tiền tại Bãi Trường</a></li>
                         </div>
                     </div>
                 </div>
