@@ -80,6 +80,7 @@ switch ($act) {
     $anhien = $_POST["anhien"];
     settype($id, "int");
     $hoten = trim(strip_tags($hoten));
+    $diachi = trim(strip_tags($diachi));
     updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
 
     $dstinhthanh = getAllTinhThanh();

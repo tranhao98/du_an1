@@ -93,11 +93,6 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Địa chỉ:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1 " rows="2" style="resize: none" required name="diachi" placeholder="Nhập số nhà, tổ, đường,..."><?= $baiviet['diadiem'] ?></textarea>
-            </div>
-
             <div class="row">
                 <!-- <div class="form-group col-5">
                         <label for="name">Thứ tự:</label>

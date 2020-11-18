@@ -86,7 +86,7 @@
             <div class="row">
                 <div class="form-group col-4">
                     <label for="">Tỉnh / Thành phố:</label>
-                    <select id="tinhthanh" class="form-control" placeholder="Tỉnh/Thành phố" required name="tinhthanhpho">
+                    <select id="tinhthanh" class="form-control" placeholder="Tỉnh/Thành phố" required  name="tinhthanhpho">
                         <option value="" selected>--Chọn Tỉnh / Thành phố--</option>
                         <?php
                         foreach ($tinh as $tinh) {
@@ -97,7 +97,7 @@
                 </div>
                 <div class="form-group col-4">
                     <label for="">Quận / Huyện:</label>
-                    <select id="quanhuyen" class="form-control" placeholder="Quận/Huyện" required name="quanhuyen">
+                    <select id="quanhuyen" class="form-control" placeholder="Quận/Huyện" required  name="quanhuyen">
                         <option value="" selected>--Chọn Quận / Huyện--</option>
                         <?php
                         foreach ($huyen as $huyen) {
@@ -108,7 +108,7 @@
                 </div>
                 <div class="form-group col-4">
                     <label for="">Phường / Xã:</label>
-                    <select id="phuongxa" class="form-control" placeholder="Quận/Huyện" required name="phuongxa">
+                    <select id="phuongxa" class="form-control" placeholder="Quận/Huyện" required  name="phuongxa">
                         <option value="" selected>--Chọn Phường / Xã--</option>
                         <?php
                         foreach ($xa as $xa) {
@@ -119,10 +119,6 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Địa chỉ:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="resize: none" required name="diachi" placeholder="Nhập số nhà, tổ, đường,..."></textarea>
-            </div>
 
             <div class="row">
                 <!-- <div class="form-group col-5">

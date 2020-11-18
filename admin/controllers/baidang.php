@@ -54,9 +54,8 @@ switch ($act) {
     $tinhthanh = getNameKhuVucHanhChinh($_POST['tinhthanhpho'],1)['name'];
     $quanhuyen = getNameKhuVucHanhChinh($_POST['quanhuyen'],2)['name'];
     $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'],3)['name'];
-    $diachi = trim(strip_tags($_POST['diachi']));
     $anhien = $_POST['anhien'];
-    $diachi = $diachi.', '.$phuongxa.', '.$quanhuyen.', '.$tinhthanh.'.';
+    $diachi = $phuongxa.', '.$quanhuyen.', '.$tinhthanh.'.';
     $hinh_anh = $_FILES['hinhanh']['name'];
     $partimg = "../upload/";
     $target_file = $partimg . basename($hinh_anh);

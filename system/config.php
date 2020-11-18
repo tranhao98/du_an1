@@ -7,4 +7,5 @@ define('ROOT_URL' , "/DUAN1");
 define('ADMIN_URL' , ROOT_URL."/admin");
 define('SITE_URL' , ROOT_URL."/site");
 define('SYSTEM_PATH' , ROOT_URL."/SYSTEM");
+define("PAGE_SIZE" , 6);
 ?>
