@@ -110,7 +110,7 @@
                     </div>
                     <div class="card-conclude">
                         <p class="tbct-nguoidang">Nguyễn Thanh Phong</p><br>
-                        <p class="tbct-nguoidang">Theo nhịp sống kinh tế</p>
+                        <p class="tbct-nguontt">Theo nhịp sống kinh tế</p>
                     </div>
                 </div>
                 <div class="thongbao-phai mt-200">
@@ -118,8 +118,8 @@
                         <div class="tintucmoi">
                             <h4>Tin tức mới</h4>
                             <li><a href="">Bất động sản & Covid 19</a></li>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
-                            <li><a href="">Bất động sản & Covid 19</a></li>
+                            <li><a href="">Những căn hộ hot nhất TPHCM</a></li>
+                            <li><a href="">Xu hướng bất động sản 09/2020</a></li>
                             <li><a href="">Bất động sản & Covid 19</a></li>
                             <li><a href="">Bất động sản & Covid 19</a></li>
                             <li><a href="">Bất động sản & Covid 19</a></li>
