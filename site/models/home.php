@@ -4,10 +4,13 @@ require_once "../system/database.php";
 
 
 
-// xem thông báo theo mã
-function getAllThongBao()
+function getAllThongBao(){
+    $sql="SELECT * FROM thongbao";
+    return query($sql);
+}
+function getThongBaobyID($idtb)
 {
-    $sql = "SELECT * FROM thongbao";
+    $sql = "SELECT * FROM thongbao WHERE idtb = '$idtb'";
     return queryOne($sql);
 }
 
