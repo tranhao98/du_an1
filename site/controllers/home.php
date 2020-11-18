@@ -43,10 +43,10 @@ switch ($act) {
         require_once "views/thongbao.php";
         break;
     case "chitietthongbao":
-        $idtb = 0;
-        if (isset($_GET['idtb']) == true) $idtb = $_GET['idtb'];
+        $idtb = $_GET['idtb'];
         settype($idtb, "int");
-        $row = getAllThongBao($idtb);
-        require_once "views/thongbaochitiet.php";
+        $rowidtb = getThongBaobyID($idtb);
+        $view = "view/thongbaochitiet.php";
+        require_once "layout.php";
         break;
 }
