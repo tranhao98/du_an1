@@ -92,30 +92,23 @@
                         </h6>
                     </div>
                     <div class="card-content">
-                        <h6>Tập đoàn Novaland Gallery</h6>
+                        <h6>Dự án trung tâm triển lãm Novaland </h6>
                         <img src="../../upload/novaland-gallery.jpg" style="text-align:center"> <br> <br>
-                        <a class="tbct-noidung"></a>
+                        <!-- <a class="tbct-noidung"></a> -->
                         <a class="tbct-noidung">
                             Đây được coi là trung tâm triển lãm, giao dịch bất động sản lớn bậc nhất tại khu vực miền Nam tính đến thời điểm hiện tại.
                             Trung tâm Triển lãm Novaland tọa lại tại 179 Hai Bà Trưng, P.6, Q3 (góc giao với đường Điện Biên Phủ). 
                             Đây là điểm tiếp khách lớn nhất của Novaland với nhiều hạng mục tiện ích mới lạ và đột phá.
-                            Theo đại diện của Novaland, Novaland Gallery sẽ được xây dựng thành một công trình đa chức năng, đồng bộ, 
-                            đáp ứng nhu cầu của khách hàng đến tham quan, tìm hiểu dự án, bao gồm cả khách trong nước và ngoài nước, 
-                            xứng tầm là công trình trọng điểm tại Quận 3, TP.HCM.
-                            Việc ra mắt Novaland Gallery với diện mạo mới sẽ giúp nâng cao hơn nữa chất lượng dịch vụ khách hàng, 
-                            tăng tính trải nghiệm và tương tác trong quá trình chọn lựa các sản phẩm Bất động sản của Novaland. 
-                            Đặc biệt, đây cũng là sự mở đầu hoành tráng cho chuỗi sự kiện từ 19/11/2020 đến 31/12/2020 để giới thiệu 
-                            các dự án trọng điểm sắp tới của Novaland, hâm nóng bầu không khí náo nhiệt của mùa đầu tư cuối năm trong bối cảnh bình thường mới.
-                            Đây được coi là trung tâm triển lãm, giao dịch bất động sản lớn bậc nhất tại khu vực miền Nam tính đến thời điểm hiện tại.
-                            Trung tâm Triển lãm Novaland tọa lại tại 179 Hai Bà Trưng, P.6, Q3 (góc giao với đường Điện Biên Phủ). 
-                            Đây là điểm tiếp khách lớn nhất của Novaland với nhiều hạng mục tiện ích mới lạ và đột phá.
-                            Theo đại diện của Novaland, Novaland Gallery sẽ được xây dựng thành một công trình đa chức năng, đồng bộ, 
-                            đáp ứng nhu cầu của khách hàng đến tham quan, tìm hiểu dự án, bao gồm cả khách trong nước và ngoài nước, 
-                            xứng tầm là công trình trọng điểm tại Quận 3, TP.HCM.
-                            Việc ra mắt Novaland Gallery với diện mạo mới sẽ giúp nâng cao hơn nữa chất lượng dịch vụ khách hàng, 
-                            tăng tính trải nghiệm và tương tác trong quá trình chọn lựa các sản phẩm Bất động sản của Novaland. 
-                            Đặc biệt, đây cũng là sự mở đầu hoành tráng cho chuỗi sự kiện từ 19/11/2020 đến 31/12/2020 để giới thiệu 
-                            các dự án trọng điểm sắp tới của Novaland, hâm nóng bầu không khí náo nhiệt của mùa đầu tư cuối năm trong bối cảnh bình thường mới.
+                            Tiên phong tại TP.HCM, một trung tâm triển lãm đem đến những "trải nghiệm số" vô cùng thú vị, giúp khách hàng hình dung rõ hơn về những dự án tương lai. 
+                            Cụ thể phải kể đến như phòng chiếu phim , sa bàn thực tế ảo… Bên cạnh đó, không gian mở và linh hoạt của 
+                            Trung tâm cũng rất thuận tiện để chuyển đổi công năng thành nơi tổ chức sự kiện cao cấp. Nhà hàng The Dome tiêu chuẩn 5 sao, cà phê 
+                            Saigon Casa nằm trong khuôn viên Triển lãm vừa phục vụ cho các tiệc tri ân khách hàng, cũng vừa tạo thêm điểm gặp gỡ, kết nối lý tưởng cho giới đầu tư thời gian 
+                            tới.
+                            Các dự án trọng điểm của Novaland sẽ được giới thiệu và trưng bày tại đây như: The Grand Manhattan (Q.1, TP.HCM), Aqua City (Biên Hòa, Đồng Nai), 
+                            NovaWorld Ho Tram (Bà Rịa Vũng Tàu), NovaWorld Phan Thiet (Phan Thiết, Bình Thuận), NovaHills Mui Ne Resort & Villas (Mũi Né, Bình Thuận)…
+                            Bên cạnh sa bàn thực, khách hàng còn có thể tham quan các dự án bằng hệ thống sa bàn thực tế ảo; qua đó có thể quan sát các dự án từ tổng quan, 
+                            góc trên cao với mọi phương hướng, đến sự thay đổi về thời tiết, thời gian trong ngày (sáng, trưa, tối). Các thông tin từ hệ thống sa bàn sẽ giúp 
+                            khách hàng có lựa chọn sản phẩm phù hợp với nhu cầu về vị trí, hướng nhà, kết nối tiện ích ưa chuộng…
                         </a>
                     </div>
                     <div class="card-conclude">
