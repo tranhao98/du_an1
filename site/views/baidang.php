@@ -101,7 +101,7 @@
             </div>
         </div>
     </div>
-
+<!-- <br><br><br><br><br> -->
     <section class="section" id="our-classes">
         <div class="container">
             <div class="row">
@@ -116,9 +116,48 @@
                     <section class='tabs-content'>
                         <div class="row"> 
                             <div class="card col-9 rounded-0 bg-transparent border-0 p-0">
-                                <img class="card-img-top" src="../upload/nha.jpg" alt="Card image cap">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=843&q=80" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Third slide">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
                                 <div class="card-body p-0 mt-4">
                                     <h5 class="card-title">Loạt chung cư gần Làng Đại học Quốc gia có giá từ 1,6 tỷ/căn.</h5>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
                                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
                                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
                                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
@@ -127,7 +166,7 @@
                             </div>
                             <div class="card col-3 rounded-0 border-0">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item active">Thông tin</li>
+                                    <li class="list-group-item bg-dark text-white">Thông tin</li>
                                     <li class="list-group-item">Tác giả: KhangDuong</li>
                                     <li class="list-group-item">Giá: 1230000000000đ</li>
                                     <li class="list-group-item">Khu vực: Thành Phố Hồ Chí Minh</li>
@@ -138,7 +177,7 @@
                                     <li class="list-group-item">Diện tích: 2000 m2</li>
                                 </ul>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item active">Liên hệ người đăng</li>
+                                    <li class="list-group-item bg-dark text-white">Liên hệ người đăng</li>
                                     <li class="list-group-item">Số điện thoại: 0123456789</li>
                                     <li class="list-group-item">Địa chỉ: 123, Hồ Chí Minh, 2020</li>
                                     <li class="list-group-item">Email: duongkhang0401@gmail.com</li>
@@ -161,7 +200,7 @@
         </div>
         <div class="container mt-4">
             <div class="auth">
-                <span class="auth-child">Tác giả: KhangDuong || Thời gian đăng: 14h02 11/11/2020</span>
+                <span class="auth-child">Tác giả: KhangDuong | Thời gian đăng: 14h02 11/11/2020</span>
             </div>
         </div>
     </section>

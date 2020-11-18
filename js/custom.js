@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
             }
         });
     }
-
+    $('.carousel').carousel();
     if ($('.owl-banner').length) {
         $('.owl-banner').owlCarousel({
             loop: true,
