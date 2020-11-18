@@ -789,6 +789,7 @@
         box-shadow: none;
         border: none;
         margin-bottom: 15px;
+        resize: none;
     }
     
     footer .contact-form textarea:focus {
