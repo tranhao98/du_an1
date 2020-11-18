@@ -47,7 +47,7 @@ switch ($act) {
         settype($idtb, "int");
         $dstb = getAllThongBao();
         $rowidtb = getThongBaobyID($idtb);
-        $view = "view/thongbaochitiet.php";
+        $view = "views/thongbaochitiet.php";
         require_once "layout.php";
         break;
 }
