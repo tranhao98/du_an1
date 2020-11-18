@@ -84,8 +84,10 @@
             <div class="card-thongbao">
                 <div class="thongbao-trai mt-100">
                     <div class="card-title">
-                        <h2>Novaland Gallery: Đẳng cấp mới của điểm giao dịch Bất động sản</h2>
-                        <p>17/11/2020 | Bất động sản</p> <br>
+                    <h2><?=$rowidtb['tieude']?></h2>
+                    <p><?=$rowidtb['ngaydang']?> | Bất động sản</p> 
+                        <!-- <h2>Novaland Gallery: Đẳng cấp mới của điểm giao dịch Bất động sản</h2>
+                        <p>17/11/2020 | Bất động sản</p> <br> -->
                         <h6>
                             Ngày 19/11 tới đây, tại khu vực trung tâm TP.HCM, Tập đoàn Novaland sẽ ra mắt Novaland Gallery 
                             (Trung tâm Triển lãm Novaland) lớn tại miền Nam với diện tích lên tới gần 5.000 m2. 
@@ -93,10 +95,15 @@
                     </div>
                     <div class="card-content">
                         <h6>Dự án trung tâm triển lãm Novaland </h6>
-                        <img src="../../upload/novaland-gallery.jpg" style="text-align:center"> <br> <br>
+                        <?php
+                            if($rowidtb['hinh'] == NULL)  echo "<img src='../../upload/novaland-gallery.jpg'>";
+                            else  echo "<img src='../../upload/".$rowidtb['hinh']."' >";
+                        ?>
+                        <!-- <img src="../../upload/novaland-gallery.jpg" style="text-align:center"> <br> <br> -->
                         <!-- <a class="tbct-noidung"></a> -->
                         <a class="tbct-noidung">
-                            Đây được coi là trung tâm triển lãm, giao dịch bất động sản lớn bậc nhất tại khu vực miền Nam tính đến thời điểm hiện tại.
+                            <?=$rowidtb['noidung']?>
+                            <!-- Đây được coi là trung tâm triển lãm, giao dịch bất động sản lớn bậc nhất tại khu vực miền Nam tính đến thời điểm hiện tại.
                             Trung tâm Triển lãm Novaland tọa lại tại 179 Hai Bà Trưng, P.6, Q3 (góc giao với đường Điện Biên Phủ). 
                             Đây là điểm tiếp khách lớn nhất của Novaland với nhiều hạng mục tiện ích mới lạ và đột phá.
                             Tiên phong tại TP.HCM, một trung tâm triển lãm đem đến những "trải nghiệm số" vô cùng thú vị, giúp khách hàng hình dung rõ hơn về những dự án tương lai. 
@@ -108,11 +115,11 @@
                             NovaWorld Ho Tram (Bà Rịa Vũng Tàu), NovaWorld Phan Thiet (Phan Thiết, Bình Thuận), NovaHills Mui Ne Resort & Villas (Mũi Né, Bình Thuận)…
                             Bên cạnh sa bàn thực, khách hàng còn có thể tham quan các dự án bằng hệ thống sa bàn thực tế ảo; qua đó có thể quan sát các dự án từ tổng quan, 
                             góc trên cao với mọi phương hướng, đến sự thay đổi về thời tiết, thời gian trong ngày (sáng, trưa, tối). Các thông tin từ hệ thống sa bàn sẽ giúp 
-                            khách hàng có lựa chọn sản phẩm phù hợp với nhu cầu về vị trí, hướng nhà, kết nối tiện ích ưa chuộng…
+                            khách hàng có lựa chọn sản phẩm phù hợp với nhu cầu về vị trí, hướng nhà, kết nối tiện ích ưa chuộng… -->
                         </a>
                     </div>
                     <div class="card-conclude">
-                        <p class="tbct-nguoidang">Nguyễn Thanh Phong</p>
+                        <p class="tbct-nguoidang"><?=$rowidtb['idnguoidang']?></p>
                         <p class="tbct-nguontt">VnExpress</p>
                     </div>
                 </div>
