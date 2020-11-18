@@ -97,7 +97,7 @@
                         <h6>Dự án trung tâm triển lãm Novaland </h6>
                         <?php
                             if($rowidtb['hinh'] == NULL)  echo "<img src='../../upload/novaland-gallery.jpg'>";
-                            else  echo "<img src='../../upload/".$rowidtb['hinh']."' >";
+                            else  echo "<img src='../upload/".$rowidtb['hinh']."' ><br>";
                         ?>
                         <!-- <img src="../../upload/novaland-gallery.jpg" style="text-align:center"> <br> <br> -->
                         <!-- <a class="tbct-noidung"></a> -->
@@ -121,7 +121,7 @@
                         </a>
                     </div>
                     <div class="card-conclude">
-                        <p class="tbct-nguoidang"><?=$rowidtb['idnguoidang']?></p>
+                        <p class="tbct-nguoidang"><?php echo getNameNguoiDung($rowidtb['idnguoidang'])['hoten'];?></p><br>
                         <p class="tbct-nguontt">VnExpress</p>
                     </div>
                 </div>
