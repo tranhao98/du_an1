@@ -1,0 +1,20 @@
+
+.us-100{
+    margin-top: 100px;
+}
+
+#our-classes {
+    margin-bottom: 0px;
+}
+.row{
+    width: 100%;
+}
+.us-trai{
+    float: left;
+    width: 67%;
+}
+.us-phai{
+    padding: 10px;
+    float: left;
+    width: 33%;
+}
