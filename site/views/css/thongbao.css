@@ -9,6 +9,16 @@
 .mt--100{
     margin-top: 0px;
 }
+.mt-20{
+    margin-top: 20px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.bg-dark {
+    background-color: #343a40!important;
+}
+
 #our-classes {
     margin-bottom: 0px;
 }
@@ -20,18 +30,17 @@
     margin: auto;
 }
 .card-title h2{
-    font-size: 23px;
-    font-weight: 700;
-    color: #001834;
+    font-size: 28px;
+    font-weight: 800;
+    color: #232d39;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
-.mt-20{
-    margin-top: 20px;
-}
-.mb-20{
-    margin-bottom: 20px;
+.card-content img{
+    width: 700px;
+    height: 400px;
 }
 .thongbao-trai{
     float: left;
@@ -48,6 +57,11 @@
 .tintucmoi a{
     font-size: 14px;
     color: rgb(66, 66, 66);
+}
+.ttmoi h6{
+    padding: 10px;
+    color: white;
+    border-width: 0 0 1px;
 }
 .tintuccu{
     color: rgb(66, 66, 66);
