@@ -100,6 +100,7 @@ function getTenDanhMuc($id)
 {
     $sql = "SELECT tendm from danhmuc where iddm = '$id' ";
     return queryOne($sql)['tendm'];
+<<<<<<< Updated upstream
 }
 function getTenKhuVuc($id)
 {
@@ -110,3 +111,6 @@ function demsoBaiDangTheoKV($id){
     $sql = "SELECT COUNT(idsp) as soluong from baidang where idkhuvuc = '$id'";
     return queryOne($sql)['soluong'];
 }
+=======
+}
+>>>>>>> Stashed changes

@@ -147,12 +147,13 @@
                         <img src="views/images/banner.png" alt="">
                     </div>
                     <div class="content">
-                        <p>TP. Hồ Chí Minh <a href="index.php?ctrl=home&act=cat-khuvuc"> 07 bài đăng</a></p>
+                        <p>Khu vực<a href="index.php?ctrl=home&act=cat-khuvuc">99 bài đăng</a></p>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="row">
+<<<<<<< Updated upstream
                     <?php foreach ($dskv as $kv) { ?>
                         <div class="col-6">
                             <div class="single_location">
@@ -162,6 +163,16 @@
                                 <div class="content">
                                     <p><?= $kv['tenkhuvuc'] ?> <a href="index.php?ctrl=home&act=cat-khuvuc&id=<?=$kv['idkhuvuc']?>"><?= demsoBaiDangTheoKV($kv['idkhuvuc'])?> bài đăng</a></p>
                                 </div>
+=======
+                    <?php foreach ($dskv as $kv) {?>
+                    <div class="col-6">
+                        <div class="single_location">
+                            <div class="thumb">
+                                <img src="views/images/banner.png" alt="">
+                            </div>
+                            <div class="content">
+                                <p><?=$kv['tenkhuvuc']?> <a href="#">bài đăng</a></p>
+>>>>>>> Stashed changes
                             </div>
                         </div>
                     <?php } ?>
