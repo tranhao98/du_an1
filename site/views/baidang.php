@@ -10,37 +10,11 @@
                 </div>
             </div>
             <div class="row" id="">
-                    <section class='tabs-content'>
+                    <section class='tabs-content col-lg-12'>
                         <div class="row"> 
-                            <div class="card col-9 rounded-0 bg-transparent border-0 p-0">
-                            <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="First slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="Second slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Third slide">
-                                    </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div> -->
-                                <div class="card-body p-0 mt-4">
-                                    <!-- <h5 class="card-title">Loạt chung cư gần Làng Đại học Quốc gia có giá từ 1,6 tỷ/căn.</h5> -->
+                            <div class="card col-md-8 rounded-0 bg-transparent border-0">
+                                <div class="card-body p-0 mt-4 text-dark">
+                                    <h5 class="card-title">Loạt chung cư gần Làng Đại học Quốc gia có giá từ 1,6 tỷ/căn.</h5>
                                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
                                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
                                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
@@ -51,7 +25,7 @@
                                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia nihil blanditiis iste, at labore veritatis? Quia sint officia fugit, beatae voluptates tempore ratione repellat eum modi ut architecto quo cupiditate!</p>
                                 </div>
                             </div>
-                            <div class="card col-3 rounded-0 border-0">
+                            <div class="card col-md-4 rounded-0 border-0">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item bg-dark text-white">Thông tin</li>
                                     <li class="list-group-item">Tác giả: KhangDuong</li>
@@ -74,8 +48,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </section>
-                    
+                    </section> 
             </div>
         </div>
         <div class="container mt-4">
@@ -193,93 +166,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <a href=""><img src="views/images/banner.png" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                            </span>
 
-                            <a href="">
-                                <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                            </a>
-
-                            <p>Quận 1 - TP. Hồ Chí Minh</p>
-
-                            <ul class="social-icons">
-                                <li><a href="  ">+ View More</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <a href=""><img src="views/images/banner.png" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                            </span>
-
-                            <a href="">
-                                <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                            </a>
-
-                            <p>Quận 1 - TP. Hồ Chí Minh</p>
-
-                            <ul class="social-icons">
-                                <li><a href="  ">+ View More</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <a href=""><img src="views/images/banner.png" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                            </span>
-
-                            <a href="">
-                                <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                            </a>
-
-                            <p>Quận 1 - TP. Hồ Chí Minh</p>
-
-                            <ul class="social-icons">
-                                <li><a href="  ">+ View More</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <a href=""><img src="views/images/banner.png" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                90 triệu/m<sup>2</sup> - 200 m<sup>2</sup>
-                            </span>
-
-                            <a href="">
-                                <h4>Chính chủ cần cho thuê 200m2 văn phòng phố Bà Triệu, đầy đủ trang...</h4>
-                            </a>
-
-                            <p>Quận 1 - TP. Hồ Chí Minh</p>
-                            <ul class="social-icons">
-                                <li><a href="  ">+ View More</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>  

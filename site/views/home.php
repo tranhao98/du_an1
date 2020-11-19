@@ -90,21 +90,21 @@
                         <div class="box-baidang">
                             <div class="trainer-item">
                                 <div class="image-thumb">
-                                    <a href=""><img src="../upload/<?= $bd['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" height="200px"></a>
+                                    <a href="?act=baidang&id=<?=$bd['idsp']?>"><img src="../upload/<?= $bd['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" height="200px"></a>
                                 </div>
                                 <div class="down-content">
                                     <span>
                                         <?= number_format($bd['gia'], 0, ",", "."); ?><?php if (strlen(strstr(strtolower($bd['tensp']), "cho thuê")) > 0) echo '/tháng';
                                                                                         else echo '/m<sup>2</sup>'; ?> - <?= $bd['dientich'] ?> m<sup>2</sup>
                                     </span>
-                                    <a href="">
+                                    <a href="?act=baidang&id=<?=$bd['idsp']?>">
                                         <h4><?= _substr($bd['tensp'], 55) ?></h4>
                                     </a>
 
                                     <p><?= $bd['diadiem'] ?></p>
 
                                     <ul class="social-icons">
-                                        <li><a href="  ">+ Xem thêm</a></li>
+                                        <li><a href="?act=baidang&id=<?=$bd['idsp']?>">+ Xem thêm</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -153,7 +153,6 @@
             </div>
             <div class="col-6">
                 <div class="row">
-<<<<<<< Updated upstream
                     <?php foreach ($dskv as $kv) { ?>
                         <div class="col-6">
                             <div class="single_location">
@@ -163,16 +162,6 @@
                                 <div class="content">
                                     <p><?= $kv['tenkhuvuc'] ?> <a href="index.php?ctrl=home&act=cat-khuvuc&id=<?=$kv['idkhuvuc']?>"><?= demsoBaiDangTheoKV($kv['idkhuvuc'])?> bài đăng</a></p>
                                 </div>
-=======
-                    <?php foreach ($dskv as $kv) {?>
-                    <div class="col-6">
-                        <div class="single_location">
-                            <div class="thumb">
-                                <img src="views/images/banner.png" alt="">
-                            </div>
-                            <div class="content">
-                                <p><?=$kv['tenkhuvuc']?> <a href="#">bài đăng</a></p>
->>>>>>> Stashed changes
                             </div>
                         </div>
                     <?php } ?>
