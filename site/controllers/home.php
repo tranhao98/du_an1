@@ -6,6 +6,7 @@ $dsdm1 = getAllDanhMuc1();
 $dsdm2 = getAllDanhMuc2();
 $dsbd = getAllBaiDang();
 $dskv = getAllKhuVuc();
+$dskvspecial = getKhuVucSpecial();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "index":

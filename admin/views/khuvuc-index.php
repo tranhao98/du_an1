@@ -18,14 +18,16 @@
         if (isset($_GET['idkhuvuc']) && ($_GET['idkhuvuc'] > 0)) { ?>
             <div class="box-add-dm shadow-sm bg-white rounded p-3">
                 <h5 class="mb-4 font-weight-bold">Sửa Khu Vực</h5>
+                
                 <form method="post" action="?ctrl=khuvuc&act=update" class="bg-input">
+                
                     <div class="form-group">
                         <label for="">Chọn Khu Vực</label>
-                        <select id="tinhthanh" class="form-control" name="tenkhuvuc">
+                        <select required id="tinhthanh" class="form-control" name="tenkhuvuc">
                             <option value="" selected><?=$row['tenkhuvuc']?></option>
                             <?php
                             foreach ($dstinhthanh as $tp) { ?>
-                                <option value=" <?= $tp['name'] ?> "> <?= $tp['name'] ?> </option>
+                                    <option value=" <?= $tp['name'] ?> "> <?= $tp['name'] ?> </option>
                             <?php } ?>
                         </select>
                     </div>
@@ -92,8 +94,8 @@
         <div class="box-list-dm p-3 shadow-sm bg-white rounded">
             <h5 class="mb-5 font-weight-bold text-uppercase">Danh sách khu vực </h5>
             <?php if (isset($message) && $message != "") {
-            echo $message;
-        } ?>
+                echo $message;
+            } ?>
             <table class="table-dm-kv" style="text-align:center; width:100%">
                 <thead>
                     <tr>

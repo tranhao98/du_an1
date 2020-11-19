@@ -13,21 +13,17 @@ $dataPoints = array(
 
 
         var chart = new CanvasJS.Chart("chartContainer", {
-            theme: "light2",
             animationEnabled: true,
             title: {
-                text: "Biểu đồ"
+                text: "Biểu Đồ Tổng Quan"
             },
+            subtitles: [{
+                text: ""
+            }],
             data: [{
                 type: "pie",
-                indexLabel: "{y}",
                 yValueFormatString: "",
-                indexLabelPlacement: "inside",
-                indexLabelFontColor: "#36454F",
-                indexLabelFontSize: 16,
-                indexLabelFontWeight: "bolder",
-                showInLegend: true,
-                legendText: "{label}",
+                indexLabel: "{label} ({y})",
                 dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
             }]
         });
@@ -50,12 +46,12 @@ $dataPoints = array(
                             <i class="fa fa-comments fa-4x"></i>
                         </div>
                         <div class="col-9 text-right">
-                            <div class="huge"><?=demsoDanhMuc()?></div>
+                            <div class="huge"><?= demsoDanhMuc() ?></div>
                             <div>Danh Mục</div>
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="index.php?ctrl=danhmuc&act=index">
                     <div class="panel-footer p-2">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -73,12 +69,12 @@ $dataPoints = array(
                             <i class="fa fa-tasks fa-4x"></i>
                         </div>
                         <div class="col-9 text-right">
-                            <div class="huge"><?=demsoKhuVuc()?></div>
+                            <div class="huge"><?= demsoKhuVuc() ?></div>
                             <div>Khu Vực!</div>
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="index.php?ctrl=khuvuc&act=index">
                     <div class="panel-footer p-2">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -96,12 +92,12 @@ $dataPoints = array(
                             <i class="fa fa-shopping-cart fa-4x"></i>
                         </div>
                         <div class="col-9 text-right">
-                            <div class="huge"><?=demsoNguoiDung()?></div>
+                            <div class="huge"><?= demsoNguoiDung() ?></div>
                             <div>Người Dùng!</div>
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="index.php?ctrl=nguoidung&act=index">
                     <div class="panel-footer p-2">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -119,12 +115,12 @@ $dataPoints = array(
                             <i class="fa fa-support fa-4x"></i>
                         </div>
                         <div class="col-9 text-right">
-                            <div class="huge"><?=demsoThongBao()?></div>
+                            <div class="huge"><?= demsoThongBao() ?></div>
                             <div>Thông Báo!</div>
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="index.php?ctrl=thongbao&act=index">
                     <div class="panel-footer p-2">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -143,12 +139,12 @@ $dataPoints = array(
                             <i style="font-size: 120px;" class="fa fa-support"></i>
                         </div>
                         <div class="col-9 text-right">
-                            <div class="huge1"><?=demsoBaiDang()?></div>
+                            <div class="huge1"><?= demsoBaiDang() ?></div>
                             <div style="font-size: 30px;">Bài đăng!</div>
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="index.php?ctrl=baidang&act=index">
                     <div class="panel-footer p-2">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -159,7 +155,7 @@ $dataPoints = array(
             </div>
         </div>
         <div class="col-6 mt-3 h-50">
-            <div id="chartContainer" style="height: 220px; width: 100%;"></div>
+            <div id="chartContainer" style="height: 350px; width: 100%;"></div>
         </div>
 
     </div>

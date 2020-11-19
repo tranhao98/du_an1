@@ -34,7 +34,12 @@ function getNameNguoiDung($id)
 }
 function getAllKhuVuc()
 {
-    $sql = "SELECT * from khuvuc";
+    $sql = "SELECT * from khuvuc where not thutu = 1";
+    return query($sql);
+}
+function getKhuVucSpecial()
+{
+    $sql = "SELECT * from khuvuc where thutu = 1";
     return query($sql);
 }
 function getAllBaiDang()

@@ -41,6 +41,8 @@ switch ($act) {
     $thutu = $_POST["thutu"];
     $anhien = $_POST["anhien"];
     updateKhuVuc($idkhuvuc, $tenkhuvuc, $thutu, $anhien);
+
+    $dstinhthanh = getAllTinhThanh();
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã cập nhật thành công!
     </div>";

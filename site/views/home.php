@@ -142,14 +142,16 @@
         </div>
         <div class="row">
             <div class="col-6">
+                <?php foreach ($dskvspecial as $kv) { ?>
                 <div class="single_location special">
                     <div class="thumb">
                         <img src="views/images/banner.png" alt="">
                     </div>
                     <div class="content">
-                        <p>Khu vực<a href="index.php?ctrl=home&act=cat-khuvuc">99 bài đăng</a></p>
+                        <p><?=$kv['tenkhuvuc']?><a href="index.php?ctrl=home&act=cat-khuvuc&id=<?=$kv['idkhuvuc']?>"><?= demsoBaiDangTheoKV($kv['idkhuvuc'])?> bài đăng</a></p>
                     </div>
                 </div>
+                <?php } ?>
             </div>
             <div class="col-6">
                 <div class="row">
