@@ -24,6 +24,15 @@
                         <p class="tbct-nguoidang"><?php echo getNameNguoiDung($rowidtb['idnguoidang'])['hoten'];?></p><br>
                         <p class="tbct-nguontt">VnExpress</p>
                     </div>
+                    <div class="card-share">
+                        <div class="socials-share">
+                            <a class="bg-facebook" href="" target="_blank"><span class="fa fa-facebook"></span> Share</a>
+                            <a class="bg-twitter" href="" target="_blank"><span class="fa fa-twitter"></span> Tweet</a>
+                            <a class="bg-google-plus" href="" target="_blank"><span class="fa fa-google-plus"></span> Plus</a>
+                            <a class="bg-pinterest" href="" target="_blank"><span class="fa fa-pinterest"></span> Pin</a>
+                            <a class="bg-email" href="" target="_blank"><span class="fa fa-envelope"></span> Gmail</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="thongbao-phai mt-200">
                     <div class="card-thongbao">
