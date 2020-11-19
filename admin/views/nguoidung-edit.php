@@ -73,7 +73,6 @@
                 </div>
             </div>
             <div class="row">
-
                 <div class="form-group col-3">
                     <label for="">Tỉnh/Thành phố</label>
                     <select id="tinhthanh" class="form-control" name="tinhthanh" required placeholder="Tỉnh/Thành phố">
@@ -90,7 +89,7 @@
                         ?>
                     </select>
                 </div>
-                
+
                 <div class="form-group col-3">
                     <label for="">Quận/Huyện</label>
                     <select id="quanhuyen" class="form-control" name="quanhuyen" required placeholder="Quận/Huyện">
