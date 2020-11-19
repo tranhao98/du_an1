@@ -27,6 +27,15 @@
                         <label for="">Thứ Tự</label>
                         <input type="text" name="thutu" id="" class="form-control" value="<?= $row['thutu'] ?>" placeholder="Thứ tự" aria-describedby="helpId">
                     </div>
+                    <div class="form-group">
+                        <label for="">Chọn Loại</label>
+                        <select id="loai" class="form-control" name="loai">
+
+                            <option value="1" <?php if ($row['loai'] == 1) echo "selected";?>>Đất nền</option>
+                            <option value="0" <?php if ($row['loai'] == 0) echo "selected";?>>Căn hộ</option>
+
+                        </select>
+                    </div>
                     <div class="row">
                         <div class="form-group col-3">
                             <div class="form-check form-check-inline">
@@ -58,6 +67,16 @@
                         <label for="">Thứ Tự</label>
                         <input type="text" name="thutu" id="" class="form-control" placeholder="Thứ tự" aria-describedby="helpId">
                     </div>
+                    <div class="form-group">
+                        <label for="">Chọn Loại</label>
+                        <select id="loai" class="form-control" name="loai">
+                            <option value="" selected>--Chọn loại--</option>
+
+                            <option value="1">Đất nền</option>
+                            <option value="0">Căn hộ</option>
+
+                        </select>
+                    </div>
                     <div class="row">
                         <div class="form-group col-3">
                             <div class="form-check form-check-inline">
@@ -80,8 +99,8 @@
         <div class="box-list-dm p-3 shadow-sm bg-white rounded">
             <h5 class="mb-5 font-weight-bold text-uppercase">Danh sách danh mục </h5>
             <?php if (isset($message) && $message != "") {
-            echo $message;
-        } ?>
+                echo $message;
+            } ?>
             <table class="table-dm-kv" style="text-align:center; width:100%">
                 <thead>
                     <tr>

@@ -70,8 +70,8 @@
                             
                         </td>
                         <td><img src="../upload/<?=$hinh?>" alt="" onerror="this.src ='../upload/message.jpg'"></td>
-                        <td><?=number_format($gia, 0, ',', '.')?>đ</td>
-                        <td><input type="checkbox" name="" id="" <?=$noibat?>></td>
+                        <td class="text-center"><?=number_format($gia, 0, ',', '.')?>đ</td>
+                        <td class="align-middle text-center"><input type="checkbox" name="" id="" <?=$noibat?>></td>
                         <td><?=$mota?></td>
                         <td class="align-middle"><a href="<?=$linkedit?>"><i class='far fa-edit' style='font-size:20px'></i></a></td>
                         <td class="align-middle"><a onclick="return confirm('Bạn có muốn xóa không?')" href="<?=$linkdel?>"><i class="fa fa-trash text-danger" style="font-size:20px"></i></a></td>

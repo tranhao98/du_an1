@@ -11,14 +11,14 @@
         $sql="SELECT * from danhmuc where iddm='$iddm'";
         return queryOne($sql);
     }
-    function addDanhMuc($tendm, $thutu, $anhien){
-        $sql="INSERT INTO danhmuc ( tendm, thutu, anhien) 
-        VALUES ( '$tendm', '$thutu', '$anhien')";
+    function addDanhMuc($tendm, $loai, $thutu, $anhien){
+        $sql="INSERT INTO danhmuc ( tendm, loai, thutu, anhien) 
+        VALUES ( '$tendm', '$loai', '$thutu', '$anhien')";
         execute($sql);
     }
-    function updateDanhMuc($iddm, $tendm, $thutu, $anhien){
+    function updateDanhMuc($iddm, $tendm, $loai, $thutu, $anhien){
         try {
-          $sql="UPDATE danhmuc SET tendm='$tendm', thutu='$thutu',
+          $sql="UPDATE danhmuc SET tendm='$tendm', loai='$loai', thutu='$thutu',
           anhien='$anhien' WHERE iddm='$iddm'";
           execute($sql);
         }

@@ -110,3 +110,4 @@ function demsoBaiDangTheoKV($id){
     $sql = "SELECT COUNT(idsp) as soluong from baidang where idkhuvuc = '$id'";
     return queryOne($sql)['soluong'];
 }
+
