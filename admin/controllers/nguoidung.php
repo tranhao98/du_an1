@@ -82,11 +82,10 @@ switch ($act) {
     settype($id, "int");
     $hoten = trim(strip_tags($hoten));
     $diachi = trim(strip_tags($diachi));
+
     updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
 
-    $dstinhthanh = getAllTinhThanh();
-    $dsquanhuyen = getAllQuanHuyenTheoTinhThanh();
-    $dsphuongxa = getAllPhuongXa();
+    
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã cập nhật thành công!
     </div>";

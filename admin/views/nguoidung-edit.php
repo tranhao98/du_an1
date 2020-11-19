@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
-        <form enctype="multipart/form-data" class="mx-auto w-100 bg-input" method="post" action="index.php?ctrl=nguoidung&act=update">
+        <form enctype="multipart/form-data" class="mx-auto w-100 bg-input" method="post" action="?ctrl=nguoidung&act=update">
             <div class="form-group">
                 <?php
                 $hinh = "../upload/" . $row['hinh'];
@@ -108,8 +108,8 @@
                     <input type="text" name="diachi" id="" class="form-control" value="<?= $row['diachi'] ?>" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId">
                 </div>
             </div>
-            <input name="id" value="<?= $row['id'] ?>" type="hidden">
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
+            <input name="id" value="<?= $row['id'] ?>" type="hidden">
             <button type="submit" class="btn btn-danger">Sửa</button>
         </form>
     </div>
