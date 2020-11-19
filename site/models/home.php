@@ -42,7 +42,10 @@ function getAllBaiDang()
     $sql = "SELECT * from baidang";
     return query($sql);
 }
-
+function getBaiDangLimit(){
+    $sql = "SELECT * from baidang by idsp desc limit 8";
+    return query($sql);
+}
 function getAllDanhMuc1()
 {
     $sql = "SELECT * from danhmuc where loai = 1";

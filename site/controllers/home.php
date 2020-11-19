@@ -10,6 +10,7 @@ if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức nă
 switch ($act) {
     case "index":
         $dstb = getAllThongBao();
+        $slider = "views/slider.php";
         $view = "views/home.php";
         require_once "layout.php";
         break;
@@ -52,6 +53,7 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "baidang":
+        $slider = "views/slider.php";
         $view = "views/baidang.php";
         require_once "layout.php";
         break;

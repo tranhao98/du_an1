@@ -82,29 +82,10 @@
             </div>
         </nav>
     </header>
-
-    <div class="banner header-text">
-        <div class="owl-banner owl-carousel">
-            <div class="banner-item-01">
-                <div class="text-content">
-                    <h4>HARDWORK TEAM</h4>
-                    <h2>REAL ESTATE</h2>
-                </div>
-            </div>
-            <div class="banner-item-02">
-                <div class="text-content">
-                    <h4>HARDWORK TEAM</h4>
-                    <h2>REAL ESTATE</h2>
-                </div>
-            </div>
-            <div class="banner-item-03">
-                <div class="text-content">
-                    <h4>HARDWORK TEAM</h4>
-                    <h2>REAL ESTATE</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+    <main>
+        <?php if (isset($slider) && file_exists($slider)) require_once "$slider"; ?>
+    </main>
+    
     <main>
         <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
     </main>

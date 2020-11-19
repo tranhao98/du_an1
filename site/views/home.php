@@ -90,21 +90,21 @@
                         <div class="box-baidang">
                             <div class="trainer-item">
                                 <div class="image-thumb">
-                                    <a href=""><img src="../upload/<?= $bd['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" height="200px"></a>
+                                    <a href="?act=baidang&id=<?=$bd['idsp']?>"><img src="../upload/<?= $bd['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" height="200px"></a>
                                 </div>
                                 <div class="down-content">
                                     <span>
                                         <?= number_format($bd['gia'], 0, ",", "."); ?><?php if (strlen(strstr(strtolower($bd['tensp']), "cho thuê")) > 0) echo '/tháng';
                                                                                         else echo '/m<sup>2</sup>'; ?> - <?= $bd['dientich'] ?> m<sup>2</sup>
                                     </span>
-                                    <a href="">
+                                    <a href="?act=baidang&id=<?=$bd['idsp']?>">
                                         <h4><?= _substr($bd['tensp'], 55) ?></h4>
                                     </a>
 
                                     <p><?= $bd['diadiem'] ?></p>
 
                                     <ul class="social-icons">
-                                        <li><a href="  ">+ Xem thêm</a></li>
+                                        <li><a href="?act=baidang&id=<?=$bd['idsp']?>">+ Xem thêm</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@
                         <img src="views/images/banner.png" alt="">
                     </div>
                     <div class="content">
-                        <p>TP. Hồ Chí Minh <a href="index.php?ctrl=home&act=cat-khuvuc"> 07 bài đăng</a></p>
+                        <p>Khu vực<a href="index.php?ctrl=home&act=cat-khuvuc">99 bài đăng</a></p>
                     </div>
                 </div>
             </div>
