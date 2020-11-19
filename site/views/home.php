@@ -13,25 +13,30 @@
                 <ul>
                     <?php
                     $dem = 1;
-                     foreach ($dstb as $row) { ?>
-                        <li><a href='#tabs-<?=$dem++?>'><?=$row['tieude']?></a></li>
+                    foreach ($dstb as $row) { ?>
+                        <li><a href='#tabs-<?= $dem++ ?>'><?= $row['tieude'] ?></a></li>
                     <?php } ?>
-                    <div class="main-rounded-button"><a href="">Xem Thêm Tin Tức</a></div> 
+                    <div class="main-rounded-button"><a href="">Xem Thêm Tin Tức</a></div>
                 </ul>
             </div>
             <div class="col-lg-8">
                 <section class='tabs-content'>
-                    <article id='tabs-1'>
-                        <img src="views/images/banner.png" alt="">
-                        <h4>Loạt chung cư gần Làng Đại học Quốc gia có giá từ 1,6 tỷ/căn.</h4>
+                    <?php
+                    $dem = 1;
+                    foreach ($dstb as $row) {
+                    ?>
+                        <article id='tabs-<?= $dem++ ?>'>
+                            <img src="views/images/banner.png" alt="">
+                            <h4>Loạt chung cư gần Làng Đại học Quốc gia có giá từ 1,6 tỷ/căn.</h4>
 
-                        <p><i class="fa fa-user"></i> Hào Long &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10 &nbsp;|&nbsp; <i class="fa fa-comments"></i> 15 bình luận</p>
+                            <p><i class="fa fa-user"></i> Hào Long &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10 &nbsp;|&nbsp; <i class="fa fa-comments"></i> 15 bình luận</p>
 
-                        <p>Khu vực Làng Đại học Thủ Đức, đặc biệt là tuyến đường Thống Nhất nối từ quốc lộ 1K vào địa phận Dĩ An, Bình Dương hiện có trên dưới chục dự án đã và đang triển khai. Hiện đang có gần 10.000 căn hộ được rao bán ở khu vực này với mật độ chung cư dày đặc.</p>
-                        <div class="main-button">
-                            <a href=" ">Đọc tiếp</a>
-                        </div>
-                    </article>
+                            <p>Khu vực Làng Đại học Thủ Đức, đặc biệt là tuyến đường Thống Nhất nối từ quốc lộ 1K vào địa phận Dĩ An, Bình Dương hiện có trên dưới chục dự án đã và đang triển khai. Hiện đang có gần 10.000 căn hộ được rao bán ở khu vực này với mật độ chung cư dày đặc.</p>
+                            <div class="main-button">
+                                <a href=" ">Đọc tiếp</a>
+                            </div>
+                        </article>
+                    <?php } ?>
                     <!-- <article id='tabs-2'>
                         <img src="views/images/banner2.png" alt="">
                         <h4>“Còng lưng” vì 1 phút sĩ diện muốn xây nhà to ra ở riêng.</h4>
@@ -89,10 +94,11 @@
                                 </div>
                                 <div class="down-content">
                                     <span>
-                                        <?= number_format($bd['gia'], 0, ",", "."); ?><?php if (strlen(strstr(strtolower($bd['tensp']), "cho thuê")) > 0 ) echo '/tháng'; else echo '/m<sup>2</sup>';?> - <?= $bd['dientich'] ?> m<sup>2</sup>
+                                        <?= number_format($bd['gia'], 0, ",", "."); ?><?php if (strlen(strstr(strtolower($bd['tensp']), "cho thuê")) > 0) echo '/tháng';
+                                                                                        else echo '/m<sup>2</sup>'; ?> - <?= $bd['dientich'] ?> m<sup>2</sup>
                                     </span>
                                     <a href="">
-                                        <h4><?=_substr($bd['tensp'],55)?></h4>
+                                        <h4><?= _substr($bd['tensp'], 55) ?></h4>
                                     </a>
 
                                     <p><?= $bd['diadiem'] ?></p>
@@ -110,7 +116,7 @@
             </div>
             <br>
             <br>
-            <a  class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
@@ -147,17 +153,17 @@
             </div>
             <div class="col-6">
                 <div class="row">
-                    <?php foreach ($dskv as $kv) {?>
-                    <div class="col-6">
-                        <div class="single_location">
-                            <div class="thumb">
-                                <img src="views/images/banner.png" alt="">
-                            </div>
-                            <div class="content">
-                                <p><?=$kv['tenkhuvuc']?> <a href="#">  bài đăng</a></p>
+                    <?php foreach ($dskv as $kv) { ?>
+                        <div class="col-6">
+                            <div class="single_location">
+                                <div class="thumb">
+                                    <img src="views/images/banner.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <p><?= $kv['tenkhuvuc'] ?> <a href="index.php?ctrl=home&act=cat-khuvuc&id=<?=$kv['idkhuvuc']?>"><?= demsoBaiDangTheoKV($kv['idkhuvuc'])?> bài đăng</a></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <?php } ?>
                 </div>
             </div>

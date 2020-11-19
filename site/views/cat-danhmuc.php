@@ -5,8 +5,8 @@
                 <div class="cta-content">
                     <br>
                     <br>
-                    <h2>Tất cả bất động sản<em> <?php echo getTenDanhMuc($id)?></em></h2>
-                    <p>Bán &nbsp;/&nbsp; Tất cả BĐS <?php echo getTenDanhMuc($id)?></p>
+                    <h2>Bất động sản<em> <?php echo getTenDanhMuc($id)?></em></h2>
+                    <p>Bán &nbsp;/&nbsp;BĐS <?php echo getTenDanhMuc($id)?></p>
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@
         </div>
 
         <div class="row mt-5">
-            <?php foreach ($ds as $row) { ?>
+            <?php foreach ($dsdanhmuc as $row) { ?>
                 <div class="col-lg-4">
                     <div class="trainer-item">
                         <div class="image-thumb">

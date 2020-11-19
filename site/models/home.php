@@ -65,6 +65,17 @@ function demBaiDangTheoDM($iddm)
     $sql = "SELECT count(*) as sodong from baidang where iddm = '$iddm'";
     return queryOne($sql)['sodong'];
 }
+function getBaiDangTheoKV($id, $page_num, $page_size)
+{
+    $start_row = ($page_num - 1) * $page_size;
+    $sql = "SELECT * FROM baidang where idkhuvuc = '$id'" . "ORDER BY idsp desc limit $start_row, $page_size";
+    return query($sql);
+}
+function demBaiDangTheoKV($idkhuvuc)
+{
+    $sql = "SELECT count(*) as sodong from baidang where idkhuvuc = '$idkhuvuc'";
+    return queryOne($sql)['sodong'];
+}
 function taolinks($baseurl, $page_num, $page_size, $total_rows)
 {
     if ($total_rows <= 0) return "";
@@ -89,4 +100,13 @@ function getTenDanhMuc($id)
 {
     $sql = "SELECT tendm from danhmuc where iddm = '$id' ";
     return queryOne($sql)['tendm'];
+}
+function getTenKhuVuc($id)
+{
+    $sql = "SELECT tenkhuvuc from khuvuc where idkhuvuc = '$id' ";
+    return queryOne($sql)['tenkhuvuc'];
+}
+function demsoBaiDangTheoKV($id){
+    $sql = "SELECT COUNT(idsp) as soluong from baidang where idkhuvuc = '$id'";
+    return queryOne($sql)['soluong'];
 }
