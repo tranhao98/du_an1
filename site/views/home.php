@@ -11,8 +11,10 @@
         <div class="row" id="tabs">
             <div class="col-lg-4">
                 <ul>
-                    <?php foreach ($dstb as $row) { ?>
-                        <li><a href='?act=chitietthongbao&idtb=<?=$row['idtb']?>'><?=$row['tieude']?></a></li>
+                    <?php
+                    $dem = 1;
+                     foreach ($dstb as $row) { ?>
+                        <li><a href='#tabs-<?=$dem++?>'><?=$row['tieude']?></a></li>
                     <?php } ?>
                     <div class="main-rounded-button"><a href="">Xem Thêm Tin Tức</a></div> 
                 </ul>
@@ -87,11 +89,10 @@
                                 </div>
                                 <div class="down-content">
                                     <span>
-                                        <?= number_format($bd['gia'], 0, ",", "."); ?>/m<sup>2</sup> - <?= $bd['dientich'] ?> m<sup>2</sup>
+                                        <?= number_format($bd['gia'], 0, ",", "."); ?><?php if (strlen(strstr(strtolower($bd['tensp']), "cho thuê")) > 0 ) echo '/tháng'; else echo '/m<sup>2</sup>';?> - <?= $bd['dientich'] ?> m<sup>2</sup>
                                     </span>
-
                                     <a href="">
-                                        <h4><?= $bd['tensp'] ?></h4>
+                                        <h4><?=_substr($bd['tensp'],55)?></h4>
                                     </a>
 
                                     <p><?= $bd['diadiem'] ?></p>
@@ -146,46 +147,18 @@
             </div>
             <div class="col-6">
                 <div class="row">
+                    <?php foreach ($dskv as $kv) {?>
                     <div class="col-6">
                         <div class="single_location">
                             <div class="thumb">
                                 <img src="views/images/banner.png" alt="">
                             </div>
                             <div class="content">
-                                <p>TP. Hồ Chí Minh <a href="#"> 07 bài đăng</a></p>
+                                <p><?=$kv['tenkhuvuc']?> <a href="#">  bài đăng</a></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="single_location">
-                            <div class="thumb">
-                                <img src="views/images/banner.png" alt="">
-                            </div>
-                            <div class="content">
-                                <p>TP. Hồ Chí Minh <a href="index.php?ctrl=home&act=cat-khuvuc"> 07 bài đăng</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="single_location">
-                            <div class="thumb">
-                                <img src="views/images/banner.png" alt="">
-                            </div>
-                            <div class="content">
-                                <p>TP. Hồ Chí Minh <a href="index.php?ctrl=home&act=cat-khuvuc"> 07 bài đăng</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="single_location">
-                            <div class="thumb">
-                                <img src="views/images/banner.png" alt="">
-                            </div>
-                            <div class="content">
-                                <p>TP. Hồ Chí Minh <a href="index.php?ctrl=home&act=cat-khuvuc"> 07 bài đăng</a></p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ $act = "index"; //chức năng mặc định
 $dsdm1 = getAllDanhMuc1();
 $dsdm2 = getAllDanhMuc2();
 $dsbd = getAllBaiDang();
+$dskv = getAllKhuVuc();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "index":
@@ -26,7 +27,7 @@ switch ($act) {
         $page_size = PAGE_SIZE;
         $ds = getBaiDangTheoDM($id, $page_num, $page_size);
         $total_rows = demBaiDangTheoDM($id);
-        $baseurl = SITE_URL . "/index.php?act=cat-danhmuc&id={$id}";
+        $baseurl = SITE_URL . "/index.php?ctrl=home&act=cat-danhmuc&id={$id}";
         $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
         $view = "views/cat-danhmuc.php";
         require_once "layout.php";

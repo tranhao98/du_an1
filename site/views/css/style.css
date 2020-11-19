@@ -594,7 +594,7 @@
     
     #location .single_location .content p {
         margin-bottom: 0;
-        font-size: 15px;
+        font-size: 13px;
         color: #fff;
         font-weight: 400;
         transition: 0.3s;
@@ -603,7 +603,7 @@
     #location .single_location .content p a {
         display: inline-block;
         background: #1EC6B6;
-        font-size: 11px;
+        font-size: 9px;
         border-radius: 30px;
         font-weight: 400;
         padding: 0px 12px;

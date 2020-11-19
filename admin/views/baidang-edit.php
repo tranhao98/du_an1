@@ -92,6 +92,41 @@
                     <input required type="text" class="form-control" id="exampleinput" name="dientich" value="<?= $baiviet['dientich'] ?>">
                 </div>
             </div>
+            <div class="row">
+                <div class="form-group col-4">
+                    <label for="">Tỉnh / Thành phố:</label>
+                    <select id="tinhthanh" class="form-control" placeholder="Tỉnh/Thành phố" required name="tinhthanhpho">
+                        <option value="" selected>--Chọn Tỉnh / Thành phố--</option>
+                        <?php
+                        foreach ($tinh as $tinh) {
+                        ?>
+                            <option value="<?= $tinh['matp'] ?>"><?= $tinh['name'] ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="form-group col-4">
+                    <label for="">Quận / Huyện:</label>
+                    <select id="quanhuyen" class="form-control" placeholder="Quận/Huyện" required name="quanhuyen">
+                        <option value="" selected>--Chọn Quận / Huyện--</option>
+                        <?php
+                        foreach ($huyen as $huyen) {
+                        ?>
+                            <option value="<?= $huyen['maqh'] ?>"><?= $huyen['name'] ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="form-group col-4">
+                    <label for="">Phường / Xã:</label>
+                    <select id="phuongxa" class="form-control" placeholder="Phường/Xã" required name="phuongxa">
+                        <option value="" selected>--Chọn Phường / Xã--</option>
+                        <?php
+                        foreach ($xa as $xa) {
+                        ?>
+                            <option value="<?= $xa['xaid'] ?>"><?= $xa['name'] ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>
 
             <div class="row">
                 <!-- <div class="form-group col-5">

@@ -1,11 +1,25 @@
 <?php
 require_once "../system/database.php";
 
+function _substr($str, $length, $minword = 3)
+{
+    $sub = '';
+    $len = 0;
+    foreach (explode(' ', $str) as $word) {
+        $part = (($sub != '') ? ' ' : '') . $word;
+        $sub .= $part;
+        $len += strlen($part);
+        if (strlen($word) > $minword && strlen($sub) >= $length) {
+            break;
+        }
+    }
+    return $sub . (($len < strlen($str)) ? '...' : '');
+}
 
 
-
-function getAllThongBao(){
-    $sql="SELECT * FROM thongbao";
+function getAllThongBao()
+{
+    $sql = "SELECT * FROM thongbao";
     return query($sql);
 }
 function getThongBaobyID($idtb)
@@ -18,7 +32,11 @@ function getNameNguoiDung($id)
     $sql = "SELECT * from taikhoan where id='$id'";
     return queryOne($sql);
 }
-
+function getAllKhuVuc()
+{
+    $sql = "SELECT * from khuvuc";
+    return query($sql);
+}
 function getAllBaiDang()
 {
     $sql = "SELECT * from baidang";
@@ -52,7 +70,7 @@ function taolinks($baseurl, $page_num, $page_size, $total_rows)
     if ($total_rows <= 0) return "";
     $total_pages = ceil($total_rows / $page_size);
     if ($total_pages <= 1) return "";
-    $links = "<ul class='pagination justify-content-center'>";
+    $links = "<ul class='pagination pagination-lg justify-content-center'>";
     if ($page_num >= 2) {
         $links .= "<li class='page-item'><a href='{$baseurl}' class='page-link'> << </a></li>";
         $pr = $page_num - 1;
@@ -66,4 +84,9 @@ function taolinks($baseurl, $page_num, $page_size, $total_rows)
     }
     $links .= "</ul>";
     return $links;
+}
+function getTenDanhMuc($id)
+{
+    $sql = "SELECT tendm from danhmuc where iddm = '$id' ";
+    return queryOne($sql)['tendm'];
 }
