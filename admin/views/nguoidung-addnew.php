@@ -69,32 +69,31 @@
 
                 <div class="form-group col-3">
                     <label for="">Tỉnh/Thành phố</label>
-                    <select id="tinhthanh" class="form-control" name="tinhthanh" placeholder="Tỉnh/Thành phố">
-                        <option value="" selected>--Chọn Tỉnh/Thành phố--</option>
+                    <select id="tinhthanh" class="form-control" name="tinhthanh" required placeholder="Tỉnh/Thành phố">
+                        <option value="">--Chọn Tỉnh--</option>
                         <?php
-                        foreach ($dstinhthanh as $row) { ?>
-                            <option value=" <?= $row['name'] ?> "> <?= $row['name'] ?> </option>
-                        <?php } ?>
+                        include "connection.php";
+                        $sql = "SELECT * FROM tinhthanhpho";
+                        $query = $conn->prepare($sql);
+                        $query->execute();
+                        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($result as $row) {
+                            echo '<option value="' . $row["matp"] . '">' . $row["name"] . '</option>';
+                        }
+                        ?>
                     </select>
                 </div>
                 <div class="form-group col-3">
                     <label for="">Quận/Huyện</label>
 
-                    <select id="quanhuyen" class="form-control" name="quanhuyen" placeholder="Quận/Huyện">
-                        <option value="" selected>--Chọn Quận/Huyện--</option>
-                        <?php foreach ($dsquanhuyen as $row) { ?>
-                            <option value="<?= $row['name'] ?>"><?= $row['name'] ?></option>
-                        <?php } ?>
+                    <select id="quanhuyen" class="form-control" name="quanhuyen" required placeholder="Quận/Huyện">
+                        <option value="">--Chưa Chọn Tỉnh--</option>
                     </select>
                 </div>
                 <div class="form-group col-3">
                     <label for="">Phường/Xã</label>
-                    <select id="phuongxa" class="form-control" name="phuongxa" placeholder="Phường/Xã">
-                        <option value="" selected>--Chọn Phường/Xã--</option>
-                        <?php foreach ($dsphuongxa as $row) { ?>
-                            <option value="<?= $row['name'] ?>"><?= $row['name'] ?></option>
-                        <?php } ?>
-
+                    <select id="phuongxa" class="form-control" name="phuongxa" required placeholder="Phường/Xã">
+                        <option value="">--Chưa chọn Quận/Huyện--</option>
                     </select>
                 </div>
                 <div class="form-group col-3">
@@ -107,3 +106,23 @@
         </form>
     </div>
 </div>
+<script>
+    jQuery(document).ready(function($) {
+        $("#tinhthanh").change(function(event) {
+            tinhthanhId = $("#tinhthanh").val();
+            $.post('views/quanhuyen.php', {
+                "tinhthanhid": tinhthanhId
+            }, function(data) {
+                $("#quanhuyen").html(data);
+            });
+        });
+        $("#quanhuyen").change(function(event) {
+            quanhuyenId = $("#quanhuyen").val();
+            $.post('views/phuongxa.php', {
+                "quanhuyenid": quanhuyenId
+            }, function(data) {
+                $("#phuongxa").html(data);
+            });
+        });
+    });
+</script>

@@ -140,7 +140,7 @@
                 </div>
             </aside>
             <main>
-                
+
                 <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
                 <footer class="mt-3 mb-3 bg-white rounded shadow-sm">Giao diện này được thực hiện bởi <strong class="text-danger">HARDWORK TEAM</strong> </footer>
             </main>

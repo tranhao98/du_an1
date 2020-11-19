@@ -2,6 +2,7 @@
 
 require_once "models/model_nguoidung.php"; //nạp model để có các hàm tương tác db 
 require_once "models/model_khuvuc.php";
+require_once "models/model_donvihanhchinh.php";
 $act = "index"; //chức năng mặc định
 $message = "";
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
@@ -37,9 +38,9 @@ switch ($act) {
     $hoten = $_POST["tennguoidung"];
     $ngaysinh = $_POST["ngaysinh"];
     $email = $_POST["email"];
-    $phuongxa = $_POST["phuongxa"];
-    $quanhuyen = $_POST["quanhuyen"];
-    $tinhthanh = $_POST["tinhthanh"];
+    $tinhthanh = getNameKhuVucHanhChinh($_POST['tinhthanh'], 1)['name'];
+    $quanhuyen = getNameKhuVucHanhChinh($_POST['quanhuyen'], 2)['name'];
+    $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
     $gioitinh = $_POST["gioitinh"];
     $tendangnhap = $_POST["tendangnhap"];
     $matkhau = $_POST["matkhau"];
@@ -67,9 +68,9 @@ switch ($act) {
     $hoten = $_POST["tennguoidung"];
     $ngaysinh = $_POST["ngaysinh"];
     $email = $_POST["email"];
-    $phuongxa = $_POST["phuongxa"];
-    $quanhuyen = $_POST["quanhuyen"];
-    $tinhthanh = $_POST["tinhthanh"];
+    $tinhthanh = getNameKhuVucHanhChinh($_POST['tinhthanh'], 1)['name'];
+    $quanhuyen = getNameKhuVucHanhChinh($_POST['quanhuyen'], 2)['name'];
+    $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
     $gioitinh = $_POST["gioitinh"];
     $tendangnhap = $_POST["tendangnhap"];
     $matkhau = $_POST["matkhau"];

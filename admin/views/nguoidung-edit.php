@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
-        <form enctype="multipart/form-data" class="mx-auto w-100 bg-input" method="post" action="?ctrl=nguoidung&act=update">
+        <form enctype="multipart/form-data" class="mx-auto w-100 bg-input" method="post" action="index.php?ctrl=nguoidung&act=update">
             <div class="form-group">
                 <?php
                 $hinh = "../upload/" . $row['hinh'];
@@ -76,48 +76,36 @@
 
                 <div class="form-group col-3">
                     <label for="">Tỉnh/Thành phố</label>
-                    <select id="tinhthanh" class="form-control" name="tinhthanh" placeholder="Tỉnh/Thành phố">
-                    <?php foreach ($dstinhthanh as $dstp) {
-                            if ($row['tinhthanh'] == $dstp['name']) { ?>
-                                <option value="<?= $dstp['name'] ?>" selected><?= $dstp['name'] ?> </option>
-                            <?php } else { ?>
-                                ?>
-                                <option value="<?= $dstp['name'] ?>"><?= $dstp['name'] ?></option>
-                        <?php }
-                        } ?>
+                    <select id="tinhthanh" class="form-control" name="tinhthanh" required placeholder="Tỉnh/Thành phố">
+                        <option value="">--Chọn Tỉnh--</option>
+                        <?php
+                        include "connection.php";
+                        $sql = "SELECT * FROM tinhthanhpho";
+                        $query = $conn->prepare($sql);
+                        $query->execute();
+                        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($result as $row) {
+                            echo '<option value="' . $row["matp"] . '">' . $row["name"] . '</option>';
+                        }
+                        ?>
                     </select>
                 </div>
+                
                 <div class="form-group col-3">
                     <label for="">Quận/Huyện</label>
-
-                    <select id="quanhuyen" class="form-control" name="quanhuyen" placeholder="Quận/Huyện">
-                    <?php foreach ($dsquanhuyen as $dsqh) {
-                            if ($row['quanhuyen'] == $dsqh['name']) { ?>
-                                <option value="<?= $dsqh['name'] ?>" selected><?= $dsqh['name'] ?> </option>
-                            <?php } else { ?>
-                                ?>
-                                <option value="<?= $dsqh['name'] ?>"><?= $dsqh['name'] ?></option>
-                        <?php }
-                        } ?>
+                    <select id="quanhuyen" class="form-control" name="quanhuyen" required placeholder="Quận/Huyện">
+                        <option value="">--Chưa Chọn Tỉnh--</option>
                     </select>
                 </div>
                 <div class="form-group col-3">
                     <label for="">Phường/Xã</label>
-                    <select id="phuongxa" class="form-control" name="phuongxa" placeholder="Quận/Huyện">
-                    <?php foreach ($dsphuongxa as $dsxp) {
-                            if ($row['phuongxa'] == $dsxp['name']) { ?>
-                                <option value="<?= $dsxp['name'] ?>" selected><?= $dsxp['name'] ?> </option>
-                            <?php } else { ?>
-                                ?>
-                                <option value="<?= $dsxp['name'] ?>"><?= $dsxp['name'] ?></option>
-                        <?php }
-                        } ?>
-
+                    <select id="phuongxa" class="form-control" name="phuongxa" required placeholder="Phường/Xã">
+                        <option value="">--Chưa chọn Quận/Huyện--</option>
                     </select>
                 </div>
                 <div class="form-group col-3">
                     <label for="">Địa Chỉ</label>
-                    <input type="text" name="diachi" id="" class="form-control" value="<?=$row['diachi']?>" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId">
+                    <input type="text" name="diachi" id="" class="form-control" value="<?= $row['diachi'] ?>" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId">
                 </div>
             </div>
             <input name="id" value="<?= $row['id'] ?>" type="hidden">
@@ -126,3 +114,23 @@
         </form>
     </div>
 </div>
+<script>
+    jQuery(document).ready(function($) {
+        $("#tinhthanh").change(function(event) {
+            tinhthanhId = $("#tinhthanh").val();
+            $.post('views/quanhuyen.php', {
+                "tinhthanhid": tinhthanhId
+            }, function(data) {
+                $("#quanhuyen").html(data);
+            });
+        });
+        $("#quanhuyen").change(function(event) {
+            quanhuyenId = $("#quanhuyen").val();
+            $.post('views/phuongxa.php', {
+                "quanhuyenid": quanhuyenId
+            }, function(data) {
+                $("#phuongxa").html(data);
+            });
+        });
+    });
+</script>
