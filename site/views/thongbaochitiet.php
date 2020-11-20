@@ -36,7 +36,7 @@
                 </div>
                 <div class="thongbao-phai mt-200">
                     <div class="card-thongbao">
-                        <div class="tintucmoi">
+                        <div class="tintucmoi text-white">
                             <li class="list-group-item bg-dark"><h6 class="ttmoi">TIN TỨC MỚI</h6></li>
                             <?php foreach ($dstb as $row) { ?>
                                 <li><a href='?act=chitietthongbao&idtb=<?=$row['idtb']?>'><?=$row['tieude']?></a></li>
