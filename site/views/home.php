@@ -26,35 +26,20 @@
                     foreach ($dstb as $row) {
                     ?>
                         <article id='tabs-<?= $dem++ ?>'>
-                            <img src="views/images/banner.png" alt="">
-                            <h4>Loạt chung cư gần Làng Đại học Quốc gia có giá từ 1,6 tỷ/căn.</h4>
+                            <?php
+                                if($row['hinh'] == NULL)  echo "<img src='../../upload/1.png'>";
+                                else  echo "<img src='../upload/".$row['hinh']."' ><br><br>";
+                            ?>
+                            <h4><?=$row['tieude']?></h4>
 
-                            <p><i class="fa fa-user"></i> Hào Long &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10 &nbsp;|&nbsp; <i class="fa fa-comments"></i> 15 bình luận</p>
+                            <p><i class="fa fa-user"></i> <?php echo getNameNguoiDung($row['idnguoidang'])['hoten'];?> &nbsp;|&nbsp; <i class="fa fa-calendar"></i> <?=$row['ngaydang']?> &nbsp;|&nbsp; <i class="fa fa-comments"></i> 15 bình luận</p>
 
-                            <p>Khu vực Làng Đại học Thủ Đức, đặc biệt là tuyến đường Thống Nhất nối từ quốc lộ 1K vào địa phận Dĩ An, Bình Dương hiện có trên dưới chục dự án đã và đang triển khai. Hiện đang có gần 10.000 căn hộ được rao bán ở khu vực này với mật độ chung cư dày đặc.</p>
+                            <p><?=$row['noidung']?></p>
                             <div class="main-button">
-                                <a href=" ">Đọc tiếp</a>
+                                <a href="?act=chitietthongbao&idtb=<?=$row['idtb']?>">Đọc tiếp</a>
                             </div>
-                        </article>
+                        </article> 
                     <?php } ?>
-                    <!-- <article id='tabs-2'>
-                        <img src="views/images/banner2.png" alt="">
-                        <h4>“Còng lưng” vì 1 phút sĩ diện muốn xây nhà to ra ở riêng.</h4>
-                        <p><i class="fa fa-user"></i> Hào Long &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10 &nbsp;|&nbsp; <i class="fa fa-comments"></i> 15 bình luận</p>
-                        <p>Thay vì mất 6-12 tháng để tìm và mua nhà như nhiều người, chúng tôi chỉ việc xây nhà trên mảnh đất được bố mẹ cho sẵn nhưng mọi chuyện cũng không mấy suôn sẻ như tôi nghĩ.</p>
-                        <div class="main-button">
-                            <a href="">Đọc tiếp</a>
-                        </div>
-                    </article>
-                    <article id='tabs-3'>
-                        <img src="views/images/banner3.png" alt="">
-                        <h4>Chỉ có 300 triệu đồng trong tay, tôi vẫn mua được nhà nhờ biết “liệu cơm gắp mắm”.</h4>
-                        <p><i class="fa fa-user"></i> Hào Long &nbsp;|&nbsp; <i class="fa fa-calendar"></i> 27.07.2020 10:10 &nbsp;|&nbsp; <i class="fa fa-comments"></i> 15 bình luận</p>
-                        <p>“Điên”, “liều”, “thích sang chảnh”… là những từ mà đôi vợ chồng trẻ nhận được từ người thân, bạn bè khi quyết định mua nhà trong tình trạng chỉ mới tiết kiệm được ngót nghét 300 triệu đồng.</p>
-                        <div class="main-button">
-                            <a href=" ">Đọc tiếp</a>
-                        </div>
-                    </article> -->
                 </section>
             </div>
         </div>
