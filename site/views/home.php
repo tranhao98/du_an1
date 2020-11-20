@@ -34,7 +34,7 @@
 
                             <p><i class="fa fa-user"></i> <?php echo getNameNguoiDung($row['idnguoidang'])['hoten'];?> &nbsp;|&nbsp; <i class="fa fa-calendar"></i> <?=$row['ngaydang']?> &nbsp;|&nbsp; <i class="fa fa-comments"></i> 15 bình luận</p>
 
-                            <p><?=$row['noidung']?></p>
+                            <p><?=_substr($row['noidung'], 250)?></p>
                             <div class="main-button">
                                 <a href="?act=chitietthongbao&idtb=<?=$row['idtb']?>">Đọc tiếp</a>
                             </div>
