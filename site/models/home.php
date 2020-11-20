@@ -25,7 +25,7 @@ function getThongBaoAll()
 }
 function getThongBaoNew()
 {
-    $sql = "SELECT * FROM thongbao order by ngaydang desc";
+    $sql = "SELECT * FROM thongbao order by ngaydang desc limit 3";
     return query($sql);
 }
 function getThongBaobyID($idtb)
