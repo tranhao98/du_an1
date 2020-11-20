@@ -16,9 +16,9 @@
                             if($rowidtb['hinh'] == NULL)  echo "<img src='../../upload/novaland-gallery.jpg'>";
                             else  echo "<img src='../upload/".$rowidtb['hinh']."' ><br><br>";
                         ?>
-                        <a class="tbct-noidung">
+                        <p class="tbct-noidung">
                             <?=$rowidtb['noidung']?>
-                        </a>
+                        </p>
                     </div>
                     <div class="card-conclude">
                         <p class="tbct-nguoidang"><?php echo getNameNguoiDung($rowidtb['idnguoidang'])['hoten'];?></p><br>
@@ -42,7 +42,7 @@
                                 <li><a href='?act=chitietthongbao&idtb=<?=$row['idtb']?>'><?=$row['tieude']?></a></li>
                             <?php } ?>
                         </div>
-                        <div class="tintuccu">
+                        <div class="tintuccu mt-20">
                             <li class="list-group-item bg-dark"><h6 class="ttmoi text-white">TIN TỨC CŨ</h6></li>
                             <li><a href="">Garden Riverside: Tận hưởng chất lượng sống sinh thái bên sông</a></li>
                             <li><a href="">Celesta Rise đưa phong cách nghỉ dưỡng vào không gian sống</a></li>
