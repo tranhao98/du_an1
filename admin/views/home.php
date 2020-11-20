@@ -15,7 +15,7 @@ $dataPoints = array(
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title: {
-                text: "Biểu Đồ Tổng Quan"
+                text: "BIEU DO TONG QUAN"
             },
             subtitles: [{
                 text: ""

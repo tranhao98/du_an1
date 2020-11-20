@@ -108,7 +108,7 @@
                 </div>
             </div>
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
-            <input name="id" value="<?= $row['id'] ?>" type="hidden">
+            <input name="id" value="<?= $_GET['id']?>" type="hidden">
             <button type="submit" class="btn btn-danger">Sửa</button>
         </form>
     </div>

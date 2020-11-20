@@ -33,7 +33,7 @@
 
                             <p>Khu vực Làng Đại học Thủ Đức, đặc biệt là tuyến đường Thống Nhất nối từ quốc lộ 1K vào địa phận Dĩ An, Bình Dương hiện có trên dưới chục dự án đã và đang triển khai. Hiện đang có gần 10.000 căn hộ được rao bán ở khu vực này với mật độ chung cư dày đặc.</p>
                             <div class="main-button">
-                                <a href=" ">Đọc tiếp</a>
+                                <a href="">Đọc tiếp</a>
                             </div>
                         </article>
                     <?php } ?>
