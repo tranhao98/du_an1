@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading">
-                    <h2>Bất động sản được <em>đề xuất</em></h2>
+                    <h2>Bất động sản<em> nổi bật</em></h2>
                     <img src="views/images/line-dec.png" alt="">
                 </div>
             </div>
