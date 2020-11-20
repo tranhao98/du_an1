@@ -51,19 +51,19 @@ switch ($act) {
     $dientich = trim(strip_tags($_POST['dientich']));
     $khuvuc = $_POST['khuvuc'];
     $danhmuc = $_POST['danhmuc'];
-    $tinhthanh = getNameKhuVucHanhChinh($_POST['tinhthanhpho'],1)['name'];
-    $quanhuyen = getNameKhuVucHanhChinh($_POST['quanhuyen'],2)['name'];
-    $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'],3)['name'];
-    $diachi = trim(strip_tags($_POST['diachi']));
+    $tinhthanh = getNameKhuVucHanhChinh($_POST['tinhthanhpho'], 1)['name'];
+    $quanhuyen = getNameKhuVucHanhChinh($_POST['quanhuyen'], 2)['name'];
+    $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
     $anhien = $_POST['anhien'];
-    $diachi = $diachi.', '.$phuongxa.', '.$quanhuyen.', '.$tinhthanh.'.';
+    $diachi = $phuongxa . ', ' . $quanhuyen . ', ' . $tinhthanh . '.';
     $hinh_anh = $_FILES['hinhanh']['name'];
     $partimg = "../upload/";
     $target_file = $partimg . basename($hinh_anh);
     move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
-    if(isset($_POST['noibat'])) $noibat = 1; else $noibat = 0;
+    if (isset($_POST['noibat'])) $noibat = 1;
+    else $noibat = 0;
 
-    addBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh,$gia,$nguoidung);
+    addBaiViet($tieude, $mota, $noithat, $phongngu, $dientich, $khuvuc, $danhmuc, $diachi, $anhien, $noibat, $hinh_anh, $gia, $nguoidung);
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã thêm thành công!
     </div>";
@@ -80,14 +80,18 @@ switch ($act) {
     $dientich = trim(strip_tags($_POST['dientich']));
     $khuvuc = $_POST['khuvuc'];
     $danhmuc = $_POST['danhmuc'];
-    $diachi = trim(strip_tags($_POST['diachi']));
+    $tinhthanh = getNameKhuVucHanhChinh($_POST['tinhthanhpho'], 1)['name'];
+    $quanhuyen = getNameKhuVucHanhChinh($_POST['quanhuyen'], 2)['name'];
+    $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
+    $diachi = $phuongxa . ', ' . $quanhuyen . ', ' . $tinhthanh . '.';
     $anhien = $_POST['anhien'];
     $hinh_anh = $_FILES['hinhanh']['name'];
     $partimg = "../upload/";
     $target_file = $partimg . basename($hinh_anh);
     move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
-    if(isset($_POST['noibat'])) $noibat = 1; else $noibat = 0;
-    updateBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh,$gia,$nguoidung,$id);
+    if (isset($_POST['noibat'])) $noibat = 1;
+    else $noibat = 0;
+    updateBaiViet($tieude, $mota, $noithat, $phongngu, $dientich, $khuvuc, $danhmuc, $diachi, $anhien, $noibat, $hinh_anh, $gia, $nguoidung, $id);
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã cập nhật thành công!
     </div>";

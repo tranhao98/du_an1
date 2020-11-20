@@ -88,6 +88,7 @@ footer {
 .user-admin img {
     width: 18%;
     height: 50px;
+    border-radius: 50px;
     object-fit: cover;
 }
 
@@ -164,43 +165,64 @@ img {
     background-color: #f2f2f2;
 }
 
-.trangtongquan {
-    width: 100%;
-    min-height: 100px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.huge {
+    font-size: 40px;
 }
 
-.box {
-    width: 24%;
-    height: 150px;
-    background-color: lightblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    opacity: 1;
-    font-weight: bold;
+.panel-green {
+    border-color: #5cb85c;
 }
 
-.box a {
-    color: white !important;
+.panel-green .panel-heading {
+    border-color: #5cb85c;
+    color: #fff;
+    background-color: #5cb85c;
 }
 
-.box:nth-child(1) {
-    background-color: rgb(187, 63, 63);
+.panel-green a {
+    color: #5cb85c;
 }
 
-.box:nth-child(2) {
-    background-color: rgb(59, 59, 150);
+.panel-green a:hover {
+    color: #3d8b3d;
 }
 
-.box:nth-child(3) {
-    background-color: rgb(47, 167, 47);
+.panel-red {
+    border-color: #d9534f;
 }
 
-.box:nth-child(4) {
-    background-color: rgb(197, 197, 46);
+.panel-red .panel-heading {
+    border-color: #d9534f;
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.panel-red a {
+    color: #d9534f;
+}
+
+.panel-red a:hover {
+    color: #b52b27;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow .panel-heading {
+    border-color: #f0ad4e;
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.panel-yellow a {
+    color: #f0ad4e;
+}
+
+.panel-yellow a:hover {
+    color: #df8a13;
+}
+
+.huge1 {
+    font-size: 70px;
 }

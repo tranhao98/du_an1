@@ -16,7 +16,8 @@ switch ($act) {
     $tendm = $_POST["tendm"];
     $thutu = $_POST["thutu"];
     $anhien = $_POST["anhien"];
-    addDanhMuc($tendm, $thutu, $anhien);
+    $loai = $_POST['loai'];
+    addDanhMuc($tendm, $loai, $thutu, $anhien);
     $dsdm = getAllDanhMuc();
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã thêm thành công!
@@ -37,13 +38,14 @@ switch ($act) {
   case "update":
     $iddm = $_POST["iddm"];
     $tendm = $_POST["tendm"];
+    $loai = $_POST['loai'];
     $thutu = $_POST["thutu"];
     $anhien = $_POST["anhien"];
     settype($iddm, "int");
     settype($thutu, "int");
     $iddm = trim(strip_tags($iddm));
     $tendm = trim(strip_tags($tendm));
-    updateDanhMuc($iddm, $tendm, $thutu, $anhien);
+    updateDanhMuc($iddm, $tendm, $loai, $thutu, $anhien);
 
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã cập nhật thành công!

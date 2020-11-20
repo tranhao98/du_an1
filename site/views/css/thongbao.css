@@ -9,6 +9,16 @@
 .mt--100{
     margin-top: 0px;
 }
+.mt-20{
+    margin-top: 20px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.bg-dark {
+    background-color: #343a40!important;
+}
+
 #our-classes {
     margin-bottom: 0px;
 }
@@ -19,26 +29,128 @@
     width: 100%;
     margin: auto;
 }
+.card-title h2{
+    font-size: 28px;
+    font-weight: 800;
+    color: #232d39;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.card-content img{
+    width: 700px;
+    height: 400px;
+}
 .thongbao-trai{
     float: left;
-    width: 70%;
+    width: 67%;
 }
 .thongbao-phai{
-    margin-left: 20px;
-    padding: 15px;
+    padding: 10px;
     float: left;
-    width: 30%;
+    width: 33%;
 }
-.card-conclude p{
+.card-conclude{
     float: right;
 }
+.tintucmoi a{
+    font-size: 14px;
+    color: rgb(66, 66, 66);
+}
+.ttmoi h6{
+    padding: 10px;
+    color: white;
+    border-width: 0 0 1px;
+}
+.tintuccu{
+    color: rgb(66, 66, 66);
+}
 .tbct-noidung{
-    color: black;
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-bottom: 20px;
 }
 .tbct-noidung:hover{
-    color: black;
+    color: #7a7a7a;
 }
 .tbct-nguoidang{
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    float: right;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0rem;
+}
+.tbct-nguontt{
+    font-size: 16px;
+    font-style: italic;
     color: black;
+    float: right;
+    margin-bottom: 0rem;
+}
+
+/* ///// BUTTON SHARE ///// */
+.card-share{
+    margin-top: 55px;
+    margin-bottom: 50px;
+}
+.socials-share {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.socials-share a {
+    padding: 4px 30px;
+    color: #fff;
+    line-height: 2em;
+    text-decoration: none;
+    border-radius: 2px;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.socials-share span.fa {
+    margin-right: 3px;
+}
+
+.bg-facebook {
+    background: #3a5899;
+}
+
+.bg-facebook:hover, .bg-facebook:focus {
+    background: #1d418d;
+}
+
+.bg-twitter {
+    background: #00acee;
+}
+
+.bg-twitter:hover, .bg-twitter:focus {
+    background: #0b93c7;
+}
+
+.bg-google-plus {
+    background: #db4437;
+}
+
+.bg-google-plus:hover, .bg-google-plus:focus {
+    background: #bb2a1d;
+}
+
+.bg-pinterest {
+    background: #cb1e26;
+}
+
+.bg-pinterest:hover, .bg-pinterest:focus {
+    background: #ae0e15;
+}
+
+.bg-email {
+    background: #dd5348;
+}
+
+.bg-email:hover, .bg-email:focus {
+    background: #ce3f34;
 }
