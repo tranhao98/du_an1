@@ -67,7 +67,8 @@
         </div>
     </div>
 </section>
-<section class="section" id="trainers">
+<br>
+<section class="section mt-3" style="background-color: #f2f2f2;" id="trainers">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
@@ -91,7 +92,7 @@
                     <?php
                     $r = 1;
                     foreach ($dsbd as $bd) {
-                        if ($r % 4 == 0) {
+                        if ($r % 9 == 0) {
                             echo '</div><div class="carousel-item">';
                         }
                     ?>

@@ -84,7 +84,7 @@ switch ($act) {
     $diachi = trim(strip_tags($diachi));
 
     updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
-
+    
     
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã cập nhật thành công!
