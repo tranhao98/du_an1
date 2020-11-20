@@ -379,6 +379,7 @@
         letter-spacing: 0.5px;
         font-weight: 600;
         transition: all 0.3s;
+        outline: none;
     }
     
     #tabs .main-rounded-button a {

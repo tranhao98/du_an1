@@ -28,7 +28,7 @@
                         <article id='tabs-<?= $dem++ ?>'>
                             <?php
                                 if($row['hinh'] == NULL)  echo "<img src='../../upload/1.png'>";
-                                else  echo "<img src='../upload/".$row['hinh']."' ><br><br>";
+                                else  echo "<img style='height: 400px; object-fit:cover; width:100%;' src='../upload/".$row['hinh']."' ><br><br>";
                             ?>
                             <h4><?=$row['tieude']?></h4>
 
