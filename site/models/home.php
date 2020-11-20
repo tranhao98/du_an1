@@ -19,7 +19,7 @@ function _substr($str, $length, $minword = 3)
 
 function getAllThongBao()
 {
-    $sql = "SELECT * FROM thongbao";
+    $sql = "SELECT * FROM thongbao limit 3";
     return query($sql);
 }
 function getThongBaobyID($idtb)
