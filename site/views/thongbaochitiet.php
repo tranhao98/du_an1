@@ -22,7 +22,7 @@
                             <?=$rowidtb['noidung2']?>
                         </p>
                         <?php
-                            if($rowidtb['hinh'] == NULL)  echo "<img src='../../upload/novaland-gallery.jpg'>";
+                            if($rowidtb['hinh'] == NULL)  echo "";
                             else  echo "<img src='../upload/".$rowidtb['hinh2']."' ><br><br>";
                         ?>
                         <p class="tbct-noidung">
