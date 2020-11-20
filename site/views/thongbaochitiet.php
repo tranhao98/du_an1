@@ -37,20 +37,17 @@
                 <div class="thongbao-phai mt-200">
                     <div class="card-thongbao">
                         <div class="tintucmoi">
-                            <li class="list-group-item bg-dark"><h6 class="ttmoi">TIN TỨC MỚI</h6></li>
+                            <li class="list-group-item bg-dark"><h6 class="ttmoi text-white">TIN TỨC MỚI</h6></li>
                             <?php foreach ($dstb as $row) { ?>
                                 <li><a href='?act=chitietthongbao&idtb=<?=$row['idtb']?>'><?=$row['tieude']?></a></li>
                             <?php } ?>
                         </div>
                         <div class="tintuccu">
-                            <!-- <h4>Tin tức cũ</h4>
+                            <li class="list-group-item bg-dark"><h6 class="ttmoi text-white">TIN TỨC CŨ</h6></li>
                             <li><a href="">Garden Riverside: Tận hưởng chất lượng sống sinh thái bên sông</a></li>
                             <li><a href="">Celesta Rise đưa phong cách nghỉ dưỡng vào không gian sống</a></li>
                             <li><a href="">Long An chi 13.000 tỷ đồng xây dựng 8 công trình giao thông quan trọng</a></li>
-                            <li><a href="">Số lượng dự án BĐS nghỉ dưỡng được cấp phép tại miền Trung gấp 9 lần cả miền Bắc và miền Nam cộng lại</a></li>
-                            <li><a href="">Lilama 18 xin chuyển mục đích sử dụng đất rừng tự nhiên để xây khu du lịch nghỉ dưỡng</a></li>
-                            <li><a href="">The Icon – dinh thự sang trọng với thiết kế thông minh dành cho nhà đầu tư tinh nhạy</a></li>
-                            <li><a href="">The Residence Phú Quốc mở bán biệt thự 2 mặt tiền tại Bãi Trường</a></li> -->
+                            <li><a href="">The Residence Phú Quốc mở bán biệt thự 2 mặt tiền tại Bãi Trường</a></li>
                         </div>
                     </div>
                 </div>

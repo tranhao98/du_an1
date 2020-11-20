@@ -18,7 +18,9 @@
 .bg-dark {
     background-color: #343a40!important;
 }
-
+.text-white{
+    color: honeydew;
+}
 #our-classes {
     margin-bottom: 0px;
 }
@@ -39,7 +41,7 @@
     margin-bottom: 0px;
 }
 .card-content img{
-    width: 700px;
+    width: 95%;
     height: 400px;
 }
 .thongbao-trai{
@@ -55,6 +57,10 @@
     float: right;
 }
 .tintucmoi a{
+    font-size: 14px;
+    color: rgb(66, 66, 66);
+}
+.tintuccu a{
     font-size: 14px;
     color: rgb(66, 66, 66);
 }
