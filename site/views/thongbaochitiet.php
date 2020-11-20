@@ -7,8 +7,7 @@
                         <h2><?=$rowidtb['tieude']?></h2>
                         <p class="mb-20"><i class="fa fa-calendar"></i>  <?=$rowidtb['ngaydang']?> | Bất động sản</p> 
                         <h6 class="mb-20">
-                            Ngày 19/11 tới đây, tại khu vực trung tâm TP.HCM, Tập đoàn Novaland sẽ ra mắt Novaland Gallery 
-                            (Trung tâm Triển lãm Novaland) lớn tại miền Nam với diện tích lên tới gần 5.000 m2. 
+                            <?=$rowidtb['tieude2']?>
                         </h6>
                     </div>
                     <div class="card-content">
@@ -18,6 +17,19 @@
                         ?>
                         <p class="tbct-noidung">
                             <?=$rowidtb['noidung']?>
+                        </p>
+                        <p class="tbct-noidung">
+                            <?=$rowidtb['noidung2']?>
+                        </p>
+                        <?php
+                            if($rowidtb['hinh'] == NULL)  echo "<img src='../../upload/novaland-gallery.jpg'>";
+                            else  echo "<img src='../upload/".$rowidtb['hinh2']."' ><br><br>";
+                        ?>
+                        <p class="tbct-noidung">
+                            <?=$rowidtb['noidung3']?>
+                        </p>
+                        <p class="tbct-noidung">
+                            <?=$rowidtb['noidung4']?>
                         </p>
                     </div>
                     <div class="card-conclude">
