@@ -16,10 +16,14 @@ function _substr($str, $length, $minword = 3)
     return $sub . (($len < strlen($str)) ? '...' : '');
 }
 
-
-function getAllThongBao()
+function getThongBaoAll()
 {
-    $sql = "SELECT * FROM thongbao limit 3";
+    $sql = "SELECT * FROM thongbao order by idtb asc";
+    return query($sql);
+}
+function getThongBaoNew()
+{
+    $sql = "SELECT * FROM thongbao order by idtb desc limit 3";
     return query($sql);
 }
 function getThongBaobyID($idtb)

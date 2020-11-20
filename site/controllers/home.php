@@ -7,10 +7,12 @@ $dsdm2 = getAllDanhMuc2();
 $dsbd = getAllBaiDang();
 $dskv = getAllKhuVuc();
 $dskvspecial = getKhuVucSpecial();
+$dstbnew = getThongBaoNew();
+$dstball = getThongBaoAll();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "index":
-        $dstb = getAllThongBao();
+        
         $slider = "views/slider.php";
         $view = "views/home.php";
         require_once "layout.php";
@@ -64,7 +66,7 @@ switch ($act) {
     case "chitietthongbao":
         $idtb = $_GET['idtb'];
         settype($idtb, "int");
-        $dstb = getAllThongBao();
+        
         $rowidtb = getThongBaobyID($idtb);
         $view = "views/thongbaochitiet.php";
         require_once "layout.php";

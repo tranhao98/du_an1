@@ -43,7 +43,7 @@
                             <img src="../upload/<?= $row['hinh'] ?>" alt="" onerror="this.src = '../upload/noimg.jpg';">
                         </td>
 
-                        <td><?= $row['tieude'] ?></td>
+                        <td class="text-wrap"><?= $row['tieude'] ?></td>
 
                         <td><?= $row['ngaydang'] ?></td>
 
@@ -51,7 +51,7 @@
                             <?php echo getNameNguoiDung($row['idnguoidang'])['hoten']; ?>
                         </td>
 
-                        <td><?= $row['noidung'] ?></td>
+                        <td class="text-wrap"><?= _substr($row['noidung'],100) ?></td>
 
                         <td><em class="text-success font-weight-normal"> <?php if ($row['anhien'] == 1) echo "Đang hiện"; ?></em>
                             <em class="text-danger font-weight-normal"> <?php if ($row['anhien'] == 0) echo "Đang ẩn"; ?></em></td>

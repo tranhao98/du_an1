@@ -13,7 +13,7 @@
                 <ul>
                     <?php
                     $dem = 1;
-                    foreach ($dstb as $row) { ?>
+                    foreach ($dstbnew as $row) { ?>
                         <li><a href='#tabs-<?= $dem++ ?>'><?= $row['tieude'] ?></a></li>
                     <?php } ?>
                     <div class="main-rounded-button"><a href="">Xem Thêm Tin Tức</a></div>
@@ -23,7 +23,7 @@
                 <section class='tabs-content'>
                     <?php
                     $dem = 1;
-                    foreach ($dstb as $row) {
+                    foreach ($dstbnew as $row) {
                     ?>
                         <article id='tabs-<?= $dem++ ?>'>
                             <?php
