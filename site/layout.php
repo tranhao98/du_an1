@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="views/css/thongbao.css">
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/owl.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="https://png.pngtree.com/png-clipart/20200701/original/pngtree-family-stay-at-home-illustration-to-prevent-covid-19-plague-vector-png-image_5344919.jpg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -78,7 +79,7 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
                                 <a class="dropdown-item" href="#">Đổi mật khẩu</a>
                                 <a class="dropdown-item" href="?ctrl=user&act=infouser">Xem thông tin tài khoản</a>
-                                <a class="dropdown-item" href="#">Nâng cấp gói thành viên</a>
+                                <a class="dropdown-item" href="#">Nâng cấp gói thành viên <i class="fa fa-crown" style="color: yellow;"></i></a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="?ctrl=user&act=logout">Đăng xuất</a>
                                 </div>
@@ -191,4 +192,5 @@
 <script src="../js/custom.js"></script>
 <script src="../js/owl.js"> </script>
 <script src="../js/accordions.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
