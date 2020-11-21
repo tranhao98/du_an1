@@ -29,5 +29,9 @@ switch ($act) {
             header("location: index.php");
         }
     break;
+    case "infouser":
+        $view = "views/thongtintaikhoan.php";
+        require_once "layout.php";
+    break;
 }
 ?>
