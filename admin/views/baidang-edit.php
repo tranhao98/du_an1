@@ -40,10 +40,41 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="exampleinput requiredPassword1">Hình ảnh:</label>
-                <input type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh">
-                <img src="../upload/<?= $baiviet['hinh'] ?>" alt="" onerror="this.src ='../upload/message.jpg'" class="mt-3" style="width: 30% !important;">
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword1">Hình ảnh:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh">
+                    <img src="../upload/<?= $baiviet['hinh'] ?>" alt="" onerror="this.src ='../upload/message.jpg'" class="mt-3" style="width: 30% !important;">
+                </div>
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword2">Hình ảnh 2:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword2" name="hinhanh2">
+                    <img src="../upload/<?= $baiviet['hinh2'] ?>" alt="" onerror="this.src ='../upload/message.jpg'" class="mt-3" style="width: 30% !important;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword3">Hình ảnh 3:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword3" name="hinhanh3">
+                    <img src="../upload/<?= $baiviet['hinh3'] ?>" alt="" onerror="this.src ='../upload/message.jpg'" class="mt-3" style="width: 30% !important;">
+                </div>
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword4">Hình ảnh 4:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword4" name="hinhanh4">
+                    <img src="../upload/<?= $baiviet['hinh4'] ?>" alt="" onerror="this.src ='../upload/message.jpg'" class="mt-3" style="width: 30% !important;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword5">Hình ảnh 5:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword5" name="hinhanh5">
+                    <img src="../upload/<?= $baiviet['hinh5'] ?>" alt="" onerror="this.src ='../upload/message.jpg'" class="mt-3" style="width: 30% !important;">
+                </div>
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword6">Hình ảnh 6:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword6" name="hinhanh6">
+                    <img src="../upload/<?= $baiviet['hinh6'] ?>" alt="" onerror="this.src ='../upload/message.jpg'" class="mt-3" style="width: 30% !important;">
+                </div>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Mô tả:</label>
@@ -130,17 +161,11 @@
                     </div> -->
                 <div class="form-group col-2">
                     <div class="form-check form-check-inline">
-                        <?php
-                        if ($baiviet['anhien'] == 1) $anhien = 'checked';
-                        ?>
-                        <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1" <?php if (isset($anhien)) echo $anhien ?>>
+                        <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1" <?php if ($baiviet['anhien'] == 1) echo "checked"; ?>>
                         <label class="form-check-label" for="anhien1">Hiện</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <?php
-                        if ($baiviet['anhien'] == 0) $anhien = 'checked';
-                        ?>
-                        <input class="form-check-input" type="radio" name="anhien" id="anhien0" value="0" <?php if (isset($anhien)) echo $anhien ?>>
+                        <input class="form-check-input" type="radio" name="anhien" id="anhien0" value="0" <?php if ($baiviet['anhien'] == 0) echo "checked"; ?>>
                         <label class="form-check-label" for="anhien0">Ẩn</label>
                     </div>
                 </div>

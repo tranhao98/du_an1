@@ -21,11 +21,36 @@
                 <label for="name">Tiêu đề bài viết:</label>
                 <input required type="text" class="form-control" id="name" name="tieude" placeholder="Tiêu đề">
             </div>
-            <div class="form-group">
-                <label for="exampleinput requiredPassword1">Hình ảnh:</label>
-                <input required type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh">
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword1">Hình ảnh:</label>
+                    <input required type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh">
+                </div>
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword2">Hình ảnh 2:</label>
+                    <input required type="file" class="form-control" id="exampleinput requiredPassword2" name="hinhanh2">
+                </div>
             </div>
-
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword3">Hình ảnh 3:</label>
+                    <input required type="file" class="form-control" id="exampleinput requiredPassword3" name="hinhanh3">
+                </div>
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword4">Hình ảnh 4:</label>
+                    <input required type="file" class="form-control" id="exampleinput requiredPassword4" name="hinhanh4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword5">Hình ảnh 5:</label>
+                    <input required type="file" class="form-control" id="exampleinput requiredPassword5" name="hinhanh5">
+                </div>
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword6">Hình ảnh 6:</label>
+                    <input required type="file" class="form-control" id="exampleinput requiredPassword6" name="hinhanh6">
+                </div>
+            </div>
             <div class="row">
                 <div class="form-group col-6">
                     <label for="name">Giá:</label>

@@ -54,7 +54,7 @@
                             <?php echo getNameNguoiDung($row['idnguoidang'])['hoten']; ?>
                         </td>
 
-                        <td class="text-wrap"><?= _substr($row['noidung'], 100) ?></td>
+                        <td class="text-wrap"><?= _substr($row['noidung'], 80) ?></td>
 
                         <td><em class="text-success font-weight-normal"> <?php if ($row['anhien'] == 1) echo "Đang hiện"; ?></em>
                             <em class="text-danger font-weight-normal"> <?php if ($row['anhien'] == 0) echo "Đang ẩn"; ?></em></td>
