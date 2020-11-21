@@ -40,7 +40,7 @@ function getNameNguoiDung($id)
 }
 function getAllKhuVuc()
 {
-    $sql = "SELECT * from khuvuc where not thutu = 1";
+    $sql = "SELECT * from khuvuc where not thutu = 1 limit 4";
     return query($sql);
 }
 function getKhuVucSpecial()
@@ -53,7 +53,8 @@ function getAllBaiDang()
     $sql = "SELECT * from baidang";
     return query($sql);
 }
-function getBaiDangLimit(){
+function getBaiDangLimit()
+{
     $sql = "SELECT * from baidang by idsp desc limit 8";
     return query($sql);
 }
@@ -120,8 +121,18 @@ function getTenKhuVuc($id)
     $sql = "SELECT tenkhuvuc from khuvuc where idkhuvuc = '$id' ";
     return queryOne($sql)['tenkhuvuc'];
 }
-function demsoBaiDangTheoKV($id){
+function demsoBaiDangTheoKV($id)
+{
     $sql = "SELECT COUNT(idsp) as soluong from baidang where idkhuvuc = '$id'";
     return queryOne($sql)['soluong'];
 }
-
+function demsoBinhLuanTheoTB($id)
+{
+    $sql = "SELECT COUNT(idbl) as sobl from binhluan where idtb = '$id'";
+    return queryOne($sql)['sobl'];
+}
+function getBaiVietById($id)
+{
+    $sql = "SELECT * FROM baidang WHERE idsp = '$id'";
+    return queryOne($sql);
+}

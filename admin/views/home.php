@@ -43,7 +43,7 @@ $dataPoints = array(
                 <div class="panel-heading p-3 bg-primary">
                     <div class="row text-white">
                         <div class="col-3 text-left">
-                            <i class="fa fa-comments fa-4x"></i>
+                            <i class="far fa-clone fa-4x"></i>
                         </div>
                         <div class="col-9 text-right">
                             <div class="huge"><?= demsoDanhMuc() ?></div>
@@ -66,7 +66,7 @@ $dataPoints = array(
                 <div class="panel-heading p-3">
                     <div class="row">
                         <div class="col-3">
-                            <i class="fa fa-tasks fa-4x"></i>
+                            <i class="fas fa-map-marker-alt fa-4x"></i>
                         </div>
                         <div class="col-9 text-right">
                             <div class="huge"><?= demsoKhuVuc() ?></div>
@@ -89,7 +89,7 @@ $dataPoints = array(
                 <div class="panel-heading p-3">
                     <div class="row">
                         <div class="col-3">
-                            <i class="fa fa-shopping-cart fa-4x"></i>
+                            <i class="fas fa-user-alt fa-4x"></i>
                         </div>
                         <div class="col-9 text-right">
                             <div class="huge"><?= demsoNguoiDung() ?></div>
@@ -112,7 +112,7 @@ $dataPoints = array(
                 <div class="panel-heading p-3">
                     <div class="row">
                         <div class="col-3">
-                            <i class="fa fa-support fa-4x"></i>
+                            <i class="fa fa-comments fa-4x"></i>
                         </div>
                         <div class="col-9 text-right">
                             <div class="huge"><?= demsoThongBao() ?></div>
@@ -136,7 +136,7 @@ $dataPoints = array(
                 <div class="panel-heading p-3 bg-secondary">
                     <div class="row text-white">
                         <div class="col-3">
-                            <i style="font-size: 120px;" class="fa fa-support"></i>
+                            <i style="font-size: 120px;" class="fas fa-book"></i>
                         </div>
                         <div class="col-9 text-right">
                             <div class="huge1"><?= demsoBaiDang() ?></div>

@@ -12,7 +12,7 @@ $dstball = getThongBaoAll();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "index":
-        
+
         $slider = "views/slider.php";
         $view = "views/home.php";
         require_once "layout.php";
@@ -56,7 +56,11 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "baidang":
-        $slider = "views/slider.php";
+        $id = 0;
+        if (isset($_GET['id']) == true) $id = $_GET['id'];
+        settype($id, "int");
+        
+        $rowbaidang = getBaiVietById($id);
         $view = "views/baidang.php";
         require_once "layout.php";
         break;
@@ -66,7 +70,7 @@ switch ($act) {
     case "chitietthongbao":
         $idtb = $_GET['idtb'];
         settype($idtb, "int");
-        
+
         $rowidtb = getThongBaobyID($idtb);
         $view = "views/thongbaochitiet.php";
         require_once "layout.php";
