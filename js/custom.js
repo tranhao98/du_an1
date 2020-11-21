@@ -62,6 +62,7 @@ jQuery(document).ready(function($) {
             }
         });
     }
+    $('.dropdown-toggle').dropdown();
     $('.carousel').carousel();
     if ($('.owl-banner').length) {
         $('.owl-banner').owlCarousel({

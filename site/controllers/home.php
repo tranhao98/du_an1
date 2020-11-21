@@ -70,9 +70,13 @@ switch ($act) {
     case "chitietthongbao":
         $idtb = $_GET['idtb'];
         settype($idtb, "int");
-
         $rowidtb = getThongBaobyID($idtb);
         $view = "views/thongbaochitiet.php";
         require_once "layout.php";
         break;
+    case "login":
+        $view = "views/dangnhap.php";
+        require_once "layout.php";
+    break;
+
 }
