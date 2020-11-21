@@ -77,7 +77,7 @@
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
                                 <a class="dropdown-item" href="#">Đổi mật khẩu</a>
-                                <a class="dropdown-item" href="#">Xem thông tin tài khoản</a>
+                                <a class="dropdown-item" href="?ctrl=user&act=infouser">Xem thông tin tài khoản</a>
                                 <a class="dropdown-item" href="#">Nâng cấp gói thành viên</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="?ctrl=user&act=logout">Đăng xuất</a>
@@ -85,7 +85,7 @@
                         <?php
                             } else {
                         ?>
-                        <li class="nav-item dn"><a data-toggle="modal" data-target="#staticBackdrop2" class="nav-link" href="">Đăng nhập</a>
+                        <li class="nav-item dn"><a data-toggle="modal" data-target="#staticBackdrop2" class="nav-link text-danger" href="">Đăng nhập</a>
 
                         </li>
                             <?php }?>
