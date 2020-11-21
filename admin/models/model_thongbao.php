@@ -36,7 +36,9 @@ function getThongBaoByID($idtb)
 function updateThongBao($idtb, $idnguoidang, $hinh, $hinh2, $tieude, $ngaydang, $noidung, $thutu, $anhien)
 {
   if ($hinh != "")
-    $sql = "UPDATE thongbao SET idtb='$idtb', idnguoidang='$idnguoidang', hinh = '$hinh', hinh2 = '$hinh2', tieude='$tieude', ngaydang='$ngaydang' ,noidung='$noidung' ,thutu='$thutu',
+    $sql = "UPDATE thongbao SET idtb='$idtb', idnguoidang='$idnguoidang', hinh = '$hinh', tieude='$tieude', ngaydang='$ngaydang' ,noidung='$noidung' ,thutu='$thutu',
+          anhien='$anhien' WHERE idtb='$idtb'";
+  else if ($hinh2 != "") $sql = "UPDATE thongbao SET idtb='$idtb', idnguoidang='$idnguoidang', hinh2 = '$hinh2', tieude='$tieude', ngaydang='$ngaydang' ,noidung='$noidung' ,thutu='$thutu',
           anhien='$anhien' WHERE idtb='$idtb'";
   else
     $sql = "UPDATE thongbao SET idtb='$idtb', idnguoidang='$idnguoidang', tieude='$tieude', ngaydang='$ngaydang' ,noidung='$noidung' ,thutu='$thutu',

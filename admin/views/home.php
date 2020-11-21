@@ -53,7 +53,7 @@ $dataPoints = array(
                 </div>
                 <a href="index.php?ctrl=danhmuc&act=index">
                     <div class="panel-footer p-2">
-                        <span class="pull-left">View Details</span>
+                        <span class="pull-left">Xem chi tiết</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
                         <div class="clearfix"></div>
@@ -76,7 +76,7 @@ $dataPoints = array(
                 </div>
                 <a href="index.php?ctrl=khuvuc&act=index">
                     <div class="panel-footer p-2">
-                        <span class="pull-left">View Details</span>
+                        <span class="pull-left">Xem chi tiết</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
                         <div class="clearfix"></div>
@@ -99,7 +99,7 @@ $dataPoints = array(
                 </div>
                 <a href="index.php?ctrl=nguoidung&act=index">
                     <div class="panel-footer p-2">
-                        <span class="pull-left">View Details</span>
+                        <span class="pull-left">Xem chi tiết</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
                         <div class="clearfix"></div>
@@ -122,7 +122,7 @@ $dataPoints = array(
                 </div>
                 <a href="index.php?ctrl=thongbao&act=index">
                     <div class="panel-footer p-2">
-                        <span class="pull-left">View Details</span>
+                        <span class="pull-left">Xem chi tiết</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
                         <div class="clearfix"></div>
@@ -146,7 +146,7 @@ $dataPoints = array(
                 </div>
                 <a href="index.php?ctrl=baidang&act=index">
                     <div class="panel-footer p-2">
-                        <span class="pull-left">View Details</span>
+                        <span class="pull-left">Xem chi tiết</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 
                         <div class="clearfix"></div>

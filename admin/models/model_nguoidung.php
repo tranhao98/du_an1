@@ -14,9 +14,9 @@ function getNameNguoiDung($id)
     $sql = "SELECT * from taikhoan where id='$id'";
     return queryOne($sql);
 }
-function kiemTraNguoiDung($tendangnhap, $matkhau)
+function kiemTraNguoiDung($tendangnhap)
 {
-    $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap' and matkhau='$matkhau'";
+    $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap'";
     return queryOne($sql);
 }
 function addNewNguoiDung($hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien)

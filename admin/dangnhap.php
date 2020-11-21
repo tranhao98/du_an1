@@ -2,22 +2,26 @@
 ob_start();
 session_start();
 include "models/model_nguoidung.php";
+$warning = "";
 if (isset($_POST['login']) && ($_POST['login'])) {
-    $tendangnhap = $_POST['tendangnhap'];
-    $matkhau = md5($_POST['matkhau']);
+    $tendangnhap = trim(strip_tags($_POST['tendangnhap']));
+    $matkhau = trim(strip_tags($_POST['matkhau']));
 
-    $check = kiemTraNguoiDung($tendangnhap, $matkhau);
+    $check = kiemTraNguoiDung($tendangnhap);
     // var_dump($check);
     if (is_array($check)) {
-        $_SESSION['hinh'] = $check['hinh'];
-        $_SESSION['sid'] = $check['id'];
-        $_SESSION['hoten'] = $check['hoten'];
-        $_SESSION['tendangnnhap'] = $check['tendangnhap'];
-        if ($check['vaitro'] == 1) header("location: index.php");
-        // else header("location: ../site/index.php");
-    } else {
+        // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
+        $verify = password_verify($matkhau, $check['matkhau']);
+        
+        if ($verify) {
+            $_SESSION['hinh'] = $check['hinh'];
+            $_SESSION['sid'] = $check['id'];
+            $_SESSION['hoten'] = $check['hoten'];
+            $_SESSION['tendangnnhap'] = $check['tendangnhap'];
+            if ($check['vaitro'] == 1) header("location: index.php");
+        } else $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
+    } else
         $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
-    }
 }
 ?>
 <!DOCTYPE html>
@@ -28,7 +32,7 @@ if (isset($_POST['login']) && ($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
-   
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
