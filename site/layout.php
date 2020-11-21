@@ -67,17 +67,28 @@
                         <li class="nav-item"><a class="nav-link" href="">Giới thiệu</a></li>
 
                         <li class="nav-item"><a class="nav-link" href="">Liên hệ</a></li>
-
+                        <?php
+                            if(isset($_SESSION['sid'])){
+                        ?>
+                             <div class="btn-group">
+                                <button type="button" class="btn btn-danger"><a href="" class="text-white"><?=$_SESSION['hoten']?></a></button>
+                                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                                <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                                <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                                <a class="dropdown-item" href="#">Xem thông tin tài khoản</a>
+                                <a class="dropdown-item" href="#">Nâng cấp gói thành viên</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="?ctrl=user&act=logout">Đăng xuất</a>
+                                </div>
+                        <?php
+                            } else {
+                        ?>
                         <li class="nav-item dn"><a data-toggle="modal" data-target="#staticBackdrop2" class="nav-link" href="">Đăng nhập</a>
 
                         </li>
-
-                        <span class="text-white pt-2">
-                            <h4 class="text-center">|</h4>
-                        </span>
-                        <li class="nav-item dk"><a class="nav-link" href="../admin/dangnhap.php">Đăng ký</a>
-
-                        </li>
+                            <?php }?>
                     </ul>
                 </div>
             </div>

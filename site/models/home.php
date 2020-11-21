@@ -130,3 +130,8 @@ function getBaiVietById($id)
     $sql = "SELECT * FROM baidang WHERE idsp = '$id'";
     return queryOne($sql);
 }
+function kiemTraNguoiDung($tendangnhap, $matkhau)
+{
+    $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap' and matkhau='$matkhau'";
+    return queryOne($sql);
+}
