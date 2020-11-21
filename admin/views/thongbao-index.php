@@ -25,7 +25,6 @@
                     <th scope="col">Hình Ảnh</th>
                     <th scope="col">Tiêu Đề</th>
                     <th scope="col">Ngày Đăng</th>
-                    <th scope="col">Người Đăng</th>
                     <th scope="col">Nội Dung</th>
                     <th scope="col">Trạng Thái</th>
                     <th scope="col">Bình Luận</th>
@@ -46,12 +45,15 @@
                             <img src="../upload/<?= $row['hinh2'] ?>" alt="" onerror="this.src = '../upload/noimg.jpg';">
                         </td>
 
-                        <td class="text-wrap"><?= $row['tieude'] ?></td>
-
-                        <td><?= $row['ngaydang'] ?></td>
+                        <td class="text-wrap">
+                            <h6><?= $row['tieude'] ?></h6>
+                            <p>Người đăng: <?php echo getNameNguoiDung($row['idnguoidang'])['hoten']; ?></p>
+                        </td>
 
                         <td>
-                            <?php echo getNameNguoiDung($row['idnguoidang'])['hoten']; ?>
+                            
+                            <p><?= $row['ngaydang'] ?></p>
+                        
                         </td>
 
                         <td class="text-wrap"><?= _substr($row['noidung'], 80) ?></td>
