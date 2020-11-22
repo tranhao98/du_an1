@@ -49,6 +49,15 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
     break;
-    
+    case "doimatkhau":
+        $child = "views/doimatkhau.php";
+        $view = "views/thongtintaikhoan.php";
+        require_once "layout.php";
+    break;
+    case "thanhtoan":
+        $child = "views/thanhtoan.php";
+        $view = "views/thongtintaikhoan.php";
+        require_once "layout.php";
+    break;
 }
 ?>
