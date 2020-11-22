@@ -16,16 +16,16 @@
             <img src="../upload/<?= $rowbaidang['hinh2'] ?>" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item mt-bannerbaidang">
-            <img src="../upload/<?= $rowbaidang['hinh3'] ?>" style="height: 600px; object-fit:cover;" class="d-block w-100" alt="...">
+            <img src="../upload/<?= $rowbaidang['hinh3'] ?>" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item mt-bannerbaidang">
-            <img src="../upload/<?= $rowbaidang['hinh4'] ?>" class="d-block w-100" alt="..." style="height: 600px; object-fit:cover;">
+            <img src="../upload/<?= $rowbaidang['hinh4'] ?>" class="d-block w-100" alt="..." >
         </div>
         <div class="carousel-item mt-bannerbaidang">
-            <img src="../upload/<?= $rowbaidang['hinh5'] ?>" class="d-block w-100" alt="..." style="height: 600px; object-fit:cover;">
+            <img src="../upload/<?= $rowbaidang['hinh5'] ?>" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item mt-bannerbaidang">
-            <img src="../upload/<?= $rowbaidang['hinh6'] ?>" class="d-block w-100" alt="..." style="height: 600px; object-fit:cover;">
+            <img src="../upload/<?= $rowbaidang['hinh6'] ?>" class="d-block w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -55,29 +55,31 @@
             <div class="card col-md-8 rounded-0 bg-transparent border-0">
                 <div class="card-body p-0 mt-4 text-dark">
                     <h2>Thông tin mô tả</h2>
-                    <p class="card-text"><?=$rowbaidang['mota']?></p>
-                    
+                    <p class="card-text"><?= $rowbaidang['mota'] ?></p>
+                    <h2>Thông tin bản đồ</h2>
+                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4549694901184!2d106.62692827837184!3d10.852958680974394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5b4da59e47aa97a8!2zQ8O0bmcgVmnDqm4gUGjhuqduIE3hu4FtIFF1YW5nIFRydW5n!5e0!3m2!1svi!2s!4v1606040054486!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p>
                 </div>
             </div>
             <div class="card col-md-4 rounded-0 border-0">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item bg-dark text-white">Thông tin</li>
-                    <li class="list-group-item">Tác giả: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['hoten'];?></li>
+                    <li class="list-group-item">Tác giả: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['hoten']; ?></li>
                     <li class="list-group-item">Giá: <?= number_format($rowbaidang['gia'], 0, ",", "."); ?><sup>đ</sup><?php if (strlen(strstr(strtolower($rowbaidang['tensp']), "cho thuê")) > 0) echo '/tháng';
-                                                                                        else echo '/m<sup>2</sup>'; ?></li>
+                                                                                                                        else echo '/m<sup>2</sup>'; ?></li>
                     <li class="list-group-item">Khu vực: <?= getTenKhuVuc($rowbaidang['idkhuvuc']); ?></li>
-                    <li class="list-group-item">Danh mục: <?= getTenDanhMuc($rowbaidang['iddm'])?></li>
-                    <li class="list-group-item">Nội thất: <?=$rowbaidang['noithat']?></li>
-                    <li class="list-group-item">Phòng ngủ: <?=$rowbaidang['phongngu']?></li>
-                    <li class="list-group-item">Diện tích: <?=$rowbaidang['dientich']?> m<sup>2</sup></li>
+                    <li class="list-group-item">Danh mục: <?= getTenDanhMuc($rowbaidang['iddm']) ?></li>
+                    <li class="list-group-item">Nội thất: <?= $rowbaidang['noithat'] ?></li>
+                    <li class="list-group-item">Phòng ngủ: <?= $rowbaidang['phongngu'] ?></li>
+                    <li class="list-group-item">Diện tích: <?= $rowbaidang['dientich'] ?> m<sup>2</sup></li>
+
                 </ul>
                 <div class="divider">
                     <br>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item bg-dark text-white">Liên hệ người đăng</li>
-                    <li class="list-group-item">Số điện thoại: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['sodienthoai']?></li>
-                    <li class="list-group-item">Email: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['email']?></li>
+                    <li class="list-group-item">Số điện thoại: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['sodienthoai'] ?></li>
+                    <li class="list-group-item">Email: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['email'] ?></li>
                 </ul>
             </div>
         </div>
@@ -86,17 +88,17 @@
     </div>
     <div class="container mt-4">
         <div class="grid-image">
-            <img loading="lazy" src="../upload/<?=$rowbaidang['hinh']?>" alt="" class="image-item" />
-            <img loading="lazy" src="../upload/<?=$rowbaidang['hinh2']?>" alt="" class="image-item" />
-            <img loading="lazy" src="../upload/<?=$rowbaidang['hinh3']?>" alt="" class="image-item" />
-            <img loading="lazy" src="../upload/<?=$rowbaidang['hinh4']?>" alt="" class="image-item" />
-            <img loading="lazy" src="../upload/<?=$rowbaidang['hinh5']?>" alt="" class="image-item" />
-            <img loading="lazy" src="../upload/<?=$rowbaidang['hinh6']?>" alt="" class="image-item" />
+            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh'] ?>" alt="" class="image-item" />
+            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh2'] ?>" alt="" class="image-item" />
+            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh3'] ?>" alt="" class="image-item" />
+            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh4'] ?>" alt="" class="image-item" />
+            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh5'] ?>" alt="" class="image-item" />
+            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh6'] ?>" alt="" class="image-item" />
         </div>
     </div>
     <div class="container mt-4">
         <div class="auth">
-            <span class="auth-child">Tác giả: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['hoten'];?> | Thời gian đăng: 14h02 11/11/2020</span>
+            <span class="auth-child">Tác giả: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['hoten']; ?> | Thời gian đăng: 14h02 11/11/2020</span>
         </div>
     </div>
 </section>
