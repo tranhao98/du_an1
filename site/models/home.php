@@ -18,7 +18,7 @@ function _substr($str, $length, $minword = 3)
 
 function getThongBaoAll()
 {
-    $sql = "SELECT * FROM thongbao order by idtb asc";
+    $sql = "SELECT * FROM thongbao order by ngaydang desc";
     return query($sql);
 }
 function getThongBaoNew()
