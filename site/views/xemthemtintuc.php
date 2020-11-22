@@ -7,7 +7,7 @@
                         $dem = 1;
                         foreach ($dstball as $row) {
                     ?>
-                        <article id='tabs-<?= $dem++ ?>'>
+                        <div class="tabs" id='tabs-<?= $dem++ ?>'>
                             <h4><?=$row['tieude']?></h4>
 
                             <p><i class="fa fa-user"></i> <?php echo getNameNguoiDung($row['idnguoidang'])['hoten'];?> &nbsp;|&nbsp; <i class="fa fa-calendar"></i> <?=$row['ngaydang']?> &nbsp;|&nbsp; <i class="fa fa-comments"></i> <?=demsoBinhLuanTheoTB($row['idtb'])?> bình luận</p>
@@ -26,8 +26,7 @@
                             <div class="main-button">
                                 <a href="?act=chitietthongbao&idtb=<?=$row['idtb']?>">Đọc tiếp</a>
                             </div>
-                        </article> 
-                        <hr>
+                        </div> 
                     <?php } ?>
                 </div>
                 <div class="thongbao-phai mt-200">
