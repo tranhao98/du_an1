@@ -27,6 +27,7 @@
                                 <a href="?act=chitietthongbao&idtb=<?=$row['idtb']?>">Đọc tiếp</a>
                             </div>
                         </article> 
+                        <hr>
                     <?php } ?>
                 </div>
                 <div class="thongbao-phai mt-200">
