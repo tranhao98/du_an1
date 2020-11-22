@@ -91,12 +91,12 @@
 }
 /* ///// CSS noidungleft/right ///// */
 
-.noidungleft{
+.nd-tintucleft{
     padding: 10px;
     width: 30%;
     float: left;
 }
-.noidungright{
+.nd-tintucright{
     padding: 10px;
     width: 70%;
     float: left;
