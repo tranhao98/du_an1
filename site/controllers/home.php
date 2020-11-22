@@ -74,6 +74,10 @@ switch ($act) {
         $view = "views/thongbaochitiet.php";
         require_once "layout.php";
         break;
+    case "xemthemtintuc":
+        $view = "views/xemthemtintuc.php";
+        require_once "layout.php";
+        break;
     case "login":
         $view = "views/dangnhap.php";
         require_once "layout.php";
