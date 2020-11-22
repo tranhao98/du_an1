@@ -15,19 +15,21 @@
                             <div class="nd-tintucleft">
                                 <?php
                                     if($row['hinh'] == NULL)  echo "<img src='../../upload/1.png'>";
-                                    else  echo "<img style='height: 200px; object-fit:cover; width:100%;' src='../upload/".$row['hinh']."' ><br><br>";
+                                    else  echo "<img style='height: 180px; object-fit:cover; width:100%;' src='../upload/".$row['hinh']."' ><br><br>";
                                 ?>
                             </div>
 
                             <div class="nd-tintucright">
-                                <p><?=_substr($row['noidung'], 250)?></p>
-                            </div>
-
-                            <div class="main-button">
-                                <a href="?act=chitietthongbao&idtb=<?=$row['idtb']?>">Đọc tiếp</a>
+                                <p class="justify"><?=_substr($row['noidung'], 400)?></p>
+                                <div class="button-seemore">
+                                    <a href="?act=chitietthongbao&idtb=<?=$row['idtb']?>">Đọc tiếp</a>
+                                </div>
                             </div>
                         </div> 
                     <?php } ?>
+                    <div class="main-button" style="text-align:center;">
+                        <a href="">Nhiều hơn</a>
+                    </div><br>
                 </div>
                 <div class="thongbao-phai mt-200">
                     <div class="card-thongbao">
