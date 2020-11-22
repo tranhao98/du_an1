@@ -6,26 +6,32 @@ require_once "models/home.php"; //nạp model để có các hàm tương tác d
 
 $dsdm1 = getAllDanhMuc1();
 $dsdm2 = getAllDanhMuc2();
+$dsbd = getAllBaiDang();
 $dskv = getAllKhuVuc();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "login":
-        $tendangnhap = $_POST['tendangnhap'];
-        $matkhau = md5($_POST['matkhau']);
-        $check = kiemTraNguoiDung($tendangnhap, $matkhau);
-        var_dump($check);
+        $tendangnhap = trim(strip_tags($_POST['tendangnhap']));
+        $matkhau = trim(strip_tags($_POST['matkhau']));
+        $check = kiemTraNguoiDung($tendangnhap);
+        // var_dump($check);
+        $warning = "";
         if (is_array($check)) {
-            $_SESSION['hinh'] = $check['hinh'];
-            $_SESSION['sid'] = $check['id'];
-            $_SESSION['hoten'] = $check['hoten'];
-            $_SESSION['tendangnnhap'] = $check['tendangnhap'];
-            if ($check['vaitro'] == 1) header("location: index.php");
-            echo $_SESSION['sid'];
-            exit();
+            // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
+            $verify = password_verify($matkhau, $check['matkhau']);
+            // var_dump($hash);
+            if ($verify) {
+                $_SESSION['hinh'] = $check['hinh'];
+                $_SESSION['sid'] = $check['id'];
+                $_SESSION['hoten'] = $check['hoten'];
+                $_SESSION['tendangnnhap'] = $check['tendangnhap'];
+                if ($check['vaitro'] == 1) header("location: ../admin/index.php");
+                else header("location: index.php");
+            } else $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
         } else {
             $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
         }
-    break;
+        break;
     case "logout":
         if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
             unset($_SESSION['sid']);
@@ -34,7 +40,7 @@ switch ($act) {
             unset($_SESSION['hinh']);
             header("location: index.php");
         }
-    break;
+        break;
     case "infouser":
         if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
             $id = $_SESSION['sid'];
@@ -43,21 +49,35 @@ switch ($act) {
         $child = "views/thongtin-index.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
-    break;
+        break;
     case "myarticle":
+        $id = 0;
+        if (isset($_GET['id']) == true) $id = $_GET['id'];
+
+        $page_num = 1;
+        if (isset($_GET['page_num']) == true) $page_num = $_GET['page_num'];
+
+        settype($id, "int");
+        settype($page_num, "int");
+        if ($page_num <= 0) $page_num = 1;
+
+        $page_size = PAGE_SIZE;
+        $dsnguoidung = getBaiDangTheoND($id, $page_num, $page_size);
+        $total_rows = demBaiDangTheoND($id);
+        $baseurl = SITE_URL . "/index.php?ctrl=user&act=myarticle&id={$id}";
+        $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
         $child = "views/myarticle.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
-    break;
+        break;
     case "doimatkhau":
         $child = "views/doimatkhau.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
-    break;
+        break;
     case "thanhtoan":
         $child = "views/thanhtoan.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
-    break;
+        break;
 }
-?>

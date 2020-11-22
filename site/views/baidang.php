@@ -63,14 +63,14 @@
             <div class="card col-md-4 rounded-0 border-0">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item bg-dark text-white">Thông tin</li>
-                    <li class="list-group-item">Tác giả: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['hoten']; ?></li>
-                    <li class="list-group-item">Giá: <?= number_format($rowbaidang['gia'], 0, ",", "."); ?><sup>đ</sup><?php if (strlen(strstr(strtolower($rowbaidang['tensp']), "cho thuê")) > 0) echo '/tháng';
+                    <li class="list-group-item"><span class="text-secondary">Tác giả:</span> <?= getNameNguoiDung($rowbaidang['idnguoiban'])['hoten']; ?></li>
+                    <li class="list-group-item"><span class="text-secondary">Giá:</span> <?= number_format($rowbaidang['gia'], 0, ",", "."); ?><sup>đ</sup><?php if (strlen(strstr(strtolower($rowbaidang['tensp']), "cho thuê")) > 0) echo '/tháng';
                                                                                                                         else echo '/m<sup>2</sup>'; ?></li>
-                    <li class="list-group-item">Khu vực: <?= getTenKhuVuc($rowbaidang['idkhuvuc']); ?></li>
-                    <li class="list-group-item">Danh mục: <?= getTenDanhMuc($rowbaidang['iddm']) ?></li>
-                    <li class="list-group-item">Nội thất: <?= $rowbaidang['noithat'] ?></li>
-                    <li class="list-group-item">Phòng ngủ: <?= $rowbaidang['phongngu'] ?></li>
-                    <li class="list-group-item">Diện tích: <?= $rowbaidang['dientich'] ?> m<sup>2</sup></li>
+                    <li class="list-group-item"><span class="text-secondary">Khu vực:</span> <?= getTenKhuVuc($rowbaidang['idkhuvuc']); ?></li>
+                    <li class="list-group-item"><span class="text-secondary">Danh mục:</span> <?= getTenDanhMuc($rowbaidang['iddm']) ?></li>
+                    <li class="list-group-item"><span class="text-secondary">Nội thất:</span> <?= $rowbaidang['noithat'] ?></li>
+                    <li class="list-group-item"><span class="text-secondary">Phòng ngủ:</span> <?= $rowbaidang['phongngu'] ?></li>
+                    <li class="list-group-item"><span class="text-secondary">Diện tích:</span> <?= $rowbaidang['dientich'] ?> m<sup>2</sup></li>
 
                 </ul>
                 <div class="divider">
@@ -78,8 +78,8 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item bg-dark text-white">Liên hệ người đăng</li>
-                    <li class="list-group-item">Số điện thoại: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['sodienthoai'] ?></li>
-                    <li class="list-group-item">Email: <?= getNameNguoiDung($rowbaidang['idnguoiban'])['email'] ?></li>
+                    <li class="list-group-item"><span class="text-secondary">Số điện thoại:</span> <?= getNameNguoiDung($rowbaidang['idnguoiban'])['sodienthoai'] ?></li>
+                    <li class="list-group-item"><span class="text-secondary">Email:</span> <?= getNameNguoiDung($rowbaidang['idnguoiban'])['email'] ?></li>
                 </ul>
             </div>
         </div>

@@ -186,22 +186,6 @@
         margin: 0px 20px;
     }
     
-    .navbar .navbar-nav .dn {
-        margin-right: 0px;
-    }
-    
-    .navbar .navbar-nav .dn .nav-link {
-        color: yellowgreen;
-    }
-    
-    .navbar .navbar-nav .dk {
-        margin-left: 0px;
-    }
-    
-    .navbar .navbar-nav .dk .nav-link {
-        color: #f33f3f;
-    }
-    
     .navbar .navbar-nav a.nav-link {
         text-transform: capitalize;
         font-size: 15px;
@@ -244,6 +228,7 @@
         line-height: 26px;
         font-family: 'FontAwesome';
     }
+    
     .banner {
         position: relative;
         text-align: center;
@@ -991,11 +976,11 @@
     }
     
     .button-black-next {
-        margin-right: -100px;
+        margin-right: -96px;
     }
     
     .button-black-prev {
-        margin-left: -110px;
+        margin-left: -100px;
     }
     
     .mt-bannerbaidang {

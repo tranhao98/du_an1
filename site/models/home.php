@@ -62,7 +62,17 @@ function getAllDanhMuc2()
     $sql = "SELECT * from danhmuc where loai = 0";
     return query($sql);
 }
-
+function getBaiDangTheoND($id, $page_num, $page_size)
+{
+    $start_row = ($page_num - 1) * $page_size;
+    $sql = "SELECT * FROM baidang where idnguoiban = '$id'" . "ORDER BY idsp desc limit $start_row, $page_size";
+    return query($sql);
+}
+function demBaiDangTheoND($idnguoiban)
+{
+    $sql = "SELECT count(*) as sodong from baidang where idnguoiban = '$idnguoiban'";
+    return queryOne($sql)['sodong'];
+}
 function getBaiDangTheoDM($id, $page_num, $page_size)
 {
     $start_row = ($page_num - 1) * $page_size;
@@ -130,9 +140,14 @@ function getBaiVietById($id)
     $sql = "SELECT * FROM baidang WHERE idsp = '$id'";
     return queryOne($sql);
 }
-function kiemTraNguoiDung($tendangnhap, $matkhau)
+function getBaiVietByIDND($id)
 {
-    $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap' and matkhau='$matkhau'";
+    $sql = "SELECT idnguoiban FROM baidang WHERE idsp = '$id'";
+    return queryOne($sql)['idnguoiban'];
+}
+function kiemTraNguoiDung($tendangnhap)
+{
+    $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap'";
     return queryOne($sql);
 }
 function getNguoiDungByID($id)
