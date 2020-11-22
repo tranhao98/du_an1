@@ -80,6 +80,17 @@
     float: right;
     margin-bottom: 0rem;
 }
+/* ///// CSS noidungleft/right ///// */
+.noidungleft{
+    padding: 10px;
+    width: 30%;
+    float: left;
+}
+.noidungright{
+    padding: 10px;
+    width: 70%;
+    float: left;
+}
 /* ///// CSS Class ///// */
 
 .mt-100{
