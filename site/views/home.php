@@ -16,7 +16,7 @@
                     foreach ($dstbnew as $row) { ?>
                         <li><a href='#tabs-<?= $dem++ ?>'><?= $row['tieude'] ?></a></li>
                     <?php } ?>
-                    <div class="main-rounded-button"><a href="">Xem Thêm Tin Tức</a></div>
+                    <div class="main-rounded-button"><a href="?act=xemthemtintuc">Xem Thêm Tin Tức</a></div>
                 </ul>
             </div>
             <div class="col-lg-8">
