@@ -2,20 +2,26 @@
 ob_start();
 session_start();
 require_once "../system/config.php";
-require_once "models/home.php"; //nạp model để có các hàm tương tác db
+require_once "models/home.php"; //nạp model để có các hàm tương tác db1
+
+$dsdm1 = getAllDanhMuc1();
+$dsdm2 = getAllDanhMuc2();
+$dskv = getAllKhuVuc();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "login":
         $tendangnhap = $_POST['tendangnhap'];
         $matkhau = md5($_POST['matkhau']);
         $check = kiemTraNguoiDung($tendangnhap, $matkhau);
-        // var_dump($check);
+        var_dump($check);
         if (is_array($check)) {
             $_SESSION['hinh'] = $check['hinh'];
             $_SESSION['sid'] = $check['id'];
             $_SESSION['hoten'] = $check['hoten'];
             $_SESSION['tendangnnhap'] = $check['tendangnhap'];
             if ($check['vaitro'] == 1) header("location: index.php");
+            echo $_SESSION['sid'];
+            exit();
         } else {
             $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
         }
@@ -34,8 +40,15 @@ switch ($act) {
             $id = $_SESSION['sid'];
             $row = getNguoiDungByID($id);
         }
+        $child = "views/thongtin-index.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
     break;
+    case "myarticle":
+        $child = "views/myarticle.php";
+        $view = "views/thongtintaikhoan.php";
+        require_once "layout.php";
+    break;
+    
 }
 ?>
