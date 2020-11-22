@@ -39,6 +39,10 @@
                             <li class="justify t-bold text-blue"><a href="">Long An chi 13.000 tỷ đồng xây dựng 8 công trình giao thông quan trọng</a></li>
                             <li class="justify t-bold text-blue"><a href="">The Residence Phú Quốc mở bán biệt thự 2 mặt tiền tại Bãi Trường</a></li>
                         </div>
+                        <div class="tintuckhac mt-20">
+                            <li class="list-group-item bg-dark"><h6 class="ttmoi text-white">TIN TỨC KHÁC</h6></li>
+                            <li class="list-group-item"><img src="../upload/tintuc1.gif" alt=""></li>
+                        </div>
                     </div>
                 </div>
             </div>
