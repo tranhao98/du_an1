@@ -135,3 +135,8 @@ function kiemTraNguoiDung($tendangnhap, $matkhau)
     $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap' and matkhau='$matkhau'";
     return queryOne($sql);
 }
+function getNguoiDungByID($id)
+{
+    $sql = "SELECT * from taikhoan where id='$id'";
+    return queryOne($sql);
+}

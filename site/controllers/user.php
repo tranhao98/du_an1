@@ -30,6 +30,10 @@ switch ($act) {
         }
     break;
     case "infouser":
+        if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
+            $id = $_SESSION['sid'];
+            $row = getNguoiDungByID($id);
+        }
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
     break;
