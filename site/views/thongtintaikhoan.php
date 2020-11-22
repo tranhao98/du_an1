@@ -19,6 +19,7 @@
             
  
             </div>
+<<<<<<< Updated upstream
             <div class="col-9">
                 <div class="row">
                     <div class="col-9 list-group">
@@ -74,6 +75,190 @@
                     </div>
                 </div>
                 
+=======
+        </nav>
+    </header>
+
+    
+    <div class="banner header-text">
+        <div class="us-0 col-12">   
+                    <h4>HỒ SƠ TÀI KHOẢN</h4>
+        </div>    
+    </div>
+    <section  class="section">
+        <div class="container">
+            <div class="row">
+                <table class="us-50 col-12">
+                    <tr>
+                        <th>TÀI KHOẢN 01</th>       
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="us-card">
+                                <div class="us-card-body">
+                                    <a href="" class="title-us">SƠ YẾU LÝ LỊCH</a>
+                                </div>
+                                <div class="us-card-body">
+                                    <p>Tên người dùng</p>
+                                    <p>Giới tính</p>
+                                    <p>Ngày sinh</p>
+                                    <p>Quê quán</h4>
+                                    <p>Địa chỉ</p>
+                                    <p>Số điện thoại</p>
+                                    <p>Email</p>
+                                    <p>Vai trò</p>
+                                    <p>Thời gian tham gia</>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="us-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-us">THÔNG TIN CÁ NHÂN</a>
+                                </div>
+                                <div class="us-card-body">
+                                    <p>Nguyễn Thanh Phong</p>
+                                    <p>Nam</p>
+                                    <p>24-6-1996</p>
+                                    <p>Đồng tháp</p>
+                                    <p>74B-Tân thới hiệp-Quận 12- TP HCM</p>
+                                    <p>0987128420</p>
+                                    <p>phongthanh2914@gmail.com</p>
+                                    <p>Quản trị viên</p>
+                                    <p>11/11/2020</p>
+                                </div>                          
+                            </div>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <th>TÀI KHOẢN 02</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="us-card">
+                                <div class="us-card-body">
+                                    <a href="" class="title-us">SƠ YẾU LÝ LỊCH</a>
+                                </div>
+                                <div class="us-card-body">
+                                    <p>Tên người dùng</p>
+                                    <p>Giới tính</p>
+                                    <p>Ngày sinh</p>
+                                    <p>Quê quán</h4>
+                                    <p>Địa chỉ</p>
+                                    <p>Số điện thoại</p>
+                                    <p>Email</p>
+                                    <p>Vai trò</p>
+                                    <p>Thời gian tham gia</>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="us-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-us">THÔNG TIN CÁ NHÂN</a>
+                                </div>
+                                <div class="us-card-body">
+                                    <p>Nguyễn Gia Lâm</p>
+                                    <p>Nam</p>
+                                    <p>24-6-1996</p>
+                                    <p>Đồng tháp</p>
+                                    <p>74B-Tân thới hiệp-Quận 12- TP HCM</p>
+                                    <p>0987128420</p>
+                                    <p>phongthanh2914@gmail.com</p>
+                                    <p>Quản trị viên</p>
+                                    <p>11/11/2020</p>
+                                </div>                          
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>TÀI KHOẢN 03</th>       
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="us-card">
+                                <div class="us-card-body">
+                                    <a href="" class="title-us">SƠ YẾU LÝ LỊCH</a>
+                                </div>
+                                <div class="us-card-body">
+                                    <p>Tên người dùng</p>
+                                    <p>Giới tính</p>
+                                    <p>Ngày sinh</p>
+                                    <p>Quê quán</h4>
+                                    <p>Địa chỉ</p>
+                                    <p>Số điện thoại</p>
+                                    <p>Email</p>
+                                    <p>Vai trò</p>
+                                    <p>Thời gian tham gia</>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="us-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-us">THÔNG TIN CÁ NHÂN</a>
+                                </div>
+                                <div class="us-card-body">
+                                    <p>Nguyễn Thanh Phong</p>
+                                    <p>Nam</p>
+                                    <p>24-6-1996</p>
+                                    <p>Đồng tháp</p>
+                                    <p>74B-Tân thới hiệp-Quận 12- TP HCM</p>
+                                    <p>0987128420</p>
+                                    <p>phongthanh2914@gmail.com</p>
+                                    <p>Quản trị viên</p>
+                                    <p>11/11/2020</p>
+                                </div>                          
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>TÀI KHOẢN 04</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="us-card">
+                                <div class="us-card-body">
+                                    <a href="" class="title-us">SƠ YẾU LÝ LỊCH</a>
+                                </div>
+                                <div class="us-card-body">
+                                    <p>Tên người dùng</p>
+                                    <p>Giới tính</p>
+                                    <p>Ngày sinh</p>
+                                    <p>Quê quán</h4>
+                                    <p>Địa chỉ</p>
+                                    <p>Số điện thoại</p>
+                                    <p>Email</p>
+                                    <p>Vai trò</p>
+                                    <p>Thời gian tham gia</>
+                                </div>
+                                <hr>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="us-card">
+                                <div class="tb-card-body">
+                                    <a href="" class="title-us">THÔNG TIN CÁ NHÂN</a>
+                                </div>
+                                <div class="us-card-body">
+                                    <p>Nguyễn Thanh Phong</p>
+                                    <p>Nam</p>
+                                    <p>24-6-1996</p>
+                                    <p>Đồng tháp</p>
+                                    <p>74B-Tân thới hiệp-Quận 12- TP HCM</p>
+                                    <p>0987128420</p>
+                                    <p>phongthanh2914@gmail.com</p>
+                                    <p>Quản trị viên</p>
+                                    <p>11/11/2020</p>
+                                </div>                          
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+>>>>>>> Stashed changes
             </div>
     </div>
 </div>
