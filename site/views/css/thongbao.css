@@ -94,13 +94,20 @@
     float: right;
 }
 .tabs{
+    position: relative;
     float: left;
-    min-height: 330px;
+    min-height: 300px;
     width: 100%;
     padding: 10px;
 }
 .tabs::after{
-    content: <hr/>;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px; 
+    background: darkgrey;
+    top: 100%;
+    left: 0;
 }
 
 .nd-tintucleft{
