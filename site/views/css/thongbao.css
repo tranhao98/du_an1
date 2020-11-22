@@ -55,6 +55,15 @@
 .tintuccu{
     color: rgb(66, 66, 66);
 }
+.tintuckhac img{
+    width: 100%;
+}
+.tintuckhac .list-group-item{
+    position: relative;
+    display: block;
+    padding: 0.75rem 0.25rem;
+    background-color: #fff;
+}
 .tbct-noidung{
     font-size: 15px;
     font-weight: 450;
