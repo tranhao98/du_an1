@@ -12,14 +12,14 @@
 
                             <p><i class="fa fa-user"></i> <?php echo getNameNguoiDung($row['idnguoidang'])['hoten'];?> &nbsp;|&nbsp; <i class="fa fa-calendar"></i> <?=$row['ngaydang']?> &nbsp;|&nbsp; <i class="fa fa-comments"></i> <?=demsoBinhLuanTheoTB($row['idtb'])?> bình luận</p>
                             
-                            <div class="noidungleft">
+                            <div class="nd-tintucleft">
                                 <?php
                                     if($row['hinh'] == NULL)  echo "<img src='../../upload/1.png'>";
                                     else  echo "<img style='height: 200px; object-fit:cover; width:100%;' src='../upload/".$row['hinh']."' ><br><br>";
                                 ?>
                             </div>
 
-                            <div class="noidungright">
+                            <div class="nd-tintucright">
                                 <p><?=_substr($row['noidung'], 250)?></p>
                             </div>
 
