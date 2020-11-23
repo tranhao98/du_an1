@@ -186,22 +186,6 @@
         margin: 0px 20px;
     }
     
-    .navbar .navbar-nav .dn {
-        margin-right: 0px;
-    }
-    
-    .navbar .navbar-nav .dn .nav-link {
-        color: yellowgreen;
-    }
-    
-    .navbar .navbar-nav .dk {
-        margin-left: 0px;
-    }
-    
-    .navbar .navbar-nav .dk .nav-link {
-        color: #f33f3f;
-    }
-    
     .navbar .navbar-nav a.nav-link {
         text-transform: capitalize;
         font-size: 15px;
@@ -980,21 +964,30 @@
         color: #ed563b;
     }
     
-    .carousel-control-next,
-    .carousel-control-prev,
-    .carousel-indicators {
+    .button-black-next,
+    .button-black-prev,
+    .button-black-indicators {
         filter: invert(100%);
     }
     
-    .carousel-control-next,
-    .carousel-control-prev {
+    .button-black-next,
+    .button-black-prev {
         margin-bottom: 80px;
     }
     
-    .carousel-control-next {
-        margin-right: -100px;
+    .button-black-next {
+        margin-right: -96px;
     }
     
-    .carousel-control-prev {
-        margin-left: -110px;
+    .button-black-prev {
+        margin-left: -100px;
+    }
+    
+    .mt-bannerbaidang {
+        margin-top: 80px;
+    }
+    
+    .mt-bannerbaidang img {
+        height: 500px;
+        object-fit: cover;
     }

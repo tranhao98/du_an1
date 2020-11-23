@@ -13,17 +13,17 @@
                 <ul>
                     <?php
                     $dem = 1;
-                    foreach ($dstb as $row) { ?>
+                    foreach ($dstbnew as $row) { ?>
                         <li><a href='#tabs-<?= $dem++ ?>'><?= $row['tieude'] ?></a></li>
                     <?php } ?>
-                    <div class="main-rounded-button"><a href="">Xem Thêm Tin Tức</a></div>
+                    <div class="main-rounded-button"><a href="?act=xemthemtintuc">Xem Thêm Tin Tức</a></div>
                 </ul>
             </div>
             <div class="col-lg-8">
                 <section class='tabs-content'>
                     <?php
                     $dem = 1;
-                    foreach ($dstb as $row) {
+                    foreach ($dstbnew as $row) {
                     ?>
                         <article id='tabs-<?= $dem++ ?>'>
                             <?php
@@ -32,7 +32,7 @@
                             ?>
                             <h4><?=$row['tieude']?></h4>
 
-                            <p><i class="fa fa-user"></i> <?php echo getNameNguoiDung($row['idnguoidang'])['hoten'];?> &nbsp;|&nbsp; <i class="fa fa-calendar"></i> <?=$row['ngaydang']?> &nbsp;|&nbsp; <i class="fa fa-comments"></i> 15 bình luận</p>
+                            <p><i class="fa fa-user"></i> <?php echo getNameNguoiDung($row['idnguoidang'])['hoten'];?> &nbsp;|&nbsp; <i class="fa fa-calendar"></i> <?=$row['ngaydang']?> &nbsp;|&nbsp; <i class="fa fa-comments"></i> <?=demsoBinhLuanTheoTB($row['idtb'])?> bình luận</p>
 
                             <p><?=_substr($row['noidung'], 250)?></p>
                             <div class="main-button">
@@ -51,13 +51,13 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading">
-                    <h2>Bất động sản được <em>đề xuất</em></h2>
+                    <h2>Bất động sản<em> nổi bật</em></h2>
                     <img src="views/images/line-dec.png" alt="">
                 </div>
             </div>
         </div>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+            <ol class="carousel-indicators button-black-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -101,11 +101,11 @@
             </div>
             <br>
             <br>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev button-black-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next button-black-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>

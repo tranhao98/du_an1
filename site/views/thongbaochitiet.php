@@ -3,22 +3,34 @@
         <div class="row">
             <div class="card-thongbao">
                 <div class="thongbao-trai mt-100">
-                    <div class="card-title">
+                    <div class="card-title justify">
                         <h2><?=$rowidtb['tieude']?></h2>
                         <p class="mb-20"><i class="fa fa-calendar"></i>  <?=$rowidtb['ngaydang']?> | Bất động sản</p> 
-                        <h6 class="mb-20">
-                            Ngày 19/11 tới đây, tại khu vực trung tâm TP.HCM, Tập đoàn Novaland sẽ ra mắt Novaland Gallery 
-                            (Trung tâm Triển lãm Novaland) lớn tại miền Nam với diện tích lên tới gần 5.000 m2. 
+                        <h6 class="mb-20 fw-7">
+                            <?=$rowidtb['tieude2']?>
                         </h6>
                     </div>
-                    <div class="card-content">
+                    <div class="card-content justify">
                         <?php
                             if($rowidtb['hinh'] == NULL)  echo "<img src='../../upload/novaland-gallery.jpg'>";
                             else  echo "<img src='../upload/".$rowidtb['hinh']."' ><br><br>";
                         ?>
-                        <a class="tbct-noidung">
+                        <p class="tbct-noidung justify">
                             <?=$rowidtb['noidung']?>
-                        </a>
+                        </p>
+                        <p class="tbct-noidung justify">
+                            <?=$rowidtb['noidung2']?>
+                        </p>
+                        <?php
+                            if($rowidtb['hinh'] == NULL)  echo "";
+                            else  echo "<img src='../upload/".$rowidtb['hinh2']."' ><br><br>";
+                        ?>
+                        <p class="tbct-noidung justify">
+                            <?=$rowidtb['noidung3']?>
+                        </p>
+                        <p class="tbct-noidung justify">
+                            <?=$rowidtb['noidung4']?>
+                        </p>
                     </div>
                     <div class="card-conclude">
                         <p class="tbct-nguoidang"><?php echo getNameNguoiDung($rowidtb['idnguoidang'])['hoten'];?></p><br>
@@ -37,17 +49,17 @@
                 <div class="thongbao-phai mt-200">
                     <div class="card-thongbao">
                         <div class="tintucmoi">
-                            <li class="list-group-item bg-dark"><h6 class="ttmoi text-white">TIN TỨC MỚI</h6></li>
-                            <?php foreach ($dstb as $row) { ?>
-                                <li><a href='?act=chitietthongbao&idtb=<?=$row['idtb']?>'><?=$row['tieude']?></a></li>
+                            <li class="list-group-item bg-dark justify"><h6 class="ttmoi text-white justify">TIN TỨC MỚI</h6></li>
+                            <?php foreach ($dstball as $row) { ?>
+                                <li class="justify t-bold text-blue"><a href='?act=chitietthongbao&idtb=<?=$row['idtb']?>'><?=$row['tieude']?></a></li>
                             <?php } ?>
                         </div>
-                        <div class="tintuccu">
+                        <div class="tintuccu mt-20">
                             <li class="list-group-item bg-dark"><h6 class="ttmoi text-white">TIN TỨC CŨ</h6></li>
-                            <li><a href="">Garden Riverside: Tận hưởng chất lượng sống sinh thái bên sông</a></li>
-                            <li><a href="">Celesta Rise đưa phong cách nghỉ dưỡng vào không gian sống</a></li>
-                            <li><a href="">Long An chi 13.000 tỷ đồng xây dựng 8 công trình giao thông quan trọng</a></li>
-                            <li><a href="">The Residence Phú Quốc mở bán biệt thự 2 mặt tiền tại Bãi Trường</a></li>
+                            <li class="justify t-bold text-blue"><a href="">Garden Riverside: Tận hưởng chất lượng sống sinh thái bên sông</a></li>
+                            <li class="justify t-bold text-blue"><a href="">Celesta Rise đưa phong cách nghỉ dưỡng vào không gian sống</a></li>
+                            <li class="justify t-bold text-blue"><a href="">Long An chi 13.000 tỷ đồng xây dựng 8 công trình giao thông quan trọng</a></li>
+                            <li class="justify t-bold text-blue"><a href="">The Residence Phú Quốc mở bán biệt thự 2 mặt tiền tại Bãi Trường</a></li>
                         </div>
                     </div>
                 </div>

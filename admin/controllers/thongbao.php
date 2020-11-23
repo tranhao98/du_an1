@@ -25,6 +25,10 @@ switch ($act) {
     $target_file = "../upload/" . basename($hinh);
     move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file);
 
+    $hinh2 = $_FILES['hinh2']['name'];
+    $target_file = "../upload/" . basename($hinh);
+    move_uploaded_file($_FILES['hinh2']['tmp_name'], $target_file);
+
     $tieude = $_POST["tieude"];
     $ngaydang = $_POST["ngaydang"];
     $noidung = $_POST["noidung"];
@@ -32,7 +36,7 @@ switch ($act) {
     settype($idnguoidang, "int");
     settype($thutu, "int");
     $noidung = trim(strip_tags($noidung));
-    addNewThongBao($idnguoidang, $hinh, $tieude, $ngaydang, $noidung, $thutu, $anhien);
+    addNewThongBao($idnguoidang, $hinh, $hinh2, $tieude, $ngaydang, $noidung, $thutu, $anhien);
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã thêm thành công!
     </div>";
@@ -57,6 +61,10 @@ switch ($act) {
     $target_file = "../upload/" . basename($hinh);
     move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file);
 
+    $hinh2 = $_FILES['hinh2']['name'];
+    $target_file = "../upload/" . basename($hinh);
+    move_uploaded_file($_FILES['hinh2']['tmp_name'], $target_file);
+
     $idnguoidang = $_POST["idnguoidang"];
     $tieude = $_POST["tieude"];
     $ngaydang = $_POST["ngaydang"];
@@ -68,7 +76,7 @@ switch ($act) {
     settype($thutu, "int");
     $idtb = trim(strip_tags($idtb));
     $noidung = trim(strip_tags($noidung));
-    updateThongBao($idtb, $idnguoidang, $hinh, $tieude, $ngaydang, $noidung, $thutu, $anhien);
+    updateThongBao($idtb, $idnguoidang, $hinh, $hinh2, $tieude, $ngaydang, $noidung, $thutu, $anhien);
 
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã cập nhật thành công!

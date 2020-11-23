@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="views/css/thongbao.css">
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/owl.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="https://png.pngtree.com/png-clipart/20200701/original/pngtree-family-stay-at-home-illustration-to-prevent-covid-19-plague-vector-png-image_5344919.jpg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -47,7 +48,7 @@
 
                             <div class="dropdown-menu">
                                 <?php foreach ($dsdm1 as $dm1) { ?>
-                                <a class="dropdown-item" href="index.php?ctrl=home&act=cat-danhmuc&id=<?=$dm1['iddm']?>"><?=$dm1['tendm']?></a>
+                                    <a class="dropdown-item" href="index.php?ctrl=home&act=cat-danhmuc&id=<?= $dm1['iddm'] ?>"><?= $dm1['tendm'] ?></a>
                                 <?php } ?>
                             </div>
                         </li>
@@ -57,8 +58,8 @@
 
                             <div class="dropdown-menu">
 
-                            <?php foreach ($dsdm2 as $dm2) { ?>
-                                <a class="dropdown-item" href="index.php?ctrl=home&act=cat-danhmuc&id=<?=$dm2['iddm']?>"><?=$dm2['tendm']?></a>
+                                <?php foreach ($dsdm2 as $dm2) { ?>
+                                    <a class="dropdown-item" href="index.php?ctrl=home&act=cat-danhmuc&id=<?= $dm2['iddm'] ?>"><?= $dm2['tendm'] ?></a>
                                 <?php } ?>
 
                             </div>
@@ -67,17 +68,28 @@
                         <li class="nav-item"><a class="nav-link" href="">Giới thiệu</a></li>
 
                         <li class="nav-item"><a class="nav-link" href="">Liên hệ</a></li>
+                        <?php
+                        if (isset($_SESSION['sid'])) {
+                        ?>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-danger"><a href="?ctrl=user&act=infouser" class="text-white"><?= $_SESSION['hoten'] ?></a></button>
+                                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                                    <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                                    <a class="dropdown-item" href="?ctrl=user&act=infouser">Xem thông tin tài khoản</a>
+                                    <a class="dropdown-item" href="#">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow';></i></a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="?ctrl=user&act=logout">Đăng xuất</a>
+                                </div>
+                            <?php
+                        } else {
+                            ?>
+                                <li class="nav-item"><a data-toggle="modal" data-target="#staticBackdrop2" class="nav-link text-danger" href="">Đăng nhập</a>
 
-                        <li class="nav-item dn"><a data-toggle="modal" data-target="#staticBackdrop2" class="nav-link" href="">Đăng nhập</a>
-
-                        </li>
-
-                        <span class="text-white pt-2">
-                            <h4 class="text-center">|</h4>
-                        </span>
-                        <li class="nav-item dk"><a class="nav-link" href="../admin/dangnhap.php">Đăng ký</a>
-
-                        </li>
+                                </li>
+                            <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -86,7 +98,7 @@
     <main>
         <?php if (isset($slider) && file_exists($slider)) require_once "$slider"; ?>
     </main>
-    
+
     <main>
         <?php if (isset($view) && file_exists($view)) require_once "$view"; ?>
     </main>
@@ -180,4 +192,5 @@
 <script src="../js/custom.js"></script>
 <script src="../js/owl.js"> </script>
 <script src="../js/accordions.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

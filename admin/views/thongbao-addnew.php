@@ -15,9 +15,15 @@
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
         <form enctype="multipart/form-data" class="mx-auto w-100 bg-input" method="post" action="?ctrl=thongbao&act=insert">
-            <div class="form-group">
-                <label for="exampleinput requiredPassword1">Hình ảnh</label>
-                <input class="bg-light" required type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+            <div class="row">
+                <div class="form-group col-6 ">
+                    <label for="exampleinput requiredPassword1">Hình ảnh</label> <br>
+                    <input class="bg-light" required type="file" name="hinh" class="form-control " id="exampleinput requiredPassword1">
+                </div>
+                <div class="form-group col-6">
+                    <label for="exampleinput requiredPassword2">Hình ảnh 2</label> <br>
+                    <input class="bg-light" required type="file" name="hinh2" class="form-control" id="exampleinput requiredPassword2">
+                </div>
             </div>
             <div class="row">
                 <div class="form-group col-4 ">

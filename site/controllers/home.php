@@ -7,10 +7,12 @@ $dsdm2 = getAllDanhMuc2();
 $dsbd = getAllBaiDang();
 $dskv = getAllKhuVuc();
 $dskvspecial = getKhuVucSpecial();
+$dstbnew = getThongBaoNew();
+$dstball = getThongBaoAll();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "index":
-        $dstb = getAllThongBao();
+
         $slider = "views/slider.php";
         $view = "views/home.php";
         require_once "layout.php";
@@ -54,7 +56,11 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "baidang":
-        $slider = "views/slider.php";
+        $id = 0;
+        if (isset($_GET['id']) == true) $id = $_GET['id'];
+        settype($id, "int");
+        
+        $rowbaidang = getBaiVietById($id);
         $view = "views/baidang.php";
         require_once "layout.php";
         break;
@@ -64,9 +70,17 @@ switch ($act) {
     case "chitietthongbao":
         $idtb = $_GET['idtb'];
         settype($idtb, "int");
-        $dstb = getAllThongBao();
         $rowidtb = getThongBaobyID($idtb);
         $view = "views/thongbaochitiet.php";
         require_once "layout.php";
         break;
+    case "xemthemtintuc":
+        $view = "views/xemthemtintuc.php";
+        require_once "layout.php";
+        break;
+    case "login":
+        $view = "views/dangnhap.php";
+        require_once "layout.php";
+    break;
+
 }

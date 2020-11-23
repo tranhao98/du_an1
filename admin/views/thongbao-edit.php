@@ -15,16 +15,29 @@
     </div>
     <div class="row shadow-sm bg-white rounded p-3">
         <form enctype="multipart/form-data" class="mx-auto w-100" method="post" action="?ctrl=thongbao&act=update">
-            <div class="form-group">
-                <?php
-                $hinh = "../upload/" . $row['hinh'];
-                if (is_file($hinh)) {
-                    $hinh = "<img src='$hinh' style='width:150px'>";
-                } else $hinh = "<img src = '../upload/noimg.jpg' style='width:150px'>";
-                ?>
-                <label for="exampleinput requiredPassword1">Hình ảnh</label>
-                <input type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
-                <?= $hinh ?>
+            <div class="row">
+                <div class="form-group col-6">
+                    <?php
+                    $hinh = "../upload/" . $row['hinh'];
+                    if (is_file($hinh)) {
+                        $hinh = "<img src='$hinh' style='width:150px'>";
+                    } else $hinh = "<img src = '../upload/noimg.jpg' style='width:150px'>";
+                    ?>
+                    <label for="exampleinput requiredPassword1">Hình ảnh</label>
+                    <input type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+                    <?= $hinh ?>
+                </div>
+                <div class="form-group col-6">
+                    <?php
+                    $hinh2 = "../upload/" . $row['hinh2'];
+                    if (is_file($hinh2)) {
+                        $hinh2 = "<img src='$hinh2' style='width:150px'>";
+                    } else $hinh2 = "<img src = '../upload/noimg.jpg' style='width:150px'>";
+                    ?>
+                    <label for="exampleinput requiredPassword2">Hình ảnh2</label>
+                    <input type="file" name="hinh2" class="form-control" id="exampleinput requiredPassword2">
+                    <?= $hinh2 ?>
+                </div>
             </div>
             <div class="row">
                 <div class="form-group col-6 ">

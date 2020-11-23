@@ -1,4 +1,127 @@
 
+#our-classes {
+    margin-bottom: 0px;
+}
+.row{
+    width: 100%;
+}
+.card-thongbao{
+    width: 100%;
+    margin: auto;
+}
+.card-title h2{
+    font-size: 28px;
+    font-weight: 800;
+    color: #232d39;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.card-content{
+    width: 100%;
+    padding: 10px;
+}
+.card-content img{
+    width: 99%;
+    height: 400px;
+}
+.thongbao-trai{
+    float: left;
+    width: 67%;
+}
+.thongbao-phai{
+    padding: 10px;
+    float: left;
+    width: 33%;
+}
+.card-conclude{
+    float: right;
+}
+.tintucmoi a{
+    vertical-align: middle;
+    font-size: 14px;
+    color: rgb(66, 66, 66);
+}
+.tintuccu a{
+    font-size: 14px;
+    color: rgb(66, 66, 66);
+}
+.ttmoi h6{
+    padding: 10px;
+    color: white;
+    border-width: 0 0 1px;
+}
+.tintuccu{
+    color: rgb(66, 66, 66);
+}
+.tintuckhac img{
+    width: 100%;
+}
+.tintuckhac .list-group-item{
+    position: relative;
+    display: block;
+    padding: 0.75rem 0.25rem;
+    background-color: #fff;
+}
+.tbct-noidung{
+    font-size: 15px;
+    font-weight: 450;
+    color: black;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+.tbct-noidung:hover{
+    color: #0c0808;
+}
+.tbct-nguoidang{
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    float: right;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0rem;
+}
+.tbct-nguontt{
+    font-size: 16px;
+    font-style: italic;
+    color: black;
+    float: right;
+    margin-bottom: 0rem;
+}
+/* ///// CSS noidungleft/right ///// */
+.button-seemore{
+    float: right;
+}
+.tabs{
+    position: relative;
+    float: left;
+    min-height: 300px;
+    width: 100%;
+    padding: 10px;
+}
+.tabs::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px; 
+    background: darkgrey;
+    top: 100%;
+    left: 0;
+}
+
+.nd-tintucleft{
+    padding: 10px;
+    width: 30%;
+    float: left;
+}
+.nd-tintucright{
+    padding: 10px;
+    width: 70%;
+    float: left;
+}
+/* ///// CSS Class ///// */
+
 .mt-100{
     margin-top: 100px;
 }
@@ -21,79 +144,18 @@
 .text-white{
     color: honeydew;
 }
-#our-classes {
-    margin-bottom: 0px;
+.fw-6{
+    font-weight: 700;
 }
-.row{
-    width: 100%;
+.justify{
+    text-align: justify;
+    text-justify: inter-word;
 }
-.card-thongbao{
-    width: 100%;
-    margin: auto;
+.t-bold{
+    font-weight: bold;
 }
-.card-title h2{
-    font-size: 28px;
-    font-weight: 800;
-    color: #232d39;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.card-content img{
-    width: 95%;
-    height: 400px;
-}
-.thongbao-trai{
-    float: left;
-    width: 67%;
-}
-.thongbao-phai{
-    padding: 10px;
-    float: left;
-    width: 33%;
-}
-.card-conclude{
-    float: right;
-}
-.tintucmoi a{
-    font-size: 14px;
-    color: rgb(66, 66, 66);
-}
-.tintuccu a{
-    font-size: 14px;
-    color: rgb(66, 66, 66);
-}
-.ttmoi h6{
-    padding: 10px;
-    color: white;
-    border-width: 0 0 1px;
-}
-.tintuccu{
-    color: rgb(66, 66, 66);
-}
-.tbct-noidung{
-    font-size: 14px;
-    color: #7a7a7a;
-    margin-bottom: 20px;
-}
-.tbct-noidung:hover{
-    color: #7a7a7a;
-}
-.tbct-nguoidang{
-    font-size: 16px;
-    font-weight: 500;
-    font-style: italic;
-    float: right;
-    color: rgb(0, 0, 0);
-    margin-bottom: 0rem;
-}
-.tbct-nguontt{
-    font-size: 16px;
-    font-style: italic;
-    color: black;
-    float: right;
-    margin-bottom: 0rem;
+.text-blue{
+    color: darkblue;
 }
 
 /* ///// BUTTON SHARE ///// */

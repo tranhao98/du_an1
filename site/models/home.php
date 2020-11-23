@@ -16,10 +16,14 @@ function _substr($str, $length, $minword = 3)
     return $sub . (($len < strlen($str)) ? '...' : '');
 }
 
-
-function getAllThongBao()
+function getThongBaoAll()
 {
-    $sql = "SELECT * FROM thongbao limit 3";
+    $sql = "SELECT * FROM thongbao order by ngaydang desc";
+    return query($sql);
+}
+function getThongBaoNew()
+{
+    $sql = "SELECT * FROM thongbao order by ngaydang desc limit 3";
     return query($sql);
 }
 function getThongBaobyID($idtb)
@@ -34,7 +38,7 @@ function getNameNguoiDung($id)
 }
 function getAllKhuVuc()
 {
-    $sql = "SELECT * from khuvuc where not thutu = 1";
+    $sql = "SELECT * from khuvuc where not thutu = 1 limit 4";
     return query($sql);
 }
 function getKhuVucSpecial()
@@ -47,10 +51,7 @@ function getAllBaiDang()
     $sql = "SELECT * from baidang";
     return query($sql);
 }
-function getBaiDangLimit(){
-    $sql = "SELECT * from baidang by idsp desc limit 8";
-    return query($sql);
-}
+
 function getAllDanhMuc1()
 {
     $sql = "SELECT * from danhmuc where loai = 1";
@@ -61,7 +62,17 @@ function getAllDanhMuc2()
     $sql = "SELECT * from danhmuc where loai = 0";
     return query($sql);
 }
-
+function getBaiDangTheoND($id, $page_num, $page_size)
+{
+    $start_row = ($page_num - 1) * $page_size;
+    $sql = "SELECT * FROM baidang where idnguoiban = '$id'" . "ORDER BY idsp desc limit $start_row, $page_size";
+    return query($sql);
+}
+function demBaiDangTheoND($idnguoiban)
+{
+    $sql = "SELECT count(*) as sodong from baidang where idnguoiban = '$idnguoiban'";
+    return queryOne($sql)['sodong'];
+}
 function getBaiDangTheoDM($id, $page_num, $page_size)
 {
     $start_row = ($page_num - 1) * $page_size;
@@ -114,8 +125,33 @@ function getTenKhuVuc($id)
     $sql = "SELECT tenkhuvuc from khuvuc where idkhuvuc = '$id' ";
     return queryOne($sql)['tenkhuvuc'];
 }
-function demsoBaiDangTheoKV($id){
+function demsoBaiDangTheoKV($id)
+{
     $sql = "SELECT COUNT(idsp) as soluong from baidang where idkhuvuc = '$id'";
     return queryOne($sql)['soluong'];
 }
-
+function demsoBinhLuanTheoTB($id)
+{
+    $sql = "SELECT COUNT(idbl) as sobl from binhluan where idtb = '$id'";
+    return queryOne($sql)['sobl'];
+}
+function getBaiVietById($id)
+{
+    $sql = "SELECT * FROM baidang WHERE idsp = '$id'";
+    return queryOne($sql);
+}
+function getBaiVietByIDND($id)
+{
+    $sql = "SELECT idnguoiban FROM baidang WHERE idsp = '$id'";
+    return queryOne($sql)['idnguoiban'];
+}
+function kiemTraNguoiDung($tendangnhap)
+{
+    $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap'";
+    return queryOne($sql);
+}
+function getNguoiDungByID($id)
+{
+    $sql = "SELECT * from taikhoan where id='$id'";
+    return queryOne($sql);
+}

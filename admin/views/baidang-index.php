@@ -17,8 +17,8 @@
         <div class="col-12 p-3 shadow-sm bg-white rounded">
             <h5 class="mb-3 font-weight-bold">Danh Sách Bài Đăng </h5>
             <?php if (isset($message) && $message != "") {
-            echo $message;
-        } ?>
+                echo $message;
+            } ?>
             <table class="table-tb-nd text-nowrap" style="width:100%">
                 <thead>
                     <tr>
@@ -34,49 +34,69 @@
                 </thead>
                 <tbody>
                     <?php
-                        foreach($sanpham as $row => $sanpham){
-                            $stt = $row + 1;
-                            $ten = $sanpham['tensp'];
-                            $id = $sanpham['idsp'];
-                            $nguoidang = getNameNguoiDung($sanpham['idnguoiban'])['hoten'];
-                            $khuvuc = getNameKhuVuc($sanpham['idkhuvuc'])['tenkhuvuc'];
-                            $danhmuc = getNameDanhMuc($sanpham['iddm'])['tendm'];
-                            $dientich = $sanpham['dientich'];
-                            $phongngu = $sanpham['phongngu'];
-                            $noithat = $sanpham['noithat'];
-                            $hinh = $sanpham['hinh'];
-                            $gia = $sanpham['gia'];
-                            $mota = $sanpham['mota'];
-                            $noibat = $sanpham['noibat'];
-                            $anhien = $sanpham['anhien'];
-                            $diachi = $sanpham['diadiem'];
-                            if($anhien == 1) $anhien = '<span class="text-primary" style="font-weight: bold;">Hiển thị</span>' ; else $anhien = '<span class="text-danger" style="font-weight: bold;">Ẩn</span>';
-                            if($noibat == 1) $noibat = "checked" ; else $noibat = "";
-                            $linkedit = "?ctrl=baidang&act=edit&id=".$id;
-                            $linkdel = "?ctrl=baidang&act=delete&id=".$id;
+                    foreach ($sanpham as $row => $sanpham) {
+                        $stt = $row + 1;
+                        $ten = $sanpham['tensp'];
+                        $id = $sanpham['idsp'];
+                        $nguoidang = getNameNguoiDung($sanpham['idnguoiban'])['hoten'];
+                        $khuvuc = getNameKhuVuc($sanpham['idkhuvuc'])['tenkhuvuc'];
+                        $danhmuc = getNameDanhMuc($sanpham['iddm'])['tendm'];
+                        $dientich = $sanpham['dientich'];
+                        $phongngu = $sanpham['phongngu'];
+                        $noithat = $sanpham['noithat'];
+                        $hinh = $sanpham['hinh'];
+                        $hinh2 = $sanpham['hinh2'];
+                        $hinh3 = $sanpham['hinh3'];
+                        $hinh4 = $sanpham['hinh4'];
+                        $hinh5 = $sanpham['hinh5'];
+                        $hinh6 = $sanpham['hinh6'];
+                        $gia = $sanpham['gia'];
+                        $mota = $sanpham['mota'];
+                        $noibat = $sanpham['noibat'];
+                        $anhien = $sanpham['anhien'];
+                        $diachi = $sanpham['diadiem'];
+                        if ($anhien == 1) $anhien = '<span class="text-primary" style="font-weight: bold;">Hiển thị</span>';
+                        else $anhien = '<span class="text-danger" style="font-weight: bold;">Ẩn</span>';
+                        if ($noibat == 1) $noibat = "checked";
+                        else $noibat = "";
+                        $linkedit = "?ctrl=baidang&act=edit&id=" . $id;
+                        $linkdel = "?ctrl=baidang&act=delete&id=" . $id;
                     ?>
-                    <tr>
-                        <th scope="col"><?=$stt?></th>
-                        <td>
-                            <span class="text-secondary font-weight-bold">Tên bài viết:</span> <?=$ten?><br>
-                            <span class="text-secondary font-weight-bold">Người đăng:</span> <?=$nguoidang?><br>
-                            <span class="text-secondary font-weight-bold">Danh mục:</span> <?=$danhmuc?><br>
-                            <span class="text-secondary font-weight-bold">Khu vực:</span> <?=$khuvuc?><br>
-                            <span class="text-secondary font-weight-bold">Diện tích:</span> <?=$dientich?><br>
-                            <span class="text-secondary font-weight-bold">Phòng ngủ:</span> <?=$phongngu?><br>
-                            <span class="text-secondary font-weight-bold">Nội thất:</span> <?=$noithat?><br>
-                            <span class="text-secondary font-weight-bold">Trạng thái:</span> <?=$anhien?><br>
-                            <span class="text-secondary font-weight-bold">Địa chỉ:</span> <?=$diachi?>
-                            
-                        </td>
-                        <td><img src="../upload/<?=$hinh?>" alt="" onerror="this.src ='../upload/message.jpg'"></td>
-                        <td class="text-center"><?=number_format($gia, 0, ',', '.')?>đ</td>
-                        <td class="align-middle text-center"><input type="checkbox" name="" id="" <?=$noibat?>></td>
-                        <td><?=$mota?></td>
-                        <td class="align-middle"><a href="<?=$linkedit?>"><i class='far fa-edit' style='font-size:20px'></i></a></td>
-                        <td class="align-middle"><a onclick="return confirm('Bạn có muốn xóa không?')" href="<?=$linkdel?>"><i class="fa fa-trash text-danger" style="font-size:20px"></i></a></td>
-                    </tr>
-                        <?php }?>
+                        <tr>
+                            <th scope="col"><?= $stt ?></th>
+                            <td>
+                                <span class="text-secondary font-weight-bold">Tên bài viết:</span> <?= _substr($ten, 80) ?><br>
+                                <span class="text-secondary font-weight-bold">Người đăng:</span> <?= $nguoidang ?><br>
+                                <span class="text-secondary font-weight-bold">Danh mục:</span> <?= $danhmuc ?><br>
+                                <span class="text-secondary font-weight-bold">Khu vực:</span> <?= $khuvuc ?><br>
+                                <span class="text-secondary font-weight-bold">Diện tích:</span> <?= $dientich ?><br>
+                                <span class="text-secondary font-weight-bold">Phòng ngủ:</span> <?= $phongngu ?><br>
+                                <span class="text-secondary font-weight-bold">Nội thất:</span> <?= $noithat ?><br>
+                                <span class="text-secondary font-weight-bold">Trạng thái:</span> <?= $anhien ?><br>
+                                <span class="text-secondary font-weight-bold">Địa chỉ:</span> <?= $diachi ?>
+
+                            </td>
+                            <td class="text-wrap">
+                                <em>Hình 1</em>
+                                <img src="../upload/<?= $hinh ?>" alt="" onerror="this.src ='../upload/message.jpg'">
+                                <em>Hình 2</em>
+                                <img src="../upload/<?= $hinh2 ?>" alt="" onerror="this.src ='../upload/message.jpg'">
+                                <em>Hình 3</em>
+                                <img src="../upload/<?= $hinh3 ?>" alt="" onerror="this.src ='../upload/message.jpg'">
+                                <em>Hình 4</em>
+                                <img src="../upload/<?= $hinh4 ?>" alt="" onerror="this.src ='../upload/message.jpg'">
+                                <em>Hình 5</em>
+                                <img src="../upload/<?= $hinh5 ?>" alt="" onerror="this.src ='../upload/message.jpg'">
+                                <em>Hình 6</em>
+                                <img src="../upload/<?= $hinh6 ?>" alt="" onerror="this.src ='../upload/message.jpg'">
+                            </td>
+                            <td class="text-center"><?= number_format($gia, 0, ',', '.') ?>đ</td>
+                            <td class="align-middle text-center"><input type="checkbox" name="" id="" <?= $noibat ?>></td>
+                            <td class="text-wrap"><?= _substr($mota, 50) ?></td>
+                            <td class="align-middle"><a href="<?= $linkedit ?>"><i class='far fa-edit' style='font-size:20px'></i></a></td>
+                            <td class="align-middle"><a onclick="return confirm('Bạn có muốn xóa không?')" href="<?= $linkdel ?>"><i class="fa fa-trash text-danger" style="font-size:20px"></i></a></td>
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>

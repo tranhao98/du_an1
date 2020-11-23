@@ -43,15 +43,17 @@ switch ($act) {
     $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
     $gioitinh = $_POST["gioitinh"];
     $tendangnhap = $_POST["tendangnhap"];
-    $matkhau = $_POST["matkhau"];
+    $matkhau = password_hash($_POST["matkhau"],PASSWORD_DEFAULT);
     $sodienthoai = $_POST["sodienthoai"];
     $diachi = $_POST["diachi"];
     if (isset($_POST['vaitro']) == true) $vaitro = 1;
     else $vaitro = 0;
     $anhien = $_POST["anhien"];
     $hoten = trim(strip_tags($hoten));
+    $sodienthoai = trim(strip_tags($sodienthoai));
     $tendangnhap = trim(strip_tags($tendangnhap));
     $matkhau = trim(strip_tags($matkhau));
+    $diachi = trim(strip_tags($diachi));
     addNewNguoiDung($hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã thêm thành công!
@@ -73,18 +75,21 @@ switch ($act) {
     $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
     $gioitinh = $_POST["gioitinh"];
     $tendangnhap = $_POST["tendangnhap"];
-    $matkhau = $_POST["matkhau"];
+    $matkhau = password_hash($_POST["matkhau"],PASSWORD_DEFAULT);
     $sodienthoai = $_POST["sodienthoai"];
     $diachi = $_POST["diachi"];
     if (isset($_POST['vaitro']) == true) $vaitro = 1;
     else $vaitro = 0;
     $anhien = $_POST["anhien"];
     settype($id, "int");
+    $sodienthoai = trim(strip_tags($sodienthoai));
+    $tendangnhap = trim(strip_tags($tendangnhap));
+    $matkhau = trim(strip_tags($matkhau));
     $hoten = trim(strip_tags($hoten));
     $diachi = trim(strip_tags($diachi));
 
     updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
-
+    
     
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã cập nhật thành công!

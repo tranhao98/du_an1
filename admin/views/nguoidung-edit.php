@@ -48,9 +48,12 @@
                 </div>
                 <div class="form-group col-3">
                     <label class="mb-3" for="">Vai Trò</label> <br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="vaitro" id="vaitro">
-                        <label class="form-check-label" for="vaitro">Quản trị viên</label>
+                    <div class="custom-control custom-checkbox">
+                        <?php
+                        if ($row['vaitro'] == 1) $vaitro = 'checked';
+                        ?>
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" name="noibat" value="1" <?php if (isset($vaitro)) echo $vaitro ?>>
+                        <label class="custom-control-label" for="customCheck1">Quản trị viên</label>
                     </div>
                 </div>
             </div>
@@ -104,11 +107,11 @@
                 </div>
                 <div class="form-group col-3">
                     <label for="">Địa Chỉ</label>
-                    <input type="text" name="diachi" id="" class="form-control" value="<?= $row['diachi'] ?>" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId">
+                    <input type="text" name="diachi" id="diachi" class="form-control" value="<?= $row['diachi'] ?>" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId">
                 </div>
             </div>
             <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
-            <input name="id" value="<?= $row['id'] ?>" type="hidden">
+            <input name="id" value="<?= $_GET['id'] ?>" type="hidden">
             <button type="submit" class="btn btn-danger">Sửa</button>
         </form>
     </div>
