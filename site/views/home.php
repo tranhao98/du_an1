@@ -130,7 +130,7 @@
                 <?php foreach ($dskvspecial as $kv) { ?>
                 <div class="single_location special">
                     <div class="thumb">
-                        <img src="views/images/banner.png" alt="">
+                        <img src="../upload/khuvuc-hcm.jpg" alt="">
                     </div>
                     <div class="content">
                         <p><?=$kv['tenkhuvuc']?><a href="index.php?ctrl=home&act=cat-khuvuc&id=<?=$kv['idkhuvuc']?>"><?= demsoBaiDangTheoKV($kv['idkhuvuc'])?> bài đăng</a></p>
