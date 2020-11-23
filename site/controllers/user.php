@@ -61,7 +61,7 @@ switch ($act) {
         settype($page_num, "int");
         if ($page_num <= 0) $page_num = 1;
 
-        $page_size = PAGE_SIZE;
+        $page_size = 4;
         $dsnguoidung = getBaiDangTheoND($id, $page_num, $page_size);
         $total_rows = demBaiDangTheoND($id);
         $baseurl = SITE_URL . "/index.php?ctrl=user&act=myarticle&id={$id}";
