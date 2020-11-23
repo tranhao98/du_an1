@@ -6,7 +6,6 @@ require_once "models/home.php"; //nạp model để có các hàm tương tác d
 
 $dsdm1 = getAllDanhMuc1();
 $dsdm2 = getAllDanhMuc2();
-$dsbd = getAllBaiDang();
 $dskv = getAllKhuVuc();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
