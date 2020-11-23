@@ -59,7 +59,7 @@ switch ($act) {
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
         settype($id, "int");
-        
+
         $rowbaidang = getBaiVietById($id);
         $view = "views/baidang.php";
         require_once "layout.php";
@@ -78,9 +78,19 @@ switch ($act) {
         $view = "views/xemthemtintuc.php";
         require_once "layout.php";
         break;
-    case "login":
-        $view = "views/dangnhap.php";
-        require_once "layout.php";
-    break;
+    case "timkiem":
+        $thongbao = "";
+        if (isset($_GET['ketqua'])) {
 
+            $keyword = $_POST['tukhoa'];
+            if ($keyword == "") {
+                $thongbao =  "<div class=\"alert alert-danger text-center\" role=\"alert\">
+                Bạn chưa nhập từ khóa!
+              </div>";
+            } else
+                $dstimkiem = SearchDiaDiem($keyword);
+        }
+
+        $view = "views/timkiem.php";
+        require_once "layout.php";
 }

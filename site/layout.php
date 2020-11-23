@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="views/css/thongbao.css">
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/owl.css">
+    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="https://png.pngtree.com/png-clipart/20200701/original/pngtree-family-stay-at-home-illustration-to-prevent-covid-19-plague-vector-png-image_5344919.jpg" />
@@ -80,7 +81,7 @@
                                     <a class="dropdown-item" href="#">Đăng bài</a>
                                     <a class="dropdown-item" href="#">Đổi mật khẩu</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=infouser">Xem thông tin tài khoản</a>
-                                    <a class="dropdown-item" href="#">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow';></i></a>
+                                    <a class="dropdown-item" href="#">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow' ;></i></a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="?ctrl=user&act=logout">Đăng xuất</a>
                                 </div>
@@ -88,11 +89,16 @@
                         } else {
                             ?>
                                 <li class="nav-item"><a data-toggle="modal" data-target="#staticBackdrop2" class="nav-link text-danger" href="">Đăng nhập</a>
-
                                 </li>
                             <?php } ?>
+
                     </ul>
                 </div>
+            </div>
+            <div class="search_icon">
+                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                    <i class="fa fa-search"></i>
+                </a>
             </div>
         </nav>
     </header>
@@ -186,6 +192,19 @@
         </div>
     </div>
     <?php require_once "views/dangnhap.php"; ?>
+    <!-- Modal Tìm kiếm-->
+    <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="serch_form">
+                    <form action="index.php?ctrl=home&act=timkiem&ketqua" method="post">
+                        <input type="text" class="input_search" name="tukhoa" placeholder="Nhập từ khóa">
+                        <input type="submit" class="button" value="Tìm kiếm">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

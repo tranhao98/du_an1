@@ -150,3 +150,12 @@ function getNguoiDungByID($id)
     $sql = "SELECT * from taikhoan where id='$id'";
     return queryOne($sql);
 }
+function SearchDiaDiem($keyword)
+{
+    $sql = "SELECT * from baidang where 1";
+    if ($keyword != "") {
+        $sql .= " AND diadiem like '%" . $keyword . "%'";
+    }
+
+    return query($sql);
+}
