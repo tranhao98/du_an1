@@ -77,6 +77,7 @@
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                                    <a class="dropdown-item" href="#">Đăng bài</a>
                                     <a class="dropdown-item" href="#">Đổi mật khẩu</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=infouser">Xem thông tin tài khoản</a>
                                     <a class="dropdown-item" href="#">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow';></i></a>
