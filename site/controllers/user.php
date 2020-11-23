@@ -6,7 +6,11 @@ require_once "models/home.php"; //nạp model để có các hàm tương tác d
 
 $dsdm1 = getAllDanhMuc1();
 $dsdm2 = getAllDanhMuc2();
+$dsbd = getAllBaiDang();
 $dskv = getAllKhuVuc();
+$dskvspecial = getKhuVucSpecial();
+$dstbnew = getThongBaoNew();
+$dstball = getThongBaoAll();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "login":
@@ -26,9 +30,14 @@ switch ($act) {
                 $_SESSION['tendangnnhap'] = $check['tendangnhap'];
                 if ($check['vaitro'] == 1) header("location: ../admin/index.php");
                 else header("location: index.php");
-            } else $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
+            } else {
+                $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
+                $slider = "views/slider.php";
+                $view = "views/home.php";
+                require_once "layout.php";
+            }
         } else {
-            
+
             $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
         }
         break;
