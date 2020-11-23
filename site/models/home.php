@@ -156,6 +156,5 @@ function SearchDiaDiem($keyword)
     if ($keyword != "") {
         $sql .= " AND diadiem like '%" . $keyword . "%'";
     }
-
     return query($sql);
 }
