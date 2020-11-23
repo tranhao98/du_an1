@@ -140,11 +140,6 @@ function getBaiVietById($id)
     $sql = "SELECT * FROM baidang WHERE idsp = '$id'";
     return queryOne($sql);
 }
-function getBaiVietByIDND($id)
-{
-    $sql = "SELECT idnguoiban FROM baidang WHERE idsp = '$id'";
-    return queryOne($sql)['idnguoiban'];
-}
 function kiemTraNguoiDung($tendangnhap)
 {
     $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap'";
