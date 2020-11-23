@@ -36,6 +36,7 @@
                         <p class="tbct-nguoidang"><?php echo getNameNguoiDung($rowidtb['idnguoidang'])['hoten'];?></p><br>
                         <p class="tbct-nguontt">VnExpress</p>
                     </div>
+                    <!-- SOCIAL NETWORK -->
                     <div class="card-share">
                         <div class="socials-share">
                             <a class="bg-facebook" href="" target="_blank"><span class="fa fa-facebook"></span> Share</a>
@@ -44,6 +45,11 @@
                             <a class="bg-pinterest" href="" target="_blank"><span class="fa fa-pinterest"></span> Pin</a>
                             <a class="bg-email" href="" target="_blank"><span class="fa fa-envelope"></span> Gmail</a>
                         </div>
+                    </div>
+                    <!-- BÌNH LUẬN -->
+                    <div class="card-comment">
+                        
+
                     </div>
                 </div>
                 <div class="thongbao-phai mt-200">
@@ -60,6 +66,9 @@
                             <li class="justify t-bold text-blue"><a href="">Celesta Rise đưa phong cách nghỉ dưỡng vào không gian sống</a></li>
                             <li class="justify t-bold text-blue"><a href="">Long An chi 13.000 tỷ đồng xây dựng 8 công trình giao thông quan trọng</a></li>
                             <li class="justify t-bold text-blue"><a href="">The Residence Phú Quốc mở bán biệt thự 2 mặt tiền tại Bãi Trường</a></li>
+                        </div>
+                        <div class="tintuckhac mt-20">
+                            <li class="list-group-item gifchitiet"><img src="../upload/tintuc1.gif" alt=""></li>
                         </div>
                     </div>
                 </div>
