@@ -31,7 +31,6 @@ switch ($act) {
             
             $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
         }
-        header("location: index.php");
         break;
     case "logout":
         if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
