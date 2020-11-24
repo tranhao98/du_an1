@@ -14,11 +14,14 @@
         </div>
     </div>
 </section>
+<?php if (isset($thongbao) && $thongbao != "") {
+    echo $thongbao;
+} ?>
 <?php
 if ($total_rows == 0) {
 ?>
-    <div class="alert alert-danger" role="alert">
-        Không tìm thấy bài viết nào!
+    <div class="alert alert-danger text-center" role="alert">
+        Không tìm thấy bài viết nào với từ khóa "<?=$key?>"!
     </div>
 <?php
 }

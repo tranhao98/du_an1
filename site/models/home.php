@@ -153,7 +153,10 @@ function getNguoiDungByID($id)
 function getBaiDangTheoTuKhoa($key, $page_num, $page_size)
 {
     $start_row = ($page_num - 1) * $page_size;
-    $sql = "SELECT * FROM baidang WHERE diadiem like '%" . $key . "%'" . "order by idsp desc limit $start_row, $page_size";
+    $sql = "SELECT * FROM baidang WHERE 1";
+    if ($key != "") {
+        $sql .= " AND diadiem like '%" . $key . "%'" . "order by idsp desc limit $start_row, $page_size";
+    }
     return query($sql);
 }
 function demBaiDangTheoTuKhoa($key)
