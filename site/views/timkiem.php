@@ -5,8 +5,8 @@
                 <div class="cta-content">
                     <br>
                     <br>
-                    <h2>Kết quả tìm kiếm từ khóa<em><?php if($keyword != "") echo '<span class="text-lowercase"> "' . $keyword . '" </span>';
-                                                            else echo '<span class="text-lowercase"> "từ khóa" </span>';
+                    <h2>Kết quả tìm kiếm từ khóa<em><?php if ($key != "") echo '<span class="text-lowercase"> "' . $key . '" </span>';
+                                                    else echo '<span class="text-lowercase"> "từ khóa" </span>';
                                                     ?></em></h2>
 
                 </div>
@@ -14,9 +14,15 @@
         </div>
     </div>
 </section>
-<?php if (isset($thongbao) && $thongbao != "") {
-            echo $thongbao;
-        } ?>
+<?php
+if ($total_rows == 0) {
+?>
+    <div class="alert alert-danger" role="alert">
+        Không tìm thấy bài viết nào!
+    </div>
+<?php
+}
+?>
 <section class="section" id="trainers">
     <div class="container">
         <!-- <br>
@@ -52,7 +58,7 @@
 
         <br>
 
-        <!-- <div class="pagination_container"> <?= $links; ?> </div> -->
+        <div class="pagination_container"> <?= $links; ?> </div>
 
     </div>
 </section>

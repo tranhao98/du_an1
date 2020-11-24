@@ -79,17 +79,18 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "timkiem":
-        $thongbao = "";
-        if (isset($_GET['ketqua'])) {
+        $key = trim(strip_tags($_POST['tukhoa']));
+        (isset($_GET['tukhoa'])) ? $key = $_GET['tukhoa'] : "";
+        $page_num = 1;
+        $page_size = PAGE_SIZE;
+        $total_rows = demBaiDangTheoTuKhoa($key);
+        if (isset($_GET['page_num'])) $page_num = $_GET['page_num'];
+        settype($page_num, 'int');
 
-            $keyword = $_POST['tukhoa'];
-            if ($keyword == "") {
-                $thongbao =  "<div class=\"alert alert-danger text-center\" role=\"alert\">
-                Bạn chưa nhập từ khóa!
-              </div>";
-            } else
-                $dstimkiem = SearchDiaDiem($keyword);
-        }
+        ($page_num > ($total_rows / $page_size)) ? $page_num = ceil($total_rows / $page_size) : "";
+        $baseurl = "index.php?ctrl=home&act=timkiem&tukhoa={$key}";
+        $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
+        $dstimkiem = getBaiDangTheoTuKhoa($key, $page_num, $page_size);
 
         $view = "views/timkiem.php";
         require_once "layout.php";
