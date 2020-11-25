@@ -9,6 +9,7 @@ $dskv = getAllKhuVuc();
 $dskvspecial = getKhuVucSpecial();
 $dstbnew = getThongBaoNew();
 $dstball = getThongBaoAll();
+
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "index":
@@ -18,6 +19,26 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "cat-danhmuc":
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            if ($_POST['gia'] == "") {
+                $error = "Bạn cần chọn giá!";
+            } else {
+                $gia = $_POST['gia'];
+            }
+            if ($_POST['dientich'] == "") {
+                $error = "Bạn cần chọn diện tích!";
+            } else {
+                $dientich = $_POST['dientich'];
+            }
+            if ($_POST['loaibds'] == "") {
+                $error = "Bạn cần chọn loại!";
+            } else {
+                $loaibds = $_POST['loaibds'];
+            }
+
+            $dsdanhmucsearch = getBaiDangTheoLoc($gia, $dientich, $loaibds);
+        }
+
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
 
@@ -37,6 +58,12 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "cat-khuvuc":
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $gia = $_POST['gia'];
+            $dientich = $_POST['dientich'];
+            $loaibds = $_POST['loaibds'];
+            $dsdanhmucsearch = getBaiDangTheoLoc($gia, $dientich, $loaibds);
+        }
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
 
@@ -79,6 +106,13 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "timkiem":
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $gia = $_POST['gia'];
+            $dientich = $_POST['dientich'];
+            $loaibds = $_POST['loaibds'];
+            $dsdanhmucsearch = getBaiDangTheoLoc($gia, $dientich, $loaibds);
+        }
+
         $key = trim(strip_tags($_POST['tukhoa']));
         (isset($_GET['tukhoa'])) ? $key = $_GET['tukhoa'] : "";
         $page_num = 1;
