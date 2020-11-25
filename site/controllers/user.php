@@ -8,6 +8,9 @@ $dsdm1 = getAllDanhMuc1();
 $dsdm2 = getAllDanhMuc2();
 $dsbd = getAllBaiDang();
 $dskv = getAllKhuVuc();
+$dskvspecial = getKhuVucSpecial();
+$dstbnew = getThongBaoNew();
+$dstball = getThongBaoAll();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "login":
@@ -27,8 +30,14 @@ switch ($act) {
                 $_SESSION['tendangnnhap'] = $check['tendangnhap'];
                 if ($check['vaitro'] == 1) header("location: ../admin/index.php");
                 else header("location: index.php");
-            } else $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
+            } else {
+                $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
+                $slider = "views/slider.php";
+                $view = "views/home.php";
+                require_once "layout.php";
+            }
         } else {
+
             $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
         }
         break;
@@ -61,7 +70,7 @@ switch ($act) {
         settype($page_num, "int");
         if ($page_num <= 0) $page_num = 1;
 
-        $page_size = PAGE_SIZE;
+        $page_size = 4;
         $dsnguoidung = getBaiDangTheoND($id, $page_num, $page_size);
         $total_rows = demBaiDangTheoND($id);
         $baseurl = SITE_URL . "/index.php?ctrl=user&act=myarticle&id={$id}";

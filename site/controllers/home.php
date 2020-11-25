@@ -59,7 +59,7 @@ switch ($act) {
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
         settype($id, "int");
-        
+
         $rowbaidang = getBaiVietById($id);
         $view = "views/baidang.php";
         require_once "layout.php";
@@ -78,9 +78,23 @@ switch ($act) {
         $view = "views/xemthemtintuc.php";
         require_once "layout.php";
         break;
-    case "login":
-        $view = "views/dangnhap.php";
+    case "timkiem":
+        $key = trim(strip_tags($_POST['tukhoa']));
+        (isset($_GET['tukhoa'])) ? $key = $_GET['tukhoa'] : "";
+        $page_num = 1;
+        if (isset($_GET['page_num'])) $page_num = $_GET['page_num'];
+        settype($page_num, 'int');
+        if ($page_num <= 0) $page_num = 1;
+        $page_size = PAGE_SIZE;
+        if ($key != "")
+            $dstimkiem = getBaiDangTheoTuKhoa($key, $page_num, $page_size);
+        else
+            $thongbao = '<div class="alert alert-danger text-center" role="alert">
+                            Bạn chưa nhập từ khóa!
+                        </div>';
+        $total_rows = demBaiDangTheoTuKhoa($key);
+        $baseurl = "index.php?ctrl=home&act=timkiem&tukhoa={$key}";
+        $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
+        $view = "views/timkiem.php";
         require_once "layout.php";
-    break;
-
 }

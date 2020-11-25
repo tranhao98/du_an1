@@ -27,18 +27,18 @@
                     ?>
                         <article id='tabs-<?= $dem++ ?>'>
                             <?php
-                                if($row['hinh'] == NULL)  echo "<img src='../../upload/1.png'>";
-                                else  echo "<img style='height: 400px; object-fit:cover; width:100%;' src='../upload/".$row['hinh']."' ><br><br>";
+                            if ($row['hinh'] == NULL)  echo "<img src='../../upload/1.png'>";
+                            else  echo "<img style='height: 400px; object-fit:cover; width:100%;' src='../upload/" . $row['hinh'] . "' ><br><br>";
                             ?>
-                            <h4><?=$row['tieude']?></h4>
+                            <h4><?= $row['tieude'] ?></h4>
 
-                            <p><i class="fa fa-user"></i> <?php echo getNameNguoiDung($row['idnguoidang'])['hoten'];?> &nbsp;|&nbsp; <i class="fa fa-calendar"></i> <?=$row['ngaydang']?> &nbsp;|&nbsp; <i class="fa fa-comments"></i> <?=demsoBinhLuanTheoTB($row['idtb'])?> bình luận</p>
+                            <p><i class="fa fa-user"></i> <?php echo getNameNguoiDung($row['idnguoidang'])['hoten']; ?> &nbsp;|&nbsp; <i class="fa fa-calendar"></i> <?= $row['ngaydang'] ?> &nbsp;|&nbsp; <i class="fa fa-comments"></i> <?= demsoBinhLuanTheoTB($row['idtb']) ?> bình luận</p>
 
-                            <p><?=_substr($row['noidung'], 250)?></p>
+                            <p><?= _substr($row['noidung'], 250) ?></p>
                             <div class="main-button">
-                                <a href="?act=chitietthongbao&idtb=<?=$row['idtb']?>">Đọc tiếp</a>
+                                <a href="?act=chitietthongbao&idtb=<?= $row['idtb'] ?>">Đọc tiếp</a>
                             </div>
-                        </article> 
+                        </article>
                     <?php } ?>
                 </section>
             </div>
@@ -75,21 +75,21 @@
                         <div class="box-baidang">
                             <div class="trainer-item">
                                 <div class="image-thumb">
-                                    <a href="?act=baidang&id=<?=$bd['idsp']?>"><img src="../upload/<?= $bd['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" height="200px"></a>
+                                    <a href="?act=baidang&id=<?= $bd['idsp'] ?>"><img src="../upload/<?= $bd['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" height="200px"></a>
                                 </div>
                                 <div class="down-content">
                                     <span>
                                         <?= number_format($bd['gia'], 0, ",", "."); ?><?php if (strlen(strstr(strtolower($bd['tensp']), "cho thuê")) > 0) echo '/tháng';
                                                                                         else echo '/m<sup>2</sup>'; ?> - <?= $bd['dientich'] ?> m<sup>2</sup>
                                     </span>
-                                    <a href="?act=baidang&id=<?=$bd['idsp']?>">
+                                    <a href="?act=baidang&id=<?= $bd['idsp'] ?>">
                                         <h4><?= _substr($bd['tensp'], 55) ?></h4>
                                     </a>
 
                                     <p><?= $bd['diadiem'] ?></p>
 
                                     <ul class="social-icons">
-                                        <li><a href="?act=baidang&id=<?=$bd['idsp']?>">+ Xem thêm</a></li>
+                                        <li><a href="?act=baidang&id=<?= $bd['idsp'] ?>">+ Xem thêm</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -128,14 +128,14 @@
         <div class="row">
             <div class="col-6">
                 <?php foreach ($dskvspecial as $kv) { ?>
-                <div class="single_location special">
-                    <div class="thumb">
-                        <img src="views/images/banner.png" alt="">
+                    <div class="single_location special">
+                        <div class="thumb">
+                            <img src="views/images/banner.png" alt="">
+                        </div>
+                        <div class="content">
+                            <p><?= $kv['tenkhuvuc'] ?><a href="index.php?ctrl=home&act=cat-khuvuc&id=<?= $kv['idkhuvuc'] ?>"><?= demsoBaiDangTheoKV($kv['idkhuvuc']) ?> bài đăng</a></p>
+                        </div>
                     </div>
-                    <div class="content">
-                        <p><?=$kv['tenkhuvuc']?><a href="index.php?ctrl=home&act=cat-khuvuc&id=<?=$kv['idkhuvuc']?>"><?= demsoBaiDangTheoKV($kv['idkhuvuc'])?> bài đăng</a></p>
-                    </div>
-                </div>
                 <?php } ?>
             </div>
             <div class="col-6">
@@ -147,7 +147,7 @@
                                     <img src="views/images/banner.png" alt="">
                                 </div>
                                 <div class="content">
-                                    <p><?= $kv['tenkhuvuc'] ?> <a href="index.php?ctrl=home&act=cat-khuvuc&id=<?=$kv['idkhuvuc']?>"><?= demsoBaiDangTheoKV($kv['idkhuvuc'])?> bài đăng</a></p>
+                                    <p><?= $kv['tenkhuvuc'] ?> <a href="index.php?ctrl=home&act=cat-khuvuc&id=<?= $kv['idkhuvuc'] ?>"><?= demsoBaiDangTheoKV($kv['idkhuvuc']) ?> bài đăng</a></p>
                                 </div>
                             </div>
                         </div>

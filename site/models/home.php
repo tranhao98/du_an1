@@ -140,11 +140,6 @@ function getBaiVietById($id)
     $sql = "SELECT * FROM baidang WHERE idsp = '$id'";
     return queryOne($sql);
 }
-function getBaiVietByIDND($id)
-{
-    $sql = "SELECT idnguoiban FROM baidang WHERE idsp = '$id'";
-    return queryOne($sql)['idnguoiban'];
-}
 function kiemTraNguoiDung($tendangnhap)
 {
     $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap'";
@@ -154,4 +149,18 @@ function getNguoiDungByID($id)
 {
     $sql = "SELECT * from taikhoan where id='$id'";
     return queryOne($sql);
+}
+function getBaiDangTheoTuKhoa($key, $page_num, $page_size)
+{
+    $start_row = ($page_num - 1) * $page_size;
+    $sql = "SELECT * FROM baidang WHERE 1";
+    if ($key != "") {
+        $sql .= " AND diadiem like '%" . $key . "%'" . "order by idsp desc limit $start_row, $page_size";
+    }
+    return query($sql);
+}
+function demBaiDangTheoTuKhoa($key)
+{
+    $sql = "SELECT count(*) as sodong FROM baidang WHERE diadiem like '%" . $key . "%'";
+    return queryOne($sql)['sodong'];
 }

@@ -121,6 +121,9 @@
     float: left;
 }
 /* ///// CSS Class ///// */
+.tintuckhac .gifchitiet{
+    padding: 0px;
+}
 
 .mt-100{
     margin-top: 100px;
