@@ -1,5 +1,5 @@
 
-    <div class="container">
+    <div class="container padd0">
         <div class="row">
             <div class="card-thongbao">
                 <div class="thongbao-trai mt-100">
