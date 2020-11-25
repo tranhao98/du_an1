@@ -28,9 +28,59 @@ if ($total_rows == 0) {
 ?>
 <section class="section" id="trainers">
     <div class="container">
-        <!-- <br>
-        <br> -->
+        <br>
+        <br>
+        <div class="contact-form">
+        <form action="#" id="contact">
+        <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label>Lọc theo khoảng giá</label>
 
+                            <select>
+                                <option value="">All</option>
+                                <option value="For Rent">500-800 triệu</option>
+                                <option value="For Sale">800 triệu - 1 tỷ</option>
+                                <option value="For Sale">1 tỷ - 2 tỷ</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label>Lọc theo diện tích</label>
+
+                            <select>
+                                <option value="">--All --</option>
+                                <option value="">
+                                    <=30 m2</option> <option value="">30 m2 - 50 m2
+                                </option>
+                                <option value="">50 m2 - 80 m2</option>
+                                <option value="">80 m2 - 100 m2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label>Loại nhà đất</label>
+
+                            <select>
+                                <option value="">-- All --</option>
+                                <option value="">Căn hộ chung cư</option>
+                                <option value="">Đất nền dự án</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 offset-sm-4">
+                        <div class="main-button text-center">
+                            <a href="#">Tìm kiếm</a>
+                        </div>
+                    </div>
+                </div>
+        </form>
+        </div>
         <div class="row mt-5">
             <?php foreach ($dstimkiem as $row) { ?>
                 <div class="col-lg-4">

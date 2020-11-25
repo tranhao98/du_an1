@@ -66,6 +66,7 @@
                             <a href="#">Tìm kiếm</a>
                         </div>
                     </div>
+                </div>
                     <br>
                     <br>
             </form>

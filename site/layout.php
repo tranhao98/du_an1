@@ -198,7 +198,7 @@
             <div class="modal-content">
                 <div class="serch_form">
                     <form action="index.php?ctrl=home&act=timkiem" method="post">
-                        <input type="text" class="input_search" name="tukhoa" placeholder="Nhập từ khóa">
+                        <input type="text" class="input_search" name="tukhoa" placeholder="Nhập địa điểm cần tìm....">
                         <input type="submit" class="button" value="Tìm kiếm">
                     </form>
                 </div>
