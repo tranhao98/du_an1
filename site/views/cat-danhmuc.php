@@ -5,8 +5,8 @@
                 <div class="cta-content">
                     <br>
                     <br>
-                    <h2>Bất động sản<em> <?php echo getTenDanhMuc($id)?></em></h2>
-                    <p>Bán &nbsp;/&nbsp;BĐS <?php echo getTenDanhMuc($id)?></p>
+                    <h2>Bất động sản<em> <?php echo getTenDanhMuc($id) ?></em></h2>
+                    <p>Bán &nbsp;/&nbsp;BĐS <?php echo getTenDanhMuc($id) ?></p>
                 </div>
             </div>
         </div>
@@ -19,33 +19,36 @@
         <br>
 
         <div class="contact-form">
-            <form action="#" id="contact">
+            <form action="" id="contact" method="POST">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="form-group">
                             <label>Lọc theo khoảng giá</label>
-
-                            <select>
+                            <select name="gia" class="m-0">
                                 <option value="">All</option>
-                                <option value="For Rent">500-800 triệu</option>
-                                <option value="For Sale">800 triệu - 1 tỷ</option>
-                                <option value="For Sale">1 tỷ - 2 tỷ</option>
+                                <option value="100000000 AND 200000000">100 triệu - 200 triệu</option>
+                                <option value="200000000 AND 500000000">200 triệu - 500 triệu</option>
+                                <option value="500000000 AND 1000000000">500 triệu - 1 tỷ</option>
                             </select>
+                            <span class="text-danger"><?php if (isset($error)) echo $error; ?></span>
                         </div>
+
                     </div>
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="form-group">
                             <label>Lọc theo diện tích</label>
 
-                            <select>
+                            <select name="dientich" class="m-0">
                                 <option value="">--All --</option>
-                                <option value="">
-                                    <=30 m2</option> <option value="">30 m2 - 50 m2
+                                <option value="<=30">
+                                    <=30 m2 </option> <option value="30 AND 50">30 m2 - 50 m2
                                 </option>
-                                <option value="">50 m2 - 80 m2</option>
-                                <option value="">80 m2 - 100 m2</option>
+                                <option value="50 AND 70">50 m2 - 70 m2</option>
+                                <option value="70 AND 90">70 m2 - 90 m2</option>
                             </select>
+                            <span class="text-danger">
+                                <?php if (isset($error)) echo $error; ?></span>
                         </div>
                     </div>
 
@@ -53,56 +56,88 @@
                         <div class="form-group">
                             <label>Loại nhà đất</label>
 
-                            <select>
+                            <select name="loaibds" class="m-0">
                                 <option value="">-- All --</option>
-                                <option value="">Căn hộ chung cư</option>
-                                <option value="">Đất nền dự án</option>
+                                <option value="1">Căn hộ chung cư</option>
+                                <option value="2">Đất nền dự án</option>
                             </select>
+                            <span class="text-danger"><?php if (isset($error)) echo $error; ?></span>
                         </div>
                     </div>
 
-                    <div class="col-sm-4 offset-sm-4">
+                    <div class="col-sm-4 offset-sm-4 mt-3">
+
                         <div class="main-button text-center">
-                            <a href="#">Tìm kiếm</a>
+                            <input class="fillter" type="submit" name="search" value="Tìm kiếm">
                         </div>
                     </div>
                 </div>
-                    <br>
-                    <br>
+                <br>
+                <br>
             </form>
         </div>
 
         <div class="row mt-5">
-            <?php foreach ($dsdanhmuc as $row) { ?>
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <a href="?act=baidang&id=<?= $row['idsp'] ?>"><img src="../upload/<?= $row['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" height="200px"></a>
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <?= number_format($row['gia'], 0, ",", "."); ?><?php if (strlen(strstr(strtolower($row['tensp']), "cho thuê")) > 0 ) echo '/tháng'; else echo '/m<sup>2</sup>';?> - <?= $row['dientich'] ?> m<sup>2</sup>
-                            </span>
+            <?php if (isset($_POST['search'])) {
+                foreach ($dsdanhmucsearch as $row) { ?>
+                    <div class="col-lg-4">
+                        <div class="trainer-item">
+                            <div class="image-thumb">
+                                <a href="?act=baidang&id=<?= $row['idsp'] ?>"><img src="../upload/<?= $row['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" height="200px"></a>
+                            </div>
+                            <div class="down-content">
+                                <span>
+                                    <?= number_format($row['gia'], 0, ",", "."); ?><?php if (strlen(strstr(strtolower($row['tensp']), "cho thuê")) > 0) echo '/tháng';
+                                                                                    else echo '/m<sup>2</sup>'; ?> - <?= $row['dientich'] ?> m<sup>2</sup>
+                                </span>
 
-                            <a href="?act=baidang&id=<?= $row['idsp'] ?>">
-                                <h4><?= _substr($row['tensp'], 55) ?></h4>
-                            </a>
+                                <a href="?act=baidang&id=<?= $row['idsp'] ?>">
+                                    <h4><?= _substr($row['tensp'], 55) ?></h4>
+                                </a>
 
-                            <p><?= $row['diadiem'] ?></p>
+                                <p><?= $row['diadiem'] ?></p>
 
-                            <ul class="social-icons">
-                                <li><a href="?act=baidang&id=<?= $row['idsp'] ?>">+ Xem thêm</a></li>
-                            </ul>
+                                <ul class="social-icons">
+                                    <li><a href="?act=baidang&id=<?= $row['idsp'] ?>">+ Xem thêm</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php } ?>
+                <?php }
+            } else { ?>
+                <?php foreach ($dsdanhmuc as $row) { ?>
+                    <div class="col-lg-4">
+                        <div class="trainer-item">
+                            <div class="image-thumb">
+                                <a href="?act=baidang&id=<?= $row['idsp'] ?>"><img src="../upload/<?= $row['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" height="200px"></a>
+                            </div>
+                            <div class="down-content">
+                                <span>
+                                    <?= number_format($row['gia'], 0, ",", "."); ?><?php if (strlen(strstr(strtolower($row['tensp']), "cho thuê")) > 0) echo '/tháng';
+                                                                                    else echo '/m<sup>2</sup>'; ?> - <?= $row['dientich'] ?> m<sup>2</sup>
+                                </span>
+
+                                <a href="?act=baidang&id=<?= $row['idsp'] ?>">
+                                    <h4><?= _substr($row['tensp'], 55) ?></h4>
+                                </a>
+
+                                <p><?= $row['diadiem'] ?></p>
+
+                                <ul class="social-icons">
+                                    <li><a href="?act=baidang&id=<?= $row['idsp'] ?>">+ Xem thêm</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            <?php }
+            } ?>
 
         </div>
 
         <br>
-
-        <div class="pagination_container"> <?= $links; ?> </div>
+        <?php if (!isset($_POST['search'])) { ?>
+            <div class="pagination_container"> <?= $links; ?> </div>
+        <?php } ?>
 
     </div>
 </section>

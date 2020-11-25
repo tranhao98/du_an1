@@ -164,3 +164,24 @@ function demBaiDangTheoTuKhoa($key)
     $sql = "SELECT count(*) as sodong FROM baidang WHERE diadiem like '%" . $key . "%'";
     return queryOne($sql)['sodong'];
 }
+function getBaiDangTheoLoc($gia, $dientich, $loaibds)
+{
+    if ($gia != "") {
+        $sql = "SELECT * FROM baidang where gia BETWEEN $gia";
+    }
+    if ($dientich != "") {
+        if ($sql == "") {
+            $sql = "SELECT * FROM baidang where dientich between $dientich";
+        } else {
+            $sql .= " AND dientich between $dientich";
+        }
+    }
+    if ($loaibds != "") {
+        if ($sql == "") {
+            $sql = "SELECT * FROM baidang where iddm = '$loaibds'";
+        } else {
+            $sql .= " AND iddm = '$loaibds'";
+        }
+    }
+    return query($sql);
+}
