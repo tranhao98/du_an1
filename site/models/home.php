@@ -164,23 +164,65 @@ function demBaiDangTheoTuKhoa($key)
     $sql = "SELECT count(*) as sodong FROM baidang WHERE diadiem like '%" . $key . "%'";
     return queryOne($sql)['sodong'];
 }
-function getBaiDangTheoLoc($gia, $dientich, $loaibds)
+function getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $loaibds)
 {
     if ($gia != "") {
-        $sql = "SELECT * FROM baidang where gia BETWEEN $gia";
+        $sql = "SELECT * FROM baidang where gia BETWEEN $gia and iddm = '$id'";
     }
     if ($dientich != "") {
         if ($sql == "") {
-            $sql = "SELECT * FROM baidang where dientich between $dientich";
+            $sql = "SELECT * FROM baidang where dientich between $dientich and iddm = '$id'";
         } else {
             $sql .= " AND dientich between $dientich";
         }
     }
     if ($loaibds != "") {
         if ($sql == "") {
-            $sql = "SELECT * FROM baidang where iddm = '$loaibds'";
+            $sql = "SELECT * FROM baidang where iddm = '$loaibds' and iddm = '$id'";
         } else {
-            $sql .= " AND iddm = '$loaibds'";
+            $sql .= " AND iddm = '$loaibds' and iddm = '$id'";
+        }
+    }
+    return query($sql);
+}
+function getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $loaibds)
+{
+    if ($gia != "") {
+        $sql = "SELECT * FROM baidang where gia BETWEEN $gia and idkhuvuc = '$id'";
+    }
+    if ($dientich != "") {
+        if ($sql == "") {
+            $sql = "SELECT * FROM baidang where dientich between $dientich and idkhuvuc = '$id'";
+        } else {
+            $sql .= " AND dientich between $dientich";
+        }
+    }
+    if ($loaibds != "") {
+        if ($sql == "") {
+            $sql = "SELECT * FROM baidang where iddm = '$loaibds' and idkhuvuc = '$id'";
+        } else {
+            $sql .= " AND iddm = '$loaibds' and idkhuvuc = '$id'";
+        }
+    }
+    return query($sql);
+}
+function getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds)
+{
+    if ($gia != "") {
+        $sql = "SELECT * FROM baidang where gia BETWEEN $gia AND diadiem like '%" . $key . "%'";
+    }
+    if ($dientich != "") {
+        if ($sql == "") {
+            $sql = "SELECT * FROM baidang where dientich between $dientich AND diadiem like '%" . $key . "%'";
+        } else {
+            $sql .= " AND dientich between $dientich";
+        }
+    }
+    if ($loaibds != "") {
+        if ($sql == "") {
+            $sql = "SELECT * FROM baidang where iddm = '$loaibds' AND diadiem like '%" . $key . "%'";
+        } else {
+            $sql .= " AND iddm = '$loaibds' AND diadiem like '%" . $key . "%'";
         }
     }
     return query($sql);

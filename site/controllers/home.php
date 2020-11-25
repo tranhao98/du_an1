@@ -20,23 +20,15 @@ switch ($act) {
         break;
     case "cat-danhmuc":
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            if ($_POST['gia'] == "") {
-                $error = "Bạn cần chọn giá!";
-            } else {
-                $gia = $_POST['gia'];
-            }
-            if ($_POST['dientich'] == "") {
-                $error = "Bạn cần chọn diện tích!";
-            } else {
-                $dientich = $_POST['dientich'];
-            }
-            if ($_POST['loaibds'] == "") {
-                $error = "Bạn cần chọn loại!";
-            } else {
-                $loaibds = $_POST['loaibds'];
-            }
-
-            $dsdanhmucsearch = getBaiDangTheoLoc($gia, $dientich, $loaibds);
+            $id = 0;
+            if (isset($_GET['id']) == true) $id = $_GET['id'];
+            $loaibds = $_POST['loaibds'];
+            $dientich = $_POST['dientich'];
+            $gia = $_POST['gia'];
+            if ($gia == "" && $dientich == "" && $loaibds == "") {
+                $error = "Bạn chưa chọn giá trị!";
+            } else
+                $dsfillter = getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $loaibds);
         }
 
         $id = 0;
@@ -59,10 +51,15 @@ switch ($act) {
         break;
     case "cat-khuvuc":
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $gia = $_POST['gia'];
-            $dientich = $_POST['dientich'];
+            $id = 0;
+            if (isset($_GET['id']) == true) $id = $_GET['id'];
             $loaibds = $_POST['loaibds'];
-            $dsdanhmucsearch = getBaiDangTheoLoc($gia, $dientich, $loaibds);
+            $dientich = $_POST['dientich'];
+            $gia = $_POST['gia'];
+            if ($gia == "" && $dientich == "" && $loaibds == "") {
+                $error = "Bạn chưa chọn giá trị!";
+            } else
+                $dsfillter = getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $loaibds);
         }
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
@@ -107,13 +104,18 @@ switch ($act) {
         break;
     case "timkiem":
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $gia = $_POST['gia'];
-            $dientich = $_POST['dientich'];
+            $key = "";
+            (isset($_GET['tukhoa'])) ? $key = $_GET['tukhoa'] : "";
             $loaibds = $_POST['loaibds'];
-            $dsdanhmucsearch = getBaiDangTheoLoc($gia, $dientich, $loaibds);
+            $dientich = $_POST['dientich'];
+            $gia = $_POST['gia'];
+            if ($gia == "" && $dientich == "" && $loaibds == "") {
+                $error = "Bạn chưa chọn giá trị!";
+            } else
+                $dsfillter = getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds);
         }
 
-        $key = trim(strip_tags($_POST['tukhoa']));
+        $key = trim(strip_tags($_GET['tukhoa']));
         (isset($_GET['tukhoa'])) ? $key = $_GET['tukhoa'] : "";
         $page_num = 1;
         if (isset($_GET['page_num'])) $page_num = $_GET['page_num'];
