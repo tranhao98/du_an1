@@ -12,12 +12,12 @@
             <div class="sign-up">
                 <h2>ĐĂNG NHẬP</h2>
             </div>
-            <form action="" class="">
+            <form action="?ctrl=user&act=login" class="" method="POST">
                 <label for="">Tên Đăng Nhập: </label>
-                <input class="box" type="text" placeholder="Tên đăng nhập">
+                <input class="box" type="text" placeholder="Tên đăng nhập" name="tendangnhap">
                 <label for="">Mật Khẩu: </label>
-                <input class="box" type="password" placeholder="Nhập mật khẩu">
-                <input type="submit" name="login" value="ĐĂNG NHẬP" class="btn btn-primary w-100 p-2 mt-4">
+                <input class="box" type="password" placeholder="Nhập mật khẩu" name="matkhau">
+                <button class="btn btn-primary w-100 p-2 mt-4" type="submit">Đăng nhập</button>
                     <div class="col-12 text-center mt-3">
                         <p style="font-size: 14px;">hoặc đăng nhập với:</p>
                         <a type="button" class="btn-floating btn-fb btn-sm">
