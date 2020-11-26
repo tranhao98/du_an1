@@ -28,8 +28,9 @@
                         </article>
                     <?php } ?>
                     <div class="main-button" style="text-align:center;">
-                        <a class=" mt-20" href="">Nhiều hơn</a>
-                    </div><br>
+                        <div class="pagination_container"> <?= $links; ?> </div>
+                    </div>
+                    <br>
                 </div>
                 <div class="thongbao-phai mt-200">
                     <div class="card-thongbao">
