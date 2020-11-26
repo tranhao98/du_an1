@@ -33,7 +33,7 @@
                         <br>
                     </div>
                 </div>
-                <div class="thongbao-phai mt-200">
+                <div class="thongbao-phai mt-100">
                     <div class="card-thongbao">
                         <div class="tintuccu mt-20">
                             <li class="list-group-item bg-dark"><h6 class="ttmoi text-white">TIN TỨC KHÁC</h6></li>
