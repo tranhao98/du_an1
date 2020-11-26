@@ -114,12 +114,12 @@ session_start();
                                 mysqli_query($connmysqli, $sql);
                             }
 
-                            echo "GD Thanh cong";
+                            echo "Giao dịch thành công";
                         } else {
-                            echo "GD Khong thanh cong";
+                            echo "Giao dịch không thành công";
                         }
                     } else {
-                        echo "Chu ky khong hop le";
+                        echo "Chữ ký không hợp lệ";
                     }
                     ?>
 
