@@ -227,3 +227,14 @@ function getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds)
     }
     return query($sql);
 }
+
+function updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $anhien)
+{
+    if ($hinh != "")
+    $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', hinh = '$hinh', email='$email', sodienthoai='$sodienthoai', diachi='$diachi',
+    tinhthanh='$tinhthanh', quanhuyen='$quanhuyen', phuongxa='$phuongxa', gioitinh='$gioitinh', anhien='$anhien' WHERE id='$id'";
+    else
+    $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', email='$email', sodienthoai='$sodienthoai', diachi='$diachi',
+    tinhthanh='$tinhthanh', quanhuyen='$quanhuyen', phuongxa='$phuongxa', gioitinh='$gioitinh', anhien='$anhien' WHERE id='$id'";
+    execute($sql);
+}
