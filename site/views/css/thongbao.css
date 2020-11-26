@@ -98,6 +98,11 @@
     margin-bottom: 0rem;
 }
 /* ////// CSS Panination ///// */
+.main-button{
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
 .pagination-lgg .page-item:first-child .page-link {
     border-top-left-radius: .3rem;
     border-bottom-left-radius: .3rem;
