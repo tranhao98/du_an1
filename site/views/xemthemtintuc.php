@@ -5,7 +5,7 @@
                 <div class="thongbao-trai mt-100">
                     <?php
                         $dem = 1;
-                        foreach ($dstball as $row) {
+                        foreach ($dsthongbao as $row) {
                     ?>
                         <article class="tabs" id='tabs-<?= $dem++ ?>'>
                             <h4><?=$row['tieude']?></h4>
@@ -28,7 +28,7 @@
                         </article>
                     <?php } ?>
                     <div class="main-button" style="text-align:center;">
-                        <div class="pagination_container"> <?= $links; ?> </div>
+                        <div class="pagination_container"> <?= $link; ?> </div>
                     </div>
                     <br>
                 </div>
