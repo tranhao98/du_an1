@@ -197,9 +197,10 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="serch_form">
-                    <form action="index.php?ctrl=home&act=timkiem" method="post">
-                        <input type="text" class="input_search" name="tukhoa" placeholder="Nhập từ khóa">
+                    <form action="" method="get">
+                        <input type="text" class="input_search" name="tukhoa" placeholder="Nhập địa điểm cần tìm....">
                         <input type="submit" class="button" value="Tìm kiếm">
+                        <input type="hidden" name="act" value="timkiem">
                     </form>
                 </div>
             </div>

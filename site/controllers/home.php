@@ -9,6 +9,7 @@ $dskv = getAllKhuVuc();
 $dskvspecial = getKhuVucSpecial();
 $dstbnew = getThongBaoNew();
 $dstball = getThongBaoAll();
+
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
     case "index":
@@ -18,6 +19,18 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "cat-danhmuc":
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $id = 0;
+            if (isset($_GET['id']) == true) $id = $_GET['id'];
+            $loaibds = $_POST['loaibds'];
+            $dientich = $_POST['dientich'];
+            $gia = $_POST['gia'];
+            if ($gia == "" && $dientich == "" && $loaibds == "") {
+                $error = "Bạn chưa chọn giá trị!";
+            } else
+                $dsfillter = getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $loaibds);
+        }
+
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
 
@@ -37,6 +50,17 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "cat-khuvuc":
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $id = 0;
+            if (isset($_GET['id']) == true) $id = $_GET['id'];
+            $loaibds = $_POST['loaibds'];
+            $dientich = $_POST['dientich'];
+            $gia = $_POST['gia'];
+            if ($gia == "" && $dientich == "" && $loaibds == "") {
+                $error = "Bạn chưa chọn giá trị!";
+            } else
+                $dsfillter = getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $loaibds);
+        }
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
 
@@ -79,7 +103,19 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "timkiem":
-        $key = trim(strip_tags($_POST['tukhoa']));
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $key = "";
+            (isset($_GET['tukhoa'])) ? $key = $_GET['tukhoa'] : "";
+            $loaibds = $_POST['loaibds'];
+            $dientich = $_POST['dientich'];
+            $gia = $_POST['gia'];
+            if ($gia == "" && $dientich == "" && $loaibds == "") {
+                $error = "Bạn chưa chọn giá trị!";
+            } else
+                $dsfillter = getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds);
+        }
+
+        $key = trim(strip_tags($_GET['tukhoa']));
         (isset($_GET['tukhoa'])) ? $key = $_GET['tukhoa'] : "";
         $page_num = 1;
         if (isset($_GET['page_num'])) $page_num = $_GET['page_num'];
