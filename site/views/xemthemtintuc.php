@@ -27,6 +27,7 @@
                             </div>
                         </article>
                     <?php } ?>
+                    <br>
                     <div class="main-button" style="text-align:center;">
                         <div class="pagination_container"> <?= $link; ?> </div>
                     </div>
