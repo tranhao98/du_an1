@@ -6,6 +6,7 @@ function getConnection()
     $conn = new PDO('mysql:host=' . HOST_DB . ';dbname=' . NAME_DB, USER_DB, PASS_DB, $opt);
     return $conn;
 }
+$connmysqli = mysqli_connect('localhost', 'root', PASS_DB, NAME_DB) or die('Không thể kết nối tới database');
 function query($sql)
 {
     $conn = getConnection();
