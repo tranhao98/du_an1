@@ -27,11 +27,11 @@
                             </div>
                         </article>
                     <?php } ?>
-                    <br>
                     <div class="main-button" style="text-align:center;">
+                        <br>
                         <div class="pagination_container"> <?= $link; ?> </div>
+                        <br>
                     </div>
-                    <br>
                 </div>
                 <div class="thongbao-phai mt-200">
                     <div class="card-thongbao">
