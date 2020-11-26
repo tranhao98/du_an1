@@ -1072,3 +1072,141 @@
         height: 500px;
         object-fit: cover;
     }
+    
+    .pricing {
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+    
+    .pricing input[type="radio"] {
+        display: none;
+    }
+    
+    .pricing input[type="radio"]:checked+.pricing-check {
+        border-color: white;
+    }
+    
+    .pricing input[type="radio"]:checked~.pricing-content {
+        border-color: var(--primary);
+        background-color: var(--primary);
+        color: white;
+    }
+    
+    .pricing input[type="radio"]:checked~.pricing-content .pricing-saving {
+        background-color: white;
+    }
+    
+    .pricing-check {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 2rem;
+        background-color: white;
+        border: 2px solid #aeaec4;
+        cursor: pointer;
+        position: absolute;
+        left: 2.5rem;
+        top: 50%;
+        margin-top: -1rem;
+    }
+    
+    .pricing-content {
+        padding: 2.5rem 2.5rem 2.5rem 7.5rem;
+        border-radius: 8px;
+        border: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #0c0e44;
+    }
+    
+    .pricing-name {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    
+    .pricing-saving {
+        text-align: center;
+        display: inline-block;
+        padding: 7.5px 1.5rem;
+        color: #fa9376;
+        background-color: #feeeee;
+        border-radius: 2rem;
+        font-size: 1.2rem;
+    }
+    
+    .pricing-price {
+        display: flex;
+        align-items: center;
+    }
+    
+    .pricing-money {
+        font-weight: 600;
+        font-size: 3rem;
+    }
+    
+    .pricing-time {
+        font-size: 1.2rem;
+        margin-left: 1rem;
+    }
+    /* ---------------------------- */
+    
+    .boxcenter {
+        width: 85%;
+        margin: 0 auto;
+    }
+    
+    .section2 {
+        margin: 0 auto;
+    }
+    
+    .section2 .sign-up {
+        text-align: center;
+        padding-top: 20px;
+        color: rgb(245, 13, 13);
+    }
+    
+    .section2 .form-transparent {
+        background-color: white;
+        width: 100%;
+    }
+    
+    .section2 .form {
+        width: 450px;
+        margin: auto;
+    }
+    
+    .section2 label {
+        font-size: 15px;
+    }
+    
+    .section2 .box {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid rgb(245, 13, 13);
+        padding: 12px 20px;
+        margin: 8px 0;
+    }
+    
+    .section2 .form .submit {
+        width: 90px;
+        padding: 10px;
+        border: none;
+        background-color: rgb(245, 13, 13);
+        color: white;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    
+    .section2 .form .submit:hover {
+        width: 90px;
+        padding: 10px;
+        border: none;
+        background-color: rgb(245, 13, 13);
+        color: white;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 10px;
+    }

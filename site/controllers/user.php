@@ -3,6 +3,7 @@ ob_start();
 session_start();
 require_once "../system/config.php";
 require_once "models/home.php"; //nạp model để có các hàm tương tác db1
+require_once "models/model_donvihanhchinh.php"; //nạp model để có các hàm tương tác db1
 
 $dsdm1 = getAllDanhMuc1();
 $dsdm2 = getAllDanhMuc2();
@@ -13,6 +14,10 @@ $dstbnew = getThongBaoNew();
 $dstball = getThongBaoAll();
 if (isset($_GET["act"]) == true) $act = $_GET["act"]; //tiếp nhận chức năng user request
 switch ($act) {
+    case "login-index":
+        $view = "views/login-index.php";
+        require_once "layout.php";
+    break;
     case "login":
         $tendangnhap = trim(strip_tags($_POST['tendangnhap']));
         $matkhau = trim(strip_tags($_POST['matkhau']));
@@ -84,6 +89,41 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
         break;
+    case "edit-info":
+        if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
+            $id = $_SESSION['sid'];
+            $row = getNguoiDungByID($id);
+        }
+        $child = "views/thongtin-edit.php";
+        $view = "views/thongtintaikhoan.php";
+        require_once "layout.php";
+        break;
+    break;
+    case "update-info":
+        $id = $_POST["id"];
+        $hinh = $_FILES['hinh']['name'];
+        $target_file = "../upload/" . basename($hinh);
+        move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file);
+
+        $hoten = $_POST["tennguoidung"];
+        $ngaysinh = $_POST["ngaysinh"];
+        $email = $_POST["email"];
+        $tinhthanh = getNameKhuVucHanhChinh($_POST['tinhthanh'], 1)['name'];
+        $quanhuyen = getNameKhuVucHanhChinh($_POST['quanhuyen'], 2)['name'];
+        $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
+        $gioitinh = $_POST["gioitinh"];
+        $sodienthoai = $_POST["sodienthoai"];
+        $diachi = $_POST["diachi"];
+        $anhien = $_POST["anhien"];
+        settype($id, "int");
+        $sodienthoai = trim(strip_tags($sodienthoai));
+        $tendangnhap = trim(strip_tags($tendangnhap));
+        $hoten = trim(strip_tags($hoten));
+        $diachi = trim(strip_tags($diachi));
+
+    updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $anhien);
+    header("location:index.php?ctrl=user&act=infouser");
+    break;
     case "thanhtoan":
         $child = "views/thanhtoan.php";
         $view = "views/thongtintaikhoan.php";

@@ -42,10 +42,10 @@
                             <select name="dientich" class="m-0">
                                 <option value="">--All --</option>
                                 <option value="<=30">
-                                    <=30 m2 </option> <option value="30 AND 50">30 m2 - 50 m2
+                                    <=30 m2 </option> <option value="30 AND 50">30 m<sup>2</sup> - 50 m<sup>2</sup>
                                 </option>
-                                <option value="50 AND 70">50 m2 - 70 m2</option>
-                                <option value="70 AND 90">70 m2 - 90 m2</option>
+                                <option value="50 AND 70">50 m<sup>2</sup> - 70 m<sup>2</sup></option>
+                                <option value="70 AND 90">70 m<sup>2</sup> - 90 m<sup>2</sup></option>
                             </select>
                             <span class="text-danger">
                                 <?php if (isset($error)) echo $error; ?></span>
@@ -79,7 +79,7 @@
 
         <div class="row mt-5">
             <?php if (isset($_POST['search'])) {
-                foreach ($dsdanhmucsearch as $row) { ?>
+                foreach ($dsfillter as $row) { ?>
                     <div class="col-lg-4">
                         <div class="trainer-item">
                             <div class="image-thumb">
