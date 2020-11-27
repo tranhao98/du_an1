@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="views/css/thongbao.css">
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/owl.css">
+    <script src="../js/jquery/jquery.js"></script>
     <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -88,8 +89,7 @@
                             <?php
                         } else {
                             ?>
-                                <li class="nav-item"><a data-toggle="modal" data-target="#staticBackdrop2" class="nav-link text-danger" href="">Đăng nhập</a>
-                                </li>
+                                <li class="nav-item"><a class="nav-link text-danger" href="?ctrl=user&act=login-index">Đăng nhập</a></li>
                             <?php } ?>
 
                     </ul>
@@ -191,7 +191,7 @@
             </div>
         </div>
     </div>
-    <?php require_once "views/dangnhap.php"; ?>
+    <?php //require_once "views/dangnhap.php"; ?>
     <!-- Modal Tìm kiếm-->
     <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -209,7 +209,6 @@
 </body>
 
 </html>
-<script src="../js/jquery/jquery.min.js"></script>
 <script src="../js/custom.js"></script>
 <script src="../js/owl.js"> </script>
 <script src="../js/accordions.js"></script>

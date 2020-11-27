@@ -1,6 +1,7 @@
 <?php
 require_once "../system/config.php";
-require_once "models/home.php"; //nạp model để có các hàm tương tác db
+require_once "models/home.php";
+require_once "models/thongbao.php"; //nạp model để có các hàm tương tác db
 $act = "index"; //chức năng mặc định
 $dsdm1 = getAllDanhMuc1();
 $dsdm2 = getAllDanhMuc2();
@@ -99,6 +100,18 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "xemthemtintuc":
+
+        $page_num = 1;
+        if (isset($_GET['page_num']) == true) $page_num = $_GET['page_num'];
+
+        settype($page_num, "int");
+        if ($page_num <= 0) $page_num = 1;
+
+        $page_size = PAGE_SIZE;
+        $dsthongbao = getThongBaoND($page_num, $page_size);
+        $total_rows = demThongBaoND($id);
+        $baseurl = SITE_URL . "/index.php?ctrl=home&act=xemthemtintuc";
+        $link = taolinkstb($baseurl, $page_num, $page_size, $total_rows);
         $view = "views/xemthemtintuc.php";
         require_once "layout.php";
         break;
