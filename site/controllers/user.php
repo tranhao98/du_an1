@@ -32,6 +32,7 @@ switch ($act) {
                 $_SESSION['hinh'] = $check['hinh'];
                 $_SESSION['sid'] = $check['id'];
                 $_SESSION['hoten'] = $check['hoten'];
+                $_SESSION['vaitro'] = $check['vaitro'];
                 $_SESSION['tendangnnhap'] = $check['tendangnhap'];
                 if ($check['vaitro'] == 1) header("location: ../admin/index.php");
                 else header("location: index.php");
@@ -52,6 +53,7 @@ switch ($act) {
             unset($_SESSION['tendangnhap']);
             unset($_SESSION['hoten']);
             unset($_SESSION['hinh']);
+            unset($_SESSION['vaitro']);
             header("location: index.php");
         }
         break;
