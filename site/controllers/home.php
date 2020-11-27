@@ -8,6 +8,7 @@ $dsdm2 = getAllDanhMuc2();
 $dsbd = getAllBaiDang();
 $dskv = getAllKhuVuc();
 $dskvspecial = getKhuVucSpecial();
+$dstbold = getThongBaoOld();
 $dstbnew = getThongBaoNew();
 $dstball = getThongBaoAll();
 
