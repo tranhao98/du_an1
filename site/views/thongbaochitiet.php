@@ -48,12 +48,17 @@
                     </div>
                     <!-- BÌNH LUẬN -->
                     <div class="card-comment">
-                        <form action="">
-                            <img src="" alt="">
-                            <a class="nguoibl"><?php echo getNameNguoiDung($rowidtb['idnguoidang'])['hoten'];?></a>
-                            <textarea id="noidung" name="noidung" rows="2" cols="40"></textarea>
-                            <input id="submit" type="submit" name="submit" value="Gửi">
-                        </form>
+                            <div class="row">
+                                <form action="" method="post" class="col-12 mx-auto">
+                                    <div class="form-group w-100">
+                                        <input type="hidden" name="ma_kh" value="<?=$_SESSION['id']?>">
+                                        <input type="hidden" name="ma_hh" value="<?=$row['ma_hh']?>">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="noidung"></textarea>
+                                        <input class="btn btn-primary float-right mt-2 mb-2" type="submit" value="Bình luận">
+                                    </div>
+                                </form>
+                            </div>
+                        
                     </div>
                 </div>
                 <div class="thongbao-phai mt-100">
