@@ -16,7 +16,7 @@ function getThongBaoND($page_num, $page_size)
 }
 function demThongBaoND()
 {
-    $sql = "SELECT count(*) as sodong from thongbao ";
+    $sql = "SELECT count(*) as sodong from thongbao";
     return queryOne($sql)['sodong'];
 }
 function taolinkstb($baseurl, $page_num, $page_size, $total_rows)
