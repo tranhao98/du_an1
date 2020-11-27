@@ -94,6 +94,8 @@ switch ($act) {
         require_once "views/thongbao.php";
         break;
     case "chitietthongbao":
+        $bl_tb = Showbl($row['idtb']);
+        $all_bl = ShowALlbl();
         $idtb = $_GET['idtb'];
         settype($idtb, "int");
         $rowidtb = getThongBaobyID($idtb);
