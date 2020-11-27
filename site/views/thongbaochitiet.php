@@ -48,15 +48,29 @@
                     </div>
                     <!-- BÌNH LUẬN -->
                     <div class="card-comment">
+                        
                             <div class="row">
                                 <form action="" method="post" class="col-12 mx-auto">
                                     <div class="form-group w-100">
-                                        <input type="hidden" name="ma_kh" value="<?=$_SESSION['id']?>">
-                                        <input type="hidden" name="ma_hh" value="<?=$row['ma_hh']?>">
+                                        <input type="hidden" name="id" value="<?=$_SESSION['id']?>">
+                                        <input type="hidden" name="idtb" value="<?=$row['idtb']?>">
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="noidung"></textarea>
                                         <input class="btn btn-primary float-right mt-2 mb-2" type="submit" value="Bình luận">
                                     </div>
                                 </form>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mx-auto mb-5" style="min-height: 200px;">
+                                <?php foreach($all_bl as $bl){ 
+                                    if($bl['idtb'] == $bl_tb['idtb']){
+                                        $bl_kh = showBlKhachhang($bl['id']);
+                                    ?>
+                                        <div class="col-12 mt-2">
+                                        <?php echo $bl_kh['hoten']; ?>
+                                    <p class="mt-2"><?=$bl['noidung']?></p>
+                                    </div>
+                                <?php } } ?>
+                                </div>
                             </div>
                         
                     </div>
