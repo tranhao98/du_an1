@@ -3,6 +3,11 @@ require_once "../system/database.php";
 
 
 
+function getThongBaoOld()
+{
+    $sql = "SELECT * FROM thongbao order by ngaydang asc limit 3";
+    return query($sql);
+}
 function getThongBaoND($page_num, $page_size)
 {
     $start_row = ($page_num - 1) * $page_size;
