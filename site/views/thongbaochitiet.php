@@ -56,16 +56,15 @@
                     <div class="card-thongbao">
                         <div class="tintucmoi">
                             <li class="list-group-item bg-dark justify"><h6 class="ttmoi text-white justify">TIN TỨC MỚI</h6></li>
-                            <?php foreach ($dstball as $row) { ?>
+                            <?php foreach ($dstbnew as $row) { ?>
                                 <li class="justify t-bold text-blue"><a href='?act=chitietthongbao&idtb=<?=$row['idtb']?>'><?=$row['tieude']?></a></li>
                             <?php } ?>
                         </div>
                         <div class="tintuccu mt-20">
                             <li class="list-group-item bg-dark"><h6 class="ttmoi text-white">TIN TỨC CŨ</h6></li>
-                            <li class="justify t-bold text-blue"><a href="">Garden Riverside: Tận hưởng chất lượng sống sinh thái bên sông</a></li>
-                            <li class="justify t-bold text-blue"><a href="">Celesta Rise đưa phong cách nghỉ dưỡng vào không gian sống</a></li>
-                            <li class="justify t-bold text-blue"><a href="">Long An chi 13.000 tỷ đồng xây dựng 8 công trình giao thông quan trọng</a></li>
-                            <li class="justify t-bold text-blue"><a href="">The Residence Phú Quốc mở bán biệt thự 2 mặt tiền tại Bãi Trường</a></li>
+                            <?php foreach ($dstbold as $row) { ?>
+                                <li class="justify t-bold text-blue"><a href='?act=chitietthongbao&idtb=<?=$row['idtb']?>'><?=$row['tieude']?></a></li>
+                            <?php } ?>
                         </div>
                         <div class="tintuckhac mt-20">
                             <li class="list-group-item gifchitiet"><img src="../upload/tintuc1.gif" alt=""></li>
