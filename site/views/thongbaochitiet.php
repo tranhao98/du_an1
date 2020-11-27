@@ -48,8 +48,12 @@
                     </div>
                     <!-- BÌNH LUẬN -->
                     <div class="card-comment">
-                        
-
+                        <form action="">
+                            <img src="" alt="">
+                            <a class="nguoibl"><?php echo getNameNguoiDung($rowidtb['idnguoidang'])['hoten'];?></a>
+                            <textarea id="noidung" name="noidung" rows="2" cols="40"></textarea>
+                            <input id="submit" type="submit" name="submit" value="Gửi">
+                        </form>
                     </div>
                 </div>
                 <div class="thongbao-phai mt-100">
