@@ -125,7 +125,7 @@ session_start();
 
                 </label>
                 <br>
-                <a href="../site">
+                <a href="../site/index.php?ctrl=user&act=thanhtoan">
                     <button>Quay lại</button>
                 </a>
             </div>

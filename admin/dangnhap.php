@@ -17,6 +17,7 @@ if (isset($_POST['login']) && ($_POST['login'])) {
             $_SESSION['hinh'] = $check['hinh'];
             $_SESSION['sid'] = $check['id'];
             $_SESSION['hoten'] = $check['hoten'];
+            $_SESSION['vaitro'] = $check['vaitro'];
             $_SESSION['tendangnnhap'] = $check['tendangnhap'];
             if ($check['vaitro'] == 1) header("location: index.php");
         } else $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";

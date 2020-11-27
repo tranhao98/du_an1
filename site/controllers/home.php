@@ -110,7 +110,7 @@ switch ($act) {
 
         $page_size = PAGE_SIZE;
         $dsthongbao = getThongBaoND($page_num, $page_size);
-        $total_rows = demThongBaoND($id);
+        $total_rows = demThongBaoND();
         $baseurl = SITE_URL . "/index.php?ctrl=home&act=xemthemtintuc";
         $link = taolinkstb($baseurl, $page_num, $page_size, $total_rows);
         $view = "views/xemthemtintuc.php";

@@ -43,7 +43,7 @@ switch ($act) {
     $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
     $gioitinh = $_POST["gioitinh"];
     $tendangnhap = $_POST["tendangnhap"];
-    $matkhau = password_hash($_POST["matkhau"],PASSWORD_DEFAULT);
+    $matkhau = password_hash($_POST["matkhau"], PASSWORD_DEFAULT);
     $sodienthoai = $_POST["sodienthoai"];
     $diachi = $_POST["diachi"];
     if (isset($_POST['vaitro']) == true) $vaitro = 1;
@@ -75,7 +75,7 @@ switch ($act) {
     $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
     $gioitinh = $_POST["gioitinh"];
     $tendangnhap = $_POST["tendangnhap"];
-    $matkhau = password_hash($_POST["matkhau"],PASSWORD_DEFAULT);
+    $matkhau = password_hash($_POST["matkhau"], PASSWORD_DEFAULT);
     $sodienthoai = $_POST["sodienthoai"];
     $diachi = $_POST["diachi"];
     if (isset($_POST['vaitro']) == true) $vaitro = 1;
@@ -89,8 +89,8 @@ switch ($act) {
     $diachi = trim(strip_tags($diachi));
 
     updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $tendangnhap, $email, $matkhau, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $vaitro, $anhien);
-    
-    
+
+
     $message = "<div class=\"alert alert-primary\" role=\"alert\">
       Đã cập nhật thành công!
     </div>";
@@ -110,6 +110,9 @@ switch ($act) {
       if (isset($_GET['logout']) && ($_GET['logout'] == 1)) {
         unset($_SESSION['sid']);
         unset($_SESSION['tendangnhap']);
+        unset($_SESSION['hoten']);
+        unset($_SESSION['hinh']);
+        unset($_SESSION['vaitro']);
         header("location: dangnhap.php");
       }
     }
