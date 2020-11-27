@@ -39,3 +39,19 @@ function taolinkstb($baseurl, $page_num, $page_size, $total_rows)
     $links .= "</ul>";
     return $links;
 }
+
+// xem bl theo idtb
+function Showbl($idtb){
+    $sql = "SELECT * FROM binhluan WHERE idtb = '$idtb'";
+    return queryOne($sql);
+}
+// xem bl
+function ShowALlbl(){
+    $sql = "SELECT * FROM binhluan";
+    return query($sql);
+}
+// xem tất cả theo khách hang
+function showBlKhachhang($id){
+    $sql = "SELECT * FROM taikhoan WHERE id = '$id'";
+    return queryOne($sql);
+}
