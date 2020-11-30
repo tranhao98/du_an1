@@ -16,7 +16,7 @@
 <section class="section" id="our-classes">
     <div class="big-container">
         <div class="row">
-            <div class="card col-md-8 rounded-0 bg-transparent border-0" style="margin-top: -100px;">
+            <div class="card col-md-9 rounded-0 bg-transparent border-0" style="margin-top: -100px;">
                 <div class="card-body p-0 mt-4 text-dark">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card col-md-4 rounded-0 border-0">
+            <div class="card col-md-3 rounded-0 border-0">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item bg-dark text-white font-weight-bold">Thông tin</li>
                     <li class="list-group-item"><span class="text-secondary font-weight-bold">Danh mục:</span> <?= getTenDanhMuc($rowbaidang['iddm']) ?></li>
@@ -82,27 +82,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="card col-md-4 rounded-0 border-0">
+            <div class="card col-md-6 rounded-0 border-0">
                 <h2>Thông tin mô tả</h2>
                 <p class="card-text"><?= $rowbaidang['mota'] ?></p>
             </div>
-            <div class="card col-md-8 rounded-0 border-0">
+            <div class="card col-md-6 rounded-0 border-0">
                 <h2>Thông tin bản đồ</h2>
                 <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4549694901184!2d106.62692827837184!3d10.852958680974394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5b4da59e47aa97a8!2zQ8O0bmcgVmnDqm4gUGjhuqduIE3hu4FtIFF1YW5nIFRydW5n!5e0!3m2!1svi!2s!4v1606040054486!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p>
             </div>
         </div>
 
 
-    </div>
-    <div class="big-container mt-4">
-        <div class="grid-image">
-            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh'] ?>" alt="" class="image-item" />
-            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh2'] ?>" alt="" class="image-item" />
-            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh3'] ?>" alt="" class="image-item" />
-            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh4'] ?>" alt="" class="image-item" />
-            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh5'] ?>" alt="" class="image-item" />
-            <img loading="lazy" src="../upload/<?= $rowbaidang['hinh6'] ?>" alt="" class="image-item" />
-        </div>
     </div>
     <div class="big-container mt-4">
         <div class="auth">
