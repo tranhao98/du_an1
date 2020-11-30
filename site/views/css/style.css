@@ -19,7 +19,9 @@
         margin: 0;
         list-style: none;
     }
-    
+    .text-center{
+        text-align: center;
+    }
     h1,
     h2,
     h3,
@@ -1213,6 +1215,10 @@
     
     input {
         outline: none !important;
+    }
+    .big-container{
+        margin: auto;
+        width: 85%;
     }
 @media only screen and (min-width: 768px) {
     /* For desktop: */
