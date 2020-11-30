@@ -10,7 +10,7 @@
                     <div class="row">
                         <div class="col-5">
                             <div class="image-thumb" style="height: 100%;" >
-                                <a href=""><img src="../upload/<?= $row['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" style="height: 100% !important;" width="100%"></a>
+                                <a href="?act=baidang&id=<?= $row['idsp'] ?>"><img src="../upload/<?= $row['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" style="height: 100% !important;" width="100%"></a>
                             </div>
                         </div>
                         <div class="col-7">
@@ -20,14 +20,14 @@
                                                                                     else echo '/m<sup>2</sup>'; ?> - <?= $row['dientich'] ?> m<sup>2</sup>
                                 </span>
 
-                                <a href="">
+                                <a href="?act=baidang&id=<?= $row['idsp'] ?>">
                                     <h4><?= _substr($row['tensp'], 55) ?></h4>
                                 </a>
 
                                 <p><?= $row['diadiem'] ?></p>
 
                                 <ul class="social-icons">
-                                    <li><a href="  ">+ Xem thêm</a></li>
+                                    <li><a href="?act=baidang&id=<?= $row['idsp'] ?>">+ Xem thêm</a></li>
                                 </ul>
                                 <a class="btn btn-primary" href="">Chỉnh sửa bài viết</a>
                                 <a class="btn btn-danger" href="">Xóa bài viết</a>
