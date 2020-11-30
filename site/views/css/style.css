@@ -1216,9 +1216,13 @@
     input {
         outline: none !important;
     }
+    /* ****** Thông tin mô tả ****** */
     .big-container{
         margin: auto;
         width: 85%;
+    }
+    .thongtinmota p{
+        font-size: 15pt;
     }
 @media only screen and (min-width: 768px) {
     /* For desktop: */
