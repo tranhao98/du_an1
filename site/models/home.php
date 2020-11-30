@@ -238,3 +238,15 @@ function updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $d
     tinhthanh='$tinhthanh', quanhuyen='$quanhuyen', phuongxa='$phuongxa', gioitinh='$gioitinh', anhien='$anhien' WHERE id='$id'";
     execute($sql);
 }
+
+function changePass($pass, $id){
+   $sql = "UPDATE taikhoan SET matkhau = '$pass' WHERE id = '$id'";
+    execute($sql);
+}
+
+        
+function kiemTraMatKhau( $id)
+{
+    $sql = "SELECT * from taikhoan where id = '$id'";
+    return queryOne($sql);
+}

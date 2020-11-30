@@ -4,15 +4,16 @@
 <br>
 <div class="row">
     <div class="container">
-        <div class="alert alert-primary" role="alert">
-            A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-        </div>
+        <?php if(isset($_SESSION['mess'])) echo $_SESSION['mess'];
+                unset($_SESSION['mess']);
+        ?>
         <section class="section2">
             <div class="form-transparent">
                 <div class="form">
                     <div class="sign-up">
                         <h2>ĐĂNG NHẬP</h2>
                     </div>
+                    
                     <form action="?ctrl=user&act=login" class="" method="POST">
                         <label for="">Tên Đăng Nhập: </label>
                         <input class="box" type="text" placeholder="Tên đăng nhập" name="tendangnhap">
