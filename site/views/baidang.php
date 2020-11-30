@@ -82,9 +82,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="card col-md-6 rounded-0 border-0">
+            <div class="card col-md-6 rounded-0 border-0 thongtinmota">
                 <h2>Thông tin mô tả</h2>
                 <p class="card-text"><?= $rowbaidang['mota'] ?></p>
+                <p>Diện tích:</span class="text-danger"> <?= $rowbaidang['dientich'] ?> m<sup>2</sup></p>
+                <p>Nội thất:</span class="text-danger"> <?= $rowbaidang['noithat'] ?>, rèm, máy lạnh, máy giặc</p>
+                <p>Giá thuê:</span> <?= number_format($rowbaidang['gia'], 0, ",", "."); ?><sup>VND</sup><?php if (strlen(strstr(strtolower($rowbaidang['tensp']), "cho thuê")) > 0) echo '/ Tháng';
+                                                                                                                        else echo '/M<sup>2</sup>'; ?></p>
             </div>
             <div class="card col-md-6 rounded-0 border-0">
                 <h2>Thông tin bản đồ</h2>
