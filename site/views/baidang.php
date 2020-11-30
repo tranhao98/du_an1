@@ -84,7 +84,11 @@
         <div class="row">
             <div class="card col-md-6 rounded-0 border-0 thongtinmota">
                 <h2>THÔNG TIN MÔ TẢ</h2>
+                <h5>Vị trí:</h5>
                 <p class="card-text"><?= $rowbaidang['mota'] ?></p>
+                <h5>Hạ tầng:</h5>
+                <p>Với tiện ích nội khu đạt chuẩn quốc tế cùng nhiều khu chức năng đa dạng, cao cấp, The Sun Avenue sẽ là điểm nhấn cho phân khúc căn hộ cao cấp tại <?= getTenKhuVuc($rowbaidang['idkhuvuc']); ?> trong thời gian sắp tới.</p>
+                <h5>Thông tin:</h5>
                 <p>Phòng ngủ:</span> <?= $rowbaidang['phongngu'] ?></p>
                 <p>Diện tích:</span class="text-danger"> <?= $rowbaidang['dientich'] ?> m<sup>2</sup></p>
                 <p>Nội thất:</span class="text-danger"> <?= $rowbaidang['noithat'] ?>, rèm, máy lạnh, máy giặc</p>
