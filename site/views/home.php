@@ -60,14 +60,14 @@
             <ol class="carousel-indicators button-black-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
 
                     <?php
                     $r = 1;
-                    foreach ($dsbd as $bd) {
+                    foreach ($dsbdnoibat as $bd) {
+                        
                         if ($r % 9 == 0) {
                             echo '</div><div class="carousel-item">';
                         }

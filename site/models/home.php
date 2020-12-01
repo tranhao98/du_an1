@@ -50,12 +50,16 @@ function getKhuVucSpecial()
     $sql = "SELECT * from khuvuc where thutu = 1";
     return query($sql);
 }
+function getBaiDangNoiBat()
+{
+    $sql = "SELECT * from baidang where noibat = 1 order by idsp asc limit 16";
+    return query($sql);
+}
 function getAllBaiDang()
 {
     $sql = "SELECT * from baidang";
     return query($sql);
 }
-
 function getAllDanhMuc1()
 {
     $sql = "SELECT * from danhmuc where loai = 1";

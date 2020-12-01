@@ -8,6 +8,7 @@ require_once "models/thongbao.php"; //nạp model để có các hàm tương t�
 $act = "index"; //chức năng mặc định
 $dsdm1 = getAllDanhMuc1();
 $dsdm2 = getAllDanhMuc2();
+$dsbdnoibat = getBaiDangNoiBat();
 $dsbd = getAllBaiDang();
 $dskv = getKhuVuc();
 $dskvall = getAllKhuVuc();

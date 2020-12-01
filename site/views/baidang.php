@@ -130,7 +130,7 @@
 
                     <?php
                     $r = 1;
-                    foreach ($dsbd as $bd) {
+                    foreach ($dsbdnoibat as $bd) {
                         if ($r % 9 == 0) {
                             echo '</div><div class="carousel-item">';
                         }
