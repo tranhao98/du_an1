@@ -36,9 +36,13 @@ function getNameNguoiDung($id)
     $sql = "SELECT * from taikhoan where id='$id'";
     return queryOne($sql);
 }
-function getAllKhuVuc()
+function getKhuVuc()
 {
     $sql = "SELECT * from khuvuc where not thutu = 1 limit 4";
+    return query($sql);
+}
+function getAllKhuVuc(){
+    $sql = "SELECT * from khuvuc";
     return query($sql);
 }
 function getKhuVucSpecial()
@@ -46,12 +50,16 @@ function getKhuVucSpecial()
     $sql = "SELECT * from khuvuc where thutu = 1";
     return query($sql);
 }
+function getBaiDangNoiBat()
+{
+    $sql = "SELECT * from baidang where noibat = 1 order by idsp asc limit 16";
+    return query($sql);
+}
 function getAllBaiDang()
 {
     $sql = "SELECT * from baidang";
     return query($sql);
 }
-
 function getAllDanhMuc1()
 {
     $sql = "SELECT * from danhmuc where loai = 1";
@@ -164,7 +172,7 @@ function demBaiDangTheoTuKhoa($key)
     $sql = "SELECT count(*) as sodong FROM baidang WHERE diadiem like '%" . $key . "%'";
     return queryOne($sql)['sodong'];
 }
-function getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $loaibds)
+function getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $sapxep)
 {
     if ($gia != "") {
         $sql = "SELECT * FROM baidang where gia BETWEEN $gia and iddm = '$id'";
@@ -176,16 +184,16 @@ function getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $loaibds)
             $sql .= " AND dientich between $dientich";
         }
     }
-    if ($loaibds != "") {
+    if ($sapxep != "") {
         if ($sql == "") {
-            $sql = "SELECT * FROM baidang where iddm = '$loaibds' and iddm = '$id'";
+            $sql = "SELECT * FROM baidang where iddm = '$id' order by $sapxep";
         } else {
-            $sql .= " AND iddm = '$loaibds' and iddm = '$id'";
+            $sql .= " AND iddm = '$id' order by $sapxep";
         }
     }
     return query($sql);
 }
-function getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $loaibds)
+function getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $sapxep)
 {
     if ($gia != "") {
         $sql = "SELECT * FROM baidang where gia BETWEEN $gia and idkhuvuc = '$id'";
@@ -197,16 +205,16 @@ function getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $loaibds)
             $sql .= " AND dientich between $dientich";
         }
     }
-    if ($loaibds != "") {
+    if ($sapxep != "") {
         if ($sql == "") {
-            $sql = "SELECT * FROM baidang where iddm = '$loaibds' and idkhuvuc = '$id'";
+            $sql = "SELECT * FROM baidang where iddm = '$id' order by $sapxep";
         } else {
-            $sql .= " AND iddm = '$loaibds' and idkhuvuc = '$id'";
+            $sql .= " AND iddm = '$id' order by $sapxep";
         }
     }
     return query($sql);
 }
-function getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds)
+function getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds, $sapxep)
 {
     if ($gia != "") {
         $sql = "SELECT * FROM baidang where gia BETWEEN $gia AND diadiem like '%" . $key . "%'";
@@ -222,7 +230,14 @@ function getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds)
         if ($sql == "") {
             $sql = "SELECT * FROM baidang where iddm = '$loaibds' AND diadiem like '%" . $key . "%'";
         } else {
-            $sql .= " AND iddm = '$loaibds' AND diadiem like '%" . $key . "%'";
+            $sql .= " AND iddm = '$loaibds'";
+        }
+    }
+    if ($sapxep != "") {
+        if ($sql == "") {
+            $sql = "SELECT * FROM baidang where diadiem like '%" . $key . "%' order by $sapxep";
+        } else {
+            $sql .= " AND diadiem like '%" . $key . "%' order by $sapxep";
         }
     }
     return query($sql);
@@ -231,10 +246,43 @@ function getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds)
 function updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $anhien)
 {
     if ($hinh != "")
-    $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', hinh = '$hinh', email='$email', sodienthoai='$sodienthoai', diachi='$diachi',
+        $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', hinh = '$hinh', email='$email', sodienthoai='$sodienthoai', diachi='$diachi',
     tinhthanh='$tinhthanh', quanhuyen='$quanhuyen', phuongxa='$phuongxa', gioitinh='$gioitinh', anhien='$anhien' WHERE id='$id'";
     else
-    $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', email='$email', sodienthoai='$sodienthoai', diachi='$diachi',
+        $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', email='$email', sodienthoai='$sodienthoai', diachi='$diachi',
     tinhthanh='$tinhthanh', quanhuyen='$quanhuyen', phuongxa='$phuongxa', gioitinh='$gioitinh', anhien='$anhien' WHERE id='$id'";
+    execute($sql);
+}
+
+function changePass($pass, $id)
+{
+    $sql = "UPDATE taikhoan SET matkhau = '$pass' WHERE id = '$id'";
+    execute($sql);
+}
+
+
+function kiemTraMatKhau($id)
+{
+    $sql = "SELECT * from taikhoan where id = '$id'";
+    return queryOne($sql);
+}
+
+function addBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh, $hinh_anh2, $hinh_anh3, $hinh_anh4, $hinh_anh5 ,$hinh_anh6,$gia,$nguoidung){
+    echo $sql="INSERT INTO baidang ( iddm, idkhuvuc, idnguoiban, tensp, hinh, hinh2, hinh3, hinh4, hinh5, hinh6, gia, dientich, phongngu, noithat, noibat, mota, diadiem, anhien) 
+    VALUES ( '$danhmuc', '$khuvuc', '$nguoidung', '$tieude', '$hinh_anh', '$hinh_anh2', '$hinh_anh3', '$hinh_anh4', '$hinh_anh5', '$hinh_anh6', '$gia', '$dientich', '$phongngu', '$noithat', '$noibat', '$mota', '$diachi', '$anhien')";
+    execute($sql);
+}
+function getAllDanhMuc(){
+    $sql="SELECT * FROM danhmuc";
+    return query($sql);
+}
+
+function getAllNguoiDung()
+{
+    $sql = "SELECT * FROM taikhoan";
+    return query($sql);
+}
+function deleteBaiViet($id){
+    $sql= "DELETE FROM baidang where idsp ='$id'";
     execute($sql);
 }

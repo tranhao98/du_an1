@@ -15,7 +15,7 @@
                 <a href="?ctrl=user&act=myarticle&id=<?= $_SESSION['sid']?>" class="list-group-item list-group-item-action">Các bài viết đã đăng</a>
                 <a href="?ctrl=user&act=edit-info&id=<?= $_SESSION['sid']?>" class="list-group-item list-group-item-action">Thay đổi thông tin tài khoản</a>
                 <a href="?ctrl=user&act=doimatkhau" class="list-group-item list-group-item-action">Đổi mật khẩu</a>
-                <a href="?ctrl=user&act=thanhtoan" class="list-group-item list-group-item-action">Thanh toán</a>
+                <a href="?ctrl=user&act=thanhtoan" class="list-group-item list-group-item-action">Nâng cấp gói thành viên</a>
                 <a href="?ctrl=user&act=logout" class="list-group-item list-group-item-action">Đăng xuất</a>
             </div>
 

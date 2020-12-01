@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/owl.css">
     <script src="../js/jquery/jquery.js"></script>
+    <script src="../ckeditor/ckeditor.js"></script>
     <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -79,10 +80,10 @@
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                                    <a class="dropdown-item" href="#">Đăng bài</a>
-                                    <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                                    <a class="dropdown-item" href="?act=baidang-addnew">Đăng bài</a>
+                                    <a class="dropdown-item" href="?ctrl=user&act=doimatkhau">Đổi mật khẩu</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=infouser">Xem thông tin tài khoản</a>
-                                    <a class="dropdown-item" href="#">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow' ;></i></a>
+                                    <a class="dropdown-item" href="?ctrl=user&act=thanhtoan">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow' ;></i></a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="?ctrl=user&act=logout">Đăng xuất</a>
                                 </div>
@@ -191,7 +192,8 @@
             </div>
         </div>
     </div>
-    <?php //require_once "views/dangnhap.php"; ?>
+    <?php //require_once "views/dangnhap.php"; 
+    ?>
     <!-- Modal Tìm kiếm-->
     <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -209,6 +211,7 @@
 </body>
 
 </html>
+
 <script src="../js/custom.js"></script>
 <script src="../js/owl.js"> </script>
 <script src="../js/accordions.js"></script>

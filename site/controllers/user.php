@@ -27,23 +27,26 @@ switch ($act) {
         if (is_array($check)) {
             // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
             $verify = password_verify($matkhau, $check['matkhau']);
+            
             // var_dump($hash);
             if ($verify) {
                 $_SESSION['hinh'] = $check['hinh'];
                 $_SESSION['sid'] = $check['id'];
                 $_SESSION['hoten'] = $check['hoten'];
-                $_SESSION['tendangnnhap'] = $check['tendangnhap'];
+                $_SESSION['vaitro'] = $check['vaitro'];
                 if ($check['vaitro'] == 1) header("location: ../admin/index.php");
                 else header("location: index.php");
             } else {
                 $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
-                $slider = "views/slider.php";
-                $view = "views/home.php";
-                require_once "layout.php";
+                $_SESSION['mess'] = $warning;
+                header("location: ?ctrl=user&act=login-index");
+
             }
         } else {
-
             $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
+            $_SESSION['mess'] = $warning;
+            header("location: ?ctrl=user&act=login-index");
+
         }
         break;
     case "logout":
@@ -52,6 +55,7 @@ switch ($act) {
             unset($_SESSION['tendangnhap']);
             unset($_SESSION['hoten']);
             unset($_SESSION['hinh']);
+            unset($_SESSION['vaitro']);
             header("location: index.php");
         }
         break;
@@ -81,11 +85,6 @@ switch ($act) {
         $baseurl = SITE_URL . "/index.php?ctrl=user&act=myarticle&id={$id}";
         $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
         $child = "views/myarticle.php";
-        $view = "views/thongtintaikhoan.php";
-        require_once "layout.php";
-        break;
-    case "doimatkhau":
-        $child = "views/doimatkhau.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
         break;
@@ -129,4 +128,43 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
         break;
-}
+    case "doimatkhau":
+        if(isset($_POST['submit'])){
+            $passcu = ($_POST["passcu"]);
+            $p1 = password_hash($_POST['p1'],PASSWORD_DEFAULT);
+            $p2 = password_hash($_POST['p2'],PASSWORD_DEFAULT);
+            $check = kiemTraMatKhau($_SESSION['sid']);
+            if(is_array($check)){
+                $verify = password_verify($passcu, $check['matkhau']);
+                if($verify){
+                    changePass($p1,$_SESSION['sid']);
+                    $mess = '<div class="alert alert-primary" role="alert">
+                    Bạn đã đổi mật khẩu thành công. Bạn vui lòng đăng nhập lại.
+                </div>';
+                    $_SESSION['mess'] = $mess;
+                    unset($_SESSION['sid']);
+                    unset($_SESSION['tendangnhap']);
+                    unset($_SESSION['hoten']);
+                    unset($_SESSION['hinh']);
+                    unset($_SESSION['vaitro']);
+                    header('location: ?ctrl=user&act=login-index');
+                } else {
+                    $mess = '<div class="alert alert-primary" role="alert">
+                    Mật khẩu không trùng khớp.
+                </div>';
+                }
+            }
+        
+    }
+        $child = "views/doimatkhau.php";
+        $view = "views/thongtintaikhoan.php";
+        
+        require_once "layout.php";
+        break;
+    case "register":
+        
+        $view = "views/register.php";
+        require_once "layout.php";
+        break;
+    break;
+    }

@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label>Lọc theo khoảng giá</label>
                             <select name="gia" class="m-0">
-                                <option value="">All</option>
+                                <option value="">Tất cả</option>
                                 <option value="100000000 AND 200000000">100 triệu - 200 triệu</option>
                                 <option value="200000000 AND 500000000">200 triệu - 500 triệu</option>
                                 <option value="500000000 AND 1000000000">500 triệu - 1 tỷ</option>
@@ -40,8 +40,8 @@
                             <label>Lọc theo diện tích</label>
 
                             <select name="dientich" class="m-0">
-                                <option value="">--All --</option>
-                                <option value="<=30">
+                                <option value="">Tất cả</option>
+                                <option value="10 and 30">
                                     <=30 m2 </option> <option value="30 AND 50">30 m<sup>2</sup> - 50 m<sup>2</sup>
                                 </option>
                                 <option value="50 AND 70">50 m<sup>2</sup> - 70 m<sup>2</sup></option>
@@ -54,14 +54,16 @@
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="form-group">
-                            <label>Loại nhà đất</label>
+                            <label>Sắp xếp</label>
 
-                            <select name="loaibds" class="m-0">
-                                <option value="">-- All --</option>
-                                <option value="1">Căn hộ chung cư</option>
-                                <option value="2">Đất nền dự án</option>
+                            <select name="sapxep" class="m-0">
+                                <option value="">Sắp xếp</option>
+                                <option value="idsp desc">Tin mới nhất</option>
+                                <option value="gia asc">Giá thấp đến cao</option>
+                                <option value="gia desc">Giá cao đến thấp</option>
+                                <option value="dientich asc">Diện tích bé đến lớn</option>
+                                <option value="dientich desc">Diện tích lớn đến bé</option>
                             </select>
-                            <span class="text-danger"><?php if (isset($error)) echo $error; ?></span>
                         </div>
                     </div>
 

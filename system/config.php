@@ -6,6 +6,7 @@ define('PASS_DB' , "");
 define('ROOT_URL' , "/du_an1");
 define('ADMIN_URL' , ROOT_URL."/admin");
 define('SITE_URL' , ROOT_URL."/site");
+define('SITE_PATH', ROOT_URL.'/site');
 define('SYSTEM_PATH' , ROOT_URL."/SYSTEM");
 define("PAGE_SIZE" , 6);
 ?>
