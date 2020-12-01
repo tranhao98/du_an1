@@ -38,13 +38,15 @@ switch ($act) {
                 else header("location: index.php");
             } else {
                 $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
-                $slider = "views/slider.php";
-                $view = "views/home.php";
-                require_once "layout.php";
+                $_SESSION['mess'] = $warning;
+                header("location: ?ctrl=user&act=login-index");
+
             }
         } else {
-
             $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
+            $_SESSION['mess'] = $warning;
+            header("location: ?ctrl=user&act=login-index");
+
         }
         break;
     case "logout":
