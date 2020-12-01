@@ -56,7 +56,7 @@
             <div class="row">
                 <div class="form-group col-12">
                     <label for="exampleFormControlTextarea1">Mô tả:</label>
-                    <textarea required class="form-control" id="editor0" rows="15" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."></textarea>
+                    <textarea required class="form-control" id="editor0" rows="5" style="resize: none;" name="mota" placeholder="Mô tả sản phẩm..."></textarea>
                 </div>
             </div>
             <div class="row">
@@ -99,7 +99,7 @@
             </div>
             <div class="row">
                 <div class="form-group col-4">
-                    <label for="tinhthanh">Tỉnh / Thành phố<span class="text-danger">(*)</span>:</label>
+                    <label for="tinhthanh">Tỉnh/Thành phố<span class="text-danger">(*)</span>:</label>
                     <select id="tinhthanh" class="form-control" placeholder="Tỉnh/Thành phố" required name="tinhthanhpho">
                         <option value="">--Chọn Tỉnh--</option>
                         <?php
@@ -115,13 +115,13 @@
                     </select>
                 </div>
                 <div class="form-group col-4">
-                    <label for="">Quận / Huyện<span class="text-danger">(*)</span>:</label>
+                    <label for="">Quận/Huyện<span class="text-danger">(*)</span>:</label>
                     <select id="quanhuyen" class="form-control" placeholder="Quận/Huyện" required name="quanhuyen">
                         <option value="">--Chưa Chọn Tỉnh--</option>
                     </select>
                 </div>
                 <div class="form-group col-4">
-                    <label for="">Phường / Xã<span class="text-danger">(*)</span>:</label>
+                    <label for="">Phường/Xã<span class="text-danger">(*)</span>:</label>
                     <select id="phuongxa" class="form-control" placeholder="Quận/Huyện" required name="phuongxa">
                         <option value="">--Chưa chọn Quận/Huyện--</option>
                     </select>
@@ -158,7 +158,6 @@
 </section>
 <br><br><br><br>
 <script>
-    CKEDITOR.replace('editor0');
 
     jQuery(document).ready(function($) {
         $("#tinhthanh").change(function(event) {
