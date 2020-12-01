@@ -9,7 +9,8 @@ $act = "index"; //chức năng mặc định
 $dsdm1 = getAllDanhMuc1();
 $dsdm2 = getAllDanhMuc2();
 $dsbd = getAllBaiDang();
-$dskv = getAllKhuVuc();
+$dskv = getKhuVuc();
+$dskvall = getAllKhuVuc();
 $dskvspecial = getKhuVucSpecial();
 $dstbold = getThongBaoOld();
 $dstbnew = getThongBaoNew();
@@ -27,13 +28,13 @@ switch ($act) {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $id = 0;
             if (isset($_GET['id']) == true) $id = $_GET['id'];
-            $loaibds = $_POST['loaibds'];
+            $sapxep = $_POST['sapxep'];
             $dientich = $_POST['dientich'];
             $gia = $_POST['gia'];
-            if ($gia == "" && $dientich == "" && $loaibds == "") {
+            if ($gia == "" && $dientich == "" && $sapxep == "") {
                 $error = "Bạn chưa chọn giá trị!";
             } else
-                $dsfillter = getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $loaibds);
+                $dsfillter = getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $sapxep);
         }
 
         $id = 0;
@@ -58,13 +59,13 @@ switch ($act) {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $id = 0;
             if (isset($_GET['id']) == true) $id = $_GET['id'];
-            $loaibds = $_POST['loaibds'];
+            $sapxep = $_POST['sapxep'];
             $dientich = $_POST['dientich'];
             $gia = $_POST['gia'];
-            if ($gia == "" && $dientich == "" && $loaibds == "") {
+            if ($gia == "" && $dientich == "" && $sapxep == "") {
                 $error = "Bạn chưa chọn giá trị!";
             } else
-                $dsfillter = getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $loaibds);
+                $dsfillter = getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $sapxep);
         }
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
@@ -126,12 +127,13 @@ switch ($act) {
             $key = "";
             (isset($_GET['tukhoa'])) ? $key = $_GET['tukhoa'] : "";
             $loaibds = $_POST['loaibds'];
+            $sapxep = $_POST['sapxep'];
             $dientich = $_POST['dientich'];
             $gia = $_POST['gia'];
-            if ($gia == "" && $dientich == "" && $loaibds == "") {
+            if ($gia == "" && $dientich == "" && $loaibds == "" && $sapxep == "") {
                 $error = "Bạn chưa chọn giá trị!";
             } else
-                $dsfillter = getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds);
+                $dsfillter = getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds, $sapxep);
         }
 
         $key = trim(strip_tags($_GET['tukhoa']));
