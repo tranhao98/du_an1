@@ -28,12 +28,12 @@ function taolinkstb($baseurl, $page_num, $page_size, $total_rows)
     if ($page_num >= 2) {
         $links .= "<li class='page-item'><a href='{$baseurl}' class='page-link'> << </a></li>";
         $pr = $page_num - 1;
-        $links .= "<li class='page-item'><a href='{$baseurl}&page_num={$pr}' class='page-link'> < </a></li>";
+        $links .= "<li class='page-item'><a href='{$baseurl}&page_num={$pr}' class='page-link'> 1 </a></li>";
     }
     $links .= "<li class='page-item active'><span class='page-link'>{$page_num}</span></li>";
     if ($page_num < $total_pages) {
         $pn = $page_num + 1;
-        $links .= "<li class='page-item'><a href='{$baseurl}&page_num={$pn}' class='page-link'> > </a></li>";
+        $links .= "<li class='page-item'><a href='{$baseurl}&page_num={$pn}' class='page-link'> 2 </a></li>";
         $links .= "<li class='page-item'><a href='{$baseurl}&page_num={$total_pages}' class='page-link'> >> </a></li>";
     }
     $links .= "</ul>";
