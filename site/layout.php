@@ -192,7 +192,8 @@
             </div>
         </div>
     </div>
-    <?php //require_once "views/dangnhap.php"; ?>
+    <?php //require_once "views/dangnhap.php"; 
+    ?>
     <!-- Modal Tìm kiếm-->
     <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -210,6 +211,7 @@
 </body>
 
 </html>
+
 <script src="../js/custom.js"></script>
 <script src="../js/owl.js"> </script>
 <script src="../js/accordions.js"></script>
