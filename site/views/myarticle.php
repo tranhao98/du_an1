@@ -3,6 +3,9 @@
     <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Bài đăng của bạn</a>
 </div>
 <section class="section" id="trainers">
+    <?php if(isset($_SESSION['mess'])) echo $_SESSION['mess'];
+        unset($_SESSION['mess']);
+    ?>
     <div class="row m-0 mt-3">
         <?php foreach ($dsnguoidung as $row) { ?>
             <div class="col-12 p-2">
@@ -30,7 +33,7 @@
                                     <li><a href="?act=baidang&id=<?= $row['idsp'] ?>">+ Xem thêm</a></li>
                                 </ul>
                                 <a class="btn btn-primary" href="">Chỉnh sửa bài viết</a>
-                                <a class="btn btn-danger" href="">Xóa bài viết</a>
+                                <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa BÀI VIẾT không?')" href="?act=del&id=<?=$row['idsp']?>">Xóa bài viết</a>
 
                             </div>
                         </div>
