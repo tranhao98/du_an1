@@ -36,9 +36,13 @@ function getNameNguoiDung($id)
     $sql = "SELECT * from taikhoan where id='$id'";
     return queryOne($sql);
 }
-function getAllKhuVuc()
+function getKhuVuc()
 {
     $sql = "SELECT * from khuvuc where not thutu = 1 limit 4";
+    return query($sql);
+}
+function getAllKhuVuc(){
+    $sql = "SELECT * from khuvuc";
     return query($sql);
 }
 function getKhuVucSpecial()
