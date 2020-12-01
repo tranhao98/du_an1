@@ -164,7 +164,7 @@ function demBaiDangTheoTuKhoa($key)
     $sql = "SELECT count(*) as sodong FROM baidang WHERE diadiem like '%" . $key . "%'";
     return queryOne($sql)['sodong'];
 }
-function getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $loaibds)
+function getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $sapxep)
 {
     if ($gia != "") {
         $sql = "SELECT * FROM baidang where gia BETWEEN $gia and iddm = '$id'";
@@ -176,16 +176,16 @@ function getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $loaibds)
             $sql .= " AND dientich between $dientich";
         }
     }
-    if ($loaibds != "") {
+    if ($sapxep != "") {
         if ($sql == "") {
-            $sql = "SELECT * FROM baidang where iddm = '$loaibds' and iddm = '$id'";
+            $sql = "SELECT * FROM baidang where iddm = '$id' order by $sapxep";
         } else {
-            $sql .= " AND iddm = '$loaibds' and iddm = '$id'";
+            $sql .= " AND iddm = '$id' order by $sapxep";
         }
     }
     return query($sql);
 }
-function getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $loaibds)
+function getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $sapxep)
 {
     if ($gia != "") {
         $sql = "SELECT * FROM baidang where gia BETWEEN $gia and idkhuvuc = '$id'";
@@ -197,16 +197,16 @@ function getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $loaibds)
             $sql .= " AND dientich between $dientich";
         }
     }
-    if ($loaibds != "") {
+    if ($sapxep != "") {
         if ($sql == "") {
-            $sql = "SELECT * FROM baidang where iddm = '$loaibds' and idkhuvuc = '$id'";
+            $sql = "SELECT * FROM baidang where iddm = '$id' order by $sapxep";
         } else {
-            $sql .= " AND iddm = '$loaibds' and idkhuvuc = '$id'";
+            $sql .= " AND iddm = '$id' order by $sapxep";
         }
     }
     return query($sql);
 }
-function getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds)
+function getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds, $sapxep)
 {
     if ($gia != "") {
         $sql = "SELECT * FROM baidang where gia BETWEEN $gia AND diadiem like '%" . $key . "%'";
@@ -222,7 +222,14 @@ function getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds)
         if ($sql == "") {
             $sql = "SELECT * FROM baidang where iddm = '$loaibds' AND diadiem like '%" . $key . "%'";
         } else {
-            $sql .= " AND iddm = '$loaibds' AND diadiem like '%" . $key . "%'";
+            $sql .= " AND iddm = '$loaibds'";
+        }
+    }
+    if ($sapxep != "") {
+        if ($sql == "") {
+            $sql = "SELECT * FROM baidang where diadiem like '%" . $key . "%' order by $sapxep";
+        } else {
+            $sql .= " AND diadiem like '%" . $key . "%' order by $sapxep";
         }
     }
     return query($sql);
@@ -231,21 +238,22 @@ function getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds)
 function updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $anhien)
 {
     if ($hinh != "")
-    $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', hinh = '$hinh', email='$email', sodienthoai='$sodienthoai', diachi='$diachi',
+        $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', hinh = '$hinh', email='$email', sodienthoai='$sodienthoai', diachi='$diachi',
     tinhthanh='$tinhthanh', quanhuyen='$quanhuyen', phuongxa='$phuongxa', gioitinh='$gioitinh', anhien='$anhien' WHERE id='$id'";
     else
-    $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', email='$email', sodienthoai='$sodienthoai', diachi='$diachi',
+        $sql = "UPDATE taikhoan SET hoten='$hoten', ngaysinh = '$ngaysinh', email='$email', sodienthoai='$sodienthoai', diachi='$diachi',
     tinhthanh='$tinhthanh', quanhuyen='$quanhuyen', phuongxa='$phuongxa', gioitinh='$gioitinh', anhien='$anhien' WHERE id='$id'";
     execute($sql);
 }
 
-function changePass($pass, $id){
-   $sql = "UPDATE taikhoan SET matkhau = '$pass' WHERE id = '$id'";
+function changePass($pass, $id)
+{
+    $sql = "UPDATE taikhoan SET matkhau = '$pass' WHERE id = '$id'";
     execute($sql);
 }
 
-        
-function kiemTraMatKhau( $id)
+
+function kiemTraMatKhau($id)
 {
     $sql = "SELECT * from taikhoan where id = '$id'";
     return queryOne($sql);
