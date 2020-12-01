@@ -83,7 +83,7 @@
                                     <a class="dropdown-item" href="?act=baidang-addnew">Đăng bài</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=doimatkhau">Đổi mật khẩu</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=infouser">Xem thông tin tài khoản</a>
-                                    <a class="dropdown-item" href="#">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow' ;></i></a>
+                                    <a class="dropdown-item" href="?ctrl=user&act=thanhtoan">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow' ;></i></a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="?ctrl=user&act=logout">Đăng xuất</a>
                                 </div>

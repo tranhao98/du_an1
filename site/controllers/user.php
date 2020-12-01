@@ -161,4 +161,10 @@ switch ($act) {
         
         require_once "layout.php";
         break;
-}
+    case "register":
+        
+        $view = "views/register.php";
+        require_once "layout.php";
+        break;
+    break;
+    }
