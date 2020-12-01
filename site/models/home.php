@@ -250,3 +250,23 @@ function kiemTraMatKhau( $id)
     $sql = "SELECT * from taikhoan where id = '$id'";
     return queryOne($sql);
 }
+
+function addBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh, $hinh_anh2, $hinh_anh3, $hinh_anh4, $hinh_anh5 ,$hinh_anh6,$gia,$nguoidung){
+    echo $sql="INSERT INTO baidang ( iddm, idkhuvuc, idnguoiban, tensp, hinh, hinh2, hinh3, hinh4, hinh5, hinh6, gia, dientich, phongngu, noithat, noibat, mota, diadiem, anhien) 
+    VALUES ( '$danhmuc', '$khuvuc', '$nguoidung', '$tieude', '$hinh_anh', '$hinh_anh2', '$hinh_anh3', '$hinh_anh4', '$hinh_anh5', '$hinh_anh6', '$gia', '$dientich', '$phongngu', '$noithat', '$noibat', '$mota', '$diachi', '$anhien')";
+    execute($sql);
+}
+function getAllDanhMuc(){
+    $sql="SELECT * FROM danhmuc";
+    return query($sql);
+}
+
+function getAllNguoiDung()
+{
+    $sql = "SELECT * FROM taikhoan";
+    return query($sql);
+}
+function deleteBaiViet($id){
+    $sql= "DELETE FROM baidang where idsp ='$id'";
+    execute($sql);
+}

@@ -1,26 +1,12 @@
-<div class="container">
-    <div class="row content shadow-sm mb-3 bg-white rounded">
-        <div class="col-5 text-left h-100 p-3 mt-n1">
-            <h5 class="font-weight-bold">Thêm thông tin bài đăng</h5>
-        </div>
-        <div class="col-7 h-100 ">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb pl-5 bg-white">
-                    <li class="breadcrumb-item"><a href="" class="text-dark">Tổng quan</a></li>
-                    <li class="breadcrumb-item"><a href="" class="text-dark">Bài đăng</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Thêm thông tin bài đăng</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <div class="row shadow-sm bg-white rounded p-3">
+<br><br><br><br>
+<section class="section">
+    <div class="container">
         <h5 class="font-weight-bold mb-3">Thêm bài đăng</h5>
-        <form action="?ctrl=baidang&act=insert" method="POST" class="mx-auto w-100 bg-input" enctype="multipart/form-data">
-
-            <div class="form-group">
-                <label for="name">Tiêu đề bài viết:</label>
-                <input required type="text" class="form-control" id="name" name="tieude" placeholder="Tiêu đề">
-            </div>
+        <form action="?act=insert-baidang" method="POST" class="mx-auto w-100 bg-input" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Tiêu đề bài viết:</label>
+                    <input required type="text" class="form-control" id="name" name="tieude" placeholder="Tiêu đề">
+                </div>
             <div class="row">
                 <div class="form-group col-6">
                     <label for="exampleinput requiredPassword1">Hình ảnh 1:</label>
@@ -59,17 +45,14 @@
                 <div class="form-group col-6">
                     <label for="tieude">Người Đăng:</label>
                     <select class="form-control" name="idnguoidang" placeholder="Người Dùng">
-                        <?php
-                        foreach ($nguoidung as $nd) { ?>
-                            <option value=" <?= $nd['id'] ?> "> <?= $nd['hoten'] ?> </option>
-                        <?php } ?>
+                            <option value="<?=$_SESSION['sid']?>" selected><?=$_SESSION['hoten']?></option>
                     </select>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Mô tả:</label>
-                <textarea required class="form-control" id="editor0" rows="5" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."></textarea>
+                <textarea required class="form-control" id="editor0" rows="15" style="resize: none" name="mota" placeholder="Mô tả sản phẩm..."></textarea>
             </div>
 
             <div class="row">
@@ -164,14 +147,12 @@
 
             </div>
 
-            <button type="reset" class="btn btn-secondary mr-2">Làm lại</button>
             <button type="submit" class="btn btn-danger">Thêm bài viết</button>
 
         </form>
     </div>
-
-</div>
-
+</section>
+<br><br><br><br>
 <script>
     CKEDITOR.replace('editor0');
 
