@@ -11,7 +11,6 @@
             <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Thông tin & Liên hệ</a>
                 <a href="?ctrl=user&act=infouser" class="list-group-item list-group-item-action">Thông tin tài khoản</a>
-
                 <a href="?ctrl=user&act=myarticle&id=<?= $_SESSION['sid']?>" class="list-group-item list-group-item-action">Các bài viết đã đăng</a>
                 <a href="?ctrl=user&act=edit-info&id=<?= $_SESSION['sid']?>" class="list-group-item list-group-item-action">Thay đổi thông tin tài khoản</a>
                 <a href="?ctrl=user&act=doimatkhau" class="list-group-item list-group-item-action">Đổi mật khẩu</a>

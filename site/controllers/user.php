@@ -169,23 +169,8 @@ switch ($act) {
         break;
         break;
     case "kiemtra":
-<<<<<<< HEAD
         $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
-=======
-        $check = kiemTraNguoiDung($tendangnhap);
-        
-        if (is_array($check)) {
-            $checkgoi = kiemTraGoi($check['id']);
-        }
-        
-        if (is_array($checkgoi)) {
-            $_SESSION['goitv'] = $checkgoi['thanh_vien'];
-        }
-        var_dump($check);
-        var_dump($checkgoi);
-        exit();
->>>>>>> d2e8ee97d090d5a5bae1e9037475d65c5dad31e2
         header("location: ?ctrl=user&act=thanhtoan");
 
         break;

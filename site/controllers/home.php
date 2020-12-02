@@ -165,7 +165,7 @@ switch ($act) {
         $tieude = trim(strip_tags($_POST['tieude']));
         $gia = trim(strip_tags($_POST['gia']));
         $nguoidung = trim(strip_tags($_POST['idnguoidang']));
-        $mota = trim(strip_tags($_POST['mota']));
+        $mota = $_POST['mota'];
         $noithat = trim(strip_tags($_POST['noithat']));
         $phongngu = trim(strip_tags($_POST['phongngu']));
         $dientich = trim(strip_tags($_POST['dientich']));

@@ -158,6 +158,7 @@
 </section>
 <br><br><br><br>
 <script>
+    CKEDITOR.replace('editor0');
 
     jQuery(document).ready(function($) {
         $("#tinhthanh").change(function(event) {
