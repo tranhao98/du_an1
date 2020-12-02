@@ -51,6 +51,7 @@
                     <div class="row">
                         <h3 class="text-secondary pl-3 pr-3">Bình luận</h3>
                         <iframe src="comment.php" width=100% height=300px frameborder="0"></iframe>
+                        <?php if(isset($_SESSION['sid'])) { ?>
                         <form method="post" class="form_cmt w-100" id="comment_form">
                             <div class="row m-0">
                                 <div class="col-10 form-group">
@@ -61,6 +62,7 @@
                                 </div>
                             </div>
                         </form>
+                        <?php } ?>
                         <?php
                                 if (isset($_POST['guicmt']) && ($_POST['guicmt'])) {
 
