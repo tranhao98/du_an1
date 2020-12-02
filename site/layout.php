@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/owl.css">
     <script src="../js/jquery/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../ckeditor/ckeditor.js"></script>
-    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="https://png.pngtree.com/png-clipart/20200701/original/pngtree-family-stay-at-home-illustration-to-prevent-covid-19-plague-vector-png-image_5344919.jpg" />
@@ -81,11 +81,11 @@
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                                <?php
-                                    if(isset($_SESSION['goitv'])&& $_SESSION['goitv']>0){
-                                ?>
-                                    <a class="dropdown-item" href="?act=baidang-addnew">Đăng bài</a>
-                                    <?php }?>
+                                    <?php
+                                    if (isset($_SESSION['goitv']) && $_SESSION['goitv'] > 0) {
+                                    ?>
+                                        <a class="dropdown-item" href="?act=baidang-addnew">Đăng bài</a>
+                                    <?php } ?>
                                     <a class="dropdown-item" href="?ctrl=user&act=doimatkhau">Đổi mật khẩu</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=infouser">Xem thông tin tài khoản</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=thanhtoan">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow' ;></i></a>
@@ -216,6 +216,7 @@
 </body>
 
 </html>
+
 
 <script src="../js/custom.js"></script>
 <script src="../js/owl.js"> </script>

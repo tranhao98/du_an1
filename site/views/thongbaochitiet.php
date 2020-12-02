@@ -50,8 +50,8 @@
 
                     <div class="row">
                         <h3 class="text-secondary pl-3 pr-3">Bình luận</h3>
-                        <iframe src="comment.php" width=100% height=300px frameborder="0"></iframe>
-                        <form method="post" class="form_cmt w-100" id="form_cmt">
+                        <!-- <iframe src="comment.php" width=100% height=300px frameborder="0"></iframe> -->
+                        <form method="post" class="form_cmt w-100" id="comment_form">
                             <div class="row m-0">
                                 <div class="col-10 form-group">
                                     <textarea class="form-control mb-3" name="noidung" id="noidung" rows="3" placeholder="Nhập nội dung bình luận tại đây!"></textarea>
@@ -61,22 +61,22 @@
                                 </div>
                             </div>
                         </form>
-                        <!-- <span id="comment_message"></span> -->
+                        <span id="comment_message"></span>
+                        <div id="display_comment"></div>
+                        <!-- <?php
+                                // if (isset($_POST['guicmt']) && ($_POST['guicmt'])) {
 
-                        <?php
-                        if (isset($_POST['guicmt']) && ($_POST['guicmt'])) {
+                                //     $noidung = $_POST['noidung'];
 
-                            $noidung = $_POST['noidung'];
+                                //     $thoigianbinhluan = date("Y/m/d h:i:s");
+                                //     $idtb = $_GET['idtb'];
+                                //     $idnguoibl = $_SESSION['sid'];
+                                //     if ($noidung != "") {
+                                //         addcmt($idnguoibl, $idtb, $noidung, $thoigianbinhluan);
+                                //     }
+                                // }
 
-                            $thoigianbinhluan = date("Y/m/d h:i:s");
-                            $idtb = $_GET['idtb'];
-                            $idnguoibl = $_SESSION['sid'];
-                            if ($noidung != "") {
-                                addcmt($idnguoibl, $idtb, $noidung, $thoigianbinhluan);
-                            }
-                        }
-
-                        ?>
+                                ?> -->
                     </div>
 
                 </div>
@@ -107,23 +107,23 @@
         </div>
     </div>
 </div>
-<!-- <script>
-                            $(document).ready(function() {
-                                $('#form_cmt').on('guicmt', function(event) {
-                                    event.preventDefault();
-                                    var form_data = $(this).serialize();
-                                    $.ajax({
-                                        url: "thongbaochitiet.php",
-                                        method: "POST",
-                                        data: form_data,
-                                        dataType: "JSON",
-                                        success: function(data) {
-                                            if (data.error != '') {
-                                                $('#form_cmt')[0].reset();
-                                                $('#comment_message').html(data.error);
-                                            }
-                                        }
-                                    })
-                                });
-                            });
-                        </script> -->
+<script>
+    $(document).ready(function() {
+        $('#comment_form').on('guicmt', function(event) {
+            event.preventDefault();
+            var form_data = $(this).serialize();
+            $.ajax({
+                url: "addcmt.php",
+                method: "POST",
+                data: form_data,
+                dataType: "JSON",
+                success: function(data) {
+                    if (data.error != '') {
+                        $('#comment_form')[0].reset();
+                        $('#comment_message').html(data.error);
+                    }
+                }
+            })
+        });
+    });
+</script>
