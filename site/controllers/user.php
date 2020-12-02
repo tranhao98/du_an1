@@ -38,12 +38,12 @@ switch ($act) {
                 if ($check['vaitro'] == 1) header("location: ../admin/index.php");
                 else header("location: index.php");
             } else {
-                $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
+                $warning = "<div class='alert alert-danger'>Sai mật khẩu!</div>";
                 $_SESSION['mess'] = $warning;
                 header("location: ?ctrl=user&act=login-index");
             }
         } else {
-            $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
+            $warning = "<div class='alert alert-primary'>Tài khoản này không tồn tại!</div>";
             $_SESSION['mess'] = $warning;
             header("location: ?ctrl=user&act=login-index");
         }
