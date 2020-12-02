@@ -27,18 +27,16 @@ switch ($act) {
         if (is_array($check)) {
             // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
             $verify = password_verify($matkhau, $check['matkhau']);
-            $checkgoi = kiemTraGoi($check['id']);
             // var_dump($hash);
             if ($verify) {
                 $_SESSION['hinh'] = $check['hinh'];
                 $_SESSION['sid'] = $check['id'];
                 $_SESSION['hoten'] = $check['hoten'];
                 $_SESSION['vaitro'] = $check['vaitro'];
-                $_SESSION['goitv'] = $checkgoi['thanh_vien'];
                 if ($check['vaitro'] == 1) header("location: ../admin/index.php");
                 else header("location: index.php");
             } else {
-                $warning = "<div class='alert alert-danger'>Sai mật khẩu!</div>";
+                $warning = "<div class='alert alert-danger'>Bạn nhập sai mật khẩu. Vui lòng nhập lại!</div>";
                 $_SESSION['mess'] = $warning;
                 header("location: ?ctrl=user&act=login-index");
             }

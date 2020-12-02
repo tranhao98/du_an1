@@ -1,7 +1,7 @@
 <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Thông tin</a>
     <div class="d-flex w-100 justify-content-between">
-        <form enctype="multipart/form-data" class="mt-3 mx-auto w-100 bg-input" method="post" action="?ctrl=user&act=update-info">
+        <form enctype="multipart/form-data" class="mt-3 mb-3 mx-auto w-100 bg-input" method="post" action="?ctrl=user&act=update-info">
             <div class="form-gruop">
                 <label for="exampleinput requiredPassword1">Hình ảnh</label>
                 <input type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">

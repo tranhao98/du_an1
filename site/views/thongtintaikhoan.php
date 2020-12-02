@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-3" style="min-height: 1100px;">
+        <div class="col-3" style="height:auto">
 
             <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Thông tin & Liên hệ</a>

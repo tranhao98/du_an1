@@ -127,30 +127,6 @@
                     </select>
                 </div>
             </div>
-
-
-            <div class="row">
-                <!-- <div class="form-group col-5">
-                        <label for="name">Thứ tự:</label>
-                        <input required type="text" class="form-control" id="name" name="thutu">
-                    </div> -->
-                <div class="form-group col-2">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="anhien" id="anhien1" value="1">
-                        <label class="form-check-label" for="anhien1">Hiện</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="anhien" id="anhien0" value="0">
-                        <label class="form-check-label" for="anhien0">Ẩn</label>
-                    </div>
-                </div>
-                <div class="form-group col-2">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" name="noibat" value="1">
-                        <label class="custom-control-label" for="customCheck1">Nổi bật</label>
-                    </div>
-                </div>
-            </div>
             <button type="submit" class="btn btn-danger">Đăng bài</button>
 
         </form>

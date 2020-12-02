@@ -174,7 +174,6 @@ switch ($act) {
         $tinhthanh = getNameKhuVucHanhChinh($_POST['tinhthanhpho'], 1)['name'];
         $quanhuyen = getNameKhuVucHanhChinh($_POST['quanhuyen'], 2)['name'];
         $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
-        $anhien = $_POST['anhien'];
         $diachi = $phuongxa . ', ' . $quanhuyen . ', ' . $tinhthanh . '.';
         $hinh_anh = $_FILES['hinhanh']['name'];
         $hinh_anh2 = $_FILES['hinhanh2']['name'];
@@ -195,11 +194,9 @@ switch ($act) {
         move_uploaded_file($_FILES["hinhanh5"]["tmp_name"], $target_file);
         $target_file = $partimg . basename($hinh_anh6);
         move_uploaded_file($_FILES["hinhanh6"]["tmp_name"], $target_file);
+
     
-        if (isset($_POST['noibat'])) $noibat = 1;
-        else $noibat = 0;
-    
-        addBaiViet($tieude, $mota, $noithat, $phongngu, $dientich, $khuvuc, $danhmuc, $diachi, $anhien, $noibat, $hinh_anh, $hinh_anh2, $hinh_anh3, $hinh_anh4, $hinh_anh5, $hinh_anh6, $gia, $nguoidung);
+        addBaiViet($tieude, $mota, $noithat, $phongngu, $dientich, $khuvuc, $danhmuc, $diachi, $hinh_anh, $hinh_anh2, $hinh_anh3, $hinh_anh4, $hinh_anh5, $hinh_anh6, $gia, $nguoidung);
         $mess = "<div class=\"alert alert-primary\" role=\"alert\">
           Đã thêm thành công!
         </div>";
