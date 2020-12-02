@@ -1,6 +1,7 @@
 <?php
 ob_start();
 session_start();
+require "../site/models/home.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,11 +95,12 @@ session_start();
                             $note = $_GET['vnp_OrderInfo'];
                             $vnp_response_code = $_GET['vnp_ResponseCode'];
                             $code_vnpay = $_GET['vnp_TransactionNo'];
+
                             $code_bank = $_GET['vnp_BankCode'];
                             $time = $_GET['vnp_PayDate'];
                             $date_time = substr($time, 0, 4) . '-' . substr($time, 4, 2) . '-' . substr($time, 6, 2) . ' ' . substr($time, 8, 2) . ' ' . substr($time, 10, 2) . ' ' . substr($time, 12, 2);
                             require_once "../system/database.php";
-                            $taikhoan = $_SESSION['hoten'];
+                            $taikhoan = $_SESSION['sid'];
                             $sql = "SELECT * FROM payments WHERE order_id = '$order_id'";
                             $query = mysqli_query($connmysqli, $sql);
                             $row = mysqli_num_rows($query);
@@ -125,7 +127,7 @@ session_start();
 
                 </label>
                 <br>
-                <a href="../site/index.php?ctrl=user&act=thanhtoan">
+                <a href="../site/index.php?ctrl=user&act=kiemtra">
                     <button>Quay lại</button>
                 </a>
             </div>
