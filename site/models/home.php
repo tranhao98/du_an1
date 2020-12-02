@@ -286,3 +286,8 @@ function deleteBaiViet($id){
     $sql= "DELETE FROM baidang where idsp ='$id'";
     execute($sql);
 }
+
+function kiemTraGoi($id){
+    $sql = "SELECT * FROM payments WHERE thanh_vien = '$id'";
+    return queryOne($sql);
+}

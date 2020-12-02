@@ -80,7 +80,11 @@
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                                <?php
+                                    if(isset($_SESSION['goitv'])&& $_SESSION['goitv']>0){
+                                ?>
                                     <a class="dropdown-item" href="?act=baidang-addnew">Đăng bài</a>
+                                    <?php }?>
                                     <a class="dropdown-item" href="?ctrl=user&act=doimatkhau">Đổi mật khẩu</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=infouser">Xem thông tin tài khoản</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=thanhtoan">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow' ;></i></a>

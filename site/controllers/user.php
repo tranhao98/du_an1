@@ -27,27 +27,28 @@ switch ($act) {
         if (is_array($check)) {
             // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
             $verify = password_verify($matkhau, $check['matkhau']);
-            
+            $checkgoi = kiemTraGoi($check['id']);    
             // var_dump($hash);
             if ($verify) {
                 $_SESSION['hinh'] = $check['hinh'];
                 $_SESSION['sid'] = $check['id'];
                 $_SESSION['hoten'] = $check['hoten'];
                 $_SESSION['vaitro'] = $check['vaitro'];
+                $_SESSION['goitv'] = $checkgoi['thanh_vien'];
                 if ($check['vaitro'] == 1) header("location: ../admin/index.php");
                 else header("location: index.php");
             } else {
                 $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
                 $_SESSION['mess'] = $warning;
                 header("location: ?ctrl=user&act=login-index");
-
             }
+        
         } else {
             $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
             $_SESSION['mess'] = $warning;
             header("location: ?ctrl=user&act=login-index");
-
         }
+
         break;
     case "logout":
         if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
@@ -55,6 +56,7 @@ switch ($act) {
             unset($_SESSION['tendangnhap']);
             unset($_SESSION['hoten']);
             unset($_SESSION['hinh']);
+            unset($_SESSION['goitv']);
             unset($_SESSION['vaitro']);
             header("location: index.php");
         }
@@ -146,6 +148,7 @@ switch ($act) {
                     unset($_SESSION['tendangnhap']);
                     unset($_SESSION['hoten']);
                     unset($_SESSION['hinh']);
+                    unset($_SESSION['goitv']);
                     unset($_SESSION['vaitro']);
                     header('location: ?ctrl=user&act=login-index');
                 } else {
@@ -166,5 +169,10 @@ switch ($act) {
         $view = "views/register.php";
         require_once "layout.php";
         break;
+    break;
+    case "kiemtra":
+        $checkgoi = kiemTraGoi($check['id']);    
+        $_SESSION['goitv'] = $checkgoi['thanh_vien'];
+        header("location: ?ctrl=user&act=thanhtoan");
     break;
     }
