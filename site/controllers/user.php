@@ -171,7 +171,7 @@ switch ($act) {
         break;
     break;
     case "kiemtra":
-        $checkgoi = kiemTraGoi($check['id']);    
+        $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
         header("location: ?ctrl=user&act=thanhtoan");
     break;
