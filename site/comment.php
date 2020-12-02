@@ -24,25 +24,20 @@ if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
             $name = getnameuser($cmt['idnguoibl']);
             $thoigianbinhluan = $cmt['thoigianbinhluan'];
             $noidung = $cmt['noidung'];
-            echo '<div class="row d-flex align-items-center shadow-sm">
-        <div class="col-2 align-self-center">
-        <img width="100%" src="../upload/'.$_SESSION['hinh'].'">
-        </div>
-        <div class="col-4 align-self-center ml-n3">
-        ' . $name['hoten'] . '
-        </div>
-        <div class"col-6" > 
-        ' . $thoigianbinhluan . ' 
-        </div>
-        <br>
-        
-    </div>
-    <div class="row">
-    <p class="mt-3 ml-3">' . $noidung . '</p>
-    </div>
-    <div class="dropdown-divider"></div>
-    
-    ';
+            echo    '<div class="row d-flex align-items-center shadow-sm">
+                        <div class="col-2 align-self-center">
+                            <img width="100%" src="../upload/'.$_SESSION['hinh'].'">
+                        </div>
+                        <div class="col-4 align-self-center ml-n3">
+                            <a style="font-weight: bold; font-size: 13pt;">' . $name['hoten'] . '</a>
+                            <p style=" font-size: 11pt; color: grey;">' . $thoigianbinhluan . ' </p>
+                        </div>
+                        <div class"col-6" > 
+                            <p class="mt-3 ml-3">' . $noidung . '</p>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="dropdown-divider"></div>';
         }
         ?>
 
