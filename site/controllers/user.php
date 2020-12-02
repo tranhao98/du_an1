@@ -17,7 +17,7 @@ switch ($act) {
     case "login-index":
         $view = "views/login-index.php";
         require_once "layout.php";
-    break;
+        break;
     case "login":
         $tendangnhap = trim(strip_tags($_POST['tendangnhap']));
         $matkhau = trim(strip_tags($_POST['matkhau']));
@@ -27,7 +27,7 @@ switch ($act) {
         if (is_array($check)) {
             // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
             $verify = password_verify($matkhau, $check['matkhau']);
-            $checkgoi = kiemTraGoi($check['id']);    
+            $checkgoi = kiemTraGoi($check['id']);
             // var_dump($hash);
             if ($verify) {
                 $_SESSION['hinh'] = $check['hinh'];
@@ -42,7 +42,6 @@ switch ($act) {
                 $_SESSION['mess'] = $warning;
                 header("location: ?ctrl=user&act=login-index");
             }
-        
         } else {
             $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
             $_SESSION['mess'] = $warning;
@@ -99,7 +98,7 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
         break;
-    break;
+        break;
     case "update-info":
         $id = $_POST["id"];
         $hinh = $_FILES['hinh']['name'];
@@ -122,24 +121,24 @@ switch ($act) {
         $hoten = trim(strip_tags($hoten));
         $diachi = trim(strip_tags($diachi));
 
-    updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $anhien);
-    header("location:index.php?ctrl=user&act=infouser");
-    break;
+        updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $anhien);
+        header("location:index.php?ctrl=user&act=infouser");
+        break;
     case "thanhtoan":
         $child = "views/thanhtoan.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
         break;
     case "doimatkhau":
-        if(isset($_POST['submit'])){
+        if (isset($_POST['submit'])) {
             $passcu = ($_POST["passcu"]);
-            $p1 = password_hash($_POST['p1'],PASSWORD_DEFAULT);
-            $p2 = password_hash($_POST['p2'],PASSWORD_DEFAULT);
+            $p1 = password_hash($_POST['p1'], PASSWORD_DEFAULT);
+            $p2 = password_hash($_POST['p2'], PASSWORD_DEFAULT);
             $check = kiemTraMatKhau($_SESSION['sid']);
-            if(is_array($check)){
+            if (is_array($check)) {
                 $verify = password_verify($passcu, $check['matkhau']);
-                if($verify){
-                    changePass($p1,$_SESSION['sid']);
+                if ($verify) {
+                    changePass($p1, $_SESSION['sid']);
                     $mess = '<div class="alert alert-primary" role="alert">
                     Bạn đã đổi mật khẩu thành công. Bạn vui lòng đăng nhập lại.
                 </div>';
@@ -157,22 +156,37 @@ switch ($act) {
                 </div>';
                 }
             }
-        
-    }
+        }
         $child = "views/doimatkhau.php";
         $view = "views/thongtintaikhoan.php";
-        
+
         require_once "layout.php";
         break;
     case "register":
-        
+
         $view = "views/register.php";
         require_once "layout.php";
         break;
-    break;
+        break;
     case "kiemtra":
+<<<<<<< HEAD
         $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
+=======
+        $check = kiemTraNguoiDung($tendangnhap);
+        
+        if (is_array($check)) {
+            $checkgoi = kiemTraGoi($check['id']);
+        }
+        
+        if (is_array($checkgoi)) {
+            $_SESSION['goitv'] = $checkgoi['thanh_vien'];
+        }
+        var_dump($check);
+        var_dump($checkgoi);
+        exit();
+>>>>>>> d2e8ee97d090d5a5bae1e9037475d65c5dad31e2
         header("location: ?ctrl=user&act=thanhtoan");
-    break;
-    }
+
+        break;
+}

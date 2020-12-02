@@ -1309,7 +1309,7 @@
     
     .big-container {
         margin: auto;
-        width: 85%;
+        width: 80%;
     }
     
     .thongtinmota h2 {
@@ -1318,7 +1318,7 @@
     
     .thongtinmota p {
         font-weight: 400;
-        font-size: 15pt;
+        font-size: 14pt;
     }
     
     @media only screen and (min-width: 768px) {
