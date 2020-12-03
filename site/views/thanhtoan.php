@@ -1,6 +1,6 @@
 <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Thanh toán</a>
-    <?php if(isset($_SESSION['message'])) { 
+    <?php if(isset($_SESSION['goitv']) && $_SESSION['goitv'] > 0) { 
                 echo $_SESSION['message'];
                 unset($_SESSION['message']);
     } else { ?>

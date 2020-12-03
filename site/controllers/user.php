@@ -129,10 +129,9 @@ switch ($act) {
     case "thanhtoan":
         $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
-        if($checkgoi['thanh_vien'] == $_SESSION['sid']){
             $thongbao = "<div class='alert alert-primary mt-2'>Bạn đang là thành viên. Có thể sử dụng chức năng đăng tin!</div>";
             $_SESSION['message'] = $thongbao;
-        }
+        
         $child = "views/thanhtoan.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
