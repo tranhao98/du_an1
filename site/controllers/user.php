@@ -22,6 +22,8 @@ switch ($act) {
         $tendangnhap = trim(strip_tags($_POST['tendangnhap']));
         $matkhau = trim(strip_tags($_POST['matkhau']));
         $check = kiemTraNguoiDung($tendangnhap);
+        $checkgoi = kiemTraGoi($_SESSION['sid']);
+        
         // var_dump($check);
         $warning = "";
         if (is_array($check)) {
@@ -29,6 +31,7 @@ switch ($act) {
             $verify = password_verify($matkhau, $check['matkhau']);
             // var_dump($hash);
             if ($verify) {
+                $_SESSION['goitv'] = $checkgoi['thanh_vien'];
                 $_SESSION['hinh'] = $check['hinh'];
                 $_SESSION['sid'] = $check['id'];
                 $_SESSION['hoten'] = $check['hoten'];
@@ -123,6 +126,12 @@ switch ($act) {
         header("location:index.php?ctrl=user&act=infouser");
         break;
     case "thanhtoan":
+        $checkgoi = kiemTraGoi($_SESSION['sid']);
+        $_SESSION['goitv'] = $checkgoi['thanh_vien'];
+        if($checkgoi['thanh_vien'] == $_SESSION['sid']){
+            $thongbao = "<div class='alert alert-primary mt-2'>Bạn đang là thành viên. Có thể sử dụng chức năng đăng tin!</div>";
+            $_SESSION['message'] = $thongbao;
+        }
         $child = "views/thanhtoan.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";

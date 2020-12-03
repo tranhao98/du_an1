@@ -92,6 +92,7 @@
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="?ctrl=user&act=logout">Đăng xuất</a>
                                 </div>
+                            </div>
                             <?php
                         } else {
                             ?>

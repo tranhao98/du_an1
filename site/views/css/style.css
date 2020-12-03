@@ -107,8 +107,10 @@
     
     .dropdown-menu {
         background: rgba(0, 0, 0, 0.2) !important;
-        padding: 0;
-        border-radius: 0;
+    }
+    
+    .dropdown-menu .dropdown-item {
+        padding: 5px 13px !important;
     }
     
     .dropdown-menu a {
@@ -187,7 +189,7 @@
     }
     
     .navbar .navbar-nav .nav-item {
-        margin: 0px 20px;
+        margin: 0px 25px;
     }
     
     .navbar .search_icon {
