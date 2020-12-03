@@ -22,13 +22,14 @@ switch ($act) {
         $tendangnhap = trim(strip_tags($_POST['tendangnhap']));
         $matkhau = trim(strip_tags($_POST['matkhau']));
         $check = kiemTraNguoiDung($tendangnhap);
-        $checkgoi = kiemTraGoi($_SESSION['sid']);
+        
         
         // var_dump($check);
         $warning = "";
         if (is_array($check)) {
             // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
             $verify = password_verify($matkhau, $check['matkhau']);
+            $checkgoi = kiemTraGoi($check['id']);
             // var_dump($hash);
             if ($verify) {
                 $_SESSION['goitv'] = $checkgoi['thanh_vien'];
