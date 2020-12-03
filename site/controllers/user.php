@@ -209,8 +209,8 @@ switch ($act) {
                     $mail->CharSet  = "utf-8";
                     $mail->Host = 'smtp.gmail.com';  //SMTP servers
                     $mail->SMTPAuth = true; // Enable authentication
-                    $mail->Username = 'duongkhang0401@gmail.com';  // SMTP username
-                    $mail->Password = 'chochochocho';   // SMTP password
+                    $mail->Username = '';  // SMTP username
+                    $mail->Password = '';   // SMTP password
                     $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
                     $mail->Port = 465;  // port to connect to               
                     $mail->setFrom('duongkhang0401@gmail.com', 'Quản trị viên');
