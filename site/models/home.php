@@ -154,6 +154,10 @@ function kiemTraNguoiDung($tendangnhap)
     $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap'";
     return queryOne($sql);
 }
+function kiemTraMail($email){
+    $sql = "SELECT * from taikhoan where email = '$email'";
+    return queryOne($sql);
+}
 function getNguoiDungByID($id)
 {
     $sql = "SELECT * from taikhoan where id='$id'";
@@ -310,4 +314,11 @@ function addcmt($idnguoibl, $idtb, $noidung, $thoigianbinhluan)
 {
     $sql = "INSERT INTO binhluan (noidung, thoigianbinhluan, idtb, idnguoibl) VALUES ( '$noidung','$thoigianbinhluan' ,'$idtb', '$idnguoibl')";
     execute($sql);
+}
+function addUser($hoten,$email,$tendangnhap,$matkhau,$randkey){
+    $sql ="INSERT INTO taikhoan (hoten, tendangnhap, email, matkhau, randkey) VALUES ('$hoten','$tendangnhap', '$email', '$matkhau', '$randkey')";
+    $conn = getConnection();
+    $conn -> exec($sql);
+    $iduser = $conn->lastInsertId();
+    return $iduser;
 }

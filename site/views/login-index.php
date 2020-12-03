@@ -31,7 +31,7 @@
                             <a type="button" class="btn-floating btn-git btn-sm">
                                 <i style="font-size: 24px;" class="fa fa-github"></i>
                             </a>
-                            <p class="">Nếu bạn chưa có tài khoản vui lòng <a href="">đăng ký ngay!!!!</a></p>
+                            <p class="">Nếu bạn chưa có tài khoản vui lòng <a href="?ctrl=user&act=register">đăng ký ngay!!!!</a></p>
                         </div>
                     </form>
                 </div>

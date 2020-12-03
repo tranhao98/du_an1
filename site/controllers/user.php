@@ -168,17 +168,75 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
 
         require_once "layout.php";
-        break;
-    case "register":
-
-        $view = "views/register.php";
-        require_once "layout.php";
-        break;
-        break;
+        break;   
     case "kiemtra":
         $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
         header("location: ?ctrl=user&act=thanhtoan");
-
         break;
+    case "register":
+        if(isset($_POST['dangky'])){
+            $hoten = $_POST['hoten'];
+            $email = $_POST['email'];
+            $tendangnhap = $_POST['tendangnhap'];
+            $matkhau = password_hash($_POST['matkhau'], PASSWORD_DEFAULT);;
+            $check = kiemTraNguoiDung($tendangnhap);
+                if (is_array($check)) {
+                    $warning = '<div class="alert alert-primary" role="alert">
+                    Tên tài khoản đã tồn tại!!
+                  </div>';
+                    $_SESSION['mess'] = $warning;
+                }
+            else {
+            $checkmail = kiemTraMail($email);
+                if (is_array($checkmail)) {
+                    $warning = '<div class="alert alert-primary" role="alert">
+                    Địa chỉ mail này đã được đăng ký mời bạn bấm vào đây để lấy lại <a href="?ctrl=user&act=resetpass">mật khẩu</a>
+                  </div>';
+                    $_SESSION['mess'] = $warning;
+                }
+                else {
+                    $randkey = md5(rand(0,999999));
+                    $iduser = addUser($hoten,$email,$tendangnhap,$matkhau,$randkey);
+
+
+                    require "PHPMailer-master/src/PHPMailer.php"; 
+                    require "PHPMailer-master/src/SMTP.php";
+                    $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
+                    try {
+                    $mail->SMTPDebug = 2;  // Enable verbose debug output
+                    $mail->isSMTP();  
+                    $mail->CharSet  = "utf-8";
+                    $mail->Host = 'smtp.gmail.com';  //SMTP servers
+                    $mail->SMTPAuth = true; // Enable authentication
+                    $mail->Username = 'duongkhang0401@gmail.com';  // SMTP username
+                    $mail->Password = 'chochochocho';   // SMTP password
+                    $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
+                    $mail->Port = 465;  // port to connect to               
+                    $mail->setFrom('duongkhang0401@gmail.com', 'Quản trị viên');
+                    $mail->addAddress($email,$hoten); //mail và tên người nhận    
+                    $mail->isHTML(true);  // Set email format to HTML
+                    $mail->Subject = 'Kích hoạt tài khoản';                
+                    $linkKH = "<a href='?ctrl=user&act=active&id='.$iduser.'&rk='$randkey''>.$hoten.</a>";
+                    $linKH = sprintf($linkKH, $iduser, $randkey);
+                    $mail->Body= "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản tại đây: ". $linKH;
+                    $mail->send();
+                    } catch (Exception $e) {
+                        echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
+                    }
+                    $text = '<div class="alert alert-primary" role="alert">
+                    Đăng ký tài khoản thành công, mời bạn kiểm tra Mail để kích hoạt!!
+                  </div>';
+                    $_SESSION['mess'] = $text;
+                    header("location: ?ctrl=user&act=login-index");
+                    }
+            }
+               
+        }
+        $view = "views/register.php";
+        require_once "layout.php";
+    break;
+    case "register":
+
+    break;
 }
