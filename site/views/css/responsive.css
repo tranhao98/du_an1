@@ -48,4 +48,12 @@
             width: 100%;
             margin: auto;
         }
+        .banner{
+            position: relative;
+            text-align: center;
+            padding-top: 0px;
+        }
+        .row{
+            margin: auto;
+        }
     }
