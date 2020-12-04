@@ -1,21 +1,24 @@
-
 #our-classes {
     margin-bottom: 0px;
 }
-.pdd0{
+
+.pdd0 {
     padding-right: 0px;
     padding-left: 0px;
 }
-.row{
+
+.row {
     width: 100%;
     margin-right: 0px;
     margin-left: 0px;
 }
-.card-thongbao{
+
+.card-thongbao {
     width: 100%;
     margin: auto;
 }
-.card-title h2{
+
+.card-title h2 {
     font-size: 28px;
     font-weight: 800;
     color: #232d39;
@@ -24,68 +27,82 @@
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.card-content{
+
+.card-content {
     width: 100%;
     padding: 10px;
 }
-.card-content img{
+
+.card-content img {
     width: 99%;
     height: 400px;
 }
-.thongbao-trai{
+
+.thongbao-trai {
     float: left;
     width: 70%;
     padding: 10px;
     margin-right: 5%;
 }
-.thongbao-phai{
+
+.thongbao-phai {
     float: left;
     width: 25%;
     padding: 10px;
 }
-.card-conclude{
+
+.card-conclude {
     float: right;
 }
-.tintucmoi a{
+
+.tintucmoi a {
     vertical-align: middle;
     font-weight: 500;
     font-size: 14px;
     color: rgb(66, 66, 66);
 }
-.tintuccu a{
+
+.tintuccu a {
     vertical-align: middle;
     font-weight: 500;
     font-size: 14px;
     color: rgb(66, 66, 66);
 }
-.ttmoi h6{
+
+.ttmoi h6 {
     padding: 10px;
     color: white;
     border-width: 0 0 1px;
 }
-.tintuccu{
+
+.tintuccu {
     color: rgb(66, 66, 66);
 }
-.tintuckhac img{
+
+.tintuckhac img {
     width: 100%;
 }
-.tintuckhac .list-group-item{
+
+.tintuckhac .list-group-item {
     position: relative;
     display: block;
     padding: 0.75rem 0.25rem;
     background-color: #fff;
 }
-.tbct-noidung{
+
+.tbct-noidung {
     font-size: 15px;
     font-weight: 450;
     color: black;
     margin-bottom: 20px;
     word-wrap: break-word;
 }
-.tbct-noidung:hover{
+
+.tbct-noidung:hover {
     color: #0c0808;
 }
-.tbct-nguoidang{
+
+.tbct-nguoidang {
     font-size: 16px;
     font-weight: 500;
     font-style: italic;
@@ -93,15 +110,20 @@
     color: rgb(0, 0, 0);
     margin-bottom: 0rem;
 }
-.tbct-nguontt{
+
+.tbct-nguontt {
     font-size: 16px;
     font-style: italic;
     color: black;
     float: right;
     margin-bottom: 0rem;
 }
+
+
 /* ////// CSS Comment ///// */
-.card-comment{
+
+
+/* .card-comment{
     float: left;
     width: 100%;
     padding: 10px;
@@ -130,36 +152,45 @@ input#submit {
 input#submit:hover{
  
     background: linear-gradient(to right, #fc466b, #3f5efb); 
-}
+} */
+
+
 /* ////// CSS Panination ///// */
-.main-button{
+
+.main-button {
     float: left;
     width: 100%;
     padding: 10px;
 }
+
 .pagination-lgg .page-item:first-child .page-link {
     border-top-left-radius: .3rem;
     border-bottom-left-radius: .3rem;
 }
+
 .page-item.active .page-link {
     z-index: 3;
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
 }
+
 .page-item:first-child .page-link {
     margin-left: 0;
     border-top-left-radius: .25rem;
     border-bottom-left-radius: .25rem;
 }
+
 .pagination-lgg .page-link {
     padding: .5rem 1rem;
     font-size: 1rem;
     line-height: 1.5;
 }
+
 .pagination-lgg .page-link {
     color: #000000;
 }
+
 .page-link {
     position: relative;
     display: block;
@@ -170,83 +201,104 @@ input#submit:hover{
     background-color: #fff;
     border: 1px solid #dee2e6;
 }
+
+
 /* ///// CSS noidungleft/right ///// */
-.button-seemore{
+
+.button-seemore {
     float: right;
 }
-.tabs{
+
+.tabs {
     position: relative;
     float: left;
     min-height: 300px;
     width: 100%;
     padding: 10px;
 }
-.tabs::after{
+
+.tabs::after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 1px; 
+    height: 1px;
     background: darkgrey;
     top: 100%;
     left: 0;
 }
 
-.nd-tintucleft{
+.nd-tintucleft {
     padding: 10px;
     width: 30%;
     float: left;
 }
-.nd-tintucright{
+
+.nd-tintucright {
     padding: 10px;
     width: 70%;
     float: left;
 }
+
+
 /* ///// CSS Class ///// */
-.tintuckhac .gifchitiet{
+
+.tintuckhac .gifchitiet {
     padding: 0px;
 }
 
-.mt-100{
+.mt-100 {
     margin-top: 100px;
 }
-.mt-200{
+
+.mt-200 {
     margin-top: 200px;
 }
 
-.mt--100{
+.mt--100 {
     margin-top: 0px;
 }
-.mt-20{
+
+.mt-20 {
     margin-top: 20px;
 }
-.mb-20{
+
+.mb-20 {
     margin-bottom: 20px;
 }
+
 .bg-dark {
     background-color: #343a40!important;
 }
-.text-white{
+
+.text-white {
     color: honeydew;
 }
-.fw-6{
+
+.fw-6 {
     font-weight: 700;
 }
-.justify{
+
+.justify {
     text-align: justify;
     text-justify: inter-word;
 }
-.t-bold{
+
+.t-bold {
     font-weight: bold;
 }
-.text-blue{
+
+.text-blue {
     color: darkblue;
 }
 
+
 /* ///// BUTTON SHARE ///// */
-.card-share{
+
+.card-share {
     margin-top: 55px;
     margin-bottom: 50px;
 }
+
 .socials-share {
     text-align: center;
     margin-bottom: 30px;
@@ -271,7 +323,8 @@ input#submit:hover{
     background: #3a5899;
 }
 
-.bg-facebook:hover, .bg-facebook:focus {
+.bg-facebook:hover,
+.bg-facebook:focus {
     background: #1d418d;
 }
 
@@ -279,7 +332,8 @@ input#submit:hover{
     background: #00acee;
 }
 
-.bg-twitter:hover, .bg-twitter:focus {
+.bg-twitter:hover,
+.bg-twitter:focus {
     background: #0b93c7;
 }
 
@@ -287,7 +341,8 @@ input#submit:hover{
     background: #db4437;
 }
 
-.bg-google-plus:hover, .bg-google-plus:focus {
+.bg-google-plus:hover,
+.bg-google-plus:focus {
     background: #bb2a1d;
 }
 
@@ -295,7 +350,8 @@ input#submit:hover{
     background: #cb1e26;
 }
 
-.bg-pinterest:hover, .bg-pinterest:focus {
+.bg-pinterest:hover,
+.bg-pinterest:focus {
     background: #ae0e15;
 }
 
@@ -303,6 +359,7 @@ input#submit:hover{
     background: #dd5348;
 }
 
-.bg-email:hover, .bg-email:focus {
+.bg-email:hover,
+.bg-email:focus {
     background: #ce3f34;
 }

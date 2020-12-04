@@ -13,16 +13,16 @@
                     <div class="sign-up">
                         <h2>Đăng ký tài khoản mới</h2>
                     </div>
-                    <form action="">
+                    <form action="?ctrl=user&act=register" method="POST">
                             <label for="">Họ và tên: </label>
-                            <input class="box" type="text" placeholder="Nhập tên...">
+                            <input class="box" type="text" placeholder="Nhập tên..." required name="hoten">
                             <label for="">Email: </label>
-                            <input class="box" type="email" placeholder="Nhập email">
+                            <input class="box" type="email" placeholder="Nhập email" required name="email">
                             <label for="">Tên Đăng Nhập: </label>
-                            <input class="box" type="text" placeholder="Tên đăng nhập">
+                            <input class="box" type="text" placeholder="Tên đăng nhập" required name="tendangnhap">
                             <label for="">Mật Khẩu: </label>
-                            <input class="box" type="password" placeholder="Nhập mật khẩu">
-                            <button class="btn btn-primary">Đằng ký</button>
+                            <input class="box" type="password" placeholder="Nhập mật khẩu" required name="matkhau">
+                            <button class="btn btn-primary"  type="submit" name="dangky">Đằng ký</button>
                         </form>
                 </div>
             </div>

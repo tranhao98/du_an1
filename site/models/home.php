@@ -41,7 +41,8 @@ function getKhuVuc()
     $sql = "SELECT * from khuvuc where not thutu = 1 limit 4";
     return query($sql);
 }
-function getAllKhuVuc(){
+function getAllKhuVuc()
+{
     $sql = "SELECT * from khuvuc";
     return query($sql);
 }
@@ -151,6 +152,10 @@ function getBaiVietById($id)
 function kiemTraNguoiDung($tendangnhap)
 {
     $sql = "SELECT * from taikhoan where tendangnhap = '$tendangnhap'";
+    return queryOne($sql);
+}
+function kiemTraMail($email){
+    $sql = "SELECT * from taikhoan where email = '$email'";
     return queryOne($sql);
 }
 function getNguoiDungByID($id)
@@ -267,13 +272,15 @@ function kiemTraMatKhau($id)
     return queryOne($sql);
 }
 
-function addBaiViet($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh, $hinh_anh2, $hinh_anh3, $hinh_anh4, $hinh_anh5 ,$hinh_anh6,$gia,$nguoidung){
-    echo $sql="INSERT INTO baidang ( iddm, idkhuvuc, idnguoiban, tensp, hinh, hinh2, hinh3, hinh4, hinh5, hinh6, gia, dientich, phongngu, noithat, noibat, mota, diadiem, anhien) 
-    VALUES ( '$danhmuc', '$khuvuc', '$nguoidung', '$tieude', '$hinh_anh', '$hinh_anh2', '$hinh_anh3', '$hinh_anh4', '$hinh_anh5', '$hinh_anh6', '$gia', '$dientich', '$phongngu', '$noithat', '$noibat', '$mota', '$diachi', '$anhien')";
+function addBaiViet($tieude, $mota, $noithat, $phongngu, $dientich, $khuvuc, $danhmuc, $diachi, $hinh_anh, $hinh_anh2, $hinh_anh3, $hinh_anh4, $hinh_anh5, $hinh_anh6, $gia, $nguoidung)
+{
+    echo $sql = "INSERT INTO baidang ( iddm, idkhuvuc, idnguoiban, tensp, hinh, hinh2, hinh3, hinh4, hinh5, hinh6, gia, dientich, phongngu, noithat, mota, diadiem) 
+    VALUES ( '$danhmuc', '$khuvuc', '$nguoidung', '$tieude', '$hinh_anh', '$hinh_anh2', '$hinh_anh3', '$hinh_anh4', '$hinh_anh5', '$hinh_anh6', '$gia', '$dientich', '$phongngu', '$noithat', '$mota', '$diachi')";
     execute($sql);
 }
-function getAllDanhMuc(){
-    $sql="SELECT * FROM danhmuc";
+function getAllDanhMuc()
+{
+    $sql = "SELECT * FROM danhmuc";
     return query($sql);
 }
 
@@ -282,7 +289,36 @@ function getAllNguoiDung()
     $sql = "SELECT * FROM taikhoan";
     return query($sql);
 }
-function deleteBaiViet($id){
-    $sql= "DELETE FROM baidang where idsp ='$id'";
+function deleteBaiViet($id)
+{
+    $sql = "DELETE FROM baidang where idsp ='$id'";
     execute($sql);
+}
+
+function kiemTraGoi($id)
+{
+    $sql = "SELECT * FROM payments WHERE thanh_vien = '$id'";
+    return queryOne($sql);
+}
+function showcmt($id)
+{
+    $sql = "SELECT * from binhluan where idtb = '$id'" . "order by idtb desc";
+    return query($sql);
+}
+function getnameuser($id)
+{
+    $sql = "SELECT * from taikhoan where id= '$id'";
+    return queryOne($sql);
+}
+function addcmt($idnguoibl, $idtb, $noidung, $thoigianbinhluan)
+{
+    $sql = "INSERT INTO binhluan (noidung, thoigianbinhluan, idtb, idnguoibl) VALUES ( '$noidung','$thoigianbinhluan' ,'$idtb', '$idnguoibl')";
+    execute($sql);
+}
+function addUser($hoten,$email,$tendangnhap,$matkhau,$randkey){
+    $sql ="INSERT INTO taikhoan (hoten, tendangnhap, email, matkhau, randkey) VALUES ('$hoten','$tendangnhap', '$email', '$matkhau', '$randkey')";
+    $conn = getConnection();
+    $conn -> exec($sql);
+    $iduser = $conn->lastInsertId();
+    return $iduser;
 }

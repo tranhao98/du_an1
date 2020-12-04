@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="views/css/thongbao.css">
+    <link rel="stylesheet" href="views/css/respon.css">
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/owl.css">
     <script src="../js/jquery/jquery.js"></script>
     <script src="../ckeditor/ckeditor.js"></script>
-    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="https://png.pngtree.com/png-clipart/20200701/original/pngtree-family-stay-at-home-illustration-to-prevent-covid-19-plague-vector-png-image_5344919.jpg" />
@@ -80,13 +80,18 @@
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                                    <a class="dropdown-item" href="?act=baidang-addnew">Đăng bài</a>
+                                    <?php
+                                    if (isset($_SESSION['goitv']) && $_SESSION['goitv'] > 0) {
+                                    ?>
+                                        <a class="dropdown-item" href="?act=baidang-addnew">Đăng bài</a>
+                                    <?php } ?>
                                     <a class="dropdown-item" href="?ctrl=user&act=doimatkhau">Đổi mật khẩu</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=infouser">Xem thông tin tài khoản</a>
                                     <a class="dropdown-item" href="?ctrl=user&act=thanhtoan">Nâng cấp gói thành viên <i class='fas fa-crown' style='color: yellow' ;></i></a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="?ctrl=user&act=logout">Đăng xuất</a>
                                 </div>
+                            </div>
                             <?php
                         } else {
                             ?>
@@ -212,8 +217,11 @@
 
 </html>
 
+
 <script src="../js/custom.js"></script>
 <script src="../js/owl.js"> </script>
 <script src="../js/accordions.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"> </script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

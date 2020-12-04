@@ -17,19 +17,22 @@ switch ($act) {
     case "login-index":
         $view = "views/login-index.php";
         require_once "layout.php";
-    break;
+        break;
     case "login":
         $tendangnhap = trim(strip_tags($_POST['tendangnhap']));
         $matkhau = trim(strip_tags($_POST['matkhau']));
         $check = kiemTraNguoiDung($tendangnhap);
+        
+        
         // var_dump($check);
         $warning = "";
         if (is_array($check)) {
             // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
             $verify = password_verify($matkhau, $check['matkhau']);
-            
+            $checkgoi = kiemTraGoi($check['id']);
             // var_dump($hash);
             if ($verify) {
+                $_SESSION['goitv'] = $checkgoi['thanh_vien'];
                 $_SESSION['hinh'] = $check['hinh'];
                 $_SESSION['sid'] = $check['id'];
                 $_SESSION['hoten'] = $check['hoten'];
@@ -37,17 +40,16 @@ switch ($act) {
                 if ($check['vaitro'] == 1) header("location: ../admin/index.php");
                 else header("location: index.php");
             } else {
-                $warning = "<span style='color: red;'>Đăng nhập không thành công!</span>";
+                $warning = "<div class='alert alert-danger'>Bạn nhập sai mật khẩu. Vui lòng nhập lại!</div>";
                 $_SESSION['mess'] = $warning;
                 header("location: ?ctrl=user&act=login-index");
-
             }
         } else {
-            $warning = "<span style='color: red;'>Tài khoản này không tồn tại!</span>";
+            $warning = "<div class='alert alert-primary'>Tài khoản này không tồn tại!</div>";
             $_SESSION['mess'] = $warning;
             header("location: ?ctrl=user&act=login-index");
-
         }
+
         break;
     case "logout":
         if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
@@ -55,6 +57,7 @@ switch ($act) {
             unset($_SESSION['tendangnhap']);
             unset($_SESSION['hoten']);
             unset($_SESSION['hinh']);
+            unset($_SESSION['goitv']);
             unset($_SESSION['vaitro']);
             header("location: index.php");
         }
@@ -97,7 +100,7 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
         break;
-    break;
+        break;
     case "update-info":
         $id = $_POST["id"];
         $hinh = $_FILES['hinh']['name'];
@@ -120,24 +123,29 @@ switch ($act) {
         $hoten = trim(strip_tags($hoten));
         $diachi = trim(strip_tags($diachi));
 
-    updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $anhien);
-    header("location:index.php?ctrl=user&act=infouser");
-    break;
+        updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $anhien);
+        header("location:index.php?ctrl=user&act=infouser");
+        break;
     case "thanhtoan":
+        $checkgoi = kiemTraGoi($_SESSION['sid']);
+        $_SESSION['goitv'] = $checkgoi['thanh_vien'];
+            $thongbao = "<div class='alert alert-primary mt-2'>Bạn đang là thành viên. Có thể sử dụng chức năng đăng tin!</div>";
+            $_SESSION['message'] = $thongbao;
+        
         $child = "views/thanhtoan.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
         break;
     case "doimatkhau":
-        if(isset($_POST['submit'])){
+        if (isset($_POST['submit'])) {
             $passcu = ($_POST["passcu"]);
-            $p1 = password_hash($_POST['p1'],PASSWORD_DEFAULT);
-            $p2 = password_hash($_POST['p2'],PASSWORD_DEFAULT);
+            $p1 = password_hash($_POST['p1'], PASSWORD_DEFAULT);
+            $p2 = password_hash($_POST['p2'], PASSWORD_DEFAULT);
             $check = kiemTraMatKhau($_SESSION['sid']);
-            if(is_array($check)){
+            if (is_array($check)) {
                 $verify = password_verify($passcu, $check['matkhau']);
-                if($verify){
-                    changePass($p1,$_SESSION['sid']);
+                if ($verify) {
+                    changePass($p1, $_SESSION['sid']);
                     $mess = '<div class="alert alert-primary" role="alert">
                     Bạn đã đổi mật khẩu thành công. Bạn vui lòng đăng nhập lại.
                 </div>';
@@ -146,6 +154,7 @@ switch ($act) {
                     unset($_SESSION['tendangnhap']);
                     unset($_SESSION['hoten']);
                     unset($_SESSION['hinh']);
+                    unset($_SESSION['goitv']);
                     unset($_SESSION['vaitro']);
                     header('location: ?ctrl=user&act=login-index');
                 } else {
@@ -154,17 +163,80 @@ switch ($act) {
                 </div>';
                 }
             }
-        
-    }
+        }
         $child = "views/doimatkhau.php";
         $view = "views/thongtintaikhoan.php";
-        
+
         require_once "layout.php";
+        break;   
+    case "kiemtra":
+        $checkgoi = kiemTraGoi($_SESSION['sid']);
+        $_SESSION['goitv'] = $checkgoi['thanh_vien'];
+        header("location: ?ctrl=user&act=thanhtoan");
         break;
     case "register":
-        
+        if(isset($_POST['dangky'])){
+            $hoten = $_POST['hoten'];
+            $email = $_POST['email'];
+            $tendangnhap = $_POST['tendangnhap'];
+            $matkhau = password_hash($_POST['matkhau'], PASSWORD_DEFAULT);;
+            $check = kiemTraNguoiDung($tendangnhap);
+                if (is_array($check)) {
+                    $warning = '<div class="alert alert-primary" role="alert">
+                    Tên tài khoản đã tồn tại!!
+                  </div>';
+                    $_SESSION['mess'] = $warning;
+                }
+            else {
+            $checkmail = kiemTraMail($email);
+                if (is_array($checkmail)) {
+                    $warning = '<div class="alert alert-primary" role="alert">
+                    Địa chỉ mail này đã được đăng ký mời bạn bấm vào đây để lấy lại <a href="?ctrl=user&act=resetpass">mật khẩu</a>
+                  </div>';
+                    $_SESSION['mess'] = $warning;
+                }
+                else {
+                    $randkey = md5(rand(0,999999));
+                    $iduser = addUser($hoten,$email,$tendangnhap,$matkhau,$randkey);
+
+
+                    require "PHPMailer-master/src/PHPMailer.php"; 
+                    require "PHPMailer-master/src/SMTP.php";
+                    $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
+                    try {
+                    $mail->SMTPDebug = 2;  // Enable verbose debug output
+                    $mail->isSMTP();  
+                    $mail->CharSet  = "utf-8";
+                    $mail->Host = 'smtp.gmail.com';  //SMTP servers
+                    $mail->SMTPAuth = true; // Enable authentication
+                    $mail->Username = '';  // SMTP username
+                    $mail->Password = '';   // SMTP password
+                    $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
+                    $mail->Port = 465;  // port to connect to               
+                    $mail->setFrom('duongkhang0401@gmail.com', 'Quản trị viên');
+                    $mail->addAddress($email,$hoten); //mail và tên người nhận    
+                    $mail->isHTML(true);  // Set email format to HTML
+                    $mail->Subject = 'Kích hoạt tài khoản';                
+                    $linkKH = "<a href='?ctrl=user&act=active&id='.$iduser.'&rk='$randkey''>.$hoten.</a>";
+                    $linKH = sprintf($linkKH, $iduser, $randkey);
+                    $mail->Body= "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản tại đây: ". $linKH;
+                    $mail->send();
+                    } catch (Exception $e) {
+                        echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
+                    }
+                    $text = '<div class="alert alert-primary" role="alert">
+                    Đăng ký tài khoản thành công, mời bạn kiểm tra Mail để kích hoạt!!
+                  </div>';
+                    $_SESSION['mess'] = $text;
+                    header("location: ?ctrl=user&act=login-index");
+                    }
+            }
+               
+        }
         $view = "views/register.php";
         require_once "layout.php";
-        break;
     break;
-    }
+    case "register":
+
+    break;
+}

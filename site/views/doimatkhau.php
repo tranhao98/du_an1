@@ -1,6 +1,6 @@
 <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Thay đổi mật khẩu</a> 
-    <form class="mt-3" method="POST" action="?ctrl=user&act=doimatkhau">
+    <form class="mt-3 mb-3" method="POST" action="?ctrl=user&act=doimatkhau">
     <?php if(isset($mess)) echo $mess;?>
         <div class="form-group">
             <label for="exampleInputPassword1">Mời bạn nhập mật khẩu cũ:</label>

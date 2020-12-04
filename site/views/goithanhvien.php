@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-center" id="staticBackdropLabel1">Thanh toán Gói thường</h5>
+                <h5 class="modal-title text-center" id="staticBackdropLabel1">Thanh toán Gói Thành viên</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -15,10 +15,10 @@
                         <input class="form-control" id="order_id" name="order_id" type="hidden" value="<?php echo date("YmdHis") ?>" />
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="amount" name="amount" type="hidden" value="100000">
+                        <input class="form-control" id="amount" name="amount" type="hidden" value="147317">
                     </div>
                     <div class="form-group">
-                        <textarea style="display:none;" class="form-control" cols="20" id="order_desc" name="order_desc" rows="2">Thanh toán Gói thường</textarea>
+                        <textarea style="display:none;" class="form-control" cols="20" id="order_desc" name="order_desc" rows="2">Thanh toán Gói Thành viên</textarea>
                     </div>
                     <div class="form-group">
                         <select style="display:none;" name="language" id="language" class="form-control">

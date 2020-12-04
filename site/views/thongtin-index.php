@@ -1,7 +1,7 @@
 <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Thông tin</a>
     <div class="d-flex w-100 justify-content-between">
-        <form enctype="multipart/form-data" class="mt-3 mx-auto w-100 bg-input" method="post" action="?ctrl=nguoidung&act=insert">
+        <form enctype="multipart/form-data" class="mt-3 mb-3 mx-auto w-100 bg-input" method="post" action="?ctrl=nguoidung&act=insert">
             <div class="form-group">
                 <label for="">Tên Người Dùng</label>
                 <input disabled type="text" name="tennguoidung" id="" class="form-control" placeholder="Tên người dùng" aria-describedby="helpId" value="<?= $row['hoten'] ?>">
