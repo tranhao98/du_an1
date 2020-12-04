@@ -209,15 +209,15 @@ switch ($act) {
                     $mail->CharSet  = "utf-8";
                     $mail->Host = 'smtp.gmail.com';  //SMTP servers
                     $mail->SMTPAuth = true; // Enable authentication
-                    $mail->Username = '';  // SMTP username
-                    $mail->Password = '';   // SMTP password
+                    $mail->Username = 'haolong1506@gmail.com';  // SMTP username
+                    $mail->Password = 'nhomduan1';   // SMTP password
                     $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
                     $mail->Port = 465;  // port to connect to               
-                    $mail->setFrom('duongkhang0401@gmail.com', 'Quản trị viên');
+                    $mail->setFrom('haolong1506@gmail.com', 'Quản trị viên');
                     $mail->addAddress($email,$hoten); //mail và tên người nhận    
                     $mail->isHTML(true);  // Set email format to HTML
                     $mail->Subject = 'Kích hoạt tài khoản';                
-                    $linkKH = "<a href='?ctrl=user&act=active&id='.$iduser.'&rk='$randkey''>.$hoten.</a>";
+                    $linkKH = "<a href='http://localhost/du_an1/site/index.php?ctrl=user&act=active&id='.$iduser.'&rk='$randkey''>.$hoten.</a>";
                     $linKH = sprintf($linkKH, $iduser, $randkey);
                     $mail->Body= "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản tại đây: ". $linKH;
                     $mail->send();
