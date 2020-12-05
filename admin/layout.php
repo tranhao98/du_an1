@@ -126,7 +126,7 @@
                         <div class="card-header bg-white" id="headingThree">
                             <h2 class="mb-0">
                                 <button style="font-size: 12pt; font-weight:700;" class="btn btn-white btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                    <i class="fas fa-user-alt" style="font-size:18px"></i> Thành viên <i class="fa fa-angle-down" style="font-size:14pt; margin-left:39%;"></i>
+                                <i class='fas fa-crown' style='color: yellow' ;></i> Thành viên <i class="fa fa-angle-down" style="font-size:14pt; margin-left:40%;"></i>
                                 </button>
                             </h2>
                         </div>
