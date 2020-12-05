@@ -25,6 +25,7 @@
                     <th scope="col">Nội dung thanh toán</th>
                     <th scope="col">Thời gian thanh toán</th>
                     <th scope="col">Thời gian hết hạn</th>
+                    <th scope="col">Trạng thái</th>
                     <th scope="col">Xóa</th>
                 </tr>
             </thead>
@@ -35,12 +36,15 @@
                     <tr>
                         <th scope="row"><?= $dem++ ?></th>
                         <td class="text-left"><?= $row['tenthanhvien'] ?></td>
-                        <td class="text-left"><?= $row['money'] ?></td>
+                        <td class="text-left"><?= number_format($row['money'] , 0, ',', '.') ?>đ</td>
                         <td><?= $row['note'] ?></td>
                         <td> <?= $row['time'] ?>
                         </td>
                         <td> <?= $row['timehethan'] ?>
                         </td>
+                        <td><?php if(strtotime(date('Y-m-d h:i:s')) >= strtotime($row['timehethan'])) echo "<em class='text-danger'>Hết hạn</em>";
+                        else echo "<em class='text-success'>Còn hạn</em>";
+                        ?></td>
                         <td> <a onclick="return confirm('Bạn có muốn xóa thành viên không?')" href="index.php?ctrl=thanhvien&act=delete&idhoadon=<?= $row['id'] ?>"><i class="fa fa-trash text-danger" style="font-size:24px"></i></a> </td>
                     </tr>
                 <?php } ?>
