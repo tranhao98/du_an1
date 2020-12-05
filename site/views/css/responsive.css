@@ -111,11 +111,47 @@
             margin-right: 0px; 
             margin-left: 0px;
         }
+        /*** BAI DANG ***/
         .box-baidang {
-            width: calc(50% - 20px);
+            width: calc(50% - 0px);
             float: left;
-            margin-right: 20px;
+            margin-right: 0px;
             height: 90%;
+        }
+        #trainers .trainer-item {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin-bottom: 30px;
+            height: 300px;
+        }
+        #trainers .trainer-item img {
+            width: 100%;
+            border-radius: 5px;
+            height: 125px;
+            object-fit: cover;
+        }
+        #trainers .trainer-item span {
+            text-align: center;
+            font-size: 10px;
+            font-weight: 500;
+            color: #ed563b;
+            display: inline-block;
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+        #trainers .trainer-item h4 {
+            font-size: 10px;
+            font-weight: 600;
+            color: #232d39;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        #trainers .trainer-item p {
+            font-size: 7pt;
+            margin-bottom: 5px;
         }
 
     }
