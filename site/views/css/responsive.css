@@ -44,9 +44,16 @@
             float: none;
             width: 100%;
         }
+        .row {
+            /* width: 90%; */
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 0px; 
+            margin-left: 0px;
+        }
         body{
             width: 100%;
-            margin: auto;
         }
         /* Menu */
         .navbar .navbar-brand {
@@ -104,14 +111,6 @@
             background-position: center center;
         }
         /*** TIN TUC MOI CAP NHAT ***/
-        .row {
-            /* width: 90%; */
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            margin-right: 0px; 
-            margin-left: 0px;
-        }
         /*** BAI DANG ***/
         .box-baidang {
             width: calc(50% - 0px);
