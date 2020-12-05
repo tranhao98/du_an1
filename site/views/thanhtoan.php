@@ -12,7 +12,7 @@
                         <div class="price-gd-top pric-clr2">
                             <h4>Gói Thành viên</h4>
                             <h3>147.317VNĐ</h3>
-                            
+                            <h5>1 tháng</h5>
                         </div>
                         <div class="price-gd-bottom">
                             <div class="price-list">

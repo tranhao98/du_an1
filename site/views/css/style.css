@@ -554,7 +554,7 @@
     }
     
     .box-baidang {
-        width: calc(24% - 20px);
+        width: calc(25% - 20px);
         float: left;
         margin-right: 20px;
         height: 90%;
@@ -1078,8 +1078,7 @@
         height: 500px;
         object-fit: cover;
     }
-    
-    .pricing {
+    /* .pricing {
         margin-bottom: 1.5rem;
         position: relative;
     }
@@ -1155,7 +1154,7 @@
     .pricing-time {
         font-size: 1.2rem;
         margin-left: 1rem;
-    }
+    } */
     /* ---------------------------- */
     
     .boxcenter {
