@@ -78,7 +78,7 @@ switch ($act) {
         $checkbaidang = demBaiDangTheoND($_SESSION['sid']);
         $_SESSION['tongsobaidang'] = $checkbaidang;
         if($_SESSION['tongsobaidang']>=2){
-            $thongbao = "<div class='alert alert-danger mt-2'>Bạn đã đăng 2 bài/tháng. Không thể đăng bài nữa!!</div>";
+            $thongbao = "<div class='alert alert-danger mt-2'>Bạn đã vượt quá số lần đăng bài trong tháng. Không thể đăng bài nữa!!</div>";
             $_SESSION['mess'] = $thongbao;
         }
         $id = 0;
@@ -147,7 +147,7 @@ switch ($act) {
         break;
     case "doimatkhau":
         if (isset($_POST['submit'])) {
-            $passcu = ($_POST["passcu"]);
+            $passcu = $_POST["passcu"];
             $p1 = password_hash($_POST['p1'], PASSWORD_DEFAULT);
             $p2 = password_hash($_POST['p2'], PASSWORD_DEFAULT);
             $check = kiemTraMatKhau($_SESSION['sid']);
@@ -169,7 +169,7 @@ switch ($act) {
                     header('location: ?ctrl=user&act=login-index');
                 } else {
                     $mess = '<div class="alert alert-primary" role="alert">
-                    Mật khẩu không trùng khớp.
+                    Mật khẩu mới nhập không trùng khớp.
                 </div>';
                 }
             }
@@ -178,7 +178,22 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
 
         require_once "layout.php";
-        break;   
+        break;
+        case "kiemtrauser":
+            $username = "";
+            if(isset($_GET['username'])) $username = $_GET['username'];
+            if($username=="") echo "<span class='badge badge-danger'>Chưa có tên đăng nhập!</span>";
+            elseif(checkUserTontai($username)) echo "<span class='badge badge-danger'>Tên đăng nhập đã tồn tại!</span>";
+            else echo "<span class='badge badge-success'>Tên đăng nhập hợp lệ</span>";
+            break;
+        case "kiemtrarepass":
+            $repass = "";
+            if(isset($_GET['repass'])) $repass = $_GET['repass'];
+            if(isset($_GET['pass'])) $pass = $_GET['pass'];
+            if($repass=="") echo "<span class='badge badge-danger'>Vui lòng nhập mật khẩu!</span>";
+            elseif($repass!=$pass) echo "<span class='badge badge-danger'>Mật khẩu không khớp!</span>";
+            else echo "<span class='badge badge-success'>Mật khẩu trùng khớp</span>";
+            break;
     case "kiemtra":
         $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
@@ -187,9 +202,10 @@ switch ($act) {
     case "register":
         if(isset($_POST['dangky'])){
             $hoten = $_POST['hoten'];
-            $email = $_POST['email'];
+            $email = trim(strip_tags($_POST['email']));
             $tendangnhap = $_POST['tendangnhap'];
-            $matkhau = password_hash($_POST['matkhau'], PASSWORD_DEFAULT);;
+            $matkhau = password_hash($_POST['matkhau'], PASSWORD_DEFAULT);
+            $matkhau2 = password_hash($_POST['matkhau2'], PASSWORD_DEFAULT);
             $check = kiemTraNguoiDung($tendangnhap);
                 if (is_array($check)) {
                     $warning = '<div class="alert alert-primary" role="alert">
