@@ -30,8 +30,10 @@ switch ($act) {
             // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
             $verify = password_verify($matkhau, $check['matkhau']);
             $checkgoi = kiemTraGoi($check['id']);
+            $checkbaidang = demBaiDangTheoND($check['id']);
             // var_dump($hash);
             if ($verify) {
+                $_SESSION['tongsobaidang'] = $checkbaidang;
                 $_SESSION['goitv'] = $checkgoi['thanh_vien'];
                 $_SESSION['hinh'] = $check['hinh'];
                 $_SESSION['sid'] = $check['id'];
@@ -55,6 +57,7 @@ switch ($act) {
         if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
             unset($_SESSION['sid']);
             unset($_SESSION['tendangnhap']);
+            unset($_SESSION['tongsobaidang']);
             unset($_SESSION['hoten']);
             unset($_SESSION['hinh']);
             unset($_SESSION['goitv']);
@@ -72,6 +75,12 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "myarticle":
+        $checkbaidang = demBaiDangTheoND($_SESSION['sid']);
+        $_SESSION['tongsobaidang'] = $checkbaidang;
+        if($_SESSION['tongsobaidang']>=2){
+            $thongbao = "<div class='alert alert-danger mt-2'>Bạn đã đăng 2 bài/tháng. Không thể đăng bài nữa!!</div>";
+            $_SESSION['mess'] = $thongbao;
+        }
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
 
@@ -84,9 +93,9 @@ switch ($act) {
 
         $page_size = 4;
         $dsnguoidung = getBaiDangTheoND($id, $page_num, $page_size);
-        $total_rows = demBaiDangTheoND($id);
+        $total_rows1 = demBaiDangTheoND($id);
         $baseurl = SITE_URL . "/index.php?ctrl=user&act=myarticle&id={$id}";
-        $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
+        $links = taolinks($baseurl, $page_num, $page_size, $total_rows1);
         $child = "views/myarticle.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
@@ -153,6 +162,7 @@ switch ($act) {
                     unset($_SESSION['sid']);
                     unset($_SESSION['tendangnhap']);
                     unset($_SESSION['hoten']);
+                    unset($_SESSION['tongsobaidang']);
                     unset($_SESSION['hinh']);
                     unset($_SESSION['goitv']);
                     unset($_SESSION['vaitro']);

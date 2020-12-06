@@ -81,7 +81,7 @@
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
                                     <?php
-                                    if (isset($_SESSION['goitv']) && $_SESSION['goitv'] > 0) {
+                                    if (isset($_SESSION['goitv']) && $_SESSION['goitv'] > 0 && $_SESSION['tongsobaidang'] < 2) {
                                     ?>
                                         <a class="dropdown-item" href="?act=baidang-addnew">Đăng bài</a>
                                     <?php } ?>

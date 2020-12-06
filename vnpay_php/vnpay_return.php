@@ -82,7 +82,11 @@ require "../site/models/home.php";
             </div>
             <div class="form-group">
                 <label>Thời gian thanh toán:</label>
-                <label><?php echo $_GET['vnp_PayDate'] ?></label>
+                <label><?php echo substr($_GET['vnp_PayDate'], 0, 4) . '-' . substr($_GET['vnp_PayDate'], 4, 2) . '-' . substr($_GET['vnp_PayDate'], 6, 2) . ' ' . substr($_GET['vnp_PayDate'], 8, 2) . ':' . substr($_GET['vnp_PayDate'], 10, 2) . ':' . substr($_GET['vnp_PayDate'], 12, 2);?></label>
+            </div>
+            <div class="form-group">
+                <label>Thời gian hết hạn gói:</label>
+                <label><?php echo strftime('%Y-%m-%d %H:%M:%S',strtotime(date('Y-m-d h:i:s', strtotime($_GET['vnp_PayDate'])) . ' +1 month'))?></label>
             </div>
             <div class="form-group">
                 <label>Kết quả:</label>

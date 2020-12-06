@@ -8,6 +8,7 @@ if (isset($_SESSION['sid']) && $_SESSION['vaitro'] == 1) {
   unset($_SESSION['hinh']);
   unset($_SESSION['vaitro']);
   unset($_SESSION['goitv']);
+  unset($_SESSION['tongsobaidang']);
 }
 date_default_timezone_set("Asia/Ho_Chi_Minh");
 define("ARR_CONTROLLER", ["home", "user"]);
