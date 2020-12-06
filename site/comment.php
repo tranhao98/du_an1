@@ -24,7 +24,7 @@ if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
             $name = getnameuser($cmt['idnguoibl']);
             $thoigianbinhluan = $cmt['thoigianbinhluan'];
             $noidung = $cmt['noidung'];
-            echo    '<div class="row d-flex align-items-center shadow-sm">
+            echo    '<div class="row d-flex align-items-center">
                         <div class="col-2 align-self-center">
                             <img width="100%" src="../upload/'.$_SESSION['hinh'].'">
                         </div>
