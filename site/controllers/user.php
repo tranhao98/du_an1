@@ -30,10 +30,8 @@ switch ($act) {
             // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
             $verify = password_verify($matkhau, $check['matkhau']);
             $checkgoi = kiemTraGoi($check['id']);
-            $checkbaidang = demBaiDangTheoND($check['id']);
             // var_dump($hash);
             if ($verify) {
-                $_SESSION['tongsobaidang'] = $checkbaidang;
                 $_SESSION['goitv'] = $checkgoi['thanh_vien'];
                 $_SESSION['hinh'] = $check['hinh'];
                 $_SESSION['sid'] = $check['id'];
@@ -57,7 +55,6 @@ switch ($act) {
         if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
             unset($_SESSION['sid']);
             unset($_SESSION['tendangnhap']);
-            unset($_SESSION['tongsobaidang']);
             unset($_SESSION['hoten']);
             unset($_SESSION['hinh']);
             unset($_SESSION['goitv']);
@@ -75,12 +72,6 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "myarticle":
-        $checkbaidang = demBaiDangTheoND($_SESSION['sid']);
-        $_SESSION['tongsobaidang'] = $checkbaidang;
-        if($_SESSION['tongsobaidang']>=2){
-            $thongbao = "<div class='alert alert-danger mt-2'>Bạn đã vượt quá số lần đăng bài trong tháng. Không thể đăng bài nữa!!</div>";
-            $_SESSION['mess'] = $thongbao;
-        }
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
 
@@ -93,9 +84,9 @@ switch ($act) {
 
         $page_size = 4;
         $dsnguoidung = getBaiDangTheoND($id, $page_num, $page_size);
-        $total_rows1 = demBaiDangTheoND($id);
+        $total_rows = demBaiDangTheoND($id);
         $baseurl = SITE_URL . "/index.php?ctrl=user&act=myarticle&id={$id}";
-        $links = taolinks($baseurl, $page_num, $page_size, $total_rows1);
+        $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
         $child = "views/myarticle.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
@@ -147,7 +138,7 @@ switch ($act) {
         break;
     case "doimatkhau":
         if (isset($_POST['submit'])) {
-            $passcu = $_POST["passcu"];
+            $passcu = ($_POST["passcu"]);
             $p1 = password_hash($_POST['p1'], PASSWORD_DEFAULT);
             $p2 = password_hash($_POST['p2'], PASSWORD_DEFAULT);
             $check = kiemTraMatKhau($_SESSION['sid']);
@@ -162,14 +153,13 @@ switch ($act) {
                     unset($_SESSION['sid']);
                     unset($_SESSION['tendangnhap']);
                     unset($_SESSION['hoten']);
-                    unset($_SESSION['tongsobaidang']);
                     unset($_SESSION['hinh']);
                     unset($_SESSION['goitv']);
                     unset($_SESSION['vaitro']);
                     header('location: ?ctrl=user&act=login-index');
                 } else {
                     $mess = '<div class="alert alert-primary" role="alert">
-                    Mật khẩu mới nhập không trùng khớp.
+                    Mật khẩu không trùng khớp.
                 </div>';
                 }
             }
@@ -178,22 +168,7 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
 
         require_once "layout.php";
-        break;
-        case "kiemtrauser":
-            $username = "";
-            if(isset($_GET['username'])) $username = $_GET['username'];
-            if($username=="") echo "<span class='badge badge-danger'>Chưa có tên đăng nhập!</span>";
-            elseif(checkUserTontai($username)) echo "<span class='badge badge-danger'>Tên đăng nhập đã tồn tại!</span>";
-            else echo "<span class='badge badge-success'>Tên đăng nhập hợp lệ</span>";
-            break;
-        case "kiemtrarepass":
-            $repass = "";
-            if(isset($_GET['repass'])) $repass = $_GET['repass'];
-            if(isset($_GET['pass'])) $pass = $_GET['pass'];
-            if($repass=="") echo "<span class='badge badge-danger'>Vui lòng nhập mật khẩu!</span>";
-            elseif($repass!=$pass) echo "<span class='badge badge-danger'>Mật khẩu không khớp!</span>";
-            else echo "<span class='badge badge-success'>Mật khẩu trùng khớp</span>";
-            break;
+        break;   
     case "kiemtra":
         $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
@@ -202,10 +177,9 @@ switch ($act) {
     case "register":
         if(isset($_POST['dangky'])){
             $hoten = $_POST['hoten'];
-            $email = trim(strip_tags($_POST['email']));
+            $email = $_POST['email'];
             $tendangnhap = $_POST['tendangnhap'];
-            $matkhau = password_hash($_POST['matkhau'], PASSWORD_DEFAULT);
-            $matkhau2 = password_hash($_POST['matkhau2'], PASSWORD_DEFAULT);
+            $matkhau = password_hash($_POST['matkhau'], PASSWORD_DEFAULT);;
             $check = kiemTraNguoiDung($tendangnhap);
                 if (is_array($check)) {
                     $warning = '<div class="alert alert-primary" role="alert">
@@ -224,13 +198,11 @@ switch ($act) {
                 else {
                     $randkey = md5(rand(0,999999));
                     $iduser = addUser($hoten,$email,$tendangnhap,$matkhau,$randkey);
-
-
                     require "PHPMailer-master/src/PHPMailer.php"; 
                     require "PHPMailer-master/src/SMTP.php";
                     $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
                     try {
-                    $mail->SMTPDebug = 0;  // Enable verbose debug output
+                    $mail->SMTPDebug = 2;  // Enable verbose debug output
                     $mail->isSMTP();  
                     $mail->CharSet  = "utf-8";
                     $mail->Host = 'smtp.gmail.com';  //SMTP servers
@@ -238,12 +210,12 @@ switch ($act) {
                     $mail->Username = 'haolong1506@gmail.com';  // SMTP username
                     $mail->Password = 'nhomduan1';   // SMTP password
                     $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
-                    $mail->Port = 465;  // port to connect to               
+                    $mail->Port = 465;  // port to connect to                   
                     $mail->setFrom('haolong1506@gmail.com', 'Quản trị viên');
                     $mail->addAddress($email,$hoten); //mail và tên người nhận    
                     $mail->isHTML(true);  // Set email format to HTML
                     $mail->Subject = 'Kích hoạt tài khoản';                
-                    $linkKH = "<a href='http://localhost/du_an1/site/index.php?ctrl=user&act=active&id='.$iduser.'&rk='$randkey''>.$hoten.</a>";
+                    $linkKH = "<a href='http://localhost/du_an1/site/index.php?ctrl=user&act=active&id=%d&rk=%s'>.$hoten.</a>";
                     $linKH = sprintf($linkKH, $iduser, $randkey);
                     $mail->Body= "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản tại đây: ". $linKH;
                     $mail->send();
@@ -264,5 +236,12 @@ switch ($act) {
     break;
     case "register":
 
+    break;
+    case "active":
+        if($_GET['active']){
+            $iduser = $_GET['id'];
+            $rd = $_GET['rk'];
+            checkActive($iduser, $rd);
+        }
     break;
 }
