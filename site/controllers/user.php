@@ -234,14 +234,26 @@ switch ($act) {
         $view = "views/register.php";
         require_once "layout.php";
     break;
-    case "register":
-
-    break;
     case "active":
-        if($_GET['active']){
+        if($_GET['act'] == "active"){
             $iduser = $_GET['id'];
             $rd = $_GET['rk'];
-            checkActive($iduser, $rd);
+            $checkactive = checkActive($iduser, $rd);
+            if(is_array($checkactive)){
+                active($iduser);
+                $text = '<div class="alert alert-primary" role="alert">
+                Tài khoản đã được kích hoạt mời bạn đăng nhập.
+              </div>';
+                $_SESSION['mess'] = $text;
+                header("location: ?ctrl=user&act=login-index");
+            }
+            else {
+                $text = '<div class="alert alert-primary" role="alert">
+                Tài khoản chưa được kích hoạt!
+              </div>';
+                $_SESSION['mess'] = $text;
+                header("location: ?ctrl=user&act=login-index");
+            }
         }
     break;
 }
