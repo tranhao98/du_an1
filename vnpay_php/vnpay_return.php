@@ -82,7 +82,11 @@ require "../site/models/home.php";
             </div>
             <div class="form-group">
                 <label>Thời gian thanh toán:</label>
-                <label><?php echo $_GET['vnp_PayDate'] ?></label>
+                <label><?php echo substr($_GET['vnp_PayDate'], 0, 4) . '-' . substr($_GET['vnp_PayDate'], 4, 2) . '-' . substr($_GET['vnp_PayDate'], 6, 2) . ' ' . substr($_GET['vnp_PayDate'], 8, 2) . ':' . substr($_GET['vnp_PayDate'], 10, 2) . ':' . substr($_GET['vnp_PayDate'], 12, 2);?></label>
+            </div>
+            <div class="form-group">
+                <label>Thời gian hết hạn gói:</label>
+                <label><?php echo strftime('%Y-%m-%d %H:%M:%S',strtotime(date('Y-m-d h:i:s', strtotime($_GET['vnp_PayDate'])) . ' +1 month'))?></label>
             </div>
             <div class="form-group">
                 <label>Kết quả:</label>
@@ -95,12 +99,14 @@ require "../site/models/home.php";
                             $note = $_GET['vnp_OrderInfo'];
                             $vnp_response_code = $_GET['vnp_ResponseCode'];
                             $code_vnpay = $_GET['vnp_TransactionNo'];
-
                             $code_bank = $_GET['vnp_BankCode'];
                             $time = $_GET['vnp_PayDate'];
-                            $date_time = substr($time, 0, 4) . '-' . substr($time, 4, 2) . '-' . substr($time, 6, 2) . ' ' . substr($time, 8, 2) . ' ' . substr($time, 10, 2) . ' ' . substr($time, 12, 2);
+                            $date_time = substr($time, 0, 4) . '-' . substr($time, 4, 2) . '-' . substr($time, 6, 2) . ' ' . substr($time, 8, 2) . ':' . substr($time, 10, 2) . ':' . substr($time, 12, 2);
+                            $timehethan = strtotime(date('Y-m-d h:i:s', strtotime($time)) . ' +1 month');
+                            $date_timehethan = strftime('%Y-%m-%d %H:%M:%S', $timehethan);
                             require_once "../system/database.php";
                             $taikhoan = $_SESSION['sid'];
+                            $tentaikhoan = $_SESSION['hoten'];
                             $sql = "SELECT * FROM payments WHERE order_id = '$order_id'";
                             $query = mysqli_query($connmysqli, $sql);
                             $row = mysqli_num_rows($query);
@@ -111,8 +117,8 @@ require "../site/models/home.php";
 
                                 mysqli_query($connmysqli, $sql);
                             } else {
-                                $sql = "INSERT INTO payments(order_id, thanh_vien, money, note, vnp_response_code, code_vnpay, code_bank, time)
-                                    VALUES ('$order_id', '$taikhoan', '$money', '$note', '$vnp_response_code', '$code_vnpay', '$code_bank','$date_time')";
+                                $sql = "INSERT INTO payments(order_id, thanh_vien, tenthanhvien, money, note, vnp_response_code, code_vnpay, code_bank, time, timehethan)
+                                    VALUES ('$order_id', '$taikhoan','$tentaikhoan', '$money', '$note', '$vnp_response_code', '$code_vnpay', '$code_bank','$date_time','$date_timehethan')";
                                 mysqli_query($connmysqli, $sql);
                             }
 

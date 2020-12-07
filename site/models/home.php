@@ -322,3 +322,8 @@ function addUser($hoten,$email,$tendangnhap,$matkhau,$randkey){
     $iduser = $conn->lastInsertId();
     return $iduser;
 }
+function checkUserTonTai($username)
+{
+    $sql = "SELECT count(*) as sodong FROM taikhoan where tendangnhap = '$username'";
+    return queryOne($sql)['sodong'];
+}

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="views/css/thongbao.css">
-    <link rel="stylesheet" href="views/css/respon.css">
+    <link rel="stylesheet" href="views/css/responsive.css">
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/owl.css">
     <script src="../js/jquery/jquery.js"></script>
@@ -81,7 +81,7 @@
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
                                     <?php
-                                    if (isset($_SESSION['goitv']) && $_SESSION['goitv'] > 0) {
+                                    if (isset($_SESSION['goitv']) && $_SESSION['goitv'] > 0 && $_SESSION['tongsobaidang'] < 2) {
                                     ?>
                                         <a class="dropdown-item" href="?act=baidang-addnew">Đăng bài</a>
                                     <?php } ?>

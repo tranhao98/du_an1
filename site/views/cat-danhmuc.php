@@ -30,7 +30,7 @@
                                 <option value="200000000 AND 500000000">200 triệu - 500 triệu</option>
                                 <option value="500000000 AND 1000000000">500 triệu - 1 tỷ</option>
                             </select>
-                            <span class="text-danger"><?php if (isset($error)) echo $error; ?></span>
+                           
                         </div>
 
                     </div>
@@ -47,8 +47,6 @@
                                 <option value="50 AND 70">50 m<sup>2</sup> - 70 m<sup>2</sup></option>
                                 <option value="70 AND 90">70 m<sup>2</sup> - 90 m<sup>2</sup></option>
                             </select>
-                            <span class="text-danger">
-                                <?php if (isset($error)) echo $error; ?></span>
                         </div>
                     </div>
 
@@ -81,7 +79,7 @@
 
         <div class="row mt-5">
             <?php if (isset($_POST['search'])) {
-                foreach ($dsfillter as $row) { ?>
+                foreach ($dsfillterdm as $row) { ?>
                     <div class="col-lg-4">
                         <div class="trainer-item">
                             <div class="image-thumb">

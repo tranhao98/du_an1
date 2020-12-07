@@ -33,9 +33,9 @@ switch ($act) {
             $dientich = $_POST['dientich'];
             $gia = $_POST['gia'];
             if ($gia == "" && $dientich == "" && $sapxep == "") {
-                $error = "Bạn chưa chọn giá trị!";
+                header("location: ?ctrl=home&act=cat-danhmuc&id=$id");
             } else
-                $dsfillter = getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $sapxep);
+                $dsfillterdm = getBaiDangTheoLocTheoDanhMuc($id, $gia, $dientich, $sapxep);
         }
 
         $id = 0;
@@ -64,9 +64,9 @@ switch ($act) {
             $dientich = $_POST['dientich'];
             $gia = $_POST['gia'];
             if ($gia == "" && $dientich == "" && $sapxep == "") {
-                $error = "Bạn chưa chọn giá trị!";
+                header("location: ?ctrl=home&act=cat-khuvuc&id=$id");
             } else
-                $dsfillter = getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $sapxep);
+                $dsfillterkv = getBaiDangTheoLocTheoKhuVuc($id, $gia, $dientich, $sapxep);
         }
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
@@ -132,9 +132,9 @@ switch ($act) {
             $dientich = $_POST['dientich'];
             $gia = $_POST['gia'];
             if ($gia == "" && $dientich == "" && $loaibds == "" && $sapxep == "") {
-                $error = "Bạn chưa chọn giá trị!";
+               header("location: ?tukhoa=$key&act=timkiem");
             } else
-                $dsfillter = getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds, $sapxep);
+                $dsfilltertk = getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds, $sapxep);
         }
 
         $key = trim(strip_tags($_GET['tukhoa']));
