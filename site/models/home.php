@@ -322,8 +322,15 @@ function addUser($hoten,$email,$tendangnhap,$matkhau,$randkey){
     $iduser = $conn->lastInsertId();
     return $iduser;
 }
+<<<<<<< Updated upstream
 function checkUserTonTai($username)
 {
     $sql = "SELECT count(*) as sodong FROM taikhoan where tendangnhap = '$username'";
     return queryOne($sql)['sodong'];
+=======
+
+function checkActive($iduser, $rd){
+    $sql = "SELECT * from taikhoan where id= '$iduser' and randkey = '$rd'";
+    return queryOne($sql);
+>>>>>>> Stashed changes
 }
