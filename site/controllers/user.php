@@ -22,7 +22,7 @@ switch ($act) {
         $tendangnhap = trim(strip_tags($_POST['tendangnhap']));
         $matkhau = trim(strip_tags($_POST['matkhau']));
         $check = kiemTraNguoiDung($tendangnhap);
-        
+        $checkbaidang = demBaiDangTheoND($check['id']);
         
         // var_dump($check);
         $warning = "";
@@ -32,6 +32,7 @@ switch ($act) {
             $checkgoi = kiemTraGoi($check['id']);
             // var_dump($hash);
             if ($verify) {
+                $_SESSION['tongsobaidang'] = $checkbaidang;
                 $_SESSION['goitv'] = $checkgoi['thanh_vien'];
                 $_SESSION['hinh'] = $check['hinh'];
                 $_SESSION['sid'] = $check['id'];
@@ -55,6 +56,7 @@ switch ($act) {
         if (isset($_SESSION['sid']) && ($_SESSION['sid'] > 0)) {
             unset($_SESSION['sid']);
             unset($_SESSION['tendangnhap']);
+            unset($_SESSION['tongsobaidang']);
             unset($_SESSION['hoten']);
             unset($_SESSION['hinh']);
             unset($_SESSION['goitv']);
@@ -72,6 +74,12 @@ switch ($act) {
         require_once "layout.php";
         break;
     case "myarticle":
+        $checkbaidang = demBaiDangTheoND($_SESSION['sid']);
+        $_SESSION['tongsobaidang'] = $checkbaidang;
+        if($_SESSION['tongsobaidang']>=2){
+            $thongbao = "<div class='alert alert-danger mt-2'>Bạn vượt quá số lần đăng bài trong tháng. Không thể đăng bài nữa!!</div>";
+            $_SESSION['mess'] = $thongbao;
+        }
         $id = 0;
         if (isset($_GET['id']) == true) $id = $_GET['id'];
 
@@ -154,6 +162,7 @@ switch ($act) {
                     unset($_SESSION['tendangnhap']);
                     unset($_SESSION['hoten']);
                     unset($_SESSION['hinh']);
+                    unset($_SESSION['tongsobaidang']);
                     unset($_SESSION['goitv']);
                     unset($_SESSION['vaitro']);
                     header('location: ?ctrl=user&act=login-index');
@@ -168,7 +177,22 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
 
         require_once "layout.php";
-        break;   
+        break; 
+        case "kiemtrauser":
+            $username = "";
+            if(isset($_GET['username'])) $username = $_GET['username'];
+            if($username=="") echo "<span class='badge badge-danger'>Chưa có tên đăng nhập!</span>";
+            elseif(checkUserTontai($username)) echo "<span class='badge badge-danger'>Tên đăng nhập đã tồn tại!</span>";
+            else echo "<span class='badge badge-success'>Tên đăng nhập hợp lệ</span>";
+            break;
+        case "kiemtrarepass":
+            $repass = "";
+            if(isset($_GET['repass'])) $repass = $_GET['repass'];
+            if(isset($_GET['pass'])) $pass = $_GET['pass'];
+            if($repass=="") echo "<span class='badge badge-danger'>Vui lòng nhập mật khẩu!</span>";
+            elseif($repass!=$pass) echo "<span class='badge badge-danger'>Mật khẩu không khớp!</span>";
+            else echo "<span class='badge badge-success'>Mật khẩu trùng khớp</span>";
+            break;
     case "kiemtra":
         $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
@@ -177,7 +201,7 @@ switch ($act) {
     case "register":
         if(isset($_POST['dangky'])){
             $hoten = $_POST['hoten'];
-            $email = $_POST['email'];
+            $email = trim(strip_tags($_POST['email']));
             $tendangnhap = $_POST['tendangnhap'];
             $matkhau = password_hash($_POST['matkhau'], PASSWORD_DEFAULT);;
             $check = kiemTraNguoiDung($tendangnhap);
@@ -202,7 +226,7 @@ switch ($act) {
                     require "PHPMailer-master/src/SMTP.php";
                     $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
                     try {
-                    $mail->SMTPDebug = 2;  // Enable verbose debug output
+                    $mail->SMTPDebug = 0;  // Enable verbose debug output
                     $mail->isSMTP();  
                     $mail->CharSet  = "utf-8";
                     $mail->Host = 'smtp.gmail.com';  //SMTP servers
