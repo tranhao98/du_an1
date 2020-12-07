@@ -326,4 +326,8 @@ function checkUserTonTai($username)
 {
     $sql = "SELECT count(*) as sodong FROM taikhoan where tendangnhap = '$username'";
     return queryOne($sql)['sodong'];
+
+function checkActive($iduser, $rd){
+    $sql = "SELECT * from taikhoan where id= '$iduser' and randkey = '$rd'";
+    return queryOne($sql);
 }
