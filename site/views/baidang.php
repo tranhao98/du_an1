@@ -29,22 +29,22 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active mt-bannerbaidang">
-                                <img src="../upload/<?= $rowbaidang['hinh'] ?>" class="d-block w-100" alt="...">
+                                <img src="../upload/<?= $rowbaidang['hinh'] ?>" onerror="this.src = '../upload/noimg.jpg';" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item mt-bannerbaidang">
-                                <img src="../upload/<?= $rowbaidang['hinh2'] ?>" class="d-block w-100" alt="...">
+                                <img src="../upload/<?= $rowbaidang['hinh2'] ?>" onerror="this.src = '../upload/noimg.jpg';" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item mt-bannerbaidang">
-                                <img src="../upload/<?= $rowbaidang['hinh3'] ?>" class="d-block w-100" alt="...">
+                                <img src="../upload/<?= $rowbaidang['hinh3'] ?>" onerror="this.src = '../upload/noimg.jpg';" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item mt-bannerbaidang">
-                                <img src="../upload/<?= $rowbaidang['hinh4'] ?>" class="d-block w-100" alt="..." >
+                                <img src="../upload/<?= $rowbaidang['hinh4'] ?>" onerror="this.src = '../upload/noimg.jpg';" class="d-block w-100" alt="..." >
                             </div>
                             <div class="carousel-item mt-bannerbaidang">
-                                <img src="../upload/<?= $rowbaidang['hinh5'] ?>" class="d-block w-100" alt="...">
+                                <img src="../upload/<?= $rowbaidang['hinh5'] ?>" onerror="this.src = '../upload/noimg.jpg';" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item mt-bannerbaidang">
-                                <img src="../upload/<?= $rowbaidang['hinh6'] ?>" class="d-block w-100" alt="...">
+                                <img src="../upload/<?= $rowbaidang['hinh6'] ?>" onerror="this.src = '../upload/noimg.jpg';" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
