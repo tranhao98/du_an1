@@ -1,6 +1,6 @@
 <?php
 ob_start();
-//session_start();
+session_start();
 require_once "../system/config.php";
 require_once "models/home.php"; //nạp model để có các hàm tương tác db1
 require_once "models/model_donvihanhchinh.php"; //nạp model để có các hàm tương tác db1
