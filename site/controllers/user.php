@@ -108,7 +108,6 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
         break;
-        break;
     case "update-info":
         $id = $_POST["id"];
         $hinh = $_FILES['hinh']['name'];
@@ -132,6 +131,8 @@ switch ($act) {
         $diachi = trim(strip_tags($diachi));
 
         updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $anhien);
+        $thongbao = "<div class='alert alert-success'>Cập nhật thông tin thành công! Bạn hãy đăng nhập lại để thay đổi ảnh đại diện (nếu có).</div>";
+        $_SESSION['mess'] = $thongbao;
         header("location:index.php?ctrl=user&act=infouser");
         break;
     case "thanhtoan":

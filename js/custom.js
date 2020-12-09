@@ -134,7 +134,7 @@ function readURL2(input) {
         reader.readAsDataURL(input.files[0]);
 
     } else {
-        removeUpload();
+        removeUpload2();
     }
 }
 //hinh3
@@ -155,7 +155,7 @@ function readURL3(input) {
         reader.readAsDataURL(input.files[0]);
 
     } else {
-        removeUpload();
+        removeUpload3();
     }
 }
 //hinh4
@@ -176,7 +176,7 @@ function readURL4(input) {
         reader.readAsDataURL(input.files[0]);
 
     } else {
-        removeUpload();
+        removeUpload4();
     }
 }
 //hinh5
@@ -197,7 +197,7 @@ function readURL5(input) {
         reader.readAsDataURL(input.files[0]);
 
     } else {
-        removeUpload();
+        removeUpload5();
     }
 }
 //hinh6
@@ -218,7 +218,28 @@ function readURL6(input) {
         reader.readAsDataURL(input.files[0]);
 
     } else {
-        removeUpload();
+        removeUpload6();
+    }
+}
+
+function readURLanhdaidien(input) {
+    if (input.files && input.files[0]) {
+
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            $('.image-upload-wrap-anhdaidien').hide();
+
+            $('.file-upload-image-anhdaidien').attr('src', e.target.result);
+            $('.file-upload-content-anhdaidien').show();
+
+            $('.image-title-anhdaidien').html(input.files[0].name);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+
+    } else {
+        removeUploadanhdaidien();
     }
 }
 
@@ -292,4 +313,16 @@ $('.image-upload-wrap6').bind('dragover', function() {
 });
 $('.image-upload-wrap6').bind('dragleave', function() {
     $('.image-upload-wrap6').removeClass('image-dropping');
+});
+
+function removeUploadanhdaidien() {
+    $('.file-upload-input-anhdaidien').replaceWith($('.file-upload-input-anhdaidien').clone());
+    $('.file-upload-content-anhdaidien').hide();
+    $('.image-upload-wrap-anhdaidien').show();
+}
+$('.image-upload-wrap-anhdaidien').bind('dragover', function() {
+    $('.image-upload-wrap-anhdaidien').addClass('image-dropping');
+});
+$('.image-upload-wrap-anhdaidien').bind('dragleave', function() {
+    $('.image-upload-wrap-anhdaidien').removeClass('image-dropping');
 });

@@ -1078,84 +1078,6 @@
         height: 580px;
         object-fit: cover;
     }
-    /* .pricing {
-        margin-bottom: 1.5rem;
-        position: relative;
-    }
-    
-    .pricing input[type="radio"] {
-        display: none;
-    }
-    
-    .pricing input[type="radio"]:checked+.pricing-check {
-        border-color: white;
-    }
-    
-    .pricing input[type="radio"]:checked~.pricing-content {
-        border-color: var(--primary);
-        background-color: var(--primary);
-        color: white;
-    }
-    
-    .pricing input[type="radio"]:checked~.pricing-content .pricing-saving {
-        background-color: white;
-    }
-    
-    .pricing-check {
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 2rem;
-        background-color: white;
-        border: 2px solid #aeaec4;
-        cursor: pointer;
-        position: absolute;
-        left: 2.5rem;
-        top: 50%;
-        margin-top: -1rem;
-    }
-    
-    .pricing-content {
-        padding: 2.5rem 2.5rem 2.5rem 7.5rem;
-        border-radius: 8px;
-        border: 1px solid #eee;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #0c0e44;
-    }
-    
-    .pricing-name {
-        font-size: 2rem;
-        font-weight: 500;
-        margin-bottom: 1rem;
-    }
-    
-    .pricing-saving {
-        text-align: center;
-        display: inline-block;
-        padding: 7.5px 1.5rem;
-        color: #fa9376;
-        background-color: #feeeee;
-        border-radius: 2rem;
-        font-size: 1.2rem;
-    }
-    
-    .pricing-price {
-        display: flex;
-        align-items: center;
-    }
-    
-    .pricing-money {
-        font-weight: 600;
-        font-size: 3rem;
-    }
-    
-    .pricing-time {
-        font-size: 1.2rem;
-        margin-left: 1rem;
-    } */
-    /* ---------------------------- */
     
     .boxcenter {
         width: 85%;
@@ -1313,7 +1235,8 @@
         margin: 0 auto;
         padding: 20px;
     }
-    /* .file-upload-btn {
+    
+    .file-upload-btn {
         width: 100%;
         margin: 0;
         color: #fff;
@@ -1338,14 +1261,15 @@
     .file-upload-btn:active {
         border: 0;
         transition: all .2s ease;
-    } */
+    }
     
     .file-upload-content1,
     .file-upload-content2,
     .file-upload-content3,
     .file-upload-content4,
     .file-upload-content5,
-    .file-upload-content6 {
+    .file-upload-content6,
+    .file-upload-content-anhdaidien {
         display: none;
         text-align: center;
     }
@@ -1355,7 +1279,8 @@
     .file-upload-input3,
     .file-upload-input4,
     .file-upload-input5,
-    .file-upload-input6 {
+    .file-upload-input6,
+    .file-upload-input-anhdaidien {
         position: absolute;
         margin: 0;
         padding: 0;
@@ -1371,7 +1296,8 @@
     .image-upload-wrap3,
     .image-upload-wrap4,
     .image-upload-wrap5,
-    .image-upload-wrap6 {
+    .image-upload-wrap6,
+    .image-upload-wrap-anhdaidien {
         margin-top: 20px;
         border: 4px dashed #1FB264;
         position: relative;
@@ -1383,7 +1309,8 @@
     .image-upload-wrap3:hover,
     .image-upload-wrap4:hover,
     .image-upload-wrap5:hover,
-    .image-upload-wrap6:hover {
+    .image-upload-wrap6:hover,
+    .image-upload-wrap-anhdaidien:hover {
         background-color: #1FB264;
         border: 4px dashed #ffffff;
     }
@@ -1393,7 +1320,8 @@
     .image-title-wrap3,
     .image-title-wrap4,
     .image-title-wrap5,
-    .image-title-wrap6 {
+    .image-title-wrap6,
+    .image-title-wrap-anhdaidien {
         padding: 0 15px 15px 15px;
         color: #222;
     }
@@ -1414,7 +1342,8 @@
     .file-upload-image3,
     .file-upload-image4,
     .file-upload-image5,
-    .file-upload-image6 {
+    .file-upload-image6,
+    .file-upload-image-anhdaidien {
         max-height: 200px;
         max-width: 200px;
         margin: auto;
@@ -1426,7 +1355,8 @@
     .remove-image3,
     .remove-image4,
     .remove-image5,
-    .remove-image6 {
+    .remove-image6,
+    .remove-image-anhdaidien {
         width: 200px;
         margin: 0;
         color: #fff;
@@ -1446,7 +1376,8 @@
     .remove-image3:hover,
     .remove-image4:hover,
     .remove-image5:hover,
-    .remove-image6:hover {
+    .remove-image6:hover,
+    .remove-image-anhdaidien:hover {
         background: #c13b2a;
         color: #ffffff;
         transition: all .2s ease;
@@ -1458,7 +1389,8 @@
     .remove-image3:active,
     .remove-image4:active,
     .remove-image5:active,
-    .remove-image6:active {
+    .remove-image6:active,
+    .remove-image-anhdaidien:active {
         border: 0;
         transition: all .2s ease;
     }

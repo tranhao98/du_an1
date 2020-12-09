@@ -1,13 +1,98 @@
+<script>
+    $(function() {
+        $("#form_edituser").validate({
+            rules: {
+                tennguoidung: {
+                    required: true,
+                    maxlength: 30,
+                    minlength: 6
+                },
+                ngaysinh: {
+                    date: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                diachi:{
+                    required: true
+                },
+                tinhthanh: {
+                    required: true
+                },
+                quanhuyen: {
+                    required: true
+                },
+                phuongxa: {
+                    required: true
+                },
+            },
+            messages: {
+                tennguoidung: {
+                    required: "<span class='badge badge-warning'>Bạn hãy nhập họ tên vào",
+                    maxlength: "<span class='badge badge-danger'>Họ tên dài quá, phải nhỏ hơn 30 ký tự</span>",
+                    minlength: "<span class='badge badge-danger'>Họ tên ngắn quá, phải lớn hơn 6 ký tự</span>"
+                },
+                ngaysinh: {
+                    date: "<span class='badge badge-danger'>Phải đúng định dạng ngày tháng</span>"
+                },
+                email: {
+                    required: "<span class='badge badge-warning'>Không để trống email</span>",
+                    email: "<span class='badge badge-danger'>Phải đúng định dạng email</span>"
+                },
+                diachi:{
+                    required: "<span class='badge badge-warning'>Không để trống địa chỉ</span>"
+                },
+                tinhthanh: {
+                    required: "<span class='badge badge-warning'>Hãy chọn Tỉnh/Thành</span>"
+                },
+                quanhuyen: {
+                    required: "<span class='badge badge-warning'>Hãy chọn Quận/Huyện</span>"
+                },
+                phuongxa: {
+                    required: "<span class='badge badge-warning'>Hãy chọn Phường/Xã</span>"
+                },
+            }
+        });
+    });
+    $(document).ready(function() {
+    $('body').on('click','.change', function() {
+    var vnf_regex = /((09|070|079|077|076|078|032|033|034|035|036|037|038|039|08|05)+([0-9]{8})\b)/g;
+    var mobile = $('#sodienthoai').val();
+    if(mobile !==''){
+        if (vnf_regex.test(mobile) == false) 
+        {
+            alert('Số điện thoại của bạn không đúng định dạng!');
+        }
+    }else{
+        alert('Bạn chưa điền số điện thoại!');
+    }
+    });
+});
+</script>
 <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Thông tin</a>
     <div class="d-flex w-100 justify-content-between">
-        <form enctype="multipart/form-data" class="mt-3 mb-3 mx-auto w-100 bg-input" method="post" action="?ctrl=user&act=update-info">
-            <div class="form-gruop">
-                <label for="exampleinput requiredPassword1">Hình ảnh</label>
-                <input type="file" name="hinh" class="form-control" id="exampleinput requiredPassword1">
+        <form enctype="multipart/form-data" class="mt-3 mb-3 mx-auto w-100 bg-input" id="form_edituser" method="post" action="?ctrl=user&act=update-info">
+            <div class="form-group file-upload pt-0 pl-0 pr-0 mr-0 ml-0 w-100">
+                <button class="file-upload-btn" type="button" onclick="$('.file-upload-input-anhdaidien').trigger( 'click' )">Chọn ảnh đại diện</button>
+
+                <div class="image-upload-wrap-anhdaidien">
+                    <input class="file-upload-input-anhdaidien" type='file' name="hinh" onchange="readURLanhdaidien(this);" />
+                    <div class="drag-text">
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
+                    </div>
+                </div>
+                <div class="file-upload-content-anhdaidien">
+                    <img class="file-upload-image-anhdaidien" src="#" alt="your image" />
+
+                    <div class="image-title-wrap-anhdaidien">
+                        <button type="button" onclick="removeUploadanhdaidien()" class="remove-image-anhdaidien">Xóa <span class="image-title-anhdaidien">Uploaded Image</span></button>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
-                <label for="">Tên Người Dùng</label>
+                <label for="">Họ và tên</label>
                 <input type="text" name="tennguoidung" id="" class="form-control" placeholder="Tên người dùng" aria-describedby="helpId" value="<?= $row['hoten'] ?>">
             </div>
             <div class="form-group">
@@ -41,11 +126,11 @@
             </div>
             <div class="form-group">
                 <label for="">Số Điện Thoại</label>
-                <input type="text" name="sodienthoai" id="" class="form-control" placeholder="Số điện thoại" aria-describedby="helpId" value="<?= '0' . $row['sodienthoai'] ?>">
+                <input type="text" name="sodienthoai" id="sodienthoai" class="form-control" placeholder="Số điện thoại" aria-describedby="helpId" value="<?= '0' . $row['sodienthoai'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Địa Chỉ</label>
-                <textarea type="text" name="diachi" id="" class="form-control" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId"><?= $row['diachi']?></textarea>
+                <textarea type="text" name="diachi" id="" class="form-control" placeholder="Ví dụ: Số 18 Quang Trung" aria-describedby="helpId"><?= $row['diachi'] ?></textarea>
             </div>
             <div class="form-group">
                 <label for="">Tỉnh/Thành phố <span class="text-danger">(*)</span></label>
@@ -75,8 +160,8 @@
                     <option value="">--Chưa chọn Quận/Huyện--</option>
                 </select>
             </div>
-            <input type="hidden" name="id" value="<?=$_SESSION['sid']?>">
-            <button type="submit" class="btn btn-primary">Thay đổi</button>
+            <input type="hidden" name="id" value="<?= $_SESSION['sid'] ?>">
+            <button type="submit" class="btn btn-primary change">Thay đổi</button>
             <span class="text-danger">(*)</span><span> không được bỏ trống</span>
         </form>
     </div>

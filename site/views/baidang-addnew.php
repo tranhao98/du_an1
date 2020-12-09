@@ -126,7 +126,7 @@
                     <div class="file-upload-content1">
                         <img class="file-upload-image1" src="#" alt="your image" />
                         <div class="image-title-wrap1">
-                            <button type="button" onclick="removeUpload()" class="remove-image1">Remove <span class="image-title1">Uploaded Image</span></button>
+                            <button type="button" onclick="removeUpload()" class="remove-image1">Xóa <span class="image-title1">Uploaded Image</span></button>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                     <div class="file-upload-content2">
                         <img class="file-upload-image2" src="#" alt="your image" />
                         <div class="image-title-wrap2">
-                            <button type="button" onclick="removeUpload2()" class="remove-image2">Remove <span class="image-title2">Uploaded Image</span></button>
+                            <button type="button" onclick="removeUpload2()" class="remove-image2">Xóa <span class="image-title2">Uploaded Image</span></button>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                     <div class="file-upload-content3">
                         <img class="file-upload-image3" src="#" alt="your image" />
                         <div class="image-title-wrap3">
-                            <button type="button" onclick="removeUpload3()" class="remove-image3">Remove <span class="image-title3">Uploaded Image</span></button>
+                            <button type="button" onclick="removeUpload3()" class="remove-image3">Xóa <span class="image-title3">Uploaded Image</span></button>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@
                     <div class="file-upload-content4">
                         <img class="file-upload-image4" src="#" alt="your image" />
                         <div class="image-title-wrap4">
-                            <button type="button" onclick="removeUpload4()" class="remove-image4">Remove <span class="image-title4">Uploaded Image</span></button>
+                            <button type="button" onclick="removeUpload4()" class="remove-image4">Xóa <span class="image-title4">Uploaded Image</span></button>
                         </div>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
                     <div class="file-upload-content5">
                         <img class="file-upload-image5" src="#" alt="your image" />
                         <div class="image-title-wrap5">
-                            <button type="button" onclick="removeUpload5()" class="remove-image5">Remove <span class="image-title5">Uploaded Image</span></button>
+                            <button type="button" onclick="removeUpload5()" class="remove-image5">Xóa <span class="image-title5">Uploaded Image</span></button>
                         </div>
                     </div>
                 </div>
@@ -219,7 +219,7 @@
                     <div class="file-upload-content6">
                         <img class="file-upload-image6" src="#" alt="your image" />
                         <div class="image-title-wrap6">
-                            <button type="button" onclick="removeUpload6()" class="remove-image6">Remove <span class="image-title6">Uploaded Image</span></button>
+                            <button type="button" onclick="removeUpload6()" class="remove-image6">Xóa <span class="image-title6">Uploaded Image</span></button>
                         </div>
                     </div>
                 </div>
