@@ -120,7 +120,7 @@
                     <div class="image-upload-wrap1">
                         <input class="file-upload-input1" type='file' name="hinhanh" onchange="readURL(this);" />
                         <div class="drag-text">
-                            <h3>Drag and drop a file or select add Image</h3>
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
                         </div>
                     </div>
                     <div class="file-upload-content1">
@@ -138,7 +138,7 @@
                     <div class="image-upload-wrap2">
                         <input class="file-upload-input2" type='file' name="hinhanh2" onchange="readURL2(this);" />
                         <div class="drag-text">
-                            <h3>Drag and drop a file or select add Image</h3>
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
                         </div>
                     </div>
                     <div class="file-upload-content2">
@@ -157,7 +157,7 @@
                     <div class="image-upload-wrap3">
                         <input class="file-upload-input3" type='file' name="hinhanh3" onchange="readURL3(this);" />
                         <div class="drag-text">
-                            <h3>Drag and drop a file or select add Image</h3>
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
                         </div>
                     </div>
                     <div class="file-upload-content3">
@@ -177,7 +177,7 @@
                     <div class="image-upload-wrap4">
                         <input class="file-upload-input4" type='file' name="hinhanh4" onchange="readURL4(this);" />
                         <div class="drag-text">
-                            <h3>Drag and drop a file or select add Image</h3>
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
                         </div>
                     </div>
                     <div class="file-upload-content4">
@@ -195,7 +195,7 @@
                     <div class="image-upload-wrap5">
                         <input class="file-upload-input5" type='file' name="hinhanh5" onchange="readURL5(this);" />
                         <div class="drag-text">
-                            <h3>Drag and drop a file or select add Image</h3>
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
                         </div>
                     </div>
                     <div class="file-upload-content5">
