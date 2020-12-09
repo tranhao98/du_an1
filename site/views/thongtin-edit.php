@@ -14,7 +14,10 @@
                     required: true,
                     email: true
                 },
-                diachi:{
+                sodienthoai: {
+                    number: true
+                },
+                diachi: {
                     required: true
                 },
                 tinhthanh: {
@@ -40,7 +43,10 @@
                     required: "<span class='badge badge-warning'>Không để trống email</span>",
                     email: "<span class='badge badge-danger'>Phải đúng định dạng email</span>"
                 },
-                diachi:{
+                sodienthoai: {
+                    number: "<span class='badge badge-danger'>Số điện thoại phải là số</span>"
+                },
+                diachi: {
                     required: "<span class='badge badge-warning'>Không để trống địa chỉ</span>"
                 },
                 tinhthanh: {
@@ -56,19 +62,43 @@
         });
     });
     $(document).ready(function() {
-    $('body').on('click','.change', function() {
-    var vnf_regex = /((09|070|079|077|076|078|032|033|034|035|036|037|038|039|08|05)+([0-9]{8})\b)/g;
-    var mobile = $('#sodienthoai').val();
-    if(mobile !==''){
-        if (vnf_regex.test(mobile) == false) 
-        {
-            alert('Số điện thoại của bạn không đúng định dạng!');
-        }
-    }else{
-        alert('Bạn chưa điền số điện thoại!');
-    }
-    });
-});
+        $('body').on('click', '.change', function() {
+                var regex_mobile = /((09|070|079|077|076|078|032|033|034|035|036|037|038|039|08|05)+([0-9]{8})\b)/g;
+                var regex_email = /([a-z0-9_]+|[a-z0-9_]+\.[a-z0-9_]+)@(([a-z0-9]|[a-z0-9]+\.[a-z0-9]+)+\.([a-z]{2,4}))/i;
+                var mobile = $('#sodienthoai').val();
+                var email = $('#email').val();
+                if (mobile !== '') {
+                    if (regex_mobile.test(mobile) == false) {
+                        swal({
+                            title: "Xảy ra lỗi!",
+                            text: "Số điện thoại của bạn chưa đúng định dạng!",
+                            type: "error"
+                        });
+                    }
+                } else {
+                    swal({
+                        title: "Xảy ra lỗi!",
+                        text: "Bạn chưa điền số điện thoại!",
+                        type: "error"
+                    });
+                }
+                if (email !== '') {
+                    if (regex_email.test(email) == false) {
+                        swal({
+                            title: "Xảy ra lỗi!",
+                            text: "Email của bạn chưa đúng định dạng!",
+                            type: "error"
+                        });
+                    }
+                } else {
+                    swal({
+                        title: "Xảy ra lỗi!",
+                        text: "Bạn chưa nhập Email!",
+                        type: "error"
+                    });
+                }
+            });
+        });
 </script>
 <div class="list-group">
     <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Thông tin</a>
@@ -122,7 +152,7 @@
             </div>
             <div class="form-group">
                 <label for="">Email</label>
-                <input type="email" name="email" id="" class="form-control" placeholder="Email" aria-describedby="helpId" value="<?= $row['email'] ?>">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Email" aria-describedby="helpId" value="<?= $row['email'] ?>">
             </div>
             <div class="form-group">
                 <label for="">Số Điện Thoại</label>
@@ -134,7 +164,7 @@
             </div>
             <div class="form-group">
                 <label for="">Tỉnh/Thành phố <span class="text-danger">(*)</span></label>
-                <select id="tinhthanh" class="form-control" name="tinhthanh" required placeholder="Tỉnh/Thành phố">
+                <select id="tinhthanh" class="form-control" name="tinhthanh" placeholder="Tỉnh/Thành phố">
                     <option value="">--Chọn Tỉnh--</option>
                     <?php
                     include "connection.php";
@@ -150,13 +180,13 @@
             </div>
             <div class="form-group">
                 <label for="">Quận/Huyện <span class="text-danger">(*)</span></label>
-                <select id="quanhuyen" class="form-control" name="quanhuyen" required placeholder="Quận/Huyện">
+                <select id="quanhuyen" class="form-control" name="quanhuyen" placeholder="Quận/Huyện">
                     <option value="">--Chưa Chọn Tỉnh--</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="">Phường/Xã <span class="text-danger">(*)</span></label>
-                <select id="phuongxa" class="form-control" name="phuongxa" required placeholder="Phường/Xã">
+                <select id="phuongxa" class="form-control" name="phuongxa" placeholder="Phường/Xã">
                     <option value="">--Chưa chọn Quận/Huyện--</option>
                 </select>
             </div>

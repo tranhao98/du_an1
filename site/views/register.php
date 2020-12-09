@@ -15,9 +15,6 @@
                     required: true,
                     email: true
                 },
-                tendangnhap: {
-                    required: true
-                },
                 matkhau: {
                     required: true
                 },
@@ -34,9 +31,6 @@
                 email: {
                     required: "<span class='badge badge-warning'>Không để trống email</span>",
                     email: "<span class='badge badge-danger'>Phải đúng định dạng email</span>"
-                },
-                tendangnhap: {
-                    required: "<span class='badge badge-warning'>Không để trống tên đăng nhập</span>"
                 },
                 matkhau: {
                     required: "<span class='badge badge-warning'>Không để trống mật khẩu</span>"
@@ -68,7 +62,7 @@
                         <input class="box" type="text"  id="username" placeholder="Tên đăng nhập" name="tendangnhap">
                         <span id="kqcheckuser" class="d-block">&nbsp;</span>
                         <label for="pass">Mật Khẩu: </label>
-                        <input class="box" type="password" id="pass" placeholder="Nhập mật khẩu" name="matkhau">
+                        <input class="box" type="password" id="pass" placeholder="Nhập mật khẩu" name="matkhau"> <br>
                         <label for="repass">Nhập Lại Mật Khẩu: </label>
                         <input class="box" type="password" id="repass" placeholder="Nhập lại mật khẩu" name="matkhau2">
                         <span id="kqcheckpass" class="d-block"> &nbsp;</span>

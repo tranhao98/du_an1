@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="views/css/responsive.css">
     <link rel="stylesheet" href="views/css/style.css">
     <link rel="stylesheet" href="views/css/owl.css">
+    <link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+    <script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
     <script src="../js/jquery/jquery.js"></script>
     <script src="../ckeditor/ckeditor.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -93,11 +95,11 @@
                                     <a class="dropdown-item" href="?ctrl=user&act=logout">Đăng xuất</a>
                                 </div>
                             </div>
-                            <?php
+                        <?php
                         } else {
-                            ?>
-                                <li class="nav-item"><a class="nav-link text-danger" href="?ctrl=user&act=login-index">Đăng nhập</a></li>
-                            <?php } ?>
+                        ?>
+                            <li class="nav-item"><a class="nav-link text-danger" href="?ctrl=user&act=login-index">Đăng nhập</a></li>
+                        <?php } ?>
 
                     </ul>
                 </div>
