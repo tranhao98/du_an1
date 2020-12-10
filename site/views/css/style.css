@@ -2,6 +2,11 @@
         font-family: 'Nunito Sans', sans-serif;
     }
     
+    .pagination-lgg .page-link {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
     p {
         margin-bottom: 0px;
         font-size: 14px;
