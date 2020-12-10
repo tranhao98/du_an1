@@ -22,16 +22,17 @@ switch ($act) {
         $tendangnhap = trim(strip_tags($_POST['tendangnhap']));
         $matkhau = trim(strip_tags($_POST['matkhau']));
         $check = kiemTraNguoiDung($tendangnhap);
-        $checkbaidang = demBaiDangTheoND($check['id']);
-        
         // var_dump($check);
         $warning = "";
         if (is_array($check)) {
             // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
             $verify = password_verify($matkhau, $check['matkhau']);
+            $checkbaidang = demBaiDangTheoND($check['id']);
+            $checkngayhethan = kiemTraNgay($check['id']);
             $checkgoi = kiemTraGoi($check['id']);
             // var_dump($hash);
             if ($verify) {
+                $_SESSION['songayhethan'] = $checkngayhethan;
                 $_SESSION['tongsobaidang'] = $checkbaidang;
                 $_SESSION['goitv'] = $checkgoi['thanh_vien'];
                 $_SESSION['hinh'] = $check['hinh'];
@@ -57,6 +58,7 @@ switch ($act) {
             unset($_SESSION['sid']);
             unset($_SESSION['tendangnhap']);
             unset($_SESSION['tongsobaidang']);
+            unset($_SESSION['songayhethan']);
             unset($_SESSION['hoten']);
             unset($_SESSION['hinh']);
             unset($_SESSION['goitv']);
@@ -138,6 +140,8 @@ switch ($act) {
     case "thanhtoan":
         $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
+        $checkngayhethan = kiemTraNgay($_SESSION['sid']);
+        $_SESSION['songayhethan'] = "<div class='alert alert-warning'>Gói thành viên của bạn còn $checkngayhethan ngày.</div>";
             $thongbao = "<div class='alert alert-primary mt-2'>Bạn đang là thành viên. Có thể sử dụng chức năng đăng tin!</div>";
             $_SESSION['message'] = $thongbao;
         
@@ -162,6 +166,7 @@ switch ($act) {
                     unset($_SESSION['sid']);
                     unset($_SESSION['tendangnhap']);
                     unset($_SESSION['hoten']);
+                    unset($_SESSION['songayhethan']);
                     unset($_SESSION['hinh']);
                     unset($_SESSION['tongsobaidang']);
                     unset($_SESSION['goitv']);

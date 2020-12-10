@@ -300,6 +300,10 @@ function kiemTraGoi($id)
     $sql = "SELECT * FROM payments WHERE thanh_vien = '$id'";
     return queryOne($sql);
 }
+function kiemTraNgay($id){
+    $sql = "SELECT datediff(timehethan, CURRENT_DATE()) as 'songay' from payments where thanh_vien = '$id'";
+    return queryOne($sql)['songay'];
+}
 function showcmt($id)
 {
     $sql = "SELECT * from binhluan where idtb = '$id'" . "order by idtb desc";
