@@ -17,15 +17,6 @@
                 hinhanh3: {
                     required: true
                 },
-                hinhanh4: {
-                    required: true
-                },
-                hinhanh5: {
-                    required: true
-                },
-                hinhanh6: {
-                    required: true
-                },
                 gia: {
                     required: true,
                     number: true
@@ -71,16 +62,7 @@
                     required: "<span class='badge badge-warning'>Hãy chọn hình ảnh!</span>"
                 },
                 hinhanh3: {
-                    required: "<span class='badge badge-warning'>Hãy chọn hình ảnh!</span>"
-                },
-                hinhanh4: {
-                    required: "<span class='badge badge-warning'>Hãy chọn hình ảnh!</span>"
-                },
-                hinhanh5: {
-                    required: "<span class='badge badge-warning'>Hãy chọn hình ảnh!</span>"
-                },
-                hinhanh6: {
-                    required: "<span class='badge badge-warning'>Hãy chọn hình ảnh!</span>"
+                    required: "<span class='badge badge-warning'>Chọn tối thiểu 3 hình ảnh!</span>"
                 },
                 gia: {
                     required: "<span class='badge badge-warning'>Vui lòng nhập giá</span>",
@@ -130,33 +112,116 @@
                 </div>
             </div>
             <div class="row">
-                <div class="form-group col-6">
-                    <label for="exampleinput requiredPassword1">Hình ảnh 1:</label>
-                    <input type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh">
+                <div class="form-group col-4 file-upload">
+                    <!-- <label for="exampleinput requiredPassword1">Hình ảnh 1:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh"> -->
+                    <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
+
+                    <div class="image-upload-wrap1">
+                        <input class="file-upload-input1" type='file' name="hinhanh" onchange="readURL(this);" />
+                        <div class="drag-text">
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
+                        </div>
+                    </div>
+                    <div class="file-upload-content1">
+                        <img class="file-upload-image1" src="#" alt="your image" />
+                        <div class="image-title-wrap1">
+                            <button type="button" onclick="removeUpload()" class="remove-image1">Xóa <span class="image-title1">Uploaded Image</span></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group col-6">
-                    <label for="exampleinput requiredPassword2">Hình ảnh 2:</label>
-                    <input type="file" class="form-control" id="exampleinput requiredPassword2" name="hinhanh2">
+                <div class="form-group col-4 file-upload">
+                    <!-- <label for="exampleinput requiredPassword1">Hình ảnh 1:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh"> -->
+                    <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
+
+                    <div class="image-upload-wrap2">
+                        <input class="file-upload-input2" type='file' name="hinhanh2" onchange="readURL2(this);" />
+                        <div class="drag-text">
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
+                        </div>
+                    </div>
+                    <div class="file-upload-content2">
+                        <img class="file-upload-image2" src="#" alt="your image" />
+                        <div class="image-title-wrap2">
+                            <button type="button" onclick="removeUpload2()" class="remove-image2">Xóa <span class="image-title2">Uploaded Image</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-4 file-upload">
+                    <!-- <label for="exampleinput requiredPassword1">Hình ảnh 1:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh"> -->
+                    <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
+
+                    <div class="image-upload-wrap3">
+                        <input class="file-upload-input3" type='file' name="hinhanh3" onchange="readURL3(this);" />
+                        <div class="drag-text">
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
+                        </div>
+                    </div>
+                    <div class="file-upload-content3">
+                        <img class="file-upload-image3" src="#" alt="your image" />
+                        <div class="image-title-wrap3">
+                            <button type="button" onclick="removeUpload3()" class="remove-image3">Xóa <span class="image-title3">Uploaded Image</span></button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="form-group col-6">
-                    <label for="exampleinput requiredPassword3">Hình ảnh 3:</label>
-                    <input type="file" class="form-control" id="exampleinput requiredPassword3" name="hinhanh3">
+                <div class="form-group col-4 file-upload">
+                    <!-- <label for="exampleinput requiredPassword1">Hình ảnh 1:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh"> -->
+                    <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
+
+                    <div class="image-upload-wrap4">
+                        <input class="file-upload-input4" type='file' name="hinhanh4" onchange="readURL4(this);" />
+                        <div class="drag-text">
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
+                        </div>
+                    </div>
+                    <div class="file-upload-content4">
+                        <img class="file-upload-image4" src="#" alt="your image" />
+                        <div class="image-title-wrap4">
+                            <button type="button" onclick="removeUpload4()" class="remove-image4">Xóa <span class="image-title4">Uploaded Image</span></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group col-6">
-                    <label for="exampleinput requiredPassword4">Hình ảnh 4:</label>
-                    <input type="file" class="form-control" id="exampleinput requiredPassword4" name="hinhanh4">
+                <div class="form-group col-4 file-upload">
+                    <!-- <label for="exampleinput requiredPassword1">Hình ảnh 1:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh"> -->
+                    <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
+
+                    <div class="image-upload-wrap5">
+                        <input class="file-upload-input5" type='file' name="hinhanh5" onchange="readURL5(this);" />
+                        <div class="drag-text">
+                        <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
+                        </div>
+                    </div>
+                    <div class="file-upload-content5">
+                        <img class="file-upload-image5" src="#" alt="your image" />
+                        <div class="image-title-wrap5">
+                            <button type="button" onclick="removeUpload5()" class="remove-image5">Xóa <span class="image-title5">Uploaded Image</span></button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-6">
-                    <label for="exampleinput requiredPassword5">Hình ảnh 5:</label>
-                    <input type="file" class="form-control" id="exampleinput requiredPassword5" name="hinhanh5">
-                </div>
-                <div class="form-group col-6">
-                    <label for="exampleinput requiredPassword6">Hình ảnh 6:</label>
-                    <input type="file" class="form-control" id="exampleinput requiredPassword6" name="hinhanh6">
+                <div class="form-group col-4 file-upload">
+                    <!-- <label for="exampleinput requiredPassword1">Hình ảnh 1:</label>
+                    <input type="file" class="form-control" id="exampleinput requiredPassword1" name="hinhanh"> -->
+                    <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
+
+                    <div class="image-upload-wrap6">
+                        <input class="file-upload-input6" type='file' name="hinhanh6" onchange="readURL6(this);" />
+                        <div class="drag-text">
+                            <h3>Click để tải ảnh hoặc kéo thả ảnh vào đây!</h3>
+                        </div>
+                    </div>
+                    <div class="file-upload-content6">
+                        <img class="file-upload-image6" src="#" alt="your image" />
+                        <div class="image-title-wrap6">
+                            <button type="button" onclick="removeUpload6()" class="remove-image6">Xóa <span class="image-title6">Uploaded Image</span></button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -181,7 +246,7 @@
                 <div class="form-group col-6">
                     <label for="exampleinput">Địa điểm<span class="text-danger">(*)</span></label>
                     <select class="custom-select col-12" name="khuvuc">
-                        <option value="" >--Chọn địa điểm--</option>
+                        <option value="">--Chọn địa điểm--</option>
                         <?php
                         foreach ($dskvall as $kv) {
                         ?>
@@ -272,6 +337,4 @@
             });
         });
     });
-
-    
 </script>

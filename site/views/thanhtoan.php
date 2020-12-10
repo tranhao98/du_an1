@@ -2,6 +2,7 @@
     <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Thanh toán</a>
     <?php if(isset($_SESSION['goitv']) && $_SESSION['goitv'] > 0) { 
                 echo $_SESSION['message'];
+                echo $_SESSION['songayhethan'];
                 unset($_SESSION['message']);
     } else { ?>
     <div class="alert alert-success mt-2">Hãy mua gói thành viên để sử dụng chức năng đăng bài!</div>

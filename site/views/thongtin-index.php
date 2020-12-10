@@ -1,9 +1,12 @@
 <div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Thông tin</a>
+    <a href="#" class="list-group-item list-group-item-action bg-dark text-white mb-2">Thông tin</a>
+    <?php if (isset($_SESSION['mess'])) echo $_SESSION['mess'];
+        unset($_SESSION['mess']);
+        ?>
     <div class="d-flex w-100 justify-content-between">
         <form enctype="multipart/form-data" class="mt-3 mb-3 mx-auto w-100 bg-input" method="post" action="?ctrl=nguoidung&act=insert">
             <div class="form-group">
-                <label for="">Tên Người Dùng</label>
+                <label for="">Họ và tên</label>
                 <input disabled type="text" name="tennguoidung" id="" class="form-control" placeholder="Tên người dùng" aria-describedby="helpId" value="<?= $row['hoten'] ?>">
             </div>
             <div class="form-group">

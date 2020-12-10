@@ -22,17 +22,17 @@ switch ($act) {
         $tendangnhap = trim(strip_tags($_POST['tendangnhap']));
         $matkhau = trim(strip_tags($_POST['matkhau']));
         $check = kiemTraNguoiDung($tendangnhap);
-        
-        
         // var_dump($check);
         $warning = "";
         if (is_array($check)) {
             // $hash = password_hash($matkhau,PASSWORD_DEFAULT);
             $verify = password_verify($matkhau, $check['matkhau']);
-            $checkgoi = kiemTraGoi($check['id']);
             $checkbaidang = demBaiDangTheoND($check['id']);
+            $checkngayhethan = kiemTraNgay($check['id']);
+            $checkgoi = kiemTraGoi($check['id']);
             // var_dump($hash);
             if ($verify) {
+                $_SESSION['songayhethan'] = $checkngayhethan;
                 $_SESSION['tongsobaidang'] = $checkbaidang;
                 $_SESSION['goitv'] = $checkgoi['thanh_vien'];
                 $_SESSION['hinh'] = $check['hinh'];
@@ -58,6 +58,7 @@ switch ($act) {
             unset($_SESSION['sid']);
             unset($_SESSION['tendangnhap']);
             unset($_SESSION['tongsobaidang']);
+            unset($_SESSION['songayhethan']);
             unset($_SESSION['hoten']);
             unset($_SESSION['hinh']);
             unset($_SESSION['goitv']);
@@ -78,7 +79,7 @@ switch ($act) {
         $checkbaidang = demBaiDangTheoND($_SESSION['sid']);
         $_SESSION['tongsobaidang'] = $checkbaidang;
         if($_SESSION['tongsobaidang']>=2){
-            $thongbao = "<div class='alert alert-danger mt-2'>Bạn đã vượt quá số lần đăng bài trong tháng. Không thể đăng bài nữa!!</div>";
+            $thongbao = "<div class='alert alert-danger mt-2'>Bạn vượt quá số lần đăng bài trong tháng. Không thể đăng bài nữa!!</div>";
             $_SESSION['mess'] = $thongbao;
         }
         $id = 0;
@@ -93,9 +94,9 @@ switch ($act) {
 
         $page_size = 4;
         $dsnguoidung = getBaiDangTheoND($id, $page_num, $page_size);
-        $total_rows1 = demBaiDangTheoND($id);
+        $total_rows = demBaiDangTheoND($id);
         $baseurl = SITE_URL . "/index.php?ctrl=user&act=myarticle&id={$id}";
-        $links = taolinks($baseurl, $page_num, $page_size, $total_rows1);
+        $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
         $child = "views/myarticle.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
@@ -108,7 +109,6 @@ switch ($act) {
         $child = "views/thongtin-edit.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
-        break;
         break;
     case "update-info":
         $id = $_POST["id"];
@@ -133,11 +133,15 @@ switch ($act) {
         $diachi = trim(strip_tags($diachi));
 
         updateNguoiDung($id, $hoten, $ngaysinh, $hinh, $email, $sodienthoai, $diachi, $tinhthanh, $quanhuyen, $phuongxa, $gioitinh, $anhien);
+        $thongbao = "<div class='alert alert-success'>Cập nhật thông tin thành công! Bạn hãy đăng nhập lại để thay đổi ảnh đại diện (nếu có).</div>";
+        $_SESSION['mess'] = $thongbao;
         header("location:index.php?ctrl=user&act=infouser");
         break;
     case "thanhtoan":
         $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
+        $checkngayhethan = kiemTraNgay($_SESSION['sid']);
+        $_SESSION['songayhethan'] = "<div class='alert alert-warning'>Gói thành viên của bạn còn $checkngayhethan ngày.</div>";
             $thongbao = "<div class='alert alert-primary mt-2'>Bạn đang là thành viên. Có thể sử dụng chức năng đăng tin!</div>";
             $_SESSION['message'] = $thongbao;
         
@@ -147,7 +151,7 @@ switch ($act) {
         break;
     case "doimatkhau":
         if (isset($_POST['submit'])) {
-            $passcu = $_POST["passcu"];
+            $passcu = ($_POST["passcu"]);
             $p1 = password_hash($_POST['p1'], PASSWORD_DEFAULT);
             $p2 = password_hash($_POST['p2'], PASSWORD_DEFAULT);
             $check = kiemTraMatKhau($_SESSION['sid']);
@@ -162,14 +166,15 @@ switch ($act) {
                     unset($_SESSION['sid']);
                     unset($_SESSION['tendangnhap']);
                     unset($_SESSION['hoten']);
-                    unset($_SESSION['tongsobaidang']);
+                    unset($_SESSION['songayhethan']);
                     unset($_SESSION['hinh']);
+                    unset($_SESSION['tongsobaidang']);
                     unset($_SESSION['goitv']);
                     unset($_SESSION['vaitro']);
                     header('location: ?ctrl=user&act=login-index');
                 } else {
                     $mess = '<div class="alert alert-primary" role="alert">
-                    Mật khẩu mới nhập không trùng khớp.
+                    Mật khẩu không trùng khớp.
                 </div>';
                 }
             }
@@ -178,7 +183,7 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
 
         require_once "layout.php";
-        break;
+        break; 
         case "kiemtrauser":
             $username = "";
             if(isset($_GET['username'])) $username = $_GET['username'];
@@ -204,8 +209,7 @@ switch ($act) {
             $hoten = $_POST['hoten'];
             $email = trim(strip_tags($_POST['email']));
             $tendangnhap = $_POST['tendangnhap'];
-            $matkhau = password_hash($_POST['matkhau'], PASSWORD_DEFAULT);
-            $matkhau2 = password_hash($_POST['matkhau2'], PASSWORD_DEFAULT);
+            $matkhau = password_hash($_POST['matkhau'], PASSWORD_DEFAULT);;
             $check = kiemTraNguoiDung($tendangnhap);
                 if (is_array($check)) {
                     $warning = '<div class="alert alert-primary" role="alert">
@@ -224,8 +228,6 @@ switch ($act) {
                 else {
                     $randkey = md5(rand(0,999999));
                     $iduser = addUser($hoten,$email,$tendangnhap,$matkhau,$randkey);
-
-
                     require "PHPMailer-master/src/PHPMailer.php"; 
                     require "PHPMailer-master/src/SMTP.php";
                     $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
@@ -238,12 +240,12 @@ switch ($act) {
                     $mail->Username = 'haolong1506@gmail.com';  // SMTP username
                     $mail->Password = 'nhomduan1';   // SMTP password
                     $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
-                    $mail->Port = 465;  // port to connect to               
+                    $mail->Port = 465;  // port to connect to                   
                     $mail->setFrom('haolong1506@gmail.com', 'Quản trị viên');
                     $mail->addAddress($email,$hoten); //mail và tên người nhận    
                     $mail->isHTML(true);  // Set email format to HTML
                     $mail->Subject = 'Kích hoạt tài khoản';                
-                    $linkKH = "<a href='http://localhost/du_an1/site/index.php?ctrl=user&act=active&id='.$iduser.'&rk='$randkey''>.$hoten.</a>";
+                    $linkKH = "<a href='http://localhost/du_an1/site/index.php?ctrl=user&act=active&id=%d&rk=%s'>.$hoten.</a>";
                     $linKH = sprintf($linkKH, $iduser, $randkey);
                     $mail->Body= "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản tại đây: ". $linKH;
                     $mail->send();
@@ -262,7 +264,26 @@ switch ($act) {
         $view = "views/register.php";
         require_once "layout.php";
     break;
-    case "register":
-
+    case "active":
+        if($_GET['act'] == "active"){
+            $iduser = $_GET['id'];
+            $rd = $_GET['rk'];
+            $checkactive = checkActive($iduser, $rd);
+            if(is_array($checkactive)){
+                active($iduser);
+                $text = '<div class="alert alert-primary" role="alert">
+                Tài khoản đã được kích hoạt mời bạn đăng nhập.
+              </div>';
+                $_SESSION['mess'] = $text;
+                header("location: ?ctrl=user&act=login-index");
+            }
+            else {
+                $text = '<div class="alert alert-primary" role="alert">
+                Tài khoản chưa được kích hoạt!
+              </div>';
+                $_SESSION['mess'] = $text;
+                header("location: ?ctrl=user&act=login-index");
+            }
+        }
     break;
 }

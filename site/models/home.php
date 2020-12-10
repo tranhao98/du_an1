@@ -300,6 +300,10 @@ function kiemTraGoi($id)
     $sql = "SELECT * FROM payments WHERE thanh_vien = '$id'";
     return queryOne($sql);
 }
+function kiemTraNgay($id){
+    $sql = "SELECT datediff(timehethan, CURRENT_DATE()) as 'songay' from payments where thanh_vien = '$id'";
+    return queryOne($sql)['songay'];
+}
 function showcmt($id)
 {
     $sql = "SELECT * from binhluan where idtb = '$id'" . "order by idtb desc";
@@ -326,4 +330,12 @@ function checkUserTonTai($username)
 {
     $sql = "SELECT count(*) as sodong FROM taikhoan where tendangnhap = '$username'";
     return queryOne($sql)['sodong'];
+}
+function checkActive($iduser, $rd){
+    $sql = "SELECT * from taikhoan where id='$iduser' and randkey = '$rd'";
+    return queryOne($sql);
+}
+function active($id){
+    $sql = "UPDATE taikhoan SET active  = '1' WHERE id='$id'";
+    execute($sql);
 }
