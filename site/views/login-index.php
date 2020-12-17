@@ -19,6 +19,7 @@
                         <input class="box" type="text" placeholder="Tên đăng nhập" name="tendangnhap">
                         <label for="">Mật Khẩu: </label>
                         <input class="box" type="password" placeholder="Nhập mật khẩu" name="matkhau">
+                        <p class="pull-right m-0"><a href="index.php?ctrl=user&act=quenpass">Quên mật khẩu?</a></p>
                         <button class="btn btn-primary w-100 p-2 mt-4" type="submit">Đăng nhập</button>
                         <div class="col-12 text-center mt-3">
                             <p style="font-size: 14px;">hoặc đăng nhập với:</p>

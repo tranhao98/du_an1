@@ -42,7 +42,7 @@ switch ($act) {
                     unset($_SESSION['goitv']);
                     unset($_SESSION['vaitro']);
                     $text = '<div class="alert alert-primary" role="alert">
-                Tài khoản chưa được kích hoạt!
+                Tài khoản chưa được kích hoạt! Bạn hãy kiểm tra mail để kích hoạt tài khoản!
               </div>';
                     $_SESSION['mess'] = $text;
                     header("location: ?ctrl=user&act=login-index");
@@ -241,7 +241,7 @@ switch ($act) {
                     $_SESSION['mess'] = $warning;
                 } else {
                     $randkey = md5(rand(0, 999999));
-                    $iduser = addUser($hoten, $email, $tendangnhap, $matkhau, $randkey);
+                    $iduser = -addUser($hoten, $email, $tendangnhap, $matkhau, $randkey);
                     require "PHPMailer-master/src/PHPMailer.php";
                     require "PHPMailer-master/src/SMTP.php";
                     $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
@@ -254,7 +254,7 @@ switch ($act) {
                         $mail->Username = 'haolong1506@gmail.com';  // SMTP username
                         $mail->Password = 'nhomduan1';   // SMTP password
                         $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
-                        $mail->Port = 465;  // port to connect to                   
+                        $mail->Port = 465;  // port to connect to               
                         $mail->setFrom('haolong1506@gmail.com', 'Quản trị viên');
                         $mail->addAddress($email, $hoten); //mail và tên người nhận    
                         $mail->isHTML(true);  // Set email format to HTML
@@ -293,4 +293,58 @@ switch ($act) {
             }
         }
         break;
+    case "quenpass":
+        $view = "views/emailquenpass.php";
+        require_once "layout.php";
+        break;
+    case "quenpass_":
+        $email = trim(strip_tags($_POST['email']));
+        $checkmail = kiemTraMail($email);
+        if (!is_array($checkmail)) {
+            $warning = '<div class="alert alert-primary" role="alert">
+                    Email không tồn tại!</a>
+                  </div>';
+            $_SESSION['mess'] = $warning;
+        } else {
+            $randkey = md5(rand(0, 999999));
+            require "PHPMailer-master/src/PHPMailer.php";
+            require "PHPMailer-master/src/SMTP.php";
+            $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
+            try {
+                $mail->SMTPDebug = 0;  // Enable verbose debug output
+                $mail->isSMTP();
+                $mail->CharSet  = "utf-8";
+                $mail->Host = 'smtp.gmail.com';  //SMTP servers
+                $mail->SMTPAuth = true; // Enable authentication
+                $mail->Username = 'haolong1506@gmail.com';  // SMTP username
+                $mail->Password = 'nhomduan1';   // SMTP password
+                $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
+                $mail->Port = 465;  // port to connect to               
+                $mail->setFrom('haolong1506@gmail.com', 'Quản trị viên');
+                $mail->addAddress($email); //mail và tên người nhận    
+                $mail->isHTML(true);  // Set email format to HTML
+                $mail->Subject = 'Lấy lại mật khẩu';
+                $linkKH = "<a href='" . $_SERVER['HTTP_HOST'] .
+                    "/du_an1/site/index.php?ctrl=user&act=laypass&email=$email&rd=$randkey'>Nhấp vào đây</a>";
+                $linKH = sprintf($linkKH, $randkey);
+                $mail->Body = "<h4>Đây là địa chỉ URL để bạn xác nhận đổi mật khẩu!</h4>Click vào link dưới để đổi mật khẩu: " . $linKH;
+                $mail->send();
+            } catch (Exception $e) {
+                echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
+            }
+            $text = '<div class="alert alert-success" role="alert">
+                Gửi thông tin thành công! Mời bạn kiểm tra hòm thư Email!
+              </div>';
+            $_SESSION['mess'] = $text;
+            header("location: index.php?ctrl=user&act=quenpass");
+        }
+        break;
+        case "laypass":
+            if($_GET['act'] == "laypass"){
+                $m = $_GET['email'];
+                $rd = $_GET['rd'];
+            }
+            $view = "views/laylaimatkhau.php";
+            require_once "layout.php";
+            break;
 }
