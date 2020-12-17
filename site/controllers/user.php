@@ -32,15 +32,31 @@ switch ($act) {
             $checkgoi = kiemTraGoi($check['id']);
             // var_dump($hash);
             if ($verify) {
-                $_SESSION['songayhethan'] = $checkngayhethan;
-                $_SESSION['tongsobaidang'] = $checkbaidang;
-                $_SESSION['goitv'] = $checkgoi['thanh_vien'];
-                $_SESSION['hinh'] = $check['hinh'];
-                $_SESSION['sid'] = $check['id'];
-                $_SESSION['hoten'] = $check['hoten'];
-                $_SESSION['vaitro'] = $check['vaitro'];
-                if ($check['vaitro'] == 1) header("location: ../admin/index.php");
-                else header("location: index.php");
+                if ($check['active'] == 0) {
+                    unset($_SESSION['sid']);
+                    unset($_SESSION['tendangnhap']);
+                    unset($_SESSION['tongsobaidang']);
+                    unset($_SESSION['songayhethan']);
+                    unset($_SESSION['hoten']);
+                    unset($_SESSION['hinh']);
+                    unset($_SESSION['goitv']);
+                    unset($_SESSION['vaitro']);
+                    $text = '<div class="alert alert-primary" role="alert">
+                Tài khoản chưa được kích hoạt!
+              </div>';
+                    $_SESSION['mess'] = $text;
+                    header("location: ?ctrl=user&act=login-index");
+                } else {
+                    $_SESSION['songayhethan'] = $checkngayhethan;
+                    $_SESSION['tongsobaidang'] = $checkbaidang;
+                    $_SESSION['goitv'] = $checkgoi['thanh_vien'];
+                    $_SESSION['hinh'] = $check['hinh'];
+                    $_SESSION['sid'] = $check['id'];
+                    $_SESSION['hoten'] = $check['hoten'];
+                    $_SESSION['vaitro'] = $check['vaitro'];
+                    if ($check['vaitro'] == 1) header("location: ../admin/index.php");
+                    else header("location: index.php");
+                }
             } else {
                 $warning = "<div class='alert alert-danger'>Bạn nhập sai mật khẩu. Vui lòng nhập lại!</div>";
                 $_SESSION['mess'] = $warning;
@@ -78,7 +94,7 @@ switch ($act) {
     case "myarticle":
         $checkbaidang = demBaiDangTheoND($_SESSION['sid']);
         $_SESSION['tongsobaidang'] = $checkbaidang;
-        if($_SESSION['tongsobaidang']>=2){
+        if ($_SESSION['tongsobaidang'] >= 2) {
             $thongbao = "<div class='alert alert-danger mt-2'>Bạn vượt quá số lần đăng bài trong tháng. Không thể đăng bài nữa!!</div>";
             $_SESSION['mess'] = $thongbao;
         }
@@ -142,9 +158,9 @@ switch ($act) {
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
         $checkngayhethan = kiemTraNgay($_SESSION['sid']);
         $_SESSION['songayhethan'] = "<div class='alert alert-warning'>Gói thành viên của bạn còn $checkngayhethan ngày.</div>";
-            $thongbao = "<div class='alert alert-primary mt-2'>Bạn đang là thành viên. Có thể sử dụng chức năng đăng tin!</div>";
-            $_SESSION['message'] = $thongbao;
-        
+        $thongbao = "<div class='alert alert-primary mt-2'>Bạn đang là thành viên. Có thể sử dụng chức năng đăng tin!</div>";
+        $_SESSION['message'] = $thongbao;
+
         $child = "views/thanhtoan.php";
         $view = "views/thongtintaikhoan.php";
         require_once "layout.php";
@@ -183,72 +199,70 @@ switch ($act) {
         $view = "views/thongtintaikhoan.php";
 
         require_once "layout.php";
-        break; 
-        case "kiemtrauser":
-            $username = "";
-            if(isset($_GET['username'])) $username = $_GET['username'];
-            if($username=="") echo "<span class='badge badge-danger'>Chưa có tên đăng nhập!</span>";
-            elseif(checkUserTontai($username)) echo "<span class='badge badge-danger'>Tên đăng nhập đã tồn tại!</span>";
-            else echo "<span class='badge badge-success'>Tên đăng nhập hợp lệ</span>";
-            break;
-        case "kiemtrarepass":
-            $repass = "";
-            if(isset($_GET['repass'])) $repass = $_GET['repass'];
-            if(isset($_GET['pass'])) $pass = $_GET['pass'];
-            if($repass=="") echo "<span class='badge badge-danger'>Vui lòng nhập mật khẩu!</span>";
-            elseif($repass!=$pass) echo "<span class='badge badge-danger'>Mật khẩu không khớp!</span>";
-            else echo "<span class='badge badge-success'>Mật khẩu trùng khớp</span>";
-            break;
+        break;
+    case "kiemtrauser":
+        $username = "";
+        if (isset($_GET['username'])) $username = $_GET['username'];
+        if ($username == "") echo "<span class='badge badge-danger'>Chưa có tên đăng nhập!</span>";
+        elseif (checkUserTontai($username)) echo "<span class='badge badge-danger'>Tên đăng nhập đã tồn tại!</span>";
+        else echo "<span class='badge badge-success'>Tên đăng nhập hợp lệ</span>";
+        break;
+    case "kiemtrarepass":
+        $repass = "";
+        if (isset($_GET['repass'])) $repass = $_GET['repass'];
+        if (isset($_GET['pass'])) $pass = $_GET['pass'];
+        if ($repass == "") echo "<span class='badge badge-danger'>Vui lòng nhập mật khẩu!</span>";
+        elseif ($repass != $pass) echo "<span class='badge badge-danger'>Mật khẩu không khớp!</span>";
+        else echo "<span class='badge badge-success'>Mật khẩu trùng khớp</span>";
+        break;
     case "kiemtra":
         $checkgoi = kiemTraGoi($_SESSION['sid']);
         $_SESSION['goitv'] = $checkgoi['thanh_vien'];
         header("location: ?ctrl=user&act=thanhtoan");
         break;
     case "register":
-        if(isset($_POST['dangky'])){
+        if (isset($_POST['dangky'])) {
             $hoten = $_POST['hoten'];
             $email = trim(strip_tags($_POST['email']));
             $tendangnhap = $_POST['tendangnhap'];
             $matkhau = password_hash($_POST['matkhau'], PASSWORD_DEFAULT);;
             $check = kiemTraNguoiDung($tendangnhap);
-                if (is_array($check)) {
-                    $warning = '<div class="alert alert-primary" role="alert">
+            if (is_array($check)) {
+                $warning = '<div class="alert alert-primary" role="alert">
                     Tên tài khoản đã tồn tại!!
                   </div>';
-                    $_SESSION['mess'] = $warning;
-                }
-            else {
-            $checkmail = kiemTraMail($email);
+                $_SESSION['mess'] = $warning;
+            } else {
+                $checkmail = kiemTraMail($email);
                 if (is_array($checkmail)) {
                     $warning = '<div class="alert alert-primary" role="alert">
                     Địa chỉ mail này đã được đăng ký mời bạn bấm vào đây để lấy lại <a href="?ctrl=user&act=resetpass">mật khẩu</a>
                   </div>';
                     $_SESSION['mess'] = $warning;
-                }
-                else {
-                    $randkey = md5(rand(0,999999));
-                    $iduser = addUser($hoten,$email,$tendangnhap,$matkhau,$randkey);
-                    require "PHPMailer-master/src/PHPMailer.php"; 
+                } else {
+                    $randkey = md5(rand(0, 999999));
+                    $iduser = addUser($hoten, $email, $tendangnhap, $matkhau, $randkey);
+                    require "PHPMailer-master/src/PHPMailer.php";
                     require "PHPMailer-master/src/SMTP.php";
                     $mail = new PHPMailer\PHPMailer\PHPMailer(true);  //true: enables exceptions
                     try {
-                    $mail->SMTPDebug = 0;  // Enable verbose debug output
-                    $mail->isSMTP();  
-                    $mail->CharSet  = "utf-8";
-                    $mail->Host = 'smtp.gmail.com';  //SMTP servers
-                    $mail->SMTPAuth = true; // Enable authentication
-                    $mail->Username = 'haolong1506@gmail.com';  // SMTP username
-                    $mail->Password = 'nhomduan1';   // SMTP password
-                    $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
-                    $mail->Port = 465;  // port to connect to                   
-                    $mail->setFrom('haolong1506@gmail.com', 'Quản trị viên');
-                    $mail->addAddress($email,$hoten); //mail và tên người nhận    
-                    $mail->isHTML(true);  // Set email format to HTML
-                    $mail->Subject = 'Kích hoạt tài khoản';                
-                    $linkKH = "<a href='http://localhost/du_an1/site/index.php?ctrl=user&act=active&id=%d&rk=%s'>.$hoten.</a>";
-                    $linKH = sprintf($linkKH, $iduser, $randkey);
-                    $mail->Body= "<h4>Chào mừng thành viên mới</h4>Kích hoạt tài khoản tại đây: ". $linKH;
-                    $mail->send();
+                        $mail->SMTPDebug = 0;  // Enable verbose debug output
+                        $mail->isSMTP();
+                        $mail->CharSet  = "utf-8";
+                        $mail->Host = 'smtp.gmail.com';  //SMTP servers
+                        $mail->SMTPAuth = true; // Enable authentication
+                        $mail->Username = 'haolong1506@gmail.com';  // SMTP username
+                        $mail->Password = 'nhomduan1';   // SMTP password
+                        $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
+                        $mail->Port = 465;  // port to connect to                   
+                        $mail->setFrom('haolong1506@gmail.com', 'Quản trị viên');
+                        $mail->addAddress($email, $hoten); //mail và tên người nhận    
+                        $mail->isHTML(true);  // Set email format to HTML
+                        $mail->Subject = 'Kích hoạt tài khoản';
+                        $linkKH = "<a href='http://localhost/du_an1/site/index.php?ctrl=user&act=active&id=%d&rk=%s'>$hoten</a>";
+                        $linKH = sprintf($linkKH, $iduser, $randkey);
+                        $mail->Body = "<h4>Chào mừng thành viên mới</h4>Click vào link dưới để kích hoạt tài khoản: " . $linKH;
+                        $mail->send();
                     } catch (Exception $e) {
                         echo 'Mail không gửi được. Lỗi: ', $mail->ErrorInfo;
                     }
@@ -257,33 +271,26 @@ switch ($act) {
                   </div>';
                     $_SESSION['mess'] = $text;
                     header("location: ?ctrl=user&act=login-index");
-                    }
+                }
             }
-               
         }
         $view = "views/register.php";
         require_once "layout.php";
-    break;
+        break;
     case "active":
-        if($_GET['act'] == "active"){
+        if ($_GET['act'] == "active") {
             $iduser = $_GET['id'];
             $rd = $_GET['rk'];
             $checkactive = checkActive($iduser, $rd);
-            if(is_array($checkactive)){
+            if (is_array($checkactive)) {
+
                 active($iduser);
                 $text = '<div class="alert alert-primary" role="alert">
-                Tài khoản đã được kích hoạt mời bạn đăng nhập.
-              </div>';
-                $_SESSION['mess'] = $text;
-                header("location: ?ctrl=user&act=login-index");
-            }
-            else {
-                $text = '<div class="alert alert-primary" role="alert">
-                Tài khoản chưa được kích hoạt!
+                Kích hoạt tài khoản thành công. Mời bạn đăng nhập.
               </div>';
                 $_SESSION['mess'] = $text;
                 header("location: ?ctrl=user&act=login-index");
             }
         }
-    break;
+        break;
 }
