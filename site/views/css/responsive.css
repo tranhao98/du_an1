@@ -86,11 +86,11 @@
         /*** TIN TUC MOI CAP NHAT ***/
         /*** BAI DANG ***/
         .box-baidang {
-            width: calc(50% - 0px);
-            float: left;
-            margin-right: 0px;
-            height: 90%;
             padding: 3px;
+            width: calc(50% - 00px);
+            float: left;
+            margin-right: 00px;
+            height: 100%;
         }
         #trainers .trainer-item {
             background-color: #fff;
@@ -116,21 +116,37 @@
             margin-bottom: 5px;
         }
         #trainers .trainer-item h4 {
-            font-size: 10px;
+            font-size: 13px;
             font-weight: 600;
             color: #232d39;
             letter-spacing: 0.5px;
             margin-bottom: 5px;
-            text-align: center;
         }
         #trainers .trainer-item p {
             font-size: 7pt;
             margin-bottom: 5px;
         }
-        /* Chi Tiet Thong Bao */
+        /******************** CHI TIET BAI DANG ***********************/
+        .mt-bannerbaidang img {
+            height: 300px;
+            object-fit: cover;
+        }
+        iframe{
+            width: 100%;
+            height: 250px;
+        }
+        .auth-child {
+            text-align: center;
+            width: 100%;
+            font-size: 7pt;
+            float: right;
+            color: rgb(87, 81, 81);
+        }
+        /******************** CHI TIET THONG BAO TIN TUC ***********************/
+        
         .thongbao-trai {
             float: left;
-            width: 70%;
+            width: 100%;
             padding: 10px;
             margin-right: 0px;
         }
@@ -179,27 +195,57 @@
             width: 33%;
             padding: 5px;
         }
-        /******************** CHI TIET BAI DANG ***********************/
-        .mt-bannerbaidang img {
-            height: 300px;
-            object-fit: cover;
-        }
-        iframe{
-            width: 300px;
-            height: 300px;
-        }
-        .auth-child {
-            text-align: center;
-            width: 100%;
-            font-size: 7pt;
-            float: right;
-            color: rgb(87, 81, 81);
-        }
-        /******************** CHI TIET THONG BAO TIN TUC ***********************/
-        .thongbao-trai {
+        .col-4{
+            position: relative;
+            width: 40%;
             float: left;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .col-6{
+            position: relative;
+            width: 60%;
+            float: left;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+
+
+
+
+        #tabs ul li {
+            margin-bottom: 10px;
+            display: inline-block;
             width: 100%;
-            padding: 10px;
-            margin-right: 0px;
+        }
+        #tabs ul li a {
+            text-transform: capitalize;
+            width: 100%;
+            padding: 5px 5px;
+            display: inline-block;
+            background-color: #fff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            font-size: 13px;
+            color: #232d39;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+            transition: all 0.3s;
+            outline: none;
+        }
+        .tabs-content {
+            margin-left: 0px;
+            text-align: left;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .tabs-content h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #232d39;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            margin-top: 10px;
         }
     }
