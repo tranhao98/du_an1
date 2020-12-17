@@ -132,7 +132,7 @@ switch ($act) {
             $dientich = $_POST['dientich'];
             $gia = $_POST['gia'];
             if ($gia == "" && $dientich == "" && $loaibds == "" && $sapxep == "") {
-               header("location: ?tukhoa=$key&act=timkiem");
+                header("location: ?tukhoa=$key&act=timkiem");
             } else
                 $dsfilltertk = getBaiDangTheoLocTheoSearch($key, $gia, $dientich, $loaibds, $sapxep);
         }
@@ -155,12 +155,12 @@ switch ($act) {
         $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
         $view = "views/timkiem.php";
         require_once "layout.php";
-    break;
+        break;
     case "baidang-addnew":
         $nd = getAllNguoiDung();
         $view = "views/baidang-addnew.php";
         require_once "layout.php";
-    break;
+        break;
     case "insert-baidang":
         $tieude = trim(strip_tags($_POST['tieude']));
         $gia = trim(strip_tags($_POST['gia']));
@@ -195,27 +195,80 @@ switch ($act) {
         $target_file = $partimg . basename($hinh_anh6);
         move_uploaded_file($_FILES["hinhanh6"]["tmp_name"], $target_file);
 
-    
+
         addBaiViet($tieude, $mota, $noithat, $phongngu, $dientich, $khuvuc, $danhmuc, $diachi, $hinh_anh, $hinh_anh2, $hinh_anh3, $hinh_anh4, $hinh_anh5, $hinh_anh6, $gia, $nguoidung);
         $mess = "<div class=\"alert alert-primary\" role=\"alert\">
           Đã thêm thành công!
         </div>";
-        header('location:?ctrl=user&act=myarticle&id='.$_SESSION['sid']);
-    break;
+        $_SESSION['mess'] = $mess;
+        header('location:?ctrl=user&act=myarticle&id=' . $_SESSION['sid']);
+        break;
+    case "edit":
+        $id = $_GET['id'];
+        settype($id, "int");
+        $nguoidung = getAllNguoiDung();
+        $dsdm = getAllDanhMuc();
+        $dskv = getAllKhuVuc();
+        $baiviet = getBaiVietById($id);
+        $view = "views/baidang-edit.php";
+        require_once "layout.php";
+        break;
+    case "update-baidang":
+        $id = $_POST['idbaiviet'];
+        $tieude = trim(strip_tags($_POST['tieude']));
+        $gia = trim(strip_tags($_POST['gia']));
+        $nguoidung = trim(strip_tags($_POST['idnguoidang']));
+        $mota = $_POST['mota'];
+        $noithat = trim(strip_tags($_POST['noithat']));
+        $phongngu = trim(strip_tags($_POST['phongngu']));
+        $dientich = trim(strip_tags($_POST['dientich']));
+        $khuvuc = $_POST['khuvuc'];
+        $danhmuc = $_POST['danhmuc'];
+        $tinhthanh = getNameKhuVucHanhChinh($_POST['tinhthanhpho'], 1)['name'];
+        $quanhuyen = getNameKhuVucHanhChinh($_POST['quanhuyen'], 2)['name'];
+        $phuongxa = getNameKhuVucHanhChinh($_POST['phuongxa'], 3)['name'];
+        $diachi = $phuongxa . ', ' . $quanhuyen . ', ' . $tinhthanh . '.';
+        $hinh_anh = $_FILES['hinhanh']['name'];
+        $hinh_anh2 = $_FILES['hinhanh2']['name'];
+        $hinh_anh3 = $_FILES['hinhanh3']['name'];
+        $hinh_anh4 = $_FILES['hinhanh4']['name'];
+        $hinh_anh5 = $_FILES['hinhanh5']['name'];
+        $hinh_anh6 = $_FILES['hinhanh6']['name'];
+        $partimg = "../upload/";
+        $target_file = $partimg . basename($hinh_anh);
+        move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
+        $target_file = $partimg . basename($hinh_anh2);
+        move_uploaded_file($_FILES["hinhanh2"]["tmp_name"], $target_file);
+        $target_file = $partimg . basename($hinh_anh3);
+        move_uploaded_file($_FILES["hinhanh3"]["tmp_name"], $target_file);
+        $target_file = $partimg . basename($hinh_anh4);
+        move_uploaded_file($_FILES["hinhanh4"]["tmp_name"], $target_file);
+        $target_file = $partimg . basename($hinh_anh5);
+        move_uploaded_file($_FILES["hinhanh5"]["tmp_name"], $target_file);
+        $target_file = $partimg . basename($hinh_anh6);
+        move_uploaded_file($_FILES["hinhanh6"]["tmp_name"], $target_file);
+
+        updateBaiDang($tieude, $mota, $noithat, $phongngu, $dientich, $khuvuc, $danhmuc, $diachi, $anhien, $noibat, $hinh_anh, $hinh_anh2, $hinh_anh3, $hinh_anh4, $hinh_anh5, $hinh_anh6, $gia, $nguoidung, $id);
+        $mess = "<div class=\"alert alert-primary\" role=\"alert\">
+          Đã sửa thành công!
+        </div>";
+        $_SESSION['mess'] = $mess;
+        header('location:?ctrl=user&act=myarticle&id=' . $_SESSION['sid']);
+        break;
     case "del":
         $id = $_GET["id"];
         settype($id, "int");
-        if(deleteBaiViet($id) == TRUE){
+        if (deleteBaiViet($id) == TRUE) {
             $mess = "<div class=\"alert alert-primary mt-3\" role=\"alert\">
             Xóa bài viết thất bại.
             </div>";
             $_SESSION['mess'] = $mess;
         } else {
-        $mess = "<div class=\"alert alert-primary mt-3\" role=\"alert\">
+            $mess = "<div class=\"alert alert-primary mt-3\" role=\"alert\">
           Đã xóa bài viết thành công.
         </div>";
-        $_SESSION['mess'] = $mess;
+            $_SESSION['mess'] = $mess;
         }
-        header('location:?ctrl=user&act=myarticle&id='.$_SESSION['sid']);
-    break;
+        header('location:?ctrl=user&act=myarticle&id=' . $_SESSION['sid']);
+        break;
 }

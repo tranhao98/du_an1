@@ -287,6 +287,16 @@ function addBaiViet($tieude, $mota, $noithat, $phongngu, $dientich, $khuvuc, $da
     VALUES ( '$danhmuc', '$khuvuc', '$nguoidung', '$tieude', '$hinh_anh', '$hinh_anh2', '$hinh_anh3', '$hinh_anh4', '$hinh_anh5', '$hinh_anh6', '$gia', '$dientich', '$phongngu', '$noithat', '$mota', '$diachi')";
     execute($sql);
 }
+function updateBaiDang($tieude,$mota,$noithat,$phongngu,$dientich,$khuvuc,$danhmuc,$diachi,$anhien,$noibat,$hinh_anh,$hinh_anh2, $hinh_anh3, $hinh_anh4, $hinh_anh5, $hinh_anh6, $gia,$nguoidung,$id){
+    if($hinh_anh != "") $sql = "UPDATE baidang SET idkhuvuc = '$khuvuc', iddm = '$danhmuc', idnguoiban = '$nguoidung', tensp = '$tieude', hinh = '$hinh_anh', gia = '$gia', dientich = '$dientich', phongngu = '$phongngu', noithat = '$noithat', noibat = '$noibat', mota = '$mota', diadiem = '$diachi', anhien = '$anhien' WHERE idsp = '$id'";
+    else if ($hinh_anh2 != "") $sql = "UPDATE baidang SET idkhuvuc = '$khuvuc', iddm = '$danhmuc', idnguoiban = '$nguoidung', tensp = '$tieude', hinh2 = '$hinh_anh2',hinh3 = '$hinh_anh3',hinh4 = '$hinh_anh4',hinh5 = '$hinh_anh5',hinh6 = '$hinh_anh6', gia = '$gia', dientich = '$dientich', phongngu = '$phongngu', noithat = '$noithat', noibat = '$noibat', mota = '$mota', diadiem = '$diachi', anhien = '$anhien' WHERE idsp = '$id'";
+    else if ($hinh_anh3 != "") $sql = "UPDATE baidang SET idkhuvuc = '$khuvuc', iddm = '$danhmuc', idnguoiban = '$nguoidung', tensp = '$tieude', hinh3 = '$hinh_anh3',hinh4 = '$hinh_anh4',hinh5 = '$hinh_anh5',hinh6 = '$hinh_anh6', gia = '$gia', dientich = '$dientich', phongngu = '$phongngu', noithat = '$noithat', noibat = '$noibat', mota = '$mota', diadiem = '$diachi', anhien = '$anhien' WHERE idsp = '$id'";
+    else if ($hinh_anh4 != "") $sql = "UPDATE baidang SET idkhuvuc = '$khuvuc', iddm = '$danhmuc', idnguoiban = '$nguoidung', tensp = '$tieude', hinh4 = '$hinh_anh4', hinh5 = '$hinh_anh5',hinh6 = '$hinh_anh6', gia = '$gia', dientich = '$dientich', phongngu = '$phongngu', noithat = '$noithat', noibat = '$noibat', mota = '$mota', diadiem = '$diachi', anhien = '$anhien' WHERE idsp = '$id'";
+    else if ($hinh_anh5 != "") $sql = "UPDATE baidang SET idkhuvuc = '$khuvuc', iddm = '$danhmuc', idnguoiban = '$nguoidung', tensp = '$tieude', hinh5 = '$hinh_anh5', hinh6 = '$hinh_anh6', gia = '$gia', dientich = '$dientich', phongngu = '$phongngu', noithat = '$noithat', noibat = '$noibat', mota = '$mota', diadiem = '$diachi', anhien = '$anhien' WHERE idsp = '$id'";
+    else if ($hinh_anh6 != "") $sql = "UPDATE baidang SET idkhuvuc = '$khuvuc', iddm = '$danhmuc', idnguoiban = '$nguoidung', tensp = '$tieude', hinh6 = '$hinh_anh6', gia = '$gia', dientich = '$dientich', phongngu = '$phongngu', noithat = '$noithat', noibat = '$noibat', mota = '$mota', diadiem = '$diachi', anhien = '$anhien' WHERE idsp = '$id'";
+    else $sql = "UPDATE baidang SET idkhuvuc = '$khuvuc', iddm = '$danhmuc', idnguoiban = '$nguoidung', tensp = '$tieude', gia = '$gia', dientich = '$dientich', phongngu = '$phongngu', noithat = '$noithat', noibat = '$noibat', mota = '$mota', diadiem = '$diachi', anhien = '$anhien' WHERE idsp = '$id'";
+    execute($sql);
+}
 function getAllDanhMuc()
 {
     $sql = "SELECT * FROM danhmuc";

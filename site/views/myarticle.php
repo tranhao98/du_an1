@@ -32,6 +32,7 @@
                                 <ul class="social-icons">
                                     <li><a href="?act=baidang&id=<?= $row['idsp'] ?>">+ Xem thêm</a></li>
                                 </ul>
+                                <a href="?act=edit&id=<?=$row['idsp']?>" class="btn btn-primary">Chỉnh sửa bài viết</a>
                                 <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa BÀI VIẾT không?')" href="?act=del&id=<?=$row['idsp']?>">Xóa bài viết</a>
 
                             </div>
