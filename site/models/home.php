@@ -265,10 +265,19 @@ function changePass($pass, $id)
     execute($sql);
 }
 
-
+function changePass2($pass, $m)
+{
+    $sql = "UPDATE taikhoan SET matkhau = '$pass' WHERE email = '$m'";
+    execute($sql);
+}
 function kiemTraMatKhau($id)
 {
     $sql = "SELECT * from taikhoan where id = '$id'";
+    return queryOne($sql);
+}
+function kiemTraMatKhau2($m)
+{
+    $sql = "SELECT * from taikhoan where email = '$m'";
     return queryOne($sql);
 }
 
@@ -338,4 +347,8 @@ function checkActive($iduser, $rd){
 function active($id){
     $sql = "UPDATE taikhoan SET active  = '1' WHERE id='$id'";
     execute($sql);
+}
+function checkEmail($m, $rd){
+    $sql = "SELECT * from taikhoan where email='$m' and randkey = '$rd'";
+    return queryOne($sql);
 }

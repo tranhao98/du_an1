@@ -339,12 +339,32 @@ switch ($act) {
             header("location: index.php?ctrl=user&act=quenpass");
         }
         break;
-        case "laypass":
-            if($_GET['act'] == "laypass"){
-                $m = $_GET['email'];
-                $rd = $_GET['rd'];
+    case "laypass":
+        if ($_GET['act'] == "laypass") {
+            $m = $_GET['email'];
+            $rd = $_GET['rd'];
+            $checkemail = checkEmail($m, $rd);
+            if (is_array($checkemail)) {
+                $p1 = password_hash($_POST['p1'], PASSWORD_DEFAULT);
+                $p2 = password_hash($_POST['p2'], PASSWORD_DEFAULT);
+
+                changePass2($p1, $m);
+                $mess = '<div class="alert alert-primary" role="alert">
+                            Bạn đã đổi mật khẩu thành công. Bạn vui lòng đăng nhập lại.
+                        </div>';
+                $_SESSION['mess'] = $mess;
+                unset($_SESSION['sid']);
+                unset($_SESSION['tendangnhap']);
+                unset($_SESSION['hoten']);
+                unset($_SESSION['songayhethan']);
+                unset($_SESSION['hinh']);
+                unset($_SESSION['tongsobaidang']);
+                unset($_SESSION['goitv']);
+                unset($_SESSION['vaitro']);
+                header('location: ?ctrl=user&act=login-index');
             }
-            $view = "views/laylaimatkhau.php";
-            require_once "layout.php";
-            break;
+        }
+        $view = "views/laylaimatkhau.php";
+        require_once "layout.php";
+        break;
 }
